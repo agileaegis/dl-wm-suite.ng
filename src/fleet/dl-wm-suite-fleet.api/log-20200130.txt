@@ -1,0 +1,46 @@
+2020-01-30 11:11:42.935 +02:00 [Information] User profile is available. Using '"C:\Users\maliganis\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-30 11:13:51.633 +02:00 [Information] User profile is available. Using '"C:\Users\maliganis\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-30 11:17:32.145 +02:00 [Information] User profile is available. Using '"C:\Users\maliganis\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-30 11:19:47.795 +02:00 [Information] User profile is available. Using '"C:\Users\maliganis\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-30 11:26:25.579 +02:00 [Information] User profile is available. Using '"C:\Users\maliganis\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-30 11:26:27.585 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:6600/swagger/index.html  
+2020-01-30 11:26:27.686 +02:00 [Information] Default Quartz.NET properties loaded from embedded resource file
+2020-01-30 11:26:27.767 +02:00 [Information] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2020-01-30 11:26:27.772 +02:00 [Information] Quartz Scheduler v."3.0.7.0" created.
+2020-01-30 11:26:27.776 +02:00 [Information] RAMJobStore initialized.
+2020-01-30 11:26:27.785 +02:00 [Information] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-30 11:26:27.788 +02:00 [Information] Quartz scheduler 'DefaultQuartzScheduler' initialized
+2020-01-30 11:26:27.791 +02:00 [Information] Quartz scheduler version: 3.0.7.0
+2020-01-30 11:26:27.795 +02:00 [Information] JobFactory set to: dl.wm.suite.fleet.api.Schedulers.JobFactory
+2020-01-30 11:26:27.907 +02:00 [Information] Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-30 11:26:27.979 +02:00 [Information] Request finished in 388.9886ms 200 text/html
+2020-01-30 11:26:28.610 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:6600/swagger/v1/swagger.json  
+2020-01-30 11:26:29.298 +02:00 [Information] Request finished in 688.5607ms 200 application/json;charset=utf-8
+2020-01-30 11:42:48.690 +02:00 [Information] User profile is available. Using '"C:\Users\maliganis\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-30 11:42:50.968 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:6600/swagger/index.html  
+2020-01-30 11:42:51.070 +02:00 [Information] Default Quartz.NET properties loaded from embedded resource file
+2020-01-30 11:42:51.187 +02:00 [Information] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2020-01-30 11:42:51.194 +02:00 [Information] Quartz Scheduler v."3.0.7.0" created.
+2020-01-30 11:42:51.199 +02:00 [Information] RAMJobStore initialized.
+2020-01-30 11:42:51.211 +02:00 [Information] Scheduler meta-data: Quartz Scheduler (v3.0.7.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2020-01-30 11:42:51.215 +02:00 [Information] Quartz scheduler 'DefaultQuartzScheduler' initialized
+2020-01-30 11:42:51.217 +02:00 [Information] Quartz scheduler version: 3.0.7.0
+2020-01-30 11:42:51.222 +02:00 [Information] JobFactory set to: dl.wm.suite.fleet.api.Schedulers.JobFactory
+2020-01-30 11:42:51.341 +02:00 [Information] Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2020-01-30 11:42:51.413 +02:00 [Information] Request finished in 446.9159ms 200 text/html
+2020-01-30 11:42:51.719 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:6600/swagger/v1/swagger.json  
+2020-01-30 11:42:52.437 +02:00 [Information] Request finished in 718.5975ms 200 application/json;charset=utf-8

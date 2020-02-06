@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-cms.model</AssemblyName>
+    <RootNamespace>dl.wm.suite.cms.model</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Containers\ContainerType.cs~RF98f3ad8.TMP" />
+    <None Remove="Devices\DeviceModel.cs~RFe69ace2.TMP" />
+    <None Remove="Devices\Firmware\Firmware.cs~RFe6dc122.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GeoAPI" Version="1.7.5" />
+    <PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="1.15.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.infrastructure\dl-wm-suite-common.infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

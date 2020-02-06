@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-dms.model</AssemblyName>
+    <RootNamespace>dl.wm.suite.dms.model</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.infrastructure\dl-wm-suite-common.infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

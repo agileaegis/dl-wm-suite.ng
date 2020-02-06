@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-fleet.contracts</AssemblyName>
+    <RootNamespace>dl.wm.suite.fleet.contracts</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.dtos\dl-wm-suite-common.dtos.csproj" />
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.infrastructure\dl-wm-suite-common.infrastructure.csproj" />
+    <ProjectReference Include="..\dl-wm-suite-fleet.model\dl-wm-suite-fleet.model.csproj" />
+  </ItemGroup>
+
+</Project>

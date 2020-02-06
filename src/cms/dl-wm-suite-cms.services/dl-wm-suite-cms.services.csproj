@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-cms.services</AssemblyName>
+    <RootNamespace>dl.wm.suite.cms.services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Devices\UpdateDeviceProcessor.cs~RF9794c96.TMP" />
+    <None Remove="Employees\Departments\CreateDepartmentProcessor.cs~RF88f2ff8.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dl-wm-suite-cms.contracts\dl-wm-suite-cms.contracts.csproj" />
+    <ProjectReference Include="..\dl-wm-suite-cms.model\dl-wm-suite-cms.model.csproj" />
+    <ProjectReference Include="..\dl-wm-suite-cms.repository\dl-wm-suite-cms.repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>System.Data</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>System.Drawing</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>System.Xml</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

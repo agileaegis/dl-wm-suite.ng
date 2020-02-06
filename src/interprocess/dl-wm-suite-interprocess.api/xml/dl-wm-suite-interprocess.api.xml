@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dl-wm-suite-interprocess.api</name>
+    </assembly>
+    <members>
+        <member name="T:dl.wm.suite.interprocess.api.SignalR.Models.MessageModel">
+            <summary>
+                Message
+            </summary>
+        </member>
+        <member name="P:dl.wm.suite.interprocess.api.SignalR.Models.MessageModel.Id">
+            <summary>
+                Message UID
+            </summary>
+        </member>
+        <member name="P:dl.wm.suite.interprocess.api.SignalR.Models.MessageModel.Message">
+            <summary>
+                Message text
+            </summary>
+        </member>
+        <member name="P:dl.wm.suite.interprocess.api.SignalR.Models.MessageModel.ReceviedUtc">
+            <summary>
+                Message received time UTC
+            </summary>
+        </member>
+    </members>
+</doc>

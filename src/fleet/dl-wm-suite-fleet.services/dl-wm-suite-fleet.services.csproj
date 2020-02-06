@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-fleet.services</AssemblyName>
+    <RootNamespace>dl.wm.suite.fleet.services</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.dtos\dl-wm-suite-common.dtos.csproj" />
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.infrastructure\dl-wm-suite-common.infrastructure.csproj" />
+    <ProjectReference Include="..\dl-wm-suite-fleet.contracts\dl-wm-suite-fleet.contracts.csproj" />
+    <ProjectReference Include="..\dl-wm-suite-fleet.model\dl-wm-suite-fleet.model.csproj" />
+    <ProjectReference Include="..\dl-wm-suite-fleet.repository\dl-wm-suite-fleet.repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>System.Data</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>System.Drawing</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>System.Xml</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

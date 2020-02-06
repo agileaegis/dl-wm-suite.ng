@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-common.infrastructure</AssemblyName>
+    <RootNamespace>dl.wm.suite.common.infrastructure</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Exceptions\Api\**" />
+    <EmbeddedResource Remove="Exceptions\Api\**" />
+    <None Remove="Exceptions\Api\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Exceptions\Domain\Departments\InvalidDepartmentException.cs~RF881641c.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.20" />
+  </ItemGroup>
+
+</Project>

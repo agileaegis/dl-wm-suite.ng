@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dl-wm-suite-auth.api</name>
+    </assembly>
+    <members>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.AccountsController.PostAccountRegisterAsync(dl.wm.suite.common.dtos.Vms.Accounts.UserForRegistrationUiModel)">
+            <summary>
+            POST : Register a new user.
+            </summary>
+            <param name="managedUserVm">managedUserVM the managed user View Model</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new user is registered or 400 (Bad Request) if the login or email is already in use or Validation Request Model Error </remarks>
+            <response code="201">Created (if the user is registered)</response>
+            <response code="400">email in use</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.AccountsController.PutAccountActivateAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Accounts.AccountForActivationModification)">
+            <summary>
+            PUT : Activate the registered user.
+            </summary>
+            <param name="userIdToBeActivated">registeredUser Registered User Id to be activated</param>
+            <remarks> return the ResponseEntity with status 200 (OK) and the activated user in body, or status 500 (Internal Server Error) if the user couldn't be activated </remarks>
+            <response code="200">(OK) and the activated user in body</response>
+            <response code="500">500 (Internal Server Error)</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.AccountsController.PostAccountChangePasswordAsync(dl.wm.suite.common.dtos.Vms.Accounts.AccountWithNewPasswordModification)">
+            <summary>
+            POST  /account/change_password : changes the current user's password
+            </summary>
+            <remarks> return the current user </remarks>
+            <response code="200">200 (OK) and the updated user in body</response>
+            <response code="400">400 (Bad Request)</response>
+            <response code="500">500 (Internal Server Error) if the user couldn't be updated</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.AccountsController.PostAccountResetPasswordInitAsync">
+            <summary>
+            PUT   /account/reset_password/init : Send an email to reset the password of the user
+            </summary>
+            <remarks> return the current user </remarks>
+            <response code="200">200 (OK) and the updated user in body</response>
+            <response code="400">400 (Bad Request)</response>
+            <response code="500">500 (Internal Server Error) if the user couldn't be updated</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.AccountsController.PostAccountResetPasswordFinishAsync(dl.wm.suite.common.dtos.Vms.Accounts.AccountWithNewPasswordModification)">
+            <summary>
+            POST   /account/reset_password/finish : Finish to reset the password of the user
+            </summary>
+            <remarks> return the current user </remarks>
+            <response code="200">200 (OK) and the updated user in body</response>
+            <response code="400">400 (Bad Request)</response>
+            <response code="500">500 (Internal Server Error) if the user couldn't be updated</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.RolesController.PostRoleRouteAsync(dl.wm.suite.common.dtos.Vms.Roles.RoleForCreationUiModel)">
+            <summary>
+            POST : Create a New Role.
+            </summary>
+            <param name="roleForCreationUiModel">RoleForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Role is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the role is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.RolesController.UpdateEventWithModifiedPriorityAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Roles.RoleForModificationUiModel)">
+            <summary>
+            PUT : Update Role with New Role Name
+            </summary>
+            <param name="id">Role Id the Request Index for Retrieval</param>
+            <param name="updatedRole">RoleForModification the Request Model with New Role Name</param>
+            <remarks>Change Role providing RoleForModificationUiModel with Modified Role Name</remarks>
+            <response code="200">Resource updated correctly.</response>
+            <response code="400">The model is not in valid state.</response>
+            <response code="403">You have not access for this action.</response>
+            <response code="404">Wrong attributes provided.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.RolesController.GetRoleAsync(System.Guid,System.String)">
+            <summary>
+            Get : Retrieve Stored Role providing Role Id
+            </summary>
+            <param name="id">Role Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Role</param>
+            <remarks>Retrieve Role providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.RolesController.GetRolesAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.RolesResourceParameters,System.String)">
+            <summary>
+            Get : Retrieve All/or Partial Paged Stored Roles
+            </summary>
+            <remarks>Retrieve paged Roles providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.UserJwtController.PutUserExpireRefreshTokenAsync(dl.wm.suite.common.dtos.Vms.Accounts.UserForRefreshTokenModificationUiModel)">
+            <summary>
+            PUT : Expire OnDemand Refresh Token providing RefreshToken.
+            </summary>
+            <param name="refreshToken">RefreshToken key for specified user</param>
+            <remarks> return the ResponseEntity with status 200 (Ok) and the new set of Auth and Refresh Token in body, or status 500 (Internal Server Error) if an error occured</remarks>
+            <response code="200">(OK) and the activated user in body</response>
+            <response code="500">500 (Internal Server Error)</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.UserJwtController.GetNewTokenByRefreshAsync(System.String)">
+            <summary>
+            GET : New Token providing RefreshToken.
+            </summary>
+            <param name="refreshToken">RefreshToken key for specified user</param>
+            <remarks> return the ResponseEntity with status 200 (Ok) and the new set of Auth and Refresh Token in body, or status 500 (Internal Server Error) if an error occured</remarks>
+            <response code="200">(OK) and the activated user in body</response>
+            <response code="500">500 (Internal Server Error)</response>
+        </member>
+        <member name="M:dl.wm.suite.auth.api.Controllers.API.UsersController.GetUsersAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.UsersResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Persons
+            </summary>
+            <remarks>Retrieve paged Persons providing Paging Query</remarks>
+            <param name="usersResourceParameters"></param>
+            <param name="mediaType">Header - use: "application/vnd.marvin.hateoas+json" for custom links response </param>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+    </members>
+</doc>

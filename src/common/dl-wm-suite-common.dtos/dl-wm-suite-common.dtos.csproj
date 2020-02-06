@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-common.dtos</AssemblyName>
+    <RootNamespace>dl.wm.suite.common.dtos</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Vms\Employees\Departments\DepartmentForCreationUiModel.cs~RF86adf27.TMP" />
+    <None Remove="Vms\Employees\EmployeeRoles\EmployeeRoleForCreationUiModel.cs~RF8688d0a.TMP" />
+    <None Remove="Vms\Employees\EmployeeRoles\EmployeeRoleForModificationUiModel.cs~RF869c163.TMP" />
+    <None Remove="Vms\Roles\RoleUiModel.cs~RF2eac562b.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+  </ItemGroup>
+
+</Project>

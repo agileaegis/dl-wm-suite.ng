@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-fleet.repository</AssemblyName>
+    <RootNamespace>dl.wm.suite.fleet.repository</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+    <PackageReference Include="NHibernate" Version="5.2.7" />
+    <PackageReference Include="NHibernate.Spatial.MySQL" Version="5.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.infrastructure\dl-wm-suite-common.infrastructure.csproj" />
+    <ProjectReference Include="..\dl-wm-suite-fleet.model\dl-wm-suite-fleet.model.csproj" />
+  </ItemGroup>
+
+</Project>

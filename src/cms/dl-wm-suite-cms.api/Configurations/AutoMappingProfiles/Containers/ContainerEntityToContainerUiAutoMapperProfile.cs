@@ -1,0 +1,44 @@
+﻿using dl.wm.suite.cms.model.Containers;
+using dl.wm.suite.common.dtos.Vms.Containers;
+using AutoMapper;
+using GeoAPI.Geometries;
+
+namespace dl.wm.suite.cms.api.Configurations.AutoMappingProfiles.Containers
+{
+    public class ContainerEntityToContainerUiAutoMapperProfile : Profile
+    {
+        public ContainerEntityToContainerUiAutoMapperProfile()
+        {
+            ConfigureMapping();
+        }
+
+        public void ConfigureMapping()
+        {
+            CreateMap<Container, ContainerUiModel>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                .ForMember(dest => dest.ContainerName, opt => opt.MapFrom(src => src.Name))
+                .ForMember(dest => dest.ContainerLevel, opt => opt.MapFrom(src => src.Level))
+                .ForMember(dest => dest.ContainerFillLevel, opt => opt.MapFrom(src => src.FillLevel))
+                .ForMember(dest => dest.ContainerFillLevel, opt => opt.MapFrom(src => src.FillLevel))
+                .ForMember(dest => dest.ContainerLocationLat, opt => opt.MapFrom(src => src.Location.Coordinate.X))
+                .ForMember(dest => dest.ContainerLocationLong, opt => opt.MapFrom(src => src.Location.Coordinate.Y))
+                .ForMember(dest => dest.ContainerImageName, opt => opt.MapFrom(src => src.ImagePath))
+                .ForMember(dest => dest.ContainerTimeFull, opt => opt.MapFrom(src => src.TimeFull))
+                .ForMember(dest => dest.ContainerLastServicedDate, opt => opt.MapFrom(src => src.LastServicedDate))
+                .ForMember(dest => dest.ContainerCreatedDate, opt => opt.MapFrom(src => src.CreatedDate))
+                .ForMember(dest => dest.ContainerCreatedBy, opt => opt.MapFrom(src => src.CreatedBy))
+                .ForMember(dest => dest.ContainerModifiedDate, opt => opt.MapFrom(src => src.ModifiedDate))
+                .ForMember(dest => dest.ContainerModifiedBy, opt => opt.MapFrom(src => src.ModifiedBy))
+                .ForMember(dest => dest.ContainerStatus, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.ContainerType, opt => opt.MapFrom(src => src.Type))
+                .ForMember(dest => dest.ContainerStatus, opt => opt.MapFrom(src => src.Status))
+                .ForMember(dest => dest.ContainerAddress, opt => opt.MapFrom(src => src.Address))
+                .ForMember(dest => dest.ContainerMandatoryPickupDate, opt => opt.MapFrom(src => src.MandatoryPickupDate))
+                .ForMember(dest => dest.ContainerMandatoryPickupActive, opt => opt.MapFrom(src => src.MandatoryPickupActive))
+                .MaxDepth(1)
+                .PreserveReferences()
+                ;
+            
+        }
+    }
+}

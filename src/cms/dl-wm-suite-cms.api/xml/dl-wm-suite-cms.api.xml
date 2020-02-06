@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dl-wm-suite-cms.api</name>
+    </assembly>
+    <members>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.PostContainerImageAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            POST : Create a New Container Image
+            </summary>
+            <param name="file">ContainerForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 200 (Ok) if the new Image Container is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Container is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.PostContainerRouteAsync(dl.wm.suite.common.dtos.Vms.Containers.ContainerForCreationUiModel)">
+            <summary>
+            POST : Create a New Container.
+            </summary>
+            <param name="containerForCreationUiModel">ContainerForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Container is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Container is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.PutContainerRouteAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Containers.ContainerForModificationUiModel)">
+            <summary>
+            PUT : Update an Existing Container.
+            </summary>
+            <param name="id">Container Id for Modification</param>
+            <param name="containerForModificationUiModel">ContainerForCreationUiModel the Request Model for Modification</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Container is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="200">Ok (if the Container is updated)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.DeleteContainerRoot(System.Guid)">
+            <summary>
+            Delete - Delete an existing Container 
+            </summary>
+            <param name="id">Container Id for Deletion</param>
+            <remarks>Delete Existing Container </remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="200">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.DeleteHardContainerRoot(System.Guid)">
+            <summary>
+            Delete - Delete an existing Container 
+            </summary>
+            <param name="id">Container Id for Deletion</param>
+            <remarks>Delete Existing Container </remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="200">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.GetContainerAsync(System.Guid,System.String)">
+            <summary>
+            Get - Retrieve Stored Container providing Container Id
+            </summary>
+            <param name="id">Container Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Container</param>
+            <remarks>Retrieve Containers providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.GetContainersAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.ContainersResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Containers
+            </summary>
+            <remarks>Retrieve paged Containers providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DepartmentsController.PostDepartmentRouteAsync(dl.wm.suite.common.dtos.Vms.Employees.Departments.DepartmentForCreationUiModel)">
+            <summary>
+            POST : Create a New Department.
+            </summary>
+            <param name="departmentForCreationUiModel">DepartmentForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Department is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Department is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DepartmentsController.UpdateDepartmentWithModifiedDepartmentAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Employees.Departments.DepartmentForModificationUiModel)">
+            <summary>
+            PUT : Update Department with New Department Name
+            </summary>
+            <param name="id">Department Id the Request Index for Retrieval</param>
+            <param name="updatedDepartment">DepartmentForModification the Request Model with New Department Name</param>
+            <remarks>Change Department providing DepartmentForModificationUiModel with Modified Department Name</remarks>
+            <response code="200">Resource updated correctly.</response>
+            <response code="400">The model is not in valid state.</response>
+            <response code="403">You have not access for this action.</response>
+            <response code="404">Wrong attributes provided.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DepartmentsController.GetDepartmentAsync(System.Guid,System.String)">
+            <summary>
+            Get : Retrieve Stored Department providing Department Id
+            </summary>
+            <param name="id">Department Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Department</param>
+            <remarks>Retrieve Department providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DepartmentsController.GetDepartmentsAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.DepartmentsResourceParameters,System.String)">
+            <summary>
+            Get : Retrieve All/or Partial Paged Stored Departments
+            </summary>
+            <remarks>Retrieve paged Departments providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DeviceModelsController.PostDeviceModelRouteAsync(dl.wm.suite.common.dtos.Vms.Devices.DeviceModels.DeviceModelForCreationUiModel)">
+            <summary>
+            POST : Create a New DeviceModel.
+            </summary>
+            <param name="deviceForCreationUiModel">DeviceModelForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new DeviceModel is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the DeviceModel is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DeviceModelsController.PutDeviceModelRouteAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Devices.DeviceModels.DeviceModelForModificationUiModel)">
+            <summary>
+            PUT : Update an Existing DeviceModel.
+            </summary>
+            <param name="id">DeviceModel Id for Modification</param>
+            <param name="deviceForModificationUiModel">DeviceModelForCreationUiModel the Request Model for Modification</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new DeviceModel is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="200">Ok (if the DeviceModel is updated)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DeviceModelsController.GetDeviceModelAsync(System.Guid,System.String)">
+            <summary>
+            Get - Retrieve Stored DeviceModel providing DeviceModel Id
+            </summary>
+            <param name="id">DeviceModel Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned DeviceModel</param>
+            <remarks>Retrieve DeviceModels providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DeviceModelsController.GetDeviceModelsAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.DeviceModelsResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored DeviceModels
+            </summary>
+            <remarks>Retrieve paged DeviceModels providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DevicesController.PostDeviceRouteAsync(dl.wm.suite.common.dtos.Vms.Devices.DeviceForCreationUiModel)">
+            <summary>
+            POST : Create a New Device.
+            </summary>
+            <param name="deviceForCreationUiModel">DeviceForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Device is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Device is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DevicesController.PutDeviceRouteAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Devices.DeviceForModificationUiModel)">
+            <summary>
+            PUT : Update an Existing Device.
+            </summary>
+            <param name="id">Device Id for Modification</param>
+            <param name="deviceForModificationUiModel">DeviceForCreationUiModel the Request Model for Modification</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Device is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="200">Ok (if the Device is updated)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DevicesController.GetDeviceAsync(System.Guid,System.String)">
+            <summary>
+            Get - Retrieve Stored Device providing Device Id
+            </summary>
+            <param name="id">Device Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Device</param>
+            <remarks>Retrieve Devices providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.DevicesController.GetDevicesAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.DevicesResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Devices
+            </summary>
+            <remarks>Retrieve paged Devices providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.EmployeeRolesController.PostEmployeeRoleRouteAsync(dl.wm.suite.common.dtos.Vms.Employees.EmployeeRoles.EmployeeRoleForCreationUiModel)">
+            <summary>
+            POST : Create a New Employee Role.
+            </summary>
+            <param name="employeeRoleForCreationUiModel">EmployeeRoleForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Employee Role is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Employee Role is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.EmployeeRolesController.UpdateEmployeeRoleWithModifiedEmployeeRoleAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Employees.EmployeeRoles.EmployeeRoleForModificationUiModel)">
+            <summary>
+            PUT : Update Employee Role with New Employee Role Name
+            </summary>
+            <param name="id">Employee Role Id the Request Index for Retrieval</param>
+            <param name="updatedEmployeeRole">EmployeeRoleForModification the Request Model with New Employee Role Name</param>
+            <remarks>Change EmployeeRole providing EmployeeRoleForModificationUiModel with Modified Employee Role Name</remarks>
+            <response code="200">Resource updated correctly.</response>
+            <response code="400">The model is not in valid state.</response>
+            <response code="403">You have not access for this action.</response>
+            <response code="404">Wrong attributes provided.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.EmployeeRolesController.GetEmployeeRoleAsync(System.Guid,System.String)">
+            <summary>
+            Get : Retrieve Stored Role providing Employee Role Id
+            </summary>
+            <param name="id">Employee Role Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Employee Role</param>
+            <remarks>Retrieve Employee Role providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.EmployeeRolesController.GetEmployeeRolesAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.EmployeeRolesResourceParameters,System.String)">
+            <summary>
+            Get : Retrieve All/or Partial Paged Stored Employee Roles
+            </summary>
+            <remarks>Retrieve paged Employee Roles providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ToursController.PostTourRouteAsync(dl.wm.suite.common.dtos.Vms.Tours.TourForCreationUiModel)">
+            <summary>
+            POST : Create a New Tour.
+            </summary>
+            <param name="tourForCreationUiModel">TourForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Tour is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Tour is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ToursController.PutTourRouteAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Tours.TourForModificationUiModel)">
+            <summary>
+            PUT : Update an Existing Tour.
+            </summary>
+            <param name="id">Tour Id for Modification</param>
+            <param name="tourForModificationUiModel">TourForCreationUiModel the Request Model for Modification</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Tour is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="200">Ok (if the Tour is updated)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ToursController.GetTourAsync(System.Guid,System.String)">
+            <summary>
+            Get - Retrieve Stored Tour providing Tour Id
+            </summary>
+            <param name="id">Tour Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Tour</param>
+            <remarks>Retrieve Tours providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ToursController.GetTourAssignedAsync(System.String)">
+            <summary>
+            Get - Retrieve Stored Tour providing Assigned Tour
+            </summary>
+            <param name="id">Tour Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Tour</param>
+            <remarks>Retrieve Tours providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ToursController.GetToursAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.ToursResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Tours
+            </summary>
+            <remarks>Retrieve paged Tours providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.VehiclesController.PostVehicleRouteAsync(dl.wm.suite.common.dtos.Vms.Vehicles.VehicleForCreationUiModel)">
+            <summary>
+            POST : Create a New Vehicle.
+            </summary>
+            <param name="vehicleForCreationUiModel">VehicleForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Vehicle is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Vehicle is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.VehiclesController.PutVehicleRouteAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Vehicles.VehicleForModificationUiModel)">
+            <summary>
+            PUT : Update an Existing Vehicle.
+            </summary>
+            <param name="id">Vehicle Id for Modification</param>
+            <param name="vehicleForModificationUiModel">VehicleForCreationUiModel the Request Model for Modification</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Vehicle is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="200">Ok (if the Vehicle is updated)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.VehiclesController.GetVehicleAsync(System.Guid,System.String)">
+            <summary>
+            Get - Retrieve Stored Vehicle providing Vehicle Id
+            </summary>
+            <param name="id">Vehicle Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Vehicle</param>
+            <remarks>Retrieve Vehicles providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.VehiclesController.GetVehiclesAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.VehiclesResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Vehicles
+            </summary>
+            <remarks>Retrieve paged Vehicles providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+    </members>
+</doc>

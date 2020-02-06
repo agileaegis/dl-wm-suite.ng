@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dl-wm-suite-fleet.api</name>
+    </assembly>
+    <members>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.AssetsController.PostAssetRouteAsync(dl.wm.suite.common.dtos.Vms.Assets.AssetForCreationUiModel)">
+            <summary>
+            POST : Create a New Asset.
+            </summary>
+            <param name="assetForCreationUiModel">AssetForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Asset is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Asset is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.AssetsController.GetAssetAsync(System.Int32,System.String)">
+            <summary>
+            Get - Retrieve Stored Asset providing Asset Id
+            </summary>
+            <param name="id">Asset Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Asset</param>
+            <remarks>Retrieve Assets providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.AssetsController.GetAssetsAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.AssetsResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Assets
+            </summary>
+            <remarks>Retrieve paged Assets providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.AssetsController.GetAssetsLatestPositionsAsync">
+            <summary>
+            Get latest position of all assets
+            </summary>
+            <returns>Dictionary containing Asset Name vs last seen TrackingPoint</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.AssetsController.GetAssetsTrackingPointsAsync(System.Guid)">
+            <summary>
+            Get the TrackingPoints belonging to the specified asset
+            </summary>
+            <param name="assetId">The asset id</param>
+            <returns>List of TrackingPoints</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.AssetsController.GetTrips(System.String)">
+            <summary>
+            Get the trips done by the asset 
+            </summary>
+            <param name="assetId">The asset id</param>
+            <returns>List of Trips</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.LocationsController.GeLocationAsync(System.Int32)">
+            <summary>
+            Get location by id
+            </summary>
+            <param name="id">The location id</param>
+            <returns>The location</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.LocationsController.GetLocationVisitedByAssetsCountAsync(System.Guid)">
+            <summary>
+            Get the number of times assets have visited a location
+            </summary>
+            <param name="locationId">The location id</param>
+            <returns>Dictionary containing asset names vs visit count</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.LocationsController.PostCreateNewLocationAsync(dl.wm.suite.common.dtos.Vms.Locations.LocationForCreationModel)">
+            <summary>
+            POST : Create a New Location.
+            </summary>
+            <param name="locationForCreationUiModel">LocationForCreationModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Location is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Location is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.PointsController.PostPointAsync(dl.wm.suite.common.dtos.Vms.Points.TrackingPointForCreationUiModel)">
+            <summary>
+            Create TrackingPoint and check Geofences
+            </summary>
+            <param name="point">The tracking point details</param>
+            <returns>Ok response</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.PointsController.PostPointsAsync(dl.wm.suite.common.dtos.Vms.Points.TrackingPointForCreationUiModel[])">
+            <summary>
+            Create multiple TrackingPoints and check Geofences
+            </summary>
+            <param name="points">List of TrackingPoint details</param>
+            <returns>Ok response</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TrackablesController.PostTrackableRouteAsync(dl.wm.suite.common.dtos.Vms.Trackables.TrackableForCreationUiModel)">
+            <summary>
+            POST : Create a New Trackable.
+            </summary>
+            <param name="trackableForCreationUiModel">TrackableForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Trackable is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Trackable is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TrackablesController.PutTrackableRouteAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Trackables.TrackableForModificationUiModel)">
+            <summary>
+            PUT : Update an Existing Trackable.
+            </summary>
+            <param name="id">Trackable Id for Modification</param>
+            <param name="TrackableForModificationUiModel">TrackableForCreationUiModel the Request Model for Modification</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Trackable is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="200">Ok (if the Trackable is updated)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TrackablesController.GetTrackableAsync(System.Int32,System.String)">
+            <summary>
+            Get - Retrieve Stored Trackable providing Trackable Id
+            </summary>
+            <param name="id">Trackable Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Trackable</param>
+            <remarks>Retrieve Trackables providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TrackablesController.GetTrackableImeiAsync(System.String,System.String)">
+            <summary>
+            Get - Retrieve Stored Trackable providing Trackable Imei
+            </summary>
+            <param name="imei">Trackable Imei the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Trackable</param>
+            <remarks>Retrieve Trackables providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TrackablesController.GetTrackablesAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.TrackablesResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Trackables
+            </summary>
+            <remarks>Retrieve paged Trackables providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.PostTripRouteAsync(dl.wm.suite.common.dtos.Vms.Trips.TripForCreationUiModel)">
+            <summary>
+            POST : Create a New Trip.
+            </summary>
+            <param name="tripForCreationUiModel">TripForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Trip is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Trip is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.PutTripRegisterRouteAsync(System.String,dl.wm.suite.common.dtos.Vms.Trips.TripForRegistrationModel)">
+            <summary>
+            POST : Register Trip with Asset and Device.
+            </summary>
+            <param name="code">Trip Code the Request Path for Registration</param>
+            <param name="tripForRegistrationModel">TripForRegistrationModel the Request Model for Registration</param>
+            <remarks> return a ResponseEntity with status 200 (Ok) if the new Trip was registered, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Trip is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.PutTripUnRegisterRouteAsync(System.String)">
+            <summary>
+            POST : UnRegister Trip with Asset and Device.
+            </summary>
+            <param name="vendorId">Trackable Imei the Request Path for UnRegister</param>
+            <remarks> return a ResponseEntity with status 200 (Ok) if the new Trip was registered, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Trip is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.GetTripAsync(System.Int32,System.String)">
+            <summary>
+            Get - Retrieve Stored Trip providing Trip Id
+            </summary>
+            <param name="id">Trip Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Trip</param>
+            <remarks>Retrieve Trips providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.GetCurrentTripByVendorIdAsync(System.String,System.String)">
+            <summary>
+            Get - Retrieve Current Trip providing Trackable-Device  VendorId
+            </summary>
+            <param name="vendorId">Trackable-Device VendorId the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Trip</param>
+            <remarks>Retrieve Trips providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.GetTripsAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.TripsResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Trips
+            </summary>
+            <remarks>Retrieve paged Trips providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.DetectTripPerAssetAsync">
+            <summary>
+            Detect latest trips
+            </summary>
+            <returns>Detected trips per asset</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.GetTrackingPointsToNearestLocationAsync(System.Guid,System.Double,System.Double,System.Int32)">
+            <summary>
+            Get TrackingPoints belonging to trip nearest to specified location
+            </summary>
+            <param name="tripId">The trip Id</param>
+            <param name="lat">The latitude</param>
+            <param name="lon">The longitude</param>
+            <param name="count">The number of points to fetch</param>
+            <returns></returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.PostPointsToTrackableAsync(System.Int32,dl.wm.suite.common.dtos.Vms.TrackingPoints.TrackingPointDto[])">
+            <summary>
+            Add TrackingPoints related to Trackable Device, Asset and Trip
+            </summary>
+            <param name="id">The Trip id</param>
+            <param name="points">List of TrackingPoints</param>
+            <returns>Ok response</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.PostPointToTrackableAsync(System.Int32,dl.wm.suite.common.dtos.Vms.TrackingPoints.TrackingPointDto)">
+            <summary>
+            Add TrackingPoint related to Trackable Device, Asset and Trip
+            </summary>
+            <param name="id">The Trip id</param>
+            <param name="point">TrackingPoint</param>
+            <returns>Ok response</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.GetRedisPointToTrackableAsync(System.Int32)">
+            <summary>
+            Get TrackingPoint related to Trip
+            </summary>
+            <param name="id">The Trip id</param>
+            <param name="point">TrackingPoint</param>
+            <returns>Ok response</returns>
+        </member>
+        <member name="M:dl.wm.suite.fleet.api.Controllers.API.V1.TripsController.PostRedisPointToTrackableAsync(System.Int32,dl.wm.suite.common.dtos.Vms.TrackingPoints.TrackingPointDto)">
+            <summary>
+            Register TrackingPoint related to Trip
+            </summary>
+            <param name="id">The Trip id</param>
+            <param name="point">TrackingPoint</param>
+            <returns>Ok response</returns>
+        </member>
+    </members>
+</doc>

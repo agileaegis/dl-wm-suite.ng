@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssemblyName>dl-wm-suite-cms.contracts</AssemblyName>
+    <RootNamespace>dl.wm.suite.cms.contracts</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="V1\IContainersControllerDependencyBlock.cs~RF975cd33.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.dtos\dl-wm-suite-common.dtos.csproj" />
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.infrastructure\dl-wm-suite-common.infrastructure.csproj" />
+    <ProjectReference Include="..\dl-wm-suite-cms.model\dl-wm-suite-cms.model.csproj" />
+  </ItemGroup>
+
+</Project>

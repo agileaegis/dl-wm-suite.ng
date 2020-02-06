@@ -1,0 +1,50 @@
+﻿{
+  "trackableName": "DROID-4",
+  "trackableModel": "Samsung",
+  "trackableImei": "4234567890",
+  "trackablePhone": "6974898440",
+  "trackableOs": "Android",
+  "trackableVersion": "29",
+  "trackableNotes": "New Device DROID-4"
+}{
+  "assetName": "T8-12345",
+  "assetNumPlate": "AZ12345",
+  "assetType": "MileT8",
+  "assetHeight": 0,
+  "assetWidth": 0,
+  "assetLength": 0,
+  "assetWeight": 0,
+  "assetAxels": 0,
+  "assetTrailers": 0,
+  "assetIsSemi": false,
+  "assetMaxGradient": 0,
+  "assetMinTurnRadius": 0
+}
+
+
+c0a883f6-482a-4032-b153-20be8bcc73be
+
+{
+  "assetNumPlate": "AZ12345",
+  "trackableImei": "1234567890"
+}
+
+
+
+{
+  "time": 26579666,
+  "longitude": 23.76426726579666,
+  "latitude": 38.05018593679694,
+  "provider": "GPS",
+  "locationProvider": 1,
+  "accuracy": 0.1,
+  "speed": 1.0,
+  "altitude": 0.0,
+  "bearing": 0.0
+}
+
+
+{
+  "latitude": 38.05018593679694,
+  "longitude": 23.76426726579666
+}

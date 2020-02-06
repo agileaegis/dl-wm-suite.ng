@@ -1,0 +1,34 @@
+﻿using dl.wm.suite.common.dtos.Vms.Assets;
+using dl.wm.suite.fleet.model.Assets;
+using AutoMapper;
+
+namespace dl.wm.suite.fleet.api.Configurations.AutoMappingProfiles.Assets
+{
+    public class AssetForCreationUiModelToAssetEntityAutoMapperProfile : Profile
+    {
+        public AssetForCreationUiModelToAssetEntityAutoMapperProfile()
+        {
+            ConfigureMapping();
+        }
+
+        public void ConfigureMapping()
+        {
+            CreateMap<AssetForCreationUiModel, Asset>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.AssetName))
+                .ForMember(dest => dest.NumPlate, opt => opt.MapFrom(src => src.AssetNumPlate))
+                .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src.AssetType))
+                .ForMember(dest => dest.Height, opt => opt.MapFrom(src => src.AssetHeight))
+                .ForMember(dest => dest.Width, opt => opt.MapFrom(src => src.AssetWidth))
+                .ForMember(dest => dest.Length, opt => opt.MapFrom(src => src.AssetLength))
+                .ForMember(dest => dest.Width, opt => opt.MapFrom(src => src.AssetWeight))
+                .ForMember(dest => dest.Axels, opt => opt.MapFrom(src => src.AssetAxels))
+                .ForMember(dest => dest.Trailers, opt => opt.MapFrom(src => src.AssetTrailers))
+                .ForMember(dest => dest.IsSemi, opt => opt.MapFrom(src => src.AssetIsSemi))
+                .ForMember(dest => dest.MaxGradient, opt => opt.MapFrom(src => src.AssetMaxGradient))
+                .ForMember(dest => dest.MinTurnRadius, opt => opt.MapFrom(src => src.AssetMinTurnRadius))
+                .MaxDepth(1)
+                .PreserveReferences()
+                ;
+        }
+    }
+}
