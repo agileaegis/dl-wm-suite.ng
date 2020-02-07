@@ -102,11 +102,9 @@ namespace dl.wm.suite.ui.Views.Components.Containers
 
         private void OnSaveFlyoutContainer()
         {
-
         }
 
         #endregion
-
 
         #region Locals
 
