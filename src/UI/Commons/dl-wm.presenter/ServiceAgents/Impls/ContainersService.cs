@@ -5,8 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using dl.wm.models.DTOs.Containers;
+using dl.wm.models.DTOs.Dashboards;
 using dl.wm.models.DTOs.Users;
-using dl.wm.models.DTOs.Users.Accounts;
 using dl.wm.presenter.Exceptions;
 using dl.wm.presenter.ServiceAgents.Contracts;
 using dl.wm.presenter.ServiceAgents.Impls.Base;
@@ -22,6 +22,33 @@ namespace dl.wm.presenter.ServiceAgents.Impls
         public ContainersService() : base(_serviceName)
         {
 
+        }
+
+        public async Task<List<ContainerPointUiModel>> GetAllActiveContainersPointsAsync(string authorizationToken = null)
+        {
+            UriBuilder builder = CreateUriBuilder();
+            builder.Path += "points";
+
+            List<ContainerPointUiModel> result = new List<ContainerPointUiModel>();
+
+            var client = new RestClient(builder.Uri.ToString());
+            var request = new RestRequest(Method.GET);
+
+            request.AddHeader("Content-Type", "application/json");
+            request.AddHeader("Authorization", $"bearer {authorizationToken}");
+
+            var response = client.Execute(request);
+            if (response.IsSuccessful)
+            {
+                result = JsonConvert.DeserializeObject<List<ContainerPointUiModel>>(response.Content);
+            }
+            else if (response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                AccountErrorModel resultError = JsonConvert.DeserializeObject<AccountErrorModel>(response.Content);
+                throw new ServiceHttpRequestException<string>(response.StatusCode, resultError.errorMessage);
+            }
+
+            return result;
         }
 
         public async Task<IList<ContainerUiModel>> GetAllActiveContainersAsync(bool active)

@@ -238,7 +238,7 @@
             this.xtrTbPgDashboardCommands.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_cmd2_32;
             this.xtrTbPgDashboardCommands.ImageOptions.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.xtrTbPgDashboardCommands.Name = "xtrTbPgDashboardCommands";
-            this.xtrTbPgDashboardCommands.Size = new System.Drawing.Size(481, 313);
+            this.xtrTbPgDashboardCommands.Size = new System.Drawing.Size(328, 313);
             this.xtrTbPgDashboardCommands.Text = "Commands";
             // 
             // laytCntrlTabContainerCommandsSection
@@ -257,7 +257,7 @@
             this.laytCntrlTabContainerCommandsSection.Location = new System.Drawing.Point(0, 0);
             this.laytCntrlTabContainerCommandsSection.Name = "laytCntrlTabContainerCommandsSection";
             this.laytCntrlTabContainerCommandsSection.Root = this.laytCntrlGrpTabContainerCommandsSection;
-            this.laytCntrlTabContainerCommandsSection.Size = new System.Drawing.Size(481, 313);
+            this.laytCntrlTabContainerCommandsSection.Size = new System.Drawing.Size(328, 313);
             this.laytCntrlTabContainerCommandsSection.TabIndex = 0;
             this.laytCntrlTabContainerCommandsSection.Text = "layoutControl1";
             // 
@@ -320,9 +320,9 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Location = new System.Drawing.Point(312, 12);
+            this.panelControl1.Location = new System.Drawing.Point(305, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(157, 289);
+            this.panelControl1.Size = new System.Drawing.Size(11, 289);
             this.panelControl1.TabIndex = 11;
             // 
             // tggCmdAddRemoveGeofencePoint
@@ -393,7 +393,7 @@
             this.emptySpaceItem13,
             this.layoutControlItem14});
             this.laytCntrlGrpTabContainerCommandsSection.Name = "laytCntrlGrpTabContainerCommandsSection";
-            this.laytCntrlGrpTabContainerCommandsSection.Size = new System.Drawing.Size(481, 313);
+            this.laytCntrlGrpTabContainerCommandsSection.Size = new System.Drawing.Size(328, 313);
             this.laytCntrlGrpTabContainerCommandsSection.TextVisible = false;
             // 
             // layoutControlItem6
@@ -435,9 +435,9 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.panelControl1;
-            this.layoutControlItem10.Location = new System.Drawing.Point(300, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(293, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(161, 293);
+            this.layoutControlItem10.Size = new System.Drawing.Size(15, 293);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -490,7 +490,7 @@
             this.emptySpaceItem13.AllowHotTrack = false;
             this.emptySpaceItem13.Location = new System.Drawing.Point(283, 0);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(17, 293);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(10, 293);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem14
@@ -534,6 +534,7 @@
             this.mpCntrlOpenDashboard.Size = new System.Drawing.Size(1206, 886);
             this.mpCntrlOpenDashboard.TabIndex = 0;
             this.mpCntrlOpenDashboard.ZoomLevel = 14D;
+            this.mpCntrlOpenDashboard.MapItemClick += new DevExpress.XtraMap.MapItemClickEventHandler(this.MpCntrlOpenDashboardMapItemClick);
             this.mpCntrlOpenDashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MpCntrlOpenDashboardMouseDown);
             this.vectorItemsLayerOpenDashboardDumpsterSource.Data = this.listSourceDataAdapterOpenDashboardDumpsterSource;
             this.vectorItemsOpenLayerGeofence.Data = this.mapItemStorageOpenLayerGeofence;
@@ -867,7 +868,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UcDashboard";
             this.Size = new System.Drawing.Size(1577, 1092);
-            this.Load += new System.EventHandler(this.UcDashboard_Load);
+            this.Load += new System.EventHandler(this.UcDashboardLoad);
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDashboardContainer)).EndInit();
             this.layCntrlGrpDashboardContainer.ResumeLayout(false);
             this.layCntrlGrpDashboardContainer.PerformLayout();

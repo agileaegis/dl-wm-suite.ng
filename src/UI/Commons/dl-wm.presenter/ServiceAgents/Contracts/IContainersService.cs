@@ -8,6 +8,7 @@ namespace dl.wm.presenter.ServiceAgents.Contracts
 {
     public interface IContainersService : IEntityService<ContainerUiModel>
     {
+        Task<List<ContainerPointUiModel>> GetAllActiveContainersPointsAsync(string authorizationToken = null);
         Task<IList<ContainerUiModel>> GetAllActiveContainersAsync(bool active);
         Task<ImageContainerDto> UploadImage(string imagePath, string imageFile);
         Task<ContainerUiModel> CreateContainerAsync(ContainerUiModel changedContainer, string authorizationToken = null);

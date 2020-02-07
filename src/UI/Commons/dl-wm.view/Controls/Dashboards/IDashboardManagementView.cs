@@ -5,5 +5,6 @@ namespace dl.wm.view.Controls.Dashboards
 {
     public interface IDashboardManagementView : IView
     {
+        bool OnDashboardLoaded { set; }
     }
 }

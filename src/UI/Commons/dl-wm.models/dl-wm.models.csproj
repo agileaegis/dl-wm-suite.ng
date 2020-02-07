@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DTOs\Base\IUiModel.cs" />
+    <Compile Include="DTOs\Containers\ContainerPointUiModel.cs" />
     <Compile Include="DTOs\Containers\ImageContainerDto.cs" />
     <Compile Include="DTOs\Containers\ContainerForCreationUiModel.cs" />
     <Compile Include="DTOs\Containers\ContainerForModificationUiModel.cs" />

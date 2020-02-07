@@ -9,4 +9,11 @@ namespace dl.wm.view.Controls.Containers
     bool NoneContainerWasRetrieved { set; }
     List<ContainerUiModel> Containers { get; set; }
     }
+
+    public interface IContainersPointsView : IView
+
+    {
+        bool NoneContainerPointWasRetrieved { set; }
+        List<ContainerPointUiModel> ContainersPoints { set; }
+    }
 }

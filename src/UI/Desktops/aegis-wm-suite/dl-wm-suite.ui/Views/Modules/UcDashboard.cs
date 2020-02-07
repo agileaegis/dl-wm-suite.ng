@@ -12,11 +12,14 @@ using dl.wm.view.Controls.Dashboards.Maps;
 using DevExpress.Map;
 using DevExpress.Utils.Menu;
 using DevExpress.XtraMap;
-using DevExpress.XtraSplashScreen;
+using dl.wm.models.DTOs.Containers;
+using dl.wm.presenter.ViewModel.Containers;
+using dl.wm.suite.ui.Views.Modules.Clustering;
+using dl.wm.view.Controls.Containers;
 
 namespace dl.wm.suite.ui.Views.Modules
 {
-    public partial class UcDashboard : BaseModule, IDashboardManagementView, IMapManagementView
+    public partial class UcDashboard : BaseModule, IDashboardManagementView, IMapManagementView, IContainersPointsView
     {
         public override string ModuleCaption => "Dashboard";
         public override bool AllowWaitDialog => true;
@@ -29,6 +32,7 @@ namespace dl.wm.suite.ui.Views.Modules
 
         private DashboardManagementPresenter _dashboardManagementPresenter;
         private MapManagementPresenter _mapManagementPresenter;
+        private ContainerPointsPresenter _containerPointsPresenter;
 
         #endregion
 
@@ -66,16 +70,43 @@ namespace dl.wm.suite.ui.Views.Modules
             InitializePresenters();
         }
 
+        private void InitCluster()
+        {
+            listSourceDataAdapterOpenDashboardDumpsterSource.Mappings.Latitude = "ContainerLat";
+            listSourceDataAdapterOpenDashboardDumpsterSource.Mappings.Longitude = "ContainerLon";
+
+            listSourceDataAdapterOpenDashboardDumpsterSource.AttributeMappings.Add(new MapItemAttributeMapping() { Member = "Id", Name = "Id" });
+            listSourceDataAdapterOpenDashboardDumpsterSource.AttributeMappings.Add(new MapItemAttributeMapping() { Member = "Name", Name = "ContainerPointType" });
+
+            _clusterer = new DistanceBasedClusterer();
+            if (_clusterer != null)
+            {
+                _clusterer.Clustering += ClustererClustering;
+                _clusterer.Clustered += ClustererClustered;
+                _clusterer.SetClusterItemFactory(new CustomClusterFactory());
+            }
+
+            listSourceDataAdapterOpenDashboardDumpsterSource.Clusterer = _clusterer;
+        }
+
+        private void ClustererClustered(object sender, ClusteredEventArgs e)
+        {
+        }
+
+        private void ClustererClustering(object sender, EventArgs e)
+        {
+        }
+
         private void InitializePresenters()
         {
+            _containerPointsPresenter = new ContainerPointsPresenter(this);
             _dashboardManagementPresenter = new DashboardManagementPresenter(this);
             _mapManagementPresenter = new MapManagementPresenter(this);
         }
 
-        private void UcDashboard_Load(object sender, System.EventArgs e)
+        private void UcDashboardLoad(object sender, System.EventArgs e)
         {
-            OnLoaded();
-            _mapManagementPresenter.LoadDashboardGeofence();
+            _dashboardManagementPresenter.UcDashboardWasLoaded();
         }
 
         private void OnLoaded()
@@ -101,6 +132,12 @@ namespace dl.wm.suite.ui.Views.Modules
 
         MapPushpin Pin { set; get; }
 
+        private void MpCntrlOpenDashboardMapItemClick(object sender, MapItemClickEventArgs e)
+        {
+            IList<MapItem> groupItems = e.Item.ClusteredItems;
+            if (groupItems != null)
+                mpCntrlOpenDashboard.ZoomToFit(groupItems);
+        }
 
         private void TggCmdAddRemoveDumpsterToggled(object sender, EventArgs e)
         {
@@ -278,5 +315,33 @@ namespace dl.wm.suite.ui.Views.Modules
         }
 
 
+        #region IDashboardManagementView
+
+        public bool OnDashboardLoaded
+        {
+            set
+            {
+                if (value)
+                {
+                    OnLoaded();
+                    _containerPointsPresenter.LoadAllContainersPoints();
+                    _mapManagementPresenter.LoadDashboardGeofence();
+                    InitCluster();
+                }
+            }
+        }
+
+        #endregion
+
+        #region IContainersPointsView
+
+        public bool NoneContainerPointWasRetrieved { get; set; }
+
+        public List<ContainerPointUiModel> ContainersPoints
+        {
+            set => listSourceDataAdapterOpenDashboardDumpsterSource.DataSource = value;
+        }
+
+        #endregion
     }
 }

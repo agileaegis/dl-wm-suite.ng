@@ -17,5 +17,11 @@ namespace dl.wm.presenter.ViewModel.Dashboards
             : base(view, service)
         {
         }
+
+
+        public void UcDashboardWasLoaded()
+        {
+            View.OnDashboardLoaded = true;
+        }
     }
 }
