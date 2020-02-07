@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcContainerClientsManagementContainers));
             this.layCntrlClientsContainersContainer = new DevExpress.XtraLayout.LayoutControl();
             this.grpCntrlClientsContainersGroupContainer = new DevExpress.XtraEditors.GroupControl();
             this.layCntrlClientsContainersGroupContainer = new DevExpress.XtraLayout.LayoutControl();
@@ -55,6 +57,7 @@
             this.grdClmnContainersContainerAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdClmnContainersContainerFillLevel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repoItmContainerFillLevel = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.imgCllctnContainerFillLevel = new DevExpress.Utils.ImageCollection(this.components);
             this.grdClmnContainersContainerTimeFull = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdClmnContainersContainerLastServicedDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repoItmContainerLastServiced = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
@@ -62,8 +65,10 @@
             this.repoItmContainerCreatedDate = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.grdClmnContainersContainerType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repoItmContainerType = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.imgCllctnContainerType = new DevExpress.Utils.ImageCollection(this.components);
             this.grdClmnContainersContainerStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repoItmContainerStatus = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection(this.components);
             this.grdClmnContainersContainerLat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdClmnContainersContainerLon = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdClmnContainersContainerImage = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -102,12 +107,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcContainers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvContainers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerFillLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerFillLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerLastServiced)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerLastServiced.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerCreatedDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerCreatedDate.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDicomClientsGroupContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -202,7 +210,6 @@
             // 
             this.pctrEdtContainerPhoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctrEdtContainerPhoto.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pctrEdtContainerPhoto.EditValue = global::dl.wm.suite.ui.Properties.Resources.menemeni_1;
             this.pctrEdtContainerPhoto.Location = new System.Drawing.Point(3, 3);
             this.pctrEdtContainerPhoto.Name = "pctrEdtContainerPhoto";
             this.pctrEdtContainerPhoto.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -502,7 +509,23 @@
             this.repoItmContainerFillLevel.AutoHeight = false;
             this.repoItmContainerFillLevel.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmContainerFillLevel.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Άδειος (0-24%)", "1", 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Μίσο-Άδειος (25-49%)", "2", 1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Μισο-Γεμάτος (50-74%)", "3", 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Γεμάτος (75-100%)", "4", 3),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Εκτός Σύνδεσης", "5", 4)});
             this.repoItmContainerFillLevel.Name = "repoItmContainerFillLevel";
+            this.repoItmContainerFillLevel.SmallImages = this.imgCllctnContainerFillLevel;
+            // 
+            // imgCllctnContainerFillLevel
+            // 
+            this.imgCllctnContainerFillLevel.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerFillLevel.ImageStream")));
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(0, "0_32.png");
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(1, "25_32.png");
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(2, "75_32.png");
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(3, "100_32.png");
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(4, "no_32.png");
             // 
             // grdClmnContainersContainerTimeFull
             // 
@@ -623,7 +646,7 @@
             this.grdClmnContainersContainerType.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerType.Caption = "Τύπος Κάδου";
             this.grdClmnContainersContainerType.ColumnEdit = this.repoItmContainerType;
-            this.grdClmnContainersContainerType.FieldName = "ContainerType";
+            this.grdClmnContainersContainerType.FieldName = "ContainerTypeValue";
             this.grdClmnContainersContainerType.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_waste_p2_16;
             this.grdClmnContainersContainerType.Name = "grdClmnContainersContainerType";
             this.grdClmnContainersContainerType.OptionsColumn.AllowEdit = false;
@@ -640,7 +663,21 @@
             this.repoItmContainerType.AutoHeight = false;
             this.repoItmContainerType.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmContainerType.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Σύμικτα", "1", 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Ανακύκλωση", "2", 1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Κομποστοποίηση", "3", 3),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Άλλο", "4", 0)});
             this.repoItmContainerType.Name = "repoItmContainerType";
+            this.repoItmContainerType.SmallImages = this.imgCllctnContainerType;
+            // 
+            // imgCllctnContainerType
+            // 
+            this.imgCllctnContainerType.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerType.ImageStream")));
+            this.imgCllctnContainerType.Images.SetKeyName(0, "icons8_trash_32.png");
+            this.imgCllctnContainerType.Images.SetKeyName(1, "icons8_recycle3_16.png");
+            this.imgCllctnContainerType.Images.SetKeyName(2, "icons8_waste_16.png");
+            this.imgCllctnContainerType.Images.SetKeyName(3, "icons8_waste_sorting_16.png");
             // 
             // grdClmnContainersContainerStatus
             // 
@@ -656,7 +693,7 @@
             this.grdClmnContainersContainerStatus.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerStatus.Caption = "Κατάσταση Κάδου";
             this.grdClmnContainersContainerStatus.ColumnEdit = this.repoItmContainerStatus;
-            this.grdClmnContainersContainerStatus.FieldName = "ContainerStatus";
+            this.grdClmnContainersContainerStatus.FieldName = "ContainerStatusValue";
             this.grdClmnContainersContainerStatus.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_hashtag_large_164;
             this.grdClmnContainersContainerStatus.Name = "grdClmnContainersContainerStatus";
             this.grdClmnContainersContainerStatus.OptionsColumn.AllowEdit = false;
@@ -673,7 +710,30 @@
             this.repoItmContainerStatus.AutoHeight = false;
             this.repoItmContainerStatus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmContainerStatus.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Κανονικός", "1", 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Σπασμένο Καπάκι", "2", 5),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Σπασμένος Κάδος", "3", 6),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Χαλασμένο Πεντάλ", "4", 7),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Χαλασμένη Ρόδα", "5", 8),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Καμένος", "6", 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Αλλαγμένη Θέση", "7", 3),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Απών", "8", 4)});
             this.repoItmContainerStatus.Name = "repoItmContainerStatus";
+            this.repoItmContainerStatus.SmallImages = this.imgCllctnContainerStatus;
+            // 
+            // imgCllctnContainerStatus
+            // 
+            this.imgCllctnContainerStatus.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerStatus.ImageStream")));
+            this.imgCllctnContainerStatus.Images.SetKeyName(0, "icons8_ok_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(1, "icons8_delete_bin_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(2, "icons8_gas_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(3, "icons8_hunt_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(4, "icons8_marker_off_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(5, "icons8_box_important_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(6, "icons8_error_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(7, "icons8_high_priority_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(8, "icons8_tire_32.png");
             // 
             // grdClmnContainersContainerLat
             // 
@@ -839,12 +899,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcContainers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvContainers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerFillLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerFillLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerLastServiced.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerLastServiced)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerCreatedDate.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerCreatedDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItmContainerStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDicomClientsGroupContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -914,5 +977,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn grdClmnContainersContainerLat;
         private DevExpress.XtraGrid.Columns.GridColumn grdClmnContainersContainerLon;
         private DevExpress.XtraGrid.Columns.GridColumn grdClmnContainersContainerImage;
+        private DevExpress.Utils.ImageCollection imgCllctnContainerFillLevel;
+        private DevExpress.Utils.ImageCollection imgCllctnContainerStatus;
+        private DevExpress.Utils.ImageCollection imgCllctnContainerType;
     }
 }

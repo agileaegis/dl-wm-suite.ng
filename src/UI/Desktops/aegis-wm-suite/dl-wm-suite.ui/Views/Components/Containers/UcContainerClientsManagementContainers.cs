@@ -242,6 +242,7 @@ namespace dl.wm.suite.ui.Views.Components.Containers
                     {
                         OnSaveFlyoutContainer();
                     }
+                    _containersPresenter.LoadAllContainers();
                 }
             }
         }

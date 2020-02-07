@@ -29,7 +29,9 @@ namespace dl.wm.suite.common.dtos.Vms.Containers
     [Required] [Editable(true)] public virtual Guid ContainerCreatedBy { get; set; }
     [Required] [Editable(true)] public virtual Guid ContainerModifiedBy { get; set; }
     [Required] [Editable(true)] public virtual string ContainerType { get; set; }
+    [Required] [Editable(true)] public virtual string ContainerTypeValue { get; set; }
     [Required] [Editable(true)] public virtual string ContainerStatus { get; set; }
+    [Required] [Editable(true)] public virtual string ContainerStatusValue { get; set; }
 
     [Required(AllowEmptyStrings = false)]
     [Editable(true)]

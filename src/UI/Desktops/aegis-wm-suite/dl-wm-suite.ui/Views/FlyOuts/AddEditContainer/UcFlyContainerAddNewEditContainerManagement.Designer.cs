@@ -29,28 +29,22 @@
     private void InitializeComponent()
     {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcFlyContainerAddNewEditContainerManagement));
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel1 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel2 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel3 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcFlyContainerAddNewEditContainerManagement));
             this.layCntrlFlyoutAddNewEditContainersContainer = new DevExpress.XtraLayout.LayoutControl();
-            this.imgCllctnContainerMandatory = new DevExpress.Utils.ImageCollection(this.components);
-            this.imgCllctnContainerFillLevel = new DevExpress.Utils.ImageCollection(this.components);
-            this.imgCllctnContainerType = new DevExpress.Utils.ImageCollection(this.components);
-            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection(this.components);
-            this.mapItemStorage1 = new DevExpress.XtraMap.MapItemStorage();
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem13 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem14 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.openFileDialogPhotoContainer = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.grpCntrlFlyoutAddNewEditContainersContainer = new DevExpress.XtraEditors.GroupControl();
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer = new DevExpress.XtraLayout.LayoutControl();
             this.trckBrCntrlLevelContainer = new DevExpress.XtraEditors.TrackBarControl();
             this.imgCmbBxEdtContainerMandatoryTypeCollection = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.imgCllctnContainerMandatory = new DevExpress.Utils.ImageCollection(this.components);
             this.imgCmbBxEdtContainerFillLevel = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.imgCllctnContainerFillLevel = new DevExpress.Utils.ImageCollection(this.components);
             this.imgCmbBxEdtContainerType = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.imgCllctnContainerType = new DevExpress.Utils.ImageCollection(this.components);
             this.imgCmbBxEdtContainerStatus = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection(this.components);
             this.pctrEdtContainerPhoto = new DevExpress.XtraEditors.PictureEdit();
             this.lblCntrlImageContainerMandatoryType = new DevExpress.XtraEditors.LabelControl();
             this.lblCntrlImageContainerPhoto = new DevExpress.XtraEditors.LabelControl();
@@ -71,6 +65,7 @@
             this.tgglSwtchEditMapPointContainer = new DevExpress.XtraEditors.ToggleSwitch();
             this.mpCntrlAddEditContainer = new DevExpress.XtraMap.MapControl();
             this.vectorItemsLayerContainerPoint = new DevExpress.XtraMap.VectorItemsLayer();
+            this.mapItemStorage1 = new DevExpress.XtraMap.MapItemStorage();
             this.layCntrlGrpEvtAddEditEmployeeAddressContainer = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -134,17 +129,14 @@
             this.layoutControlItem36 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem13 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem14 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.openFileDialogPhotoContainer = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlFlyoutAddNewEditContainersContainer)).BeginInit();
             this.layCntrlFlyoutAddNewEditContainersContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerMandatory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerFillLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerType)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpFlyoutAddNewEditEmployeeContainer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpCntrlFlyoutAddNewEditContainersContainer)).BeginInit();
             this.grpCntrlFlyoutAddNewEditContainersContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlFlyoutAddNewEditEmployeeGrpContainer)).BeginInit();
@@ -152,9 +144,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.trckBrCntrlLevelContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trckBrCntrlLevelContainer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCmbBxEdtContainerMandatoryTypeCollection.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerMandatory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCmbBxEdtContainerFillLevel.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerFillLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCmbBxEdtContainerType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCmbBxEdtContainerStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrEdtContainerPhoto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddEditContainerAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtEdtContainerMandatoryPickupDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -220,7 +216,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpFlyoutAddNewEditEmployeeContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).BeginInit();
             this.SuspendLayout();
             // 
             // layCntrlFlyoutAddNewEditContainersContainer
@@ -233,86 +233,6 @@
             this.layCntrlFlyoutAddNewEditContainersContainer.Size = new System.Drawing.Size(1182, 796);
             this.layCntrlFlyoutAddNewEditContainersContainer.TabIndex = 0;
             this.layCntrlFlyoutAddNewEditContainersContainer.Text = "layoutControl1";
-            // 
-            // imgCllctnContainerMandatory
-            // 
-            this.imgCllctnContainerMandatory.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerMandatory.ImageStream")));
-            this.imgCllctnContainerMandatory.Images.SetKeyName(0, "icons8_today_32.png");
-            this.imgCllctnContainerMandatory.Images.SetKeyName(1, "icons8_plus_1_day_32.png");
-            this.imgCllctnContainerMandatory.Images.SetKeyName(2, "icons8_tuesday_32.png");
-            this.imgCllctnContainerMandatory.Images.SetKeyName(3, "icons8_plus_1_month_32.png");
-            this.imgCllctnContainerMandatory.Images.SetKeyName(4, "icons8_plus_1_year_32.png");
-            this.imgCllctnContainerMandatory.Images.SetKeyName(5, "icons8_calendar_20_32.png");
-            // 
-            // imgCllctnContainerFillLevel
-            // 
-            this.imgCllctnContainerFillLevel.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerFillLevel.ImageStream")));
-            this.imgCllctnContainerFillLevel.Images.SetKeyName(0, "0_32.png");
-            this.imgCllctnContainerFillLevel.Images.SetKeyName(1, "25_32.png");
-            this.imgCllctnContainerFillLevel.Images.SetKeyName(2, "75_32.png");
-            this.imgCllctnContainerFillLevel.Images.SetKeyName(3, "100_32.png");
-            this.imgCllctnContainerFillLevel.Images.SetKeyName(4, "no_32.png");
-            // 
-            // imgCllctnContainerType
-            // 
-            this.imgCllctnContainerType.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerType.ImageStream")));
-            this.imgCllctnContainerType.Images.SetKeyName(0, "icons8_waste_32.png");
-            this.imgCllctnContainerType.Images.SetKeyName(1, "icons8_recycle_32.png");
-            this.imgCllctnContainerType.Images.SetKeyName(2, "icons8_popcorn_32.png");
-            this.imgCllctnContainerType.Images.SetKeyName(3, "icons8_trash_32.png");
-            // 
-            // imgCllctnContainerStatus
-            // 
-            this.imgCllctnContainerStatus.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerStatus.ImageStream")));
-            this.imgCllctnContainerStatus.Images.SetKeyName(0, "icons8_ok_32.png");
-            this.imgCllctnContainerStatus.Images.SetKeyName(1, "icons8_delete_bin_32.png");
-            this.imgCllctnContainerStatus.Images.SetKeyName(2, "icons8_gas_32.png");
-            this.imgCllctnContainerStatus.Images.SetKeyName(3, "icons8_hunt_32.png");
-            this.imgCllctnContainerStatus.Images.SetKeyName(4, "icons8_marker_off_32.png");
-            this.imgCllctnContainerStatus.Images.SetKeyName(5, "icons8_box_important_32.png");
-            this.imgCllctnContainerStatus.Images.SetKeyName(6, "icons8_error_32.png");
-            this.imgCllctnContainerStatus.Images.SetKeyName(7, "icons8_high_priority_32.png");
-            this.imgCllctnContainerStatus.Images.SetKeyName(8, "icons8_tire_32.png");
-            // 
-            // layCntrlGrpFlyoutAddNewEditEmployeeContainer
-            // 
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.GroupBordersVisible = false;
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Name = "layCntrlGrpFlyoutAddNewEditEmployeeContainer";
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Size = new System.Drawing.Size(1182, 796);
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.TextVisible = false;
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 115);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(1254, 204);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem13
-            // 
-            this.emptySpaceItem13.AllowHotTrack = false;
-            this.emptySpaceItem13.Location = new System.Drawing.Point(0, 0);
-            this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(187, 10);
-            this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem14
-            // 
-            this.emptySpaceItem14.AllowHotTrack = false;
-            this.emptySpaceItem14.Location = new System.Drawing.Point(0, 43);
-            this.emptySpaceItem14.Name = "emptySpaceItem14";
-            this.emptySpaceItem14.Size = new System.Drawing.Size(187, 10);
-            this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // openFileDialogPhotoContainer
-            // 
-            this.openFileDialogPhotoContainer.FileName = "container-image";
-            this.openFileDialogPhotoContainer.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialogPhotoContainerFileOk);
             // 
             // grpCntrlFlyoutAddNewEditContainersContainer
             // 
@@ -426,6 +346,16 @@
             this.imgCmbBxEdtContainerMandatoryTypeCollection.TabIndex = 1;
             this.imgCmbBxEdtContainerMandatoryTypeCollection.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerMandatoryTypeCollectionEditValueChanged);
             // 
+            // imgCllctnContainerMandatory
+            // 
+            this.imgCllctnContainerMandatory.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerMandatory.ImageStream")));
+            this.imgCllctnContainerMandatory.Images.SetKeyName(0, "icons8_today_32.png");
+            this.imgCllctnContainerMandatory.Images.SetKeyName(1, "icons8_plus_1_day_32.png");
+            this.imgCllctnContainerMandatory.Images.SetKeyName(2, "icons8_tuesday_32.png");
+            this.imgCllctnContainerMandatory.Images.SetKeyName(3, "icons8_plus_1_month_32.png");
+            this.imgCllctnContainerMandatory.Images.SetKeyName(4, "icons8_plus_1_year_32.png");
+            this.imgCllctnContainerMandatory.Images.SetKeyName(5, "icons8_calendar_20_32.png");
+            // 
             // imgCmbBxEdtContainerFillLevel
             // 
             this.imgCmbBxEdtContainerFillLevel.Location = new System.Drawing.Point(12, 183);
@@ -448,6 +378,15 @@
             this.imgCmbBxEdtContainerFillLevel.TabIndex = 1;
             this.imgCmbBxEdtContainerFillLevel.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerFillLevelEditValueChanged);
             // 
+            // imgCllctnContainerFillLevel
+            // 
+            this.imgCllctnContainerFillLevel.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerFillLevel.ImageStream")));
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(0, "0_32.png");
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(1, "25_32.png");
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(2, "75_32.png");
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(3, "100_32.png");
+            this.imgCllctnContainerFillLevel.Images.SetKeyName(4, "no_32.png");
+            // 
             // imgCmbBxEdtContainerType
             // 
             this.imgCmbBxEdtContainerType.Location = new System.Drawing.Point(12, 233);
@@ -459,15 +398,23 @@
             this.imgCmbBxEdtContainerType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.imgCmbBxEdtContainerType.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Σύμικτα", "1", 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Σύμικτα", "1", 2),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Ανακύκλωση", "2", 1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Κομποστοποιήση", "3", 2),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Άλλος", "4", 3)});
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Κομποστοποιήση", "3", 3),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Άλλος", "4", 0)});
             this.imgCmbBxEdtContainerType.Properties.SmallImages = this.imgCllctnContainerType;
             this.imgCmbBxEdtContainerType.Size = new System.Drawing.Size(391, 24);
             this.imgCmbBxEdtContainerType.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.imgCmbBxEdtContainerType.TabIndex = 1;
             this.imgCmbBxEdtContainerType.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerTypeEditValueChanged);
+            // 
+            // imgCllctnContainerType
+            // 
+            this.imgCllctnContainerType.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerType.ImageStream")));
+            this.imgCllctnContainerType.Images.SetKeyName(0, "icons8_trash_32.png");
+            this.imgCllctnContainerType.Images.SetKeyName(1, "icons8_recycle3_16.png");
+            this.imgCllctnContainerType.Images.SetKeyName(2, "icons8_waste_16.png");
+            this.imgCllctnContainerType.Images.SetKeyName(3, "icons8_waste_sorting_16.png");
             // 
             // imgCmbBxEdtContainerStatus
             // 
@@ -493,6 +440,19 @@
             this.imgCmbBxEdtContainerStatus.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.imgCmbBxEdtContainerStatus.TabIndex = 0;
             this.imgCmbBxEdtContainerStatus.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerStatusEditValueChanged);
+            // 
+            // imgCllctnContainerStatus
+            // 
+            this.imgCllctnContainerStatus.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerStatus.ImageStream")));
+            this.imgCllctnContainerStatus.Images.SetKeyName(0, "icons8_ok_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(1, "icons8_delete_bin_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(2, "icons8_gas_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(3, "icons8_hunt_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(4, "icons8_marker_off_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(5, "icons8_box_important_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(6, "icons8_error_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(7, "icons8_high_priority_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(8, "icons8_tire_32.png");
             // 
             // pctrEdtContainerPhoto
             // 
@@ -1365,6 +1325,17 @@
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextVisible = false;
             // 
+            // layCntrlGrpFlyoutAddNewEditEmployeeContainer
+            // 
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.GroupBordersVisible = false;
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Name = "layCntrlGrpFlyoutAddNewEditEmployeeContainer";
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Size = new System.Drawing.Size(1182, 796);
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.TextVisible = false;
+            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.grpCntrlFlyoutAddNewEditContainersContainer;
@@ -1373,6 +1344,35 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(1180, 794);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 115);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(1254, 204);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem13
+            // 
+            this.emptySpaceItem13.AllowHotTrack = false;
+            this.emptySpaceItem13.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem13.Name = "emptySpaceItem13";
+            this.emptySpaceItem13.Size = new System.Drawing.Size(187, 10);
+            this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem14
+            // 
+            this.emptySpaceItem14.AllowHotTrack = false;
+            this.emptySpaceItem14.Location = new System.Drawing.Point(0, 43);
+            this.emptySpaceItem14.Name = "emptySpaceItem14";
+            this.emptySpaceItem14.Size = new System.Drawing.Size(187, 10);
+            this.emptySpaceItem14.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // openFileDialogPhotoContainer
+            // 
+            this.openFileDialogPhotoContainer.FileName = "container-image";
+            this.openFileDialogPhotoContainer.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialogPhotoContainerFileOk);
             // 
             // UcFlyContainerAddNewEditContainerManagement
             // 
@@ -1384,14 +1384,6 @@
             this.Load += new System.EventHandler(this.UcFlyContainerAddNewEditContainerManagementLoad);
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlFlyoutAddNewEditContainersContainer)).EndInit();
             this.layCntrlFlyoutAddNewEditContainersContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerMandatory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerFillLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerType)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpFlyoutAddNewEditEmployeeContainer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpCntrlFlyoutAddNewEditContainersContainer)).EndInit();
             this.grpCntrlFlyoutAddNewEditContainersContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlFlyoutAddNewEditEmployeeGrpContainer)).EndInit();
@@ -1399,9 +1391,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.trckBrCntrlLevelContainer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trckBrCntrlLevelContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCmbBxEdtContainerMandatoryTypeCollection.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerMandatory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCmbBxEdtContainerFillLevel.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerFillLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCmbBxEdtContainerType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCmbBxEdtContainerStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctrEdtContainerPhoto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddEditContainerAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtEdtContainerMandatoryPickupDate.Properties.CalendarTimeProperties)).EndInit();
@@ -1467,7 +1463,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpFlyoutAddNewEditEmployeeContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).EndInit();
             this.ResumeLayout(false);
 
     }

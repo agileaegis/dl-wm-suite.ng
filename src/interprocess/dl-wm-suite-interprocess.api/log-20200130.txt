@@ -1,7 +1,0 @@
-2020-01-30 11:31:18.085 +02:00 [Information] User profile is available. Using '"C:\Users\maliganis\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
-2020-01-30 11:31:19.439 +02:00 [Information] Server startup
-2020-01-30 11:31:19.516 +02:00 [Information] Service Start
-2020-01-30 11:31:20.540 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:6300/swagger/index.html  
-2020-01-30 11:31:20.762 +02:00 [Information] Request finished in 222.5907ms 200 text/html
-2020-01-30 11:31:21.407 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:6300/swagger/v1/swagger.json  
-2020-01-30 11:31:21.622 +02:00 [Information] Request finished in 214.9115ms 200 application/json;charset=utf-8
