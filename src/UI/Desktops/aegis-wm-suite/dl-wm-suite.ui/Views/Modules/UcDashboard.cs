@@ -83,7 +83,7 @@ namespace dl.wm.suite.ui.Views.Modules
             {
                 _clusterer.Clustering += ClustererClustering;
                 _clusterer.Clustered += ClustererClustered;
-                _clusterer.SetClusterItemFactory(new CustomClusterFactory());
+                _clusterer.SetClusterItemFactory(new CustomClusterItemFactory());
             }
 
             listSourceDataAdapterOpenDashboardDumpsterSource.Clusterer = _clusterer;

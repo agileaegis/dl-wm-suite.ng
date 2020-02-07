@@ -252,6 +252,7 @@
       <DependentUpon>UcFlyEvtAddNewEditEmployeeManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Helpers\DashboardCustomClusterFactory.cs" />
+    <Compile Include="Views\Modules\Clustering\CustomClusterItemFactory.cs" />
     <Compile Include="Views\Modules\Clustering\CustomClusterFactory.cs" />
     <Compile Include="Views\Modules\UcAccount.cs">
       <SubType>UserControl</SubType>
