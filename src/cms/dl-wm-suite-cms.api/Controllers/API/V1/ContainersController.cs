@@ -346,6 +346,20 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
     }
 
     /// <summary>
+    /// Get - Retrieve All Containers Points
+    /// </summary>
+    /// <remarks>Retrieve Containers Points</remarks>
+    /// <response code="200">Resource retrieved correctly.</response>
+    /// <response code="500">Internal Server Error.</response>
+    [HttpGet("points", Name = "GetContainersPointsRoot")]
+    public async Task<IActionResult> GetContainersPointsAsync()
+    {
+      var containersPoints = await _inquiryAllContainersProcessor.GetContainersPointsAsync();
+
+      return Ok(containersPoints);
+    }
+
+    /// <summary>
     /// Get - Retrieve All/or Partial Paged Stored Containers
     /// </summary>
     /// <remarks>Retrieve paged Containers providing Paging Query</remarks>

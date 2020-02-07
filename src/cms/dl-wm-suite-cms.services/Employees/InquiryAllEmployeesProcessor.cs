@@ -27,16 +27,6 @@ namespace dl.wm.suite.cms.services.Employees
             _propertyMappingService = propertyMappingService;
         }
 
-        public Task<IList<Employee>> GetAllEmployeesAsync()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Task<IList<Employee>> GetActiveEmployeesAsync(bool active)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public Task<PagedList<Employee>> GetEmployeesAsync(EmployeesResourceParameters employeesResourceParameters)
         {
             var collectionBeforePaging =

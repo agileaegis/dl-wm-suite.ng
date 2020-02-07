@@ -5,6 +5,7 @@ using dl.wm.suite.cms.contracts.Containers;
 using dl.wm.suite.cms.model.Containers;
 using dl.wm.suite.cms.repository.ContractRepositories;
 using dl.wm.suite.common.dtos.Vms.Containers;
+using dl.wm.suite.common.dtos.Vms.Employees;
 using dl.wm.suite.common.infrastructure.Extensions;
 using dl.wm.suite.common.infrastructure.Helpers.ResourceParameters;
 using dl.wm.suite.common.infrastructure.Paging;
@@ -53,6 +54,12 @@ namespace dl.wm.suite.cms.services.Containers
             return Task.Run(() => PagedList<Container>.Create(collectionBeforePaging,
                 containersResourceParameters.PageIndex,
                 containersResourceParameters.PageSize));
+        }
+
+        public Task<List<ContainerPointUiModel>> GetContainersPointsAsync()
+        {
+          return Task.Run(() =>
+            _autoMapper.Map<List<ContainerPointUiModel>>(_containerRepository.FindAllContainersPoints()));
         }
     }
 }

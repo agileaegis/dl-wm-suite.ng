@@ -8,8 +8,6 @@ namespace dl.wm.suite.cms.contracts.Employees
 {
     public interface IInquiryAllEmployeesProcessor
     {
-        Task<IList<Employee>> GetAllEmployeesAsync();
-        Task<IList<Employee>> GetActiveEmployeesAsync(bool active);
-        Task<PagedList<Employee>> GetEmployeesAsync(EmployeesResourceParameters employeesResourceParameters);
+      Task<PagedList<Employee>> GetEmployeesAsync(EmployeesResourceParameters employeesResourceParameters);
     }
 }

@@ -347,6 +347,7 @@ namespace dl.wm.suite.cms.api
         cfg.AddProfile<ContainerEntityToContainerUiAutoMapperProfile>();
         cfg.AddProfile<ContainerUiModelToContainerEntityAutoMapperProfile>();
         cfg.AddProfile<ContainerEntityToContainerDeletionUiAutoMapperProfile>();
+        cfg.AddProfile<ContainerEntityToContainerPointUiAutoMapperProfile>();
 
         cfg.AddProfile<EmployeeRoleEntityToEmployeeRolUiAutoMapperProfile>();
         cfg.AddProfile<DepartmentEntityToDepartmentUiAutoMapperProfile>();

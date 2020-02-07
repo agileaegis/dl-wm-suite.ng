@@ -67,6 +67,14 @@
             <response code="404">Resource Not Found</response>
             <response code="500">Internal Server Error.</response>
         </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.GetContainersPointsAsync">
+            <summary>
+            Get - Retrieve All Containers Points
+            </summary>
+            <remarks>Retrieve Containers Points</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
         <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ContainersController.GetContainersAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.ContainersResourceParameters,System.String)">
             <summary>
             Get - Retrieve All/or Partial Paged Stored Containers
