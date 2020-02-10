@@ -110,6 +110,10 @@ namespace dl.wm.suite.ui.Views.FlyOuts.LoginRegister
             {
                 if (value)
                 {
+                    UserToBeLoginIn.Message = "cancel";
+                    UserToBeLoginIn.Token = "";
+                    UserToBeLoginIn.RefreshToken = "";
+                    UserToBeLoginIn.Login = "";
                     (this.Parent as CustomFlyoutDialog).Close();
                 }
             }

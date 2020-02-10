@@ -30,16 +30,6 @@ namespace dl.wm.suite.ui
             this.OnLoginEventRequested += ModuleOnLoginEventRequested;
         }
 
-        //private void mainWindowsUiViewFlyoutHiding(object sender, FlyoutCancelEventArgs e)
-        //{
-        //    Flyout currentFlyOut = (sender as WindowsUIView).ActiveFlyoutContainer as Flyout;
-        //    if (currentFlyOut == null) return;
-        //    if (currentFlyOut.Equals(loginFlyout))
-        //    {
-        //        UcFlySignIn uc = currentFlyOut.Document.Control as UcFlySignIn;
-        //    }
-        //}
-
         private FlyoutAction CreateCloseAction()
         {
             var closeAction = new FlyoutAction
@@ -56,14 +46,22 @@ namespace dl.wm.suite.ui
         {
             MainGrp.Caption = "dl-wm suite";
             e.ContentContainer = MainGrp;
-
-            this.RaiseLogin(new LoginEventArgs(""));
-
-            //Todo: Get the response Roles and parameterize Tiles and Documents
-
-            CorePg.Caption = _userToBeLoginIn.Login;
         }
 
+        private void MainLoad(object sender, EventArgs e)
+        {
+            LoginEventArgs args =
+                new LoginEventArgs("OnStartupLogin");
+            this.OnLoginRequested(args);
+
+            if (_userToBeLoginIn.Message == "cancel")
+            {
+                Application.Exit();
+            }
+
+            //Todo: Get the response Roles and parameterize Tiles and Documents
+            CorePg.Caption = _userToBeLoginIn.Login;
+        }
 
         private void MainWindowsUiViewNavigatedTo(object sender, NavigationEventArgs e)
         {
@@ -77,11 +75,12 @@ namespace dl.wm.suite.ui
             if (mainWindowsUiView.ActiveFlyoutContainer == loginFlyout)
                 mainWindowsUiView.ActivateContainer(MainGrp);
         }
+
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             base.OnClosing(e);
-            if (mainWindowsUiView.ShowFlyoutDialog(closeFlyout) != DialogResult.Yes)
-                e.Cancel = true;
+                if (mainWindowsUiView.ShowFlyoutDialog(closeFlyout) != DialogResult.Yes)
+                    e.Cancel = true;
         }
 
         private void WindowsUiViewQueryControl(object sender, QueryControlEventArgs e)
@@ -100,8 +99,6 @@ namespace dl.wm.suite.ui
             e.Document.Tag = module;
             e.Control = module;
         }
-
-
 
         #region flyouts
 
@@ -208,8 +205,8 @@ namespace dl.wm.suite.ui
             public string Text { get; }
         }
 
-
-        
         #endregion
+
+
     }
 }

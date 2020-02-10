@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
@@ -67,8 +67,8 @@
             this.ucSettingsDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.ucAccountDocument = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Document(this.components);
             this.ucDashboard = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
-            this.ucContainers = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.ucRoutes = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
+            this.ucContainers = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.ucVehicles = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.ucEmployees = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
             this.ucSensors = new DevExpress.XtraBars.Docking2010.Views.WindowsUI.Tile(this.components);
@@ -102,8 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ucSettingsDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucAccountDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucDashboard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ucContainers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucRoutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ucContainers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucVehicles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucSensors)).BeginInit();
@@ -364,6 +364,21 @@
             this.ucDashboard.Group = "Main";
             this.ucDashboard.Name = "ucDashboard";
             // 
+            // ucRoutes
+            // 
+            this.ucRoutes.Document = this.ucRoutesDocument;
+            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            tileItemElement2.Appearance.Normal.Options.UseFont = true;
+            tileItemElement2.Image = global::dl.wm.suite.ui.Properties.Resources.journey_100px;
+            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            tileItemElement2.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
+            tileItemElement2.Text = "Διαδρομές";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
+            this.ucRoutes.Elements.Add(tileItemElement2);
+            this.ucRoutes.Group = "Main";
+            this.MainGrp.SetID(this.ucRoutes, 10);
+            this.ucRoutes.Name = "ucRoutes";
+            // 
             // ucContainers
             // 
             this.ucContainers.Appearances.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -383,21 +398,6 @@
             this.ucContainers.Group = "Main";
             this.MainGrp.SetID(this.ucContainers, 4);
             this.ucContainers.Name = "ucContainers";
-            // 
-            // ucRoutes
-            // 
-            this.ucRoutes.Document = this.ucRoutesDocument;
-            tileItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            tileItemElement2.Appearance.Normal.Options.UseFont = true;
-            tileItemElement2.Image = global::dl.wm.suite.ui.Properties.Resources.journey_100px;
-            tileItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            tileItemElement2.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.Top;
-            tileItemElement2.Text = "Διαδρομές";
-            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            this.ucRoutes.Elements.Add(tileItemElement2);
-            this.ucRoutes.Group = "Main";
-            this.MainGrp.SetID(this.ucRoutes, 10);
-            this.ucRoutes.Name = "ucRoutes";
             // 
             // ucVehicles
             // 
@@ -653,6 +653,7 @@
             this.ShowIcon = false;
             this.Text = "dl - Waste Management";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainLoad);
             ((System.ComponentModel.ISupportInitialize)(this.mainBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDocumentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainWindowsUiView)).EndInit();
@@ -671,8 +672,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ucSettingsDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucAccountDocument)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucDashboard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ucContainers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucRoutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ucContainers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucVehicles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucSensors)).EndInit();
