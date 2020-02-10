@@ -18,7 +18,7 @@ namespace dl.wm.presenter.Utilities
         {
         }
 
-        private string RegistryKeyPathClient => "SOFTWARE\\\\Agiledl\\\\Clients\\\\dlWm";
+        private string RegistryKeyPathClient => "SOFTWARE\\\\digitalabs\\\\Clients\\\\dlwm";
 
         private string IpAddressConfigRegistryKey => "IP";
         private string TokenConfigRegistryKey => "TKN";

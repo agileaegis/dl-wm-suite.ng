@@ -34,7 +34,16 @@ namespace dl.wm.presenter.ServiceAgents.Impls.Base
     public virtual async Task<List<TEntity>> GetEntitiesAsync(string authorizationToken = null)
     {
       UriBuilder builder = CreateUriBuilder();
-      return await RequestProvider.GetAsync<List<TEntity>>(builder.ToString(), authorizationToken);
+      try
+      {
+          return await RequestProvider.GetAsync<List<TEntity>>(builder.ToString(), authorizationToken);
+      }
+      catch (Exception e)
+      {
+          //Todo: Handle Exception
+      }
+
+      return null;
     }
 
     public virtual async Task<TEntity> CreateEntityAsync(TEntity newEntity, string authorizationToken = null)
