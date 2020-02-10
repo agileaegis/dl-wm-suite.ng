@@ -102,7 +102,7 @@ namespace dl.wm.presenter.ServiceAgents.Impls
                 ContainerLong = changedContainer.ContainerLocationLong,
                 ContainerType = changedContainer.ContainerType,
                 ContainerStatus = changedContainer.ContainerStatus,
-                ContainerPickupDate = changedContainer.ContainerMandatoryPickupDate,
+                ContainerPickupDate = DateTime.Now,
                 ContainerPickupOption = changedContainer.ContainerMandatoryPickupOption,
                 ContainerPickupActive = changedContainer.ContainerMandatoryPickupActive,
                 ContainerAddress = changedContainer.ContainerAddress,
@@ -119,6 +119,11 @@ namespace dl.wm.presenter.ServiceAgents.Impls
                 result = JsonConvert.DeserializeObject<ContainerUiModel>(response.Content);
             }
             else if (response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                ContainerErrorModel resultError = JsonConvert.DeserializeObject<ContainerErrorModel>(response.Content);
+                throw new ServiceHttpRequestException<string>(response.StatusCode, resultError.errorMessage);
+            }
+            else if (response.StatusCode == HttpStatusCode.InternalServerError)
             {
                 ContainerErrorModel resultError = JsonConvert.DeserializeObject<ContainerErrorModel>(response.Content);
                 throw new ServiceHttpRequestException<string>(response.StatusCode, resultError.errorMessage);

@@ -173,21 +173,32 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
 
       string imageBlobName = Guid.NewGuid().ToString();
 
-      using (FileStream fs = new FileStream($"{imageFolder}\\{containerForCreationUiModel.ContainerImageName}",
-        FileMode.Open, FileAccess.Read, FileShare.Read, 8,
-        true))
+      try
       {
-        try
+        string imagePathFolder = string.Empty;
+        
+        //imagePathFolder = $"{imageFolder}//{containerForCreationUiModel.ContainerImageName}"; 
+        imagePathFolder = $"{imageFolder}\\{containerForCreationUiModel.ContainerImageName}"; 
+        
+        using (FileStream fs = new FileStream(imagePathFolder, FileMode.Open, FileAccess.Read, FileShare.Read, 8,
+          true))
         {
-          var isUploaded = await StorageHelper.UploadFileToStorage(fs, imageBlobName, _storageConfig);
+          try
+          {
+            var isUploaded = await StorageHelper.UploadFileToStorage(fs, imageBlobName, _storageConfig);
 
-          if(!isUploaded)
-            return BadRequest(new { errorMessage = "ERROR_STORING_CONTAINER_IMAGE" });
+            if(!isUploaded)
+              return BadRequest(new { errorMessage = "ERROR_STORING_CONTAINER_IMAGE" });
+          }
+          catch (Exception e)
+          {
+            return BadRequest(new {errorMessage = "ERROR_STORING_CONTAINER_IMAGE"});
+          }
         }
-        catch (Exception e)
-        {
-          return BadRequest(new {errorMessage = "ERROR_STORING_CONTAINER_IMAGE"});
-        }
+      }
+      catch (Exception e)
+      {
+        return BadRequest(new { errorMessage = $"ERROR_RETRIEVE_CONTAINER_IMAGE. Details:{e.Message} inner: {e?.InnerException?.Message}" });
       }
 
 

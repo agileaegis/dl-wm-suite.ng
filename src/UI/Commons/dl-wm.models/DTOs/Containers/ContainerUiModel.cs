@@ -41,7 +41,11 @@ namespace dl.wm.models.DTOs.Containers
         [Editable(true)]
         public virtual string ContainerAddress { get; set; }
 
-        [Editable(true)] public virtual DateTime ContainerMandatoryPickupDate { get; set; }
+        [Editable(true)] public virtual DateTime ContainerMandatoryPickupDate 
+        {
+            get;
+            set;
+        }
         [Editable(true)] public virtual string ContainerMandatoryPickupOption { get; set; }
         [Required] [Editable(true)] public virtual bool ContainerMandatoryPickupActive { get; set; }
     }

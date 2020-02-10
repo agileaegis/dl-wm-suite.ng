@@ -325,7 +325,12 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
             get => dtEdtContainerMandatoryPickupDate.Enabled;
             set => dtEdtContainerMandatoryPickupDate.Enabled = value;
         }
-        public DateTime DtContainerMandatoryDateTimeValue { get; set; }
+
+        public DateTime DtContainerMandatoryDateTimeValue
+        {
+            get => (DateTime)dtEdtContainerMandatoryPickupDate.EditValue;
+            set => dtEdtContainerMandatoryPickupDate.EditValue = value;
+        }
 
         public DateTime SelectedContainerMandatoryDateTime
         {
