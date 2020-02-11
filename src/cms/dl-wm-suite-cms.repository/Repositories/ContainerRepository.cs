@@ -8,13 +8,9 @@ using dl.wm.suite.cms.repository.Repositories.Base;
 using dl.wm.suite.common.infrastructure.Domain.Queries;
 using dl.wm.suite.common.infrastructure.Exceptions.Repositories.Containers;
 using dl.wm.suite.common.infrastructure.Paging;
-using GeoAPI.Geometries;
-using NetTopologySuite.Geometries;
 using NetTopologySuite.IO;
 using NHibernate;
 using NHibernate.Criterion;
-using NHibernate.Spatial.Criterion;
-using NHibernate.Spatial.Dialect;
 
 namespace dl.wm.suite.cms.repository.Repositories
 {

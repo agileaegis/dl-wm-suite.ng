@@ -38,6 +38,24 @@ namespace dl.wm.suite.cms.api.Mqtt
         },
         new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
 
+      _client.Subscribe(new[]
+        {
+          "container/post"
+        },
+        new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+
+      _client.Subscribe(new[]
+        {
+          "container/put"
+        },
+        new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+
+      _client.Subscribe(new[]
+        {
+          "container/delete"
+        },
+        new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+
       _client.MqttMsgPublishReceived += ClientMqttMsgPublishReceived;
       _client.ConnectionClosed += ClientConnectionClosed;
       _client.MqttMsgPublished += ClientMqttMsgPublished;
