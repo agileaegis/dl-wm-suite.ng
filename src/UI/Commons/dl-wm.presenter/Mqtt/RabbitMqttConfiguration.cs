@@ -45,7 +45,7 @@ namespace dl.wm.presenter.Mqtt
             _client.MqttMsgSubscribed += ClientMqttMsgSubscribed;
             _client.MqttMsgUnsubscribed += ClientMqttMsgUnsubscribed;
 
-            _client.Connect($"CMS-{Guid.NewGuid().ToString()}",
+            _client.Connect($"UI-{Guid.NewGuid().ToString()}",
                 RabbitMqConfiguration.Username
               , RabbitMqConfiguration.Password
             );
@@ -70,7 +70,7 @@ namespace dl.wm.presenter.Mqtt
         private void ClientMqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
         {
             InboundCommandBuilderRepository.GetCommandBuilderRepository
-                    [e.Topic].Build(e.Message).RaiseWmEvent(CommandingInboundServer.GetCommandingInboundServer);
+                    [e.Topic].Build(e.Message).RaiseEvent(CommandingInboundServer.GetCommandingInboundServer);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace dl.wm.presenter.Commanding.Events.Inbound
             Model = model;
         }
 
-        public void RaiseWmEvent(CommandingInboundBaseServer inboundEventServer)
+        public void RaiseEvent(CommandingInboundBaseServer inboundEventServer)
         {
             inboundEventServer.RaiseContainerPostDetection((ContainerUiModel)Model);
         }

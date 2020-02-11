@@ -16,9 +16,9 @@ namespace dl.wm.presenter.Commanding.Commands.Inbounds.Base
     {
         public IInboundEventRaisingBehavior EventRaisingBehavior { get; set; }
 
-        public void RaiseWmEvent(CommandingInboundBaseServer inboundEventServer)
+        public void RaiseEvent(CommandingInboundBaseServer inboundEventServer)
         {
-            EventRaisingBehavior.RaiseWmEvent(inboundEventServer);
+            EventRaisingBehavior.RaiseEvent(inboundEventServer);
         }
     }
 }
