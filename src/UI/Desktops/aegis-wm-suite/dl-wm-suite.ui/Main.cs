@@ -10,6 +10,7 @@ using dl.wm.suite.ui.Views.FlyOuts.LoginRegister;
 using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraEditors;
+using dl.wm.presenter.Mqtt;
 
 namespace dl.wm.suite.ui
 {
@@ -28,6 +29,9 @@ namespace dl.wm.suite.ui
             closeFlyout.Action = CreateCloseAction();
 
             this.OnLoginEventRequested += ModuleOnLoginEventRequested;
+
+            IRabbitMqttConfiguration rabbitMqttConfiguration = new RabbitMqttConfiguration();
+            rabbitMqttConfiguration.EstablishConnection();
         }
 
         private FlyoutAction CreateCloseAction()

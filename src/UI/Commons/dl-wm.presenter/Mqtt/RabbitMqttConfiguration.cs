@@ -9,13 +9,7 @@ namespace dl.wm.presenter.Mqtt
 {
     public class RabbitMqttConfiguration : IRabbitMqttConfiguration
     {
-        private readonly IServiceProvider _service;
-
         private MqttClient _client;
-
-        public RabbitMqttConfiguration()
-        {
-        }
 
         public void EstablishConnection()
         {
