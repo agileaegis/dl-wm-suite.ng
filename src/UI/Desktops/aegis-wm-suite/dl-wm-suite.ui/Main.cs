@@ -94,7 +94,7 @@ namespace dl.wm.suite.ui
             module.OnAddEditUserRoleRequested += new EventHandler<BaseModule.FlyoutAddEditRoleEventArgs>(ModuleUserRoleManagementAddEditRoleRequested);
             module.OnAddEditUserRequested += new EventHandler<BaseModule.FlyoutAddEditUserEventArgs>(ModuleUserManagementAddEditUserRequested);
             module.OnEvtAddEditEmployeeRequested += new EventHandler<BaseModule.FlyoutAddEmployeeEventArgs>(ModuleEvtAddNewEditEmployeeManagementRequested);
-            module.OnAddEditContainerRequested += new EventHandler<BaseModule.FlyoutAddContainerEventArgs>(ModuleAddNewEditContainerManagementRequested);
+            module.OnAddEditContainerRequested += new EventHandler<BaseModule.FlyoutAddEditContainerEventArgs>(ModuleAddNewEditContainerManagementRequested);
 
             e.Document.Tag = module;
             e.Control = module;
@@ -138,7 +138,7 @@ namespace dl.wm.suite.ui
             timeTableManagementFlyoutDialog.ShowDialog();
         }
 
-        private void ModuleAddNewEditContainerManagementRequested(object sender, BaseModule.FlyoutAddContainerEventArgs e)
+        private void ModuleAddNewEditContainerManagementRequested(object sender, BaseModule.FlyoutAddEditContainerEventArgs e)
         {
             FlyoutAction onAddNewContainerManagementFlyoutAction = new FlyoutAction {Description = $"{e.Text}"};
             CustomFlyoutDialog addEditContainerManagementFlyoutDialog = new CustomFlyoutDialog(this, onAddNewContainerManagementFlyoutAction,

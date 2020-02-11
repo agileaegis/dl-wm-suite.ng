@@ -12,20 +12,33 @@ using System.Threading;
 using System.Windows.Forms;
 using DevExpress.Map;
 using DevExpress.XtraEditors;
-using DevExpress.XtraSplashScreen;
 using dl.wm.models.DTOs.Containers;
 using dl.wm.presenter.ViewModel.Maps;
+using dl.wm.view.Controls.Containers;
 using dl.wm.view.Controls.Maps;
 
 namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
 {
-    public partial class UcFlyContainerAddNewEditContainerManagement : BaseModule, IUcFlyContainerManagementView, IMapView
+    public partial class UcFlyContainerAddNewEditContainerManagement : BaseModule, IUcFlyContainerManagementView,  IMapView, IContainerImageView
     {
+        public FlyoutAddEditContainerEventArgs EventArgs { get; }
         private MapPresenter _mapPresenter;
         private UcFlyContainerManagementPresenter _ucFlyContainerManagementPresenter;
+        private ContainerImagePresenter _containerImagePresenter;
 
-        public UcFlyContainerAddNewEditContainerManagement(FlyoutAddContainerEventArgs flyoutAddEditContainerEventArgs)
+        public UcFlyContainerAddNewEditContainerManagement(FlyoutAddEditContainerEventArgs flyoutAddEditEditContainerEventArgs)
         {
+            EventArgs = flyoutAddEditEditContainerEventArgs;
+            if (EventArgs.SelectedContainerId != Guid.Empty)
+            {
+                IsAddMode = false;
+                SelectedContainerId = EventArgs.SelectedContainerId;
+            }
+            else
+            {
+                IsAddMode = true;
+            }
+
             InitializeComponent();
             InitializePresenters();
         }
@@ -34,6 +47,7 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
         {
             _ucFlyContainerManagementPresenter = new UcFlyContainerManagementPresenter(this);
             _mapPresenter = new MapPresenter(this);
+            _containerImagePresenter = new ContainerImagePresenter(this);
         }
 
         #region Locals
@@ -155,6 +169,8 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
 
         #region IUcFlyContainerManagementView
 
+        public bool IsAddMode { get; set; }
+
         public bool TxtContainerNameEnabled
         {
             get => txtAddEditContainerName.Enabled;
@@ -213,6 +229,19 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
             get => (Image)pctrEdtContainerPhoto.Image;
             set => pctrEdtContainerPhoto.Image = value;
         }
+
+
+        public bool OnLoadAsyncImage
+        {
+            set
+            {
+                if (value)
+                {
+                    SelectedContainerImageNameImageView = PctContainerImagePath;
+                    _containerImagePresenter.ContainerImagePopulate();
+                }
+            }
+        }
         public string PctContainerImagePath { get; set; }
         public string PctContainerImageServerPath { get; set; }
         public string PctContainerImagePathName { get; set; }
@@ -255,6 +284,17 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
             }
         }
 
+        public bool OnMapEditPoint
+        {
+            set
+            {
+                if (value)
+                {
+                    PopulatePointForContainer(PointLatValue, PointLonValue);
+                }
+            }
+        }
+
         private void PopulateNewPointForContainerIntoMap()
         {
             VectorItemsLayer vectorLayerPointContainer = mpCntrlAddEditContainer.Layers[0] as VectorItemsLayer;
@@ -278,6 +318,23 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
 
             PointLat = PointLatValue = p.GetY();
             PointLon = PointLonValue = p.GetX();
+
+            MapPushpin pin = new MapPushpin
+            {
+                Location = Gp
+            };
+
+            ((MapItemStorage)vectorLayerPointContainer.Data).Items.Add(pin);
+        }
+        private void PopulatePointForContainer(double lat, double lon)
+        {
+            VectorItemsLayer vectorLayerPointContainer = mpCntrlAddEditContainer.Layers[0] as VectorItemsLayer;
+
+            GeoPoint Gp = new GeoPoint()
+            {
+                Latitude = lat,
+                Longitude = lon,
+            };
 
             MapPushpin pin = new MapPushpin
             {
@@ -450,6 +507,7 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
                     imgCmbBxEdtContainerType.SelectedIndex = 0;
             }
         }
+
         public bool SelectedIndexTypeOfContainerIsFirstIndex { get; set; }
         public bool SelectedIndexTypeOfContainerIsCustom { get; set; }
 
@@ -478,7 +536,8 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
                     return i;
                 }
             }
-            return -1;        }
+            return -1;
+        }
 
         public string SelectedContainerTypeValue { get; set; }
         public string ChangedContainerTypeValue { get; set; }
@@ -549,6 +608,8 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
                 if (value)
                 {
                     OpenMapPopulate();
+                    if(!IsAddMode)
+                        _ucFlyContainerManagementPresenter.PopulateContainerDataForModification();
                 }
             }
         }
@@ -598,7 +659,6 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
                     openFileDialogPhotoContainer.Multiselect = false;
                     openFileDialogPhotoContainer.SupportMultiDottedExtensions = true;
                     openFileDialogPhotoContainer.CheckFileExists = true;
-                    //openFileDialogPhotoContainer.FilterIndex = 1;
                     openFileDialogPhotoContainer.RestoreDirectory = true;
 
                     if (openFileDialogPhotoContainer.ShowDialog() == DialogResult.OK)
@@ -620,6 +680,8 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
             }
         }
 
+        public ContainerUiModel SelectedContainer { get; set; }
+
         public ContainerUiModel ModifiedContainer { get; set; }
 
         public ContainerUiModel CreatedContainer { get; set; }
@@ -635,6 +697,20 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
 
         #endregion
 
+        #region IContainerImageView
 
+        public string PctContainerImagePathValue
+        {
+            set
+            {
+                Uri blobUrl = new Uri(value);
+                pctrEdtContainerPhoto.LoadAsync(value);
+            }
+        }
+
+        public string SelectedContainerImageNameImageView { get; set; }
+
+
+        #endregion
     }
 }

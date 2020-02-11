@@ -12,6 +12,8 @@ namespace dl.wm.view.Controls.Containers.AddEditFlyoutContainer
 {
     public interface IUcFlyContainerManagementView : IView
     {
+        bool IsAddMode { get; set; }
+
         bool TxtContainerNameEnabled { get; set; }
         string TxtContainerNameValue { get; set; }
         string SelectedContainerName { get; set; }
@@ -27,6 +29,8 @@ namespace dl.wm.view.Controls.Containers.AddEditFlyoutContainer
         bool PctContainerImageEnabled { get; set; }
         bool PctContainerImageClear { set; }
         Image PctContainerImageValue { get; set; }
+        bool OnLoadAsyncImage { set; }
+
         string PctContainerImagePath { get; set; }
         string PctContainerImageServerPath { get; set; }
         string PctContainerImagePathName { get; set; }
@@ -43,6 +47,7 @@ namespace dl.wm.view.Controls.Containers.AddEditFlyoutContainer
         Geometry SelectedMapContainer { get; set; }
         Geometry ChangedMapContainer { get; set; }
         bool OnCheckMapAddNewPoint { set; }
+        bool OnMapEditPoint { set; }
 
         bool TgglContainerPointEnabled { get; set; }
         bool TgglContainerPointValue { get; set; }
@@ -106,7 +111,7 @@ namespace dl.wm.view.Controls.Containers.AddEditFlyoutContainer
         bool OnDemandSelectContainerPhoto { set; }
         bool MapClearFromPoints { set; }
 
-
+        ContainerUiModel SelectedContainer { get; set; }
         ContainerUiModel ModifiedContainer { get; set; }
         ContainerUiModel CreatedContainer { get; set; }
         ContainerUiModel ChangedContainer { get; set; }

@@ -6,6 +6,7 @@ using dl.wm.suite.cms.model.Containers;
 using dl.wm.suite.cms.repository.ContractRepositories;
 using dl.wm.suite.cms.repository.Repositories.Base;
 using dl.wm.suite.common.infrastructure.Domain.Queries;
+using dl.wm.suite.common.infrastructure.Exceptions.Repositories.Containers;
 using dl.wm.suite.common.infrastructure.Paging;
 using GeoAPI.Geometries;
 using NetTopologySuite.Geometries;
@@ -150,6 +151,69 @@ namespace dl.wm.suite.cms.repository.Repositories
           .SetFlushMode(FlushMode.Never)
           .List<Container>()
         ;
+    }
+
+    public Container FindOneBy(Guid id)
+    {
+      string queryStr =
+          $@"select c.Id, 
+                    c.Name,
+                    c.FillLevel,
+                    c.IsActive,
+                    c.TimeFull,
+                    c.LastServicedDate,
+                    c.CreatedDate,
+                    c.ModifiedDate,
+                    c.CreatedBy,
+                    c.ModifiedBy,
+                    c.ImagePath,
+                    c.Type,
+                    c.Status,
+                    c.Address,
+                    c.MandatoryPickupDate,
+                    c.MandatoryPickupActive,
+                    NHSP.AsText(c.Location) 
+                    from Container as c 
+                    where c.Location is not null and c.Id = :Id and c.IsActive = :IsActive"
+        ;
+
+       IList containersRepo = Session
+        .CreateQuery(queryStr)
+        .SetParameter("Id", id)
+        .SetParameter("IsActive", true)
+        .List();
+
+
+      if (containersRepo.Count > 1)
+      {
+        throw new MultipleContainersForAnIdException(id);
+      }
+
+      List<Container> containers = new List<Container>();
+
+      containers.AddRange(from object[] point in containersRepo
+                          select new Container()
+        {
+          Id = (Guid)point[0],
+          Name = (string)point[1],
+          FillLevel = (int)point[2],
+          IsActive = (bool)point[3],
+          TimeFull = (double)point[4],
+          LastServicedDate = (DateTime)point[5],
+          CreatedDate = (DateTime)point[6],
+          ModifiedDate = (DateTime)point[7],
+          CreatedBy = (Guid)point[8],
+          ModifiedBy = (Guid)point[9],
+          ImagePath = (string)point[10],
+          Type = (ContainerType)point[11],
+          Status = (ContainerStatus)point[12],
+          Address = (string)point[13],
+          MandatoryPickupDate = (DateTime)point[14],
+          MandatoryPickupActive = (bool)point[15],
+          Location = _wkt.Read((string)point[16]),
+        });
+
+      return containers.FirstOrDefault();
     }
   }
 }

@@ -396,7 +396,37 @@ namespace dl.wm.presenter.ViewModel.Containers
             }
         }
 
+        public async void PopulateContainerDataForModification()
+        {
+            View.SelectedContainer = await Service.GetEntityByIdAsync(View.SelectedContainerId, ClientSettingsSingleton.InstanceSettings().TokenConfigValue);
+            PrepareUiCtrlsAfterContainerSelection();
+        }
 
-
+        private void PrepareUiCtrlsAfterContainerSelection()
+        {
+            View.TxtContainerNameValue = View.SelectedContainer?.ContainerName;
+            View.TxtContainerAddressValue = View.SelectedContainer?.ContainerAddress;
+            if (View.SelectedContainer?.ContainerLevel != null)
+                View.BarContainerLevelValue = (int) View.SelectedContainer?.ContainerLevel;
+            View.CmbContainerFillLevelValue = View.SelectedContainer?.ContainerFillLevel;
+            View.CmbContainerTypeValue = View.SelectedContainer?.ContainerTypeValue;
+            View.CmbContainerStatusValue = View.SelectedContainer?.ContainerStatusValue;
+            if (View.SelectedContainer?.ContainerLocationLat != null)
+                View.PointLatValue = (double) View.SelectedContainer?.ContainerLocationLat;
+            if (View.SelectedContainer?.ContainerLocationLong != null)
+                View.PointLonValue = (double) View.SelectedContainer?.ContainerLocationLong;
+            View.OnMapEditPoint = true;
+            if (View.SelectedContainer?.ContainerMandatoryPickupActive != null)
+                View.ChckContainerMandatoryValue = (bool) View.SelectedContainer?.ContainerMandatoryPickupActive;
+            if (View.SelectedContainer?.ContainerMandatoryPickupDate != null)
+            {
+                View.DtContainerMandatoryDateTimeValue =
+                    (DateTime) View.SelectedContainer?.ContainerMandatoryPickupDate;
+                View.DtContainerMandatoryDateTimeValue = View.SelectedContainer.ContainerMandatoryPickupDate;
+            }
+            View.CmbContainerMandatoryOptionValue = View.SelectedContainer?.ContainerMandatoryPickupOption;
+            View.PctContainerImagePath = View.SelectedContainer?.ContainerImageName;
+            View.OnLoadAsyncImage = true;
+        }
     }
 }

@@ -44,7 +44,7 @@ namespace dl.wm.suite.cms.api.Mqtt
       _client.MqttMsgSubscribed += ClientMqttMsgSubscribed;
       _client.MqttMsgUnsubscribed += ClientMqttMsgUnsubscribed;
 
-      _client.Connect($"INTER-{Guid.NewGuid().ToString()}",
+      _client.Connect($"CMS-{Guid.NewGuid().ToString()}",
         Configuration.GetSection("RabbitMq:Username").Value
         , Configuration.GetSection("RabbitMq:Password").Value
       );

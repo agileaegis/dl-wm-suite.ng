@@ -625,12 +625,12 @@
             // 
             // timerSuccess
             // 
-            this.timerSuccess.Interval = 2500;
+            this.timerSuccess.Interval = 1500;
             this.timerSuccess.Tick += new System.EventHandler(this.TimerSuccessTick);
             // 
             // timerError
             // 
-            this.timerError.Interval = 2500;
+            this.timerError.Interval = 1500;
             this.timerError.Tick += new System.EventHandler(this.TimerErrorTick);
             // 
             // UcFlyLoginForget

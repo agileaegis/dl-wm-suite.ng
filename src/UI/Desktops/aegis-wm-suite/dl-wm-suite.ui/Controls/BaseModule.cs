@@ -69,26 +69,29 @@ namespace dl.wm.suite.ui.Controls
 
         #region AddEditContainer
 
-        protected virtual void OnAddNewContainerRequested(FlyoutAddContainerEventArgs args) {
-            (this.ParentForm.ActiveControl as BaseModule).RaiseAddNewContainer(args);
+        protected virtual void OnAddNewEditContainerRequested(FlyoutAddEditContainerEventArgs args) {
+            (this.ParentForm.ActiveControl as BaseModule).RaiseAddNewEditContainer(args);
         }
 
-        private void RaiseAddNewContainer(FlyoutAddContainerEventArgs args)
+        private void RaiseAddNewEditContainer(FlyoutAddEditContainerEventArgs args)
         {
-            EventHandler<FlyoutAddContainerEventArgs> handler = OnAddEditContainerRequested;
+            EventHandler<FlyoutAddEditContainerEventArgs> handler = OnAddEditContainerRequested;
             handler?.Invoke(this, args);
         }
 
-        public event EventHandler<FlyoutAddContainerEventArgs> OnAddEditContainerRequested;
+        public event EventHandler<FlyoutAddEditContainerEventArgs> OnAddEditContainerRequested;
 
-        public class FlyoutAddContainerEventArgs : EventArgs {
-            public FlyoutAddContainerEventArgs(string text) {
+        public class FlyoutAddEditContainerEventArgs : EventArgs {
+            public FlyoutAddEditContainerEventArgs(string text, Guid selectedContainerId)
+            {
                 Text = text;
+                SelectedContainerId = selectedContainerId;
             }
 
             public bool IsAccepted { get; set; }
 
             public string Text { get; }
+            public Guid SelectedContainerId { get; }
         }
 
         #endregion

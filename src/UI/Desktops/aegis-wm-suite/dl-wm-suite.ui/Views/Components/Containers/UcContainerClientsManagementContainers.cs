@@ -38,12 +38,12 @@ namespace dl.wm.suite.ui.Views.Components.Containers
 
         private void BtnEditContainerClick(object sender, EventArgs e)
         {
-
+            _ucContainerManagementPresenter.OpenFlyoutForEditContainerWasClicked();
         }
 
         private void BtnRemoveContainerClick(object sender, EventArgs e)
         {
-
+            _ucContainerManagementPresenter.RemoveContainerWasClicked();
         }
 
         private void UcClientsUcContainersLoad(object sender, EventArgs e)
@@ -233,9 +233,9 @@ namespace dl.wm.suite.ui.Views.Components.Containers
             {
                 if (value)
                 {
-                    FlyoutAddContainerEventArgs args =
-                        new FlyoutAddContainerEventArgs("OnAddNewContainer");
-                    this.OnAddNewContainerRequested(args);
+                    FlyoutAddEditContainerEventArgs args =
+                        new FlyoutAddEditContainerEventArgs("OnAddNewContainer", Guid.Empty);
+                    this.OnAddNewEditContainerRequested(args);
                     if (args.IsAccepted)
                     {
                         OnSaveFlyoutContainer();
@@ -252,17 +252,27 @@ namespace dl.wm.suite.ui.Views.Components.Containers
                 if (value)
                 {
                     PopulateNewPointForContainerIntoMap();
-                    PopulateContainerImage();
                 }
             }
         }
 
-        private void PopulateContainerImage()
+        public bool OpenFlyoutForEditContainer
         {
-            
+            set
+            {
+                if (value)
+                {
+                    FlyoutAddEditContainerEventArgs args =
+                        new FlyoutAddEditContainerEventArgs("OnAddNewContainer", SelectedContainerId);
+                    this.OnAddNewEditContainerRequested(args);
+                    if (args.IsAccepted)
+                    {
+                        OnSaveFlyoutContainer();
+                    }
+                    _containersPresenter.LoadAllContainers();
+                }
+            }
         }
-
         #endregion
-
     }
 }

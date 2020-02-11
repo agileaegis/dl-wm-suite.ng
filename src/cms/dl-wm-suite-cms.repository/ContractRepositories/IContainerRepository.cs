@@ -15,5 +15,6 @@ namespace dl.wm.suite.cms.repository.ContractRepositories
         Container FindByNameSpecifiedDate(string nameContainer, DateTime scheduledDateContainer);
         IList<Container> FindAllByScheduledDate(DateTime scheduledDate);
         IList<Container> FindAllBetweenScheduledDate(DateTime startedScheduledDate, DateTime endedScheduledDate);
+        Container FindOneBy(Guid id);
     }
 }

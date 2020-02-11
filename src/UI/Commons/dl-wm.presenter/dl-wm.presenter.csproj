@@ -129,7 +129,8 @@
     <Compile Include="Utilities\CryptoCls.cs" />
     <Compile Include="Utilities\RegistryEditCls.cs" />
     <Compile Include="ViewModel\Configurations\UcConfigurationManagementPresenter.cs" />
-    <Compile Include="ViewModel\Containers\ContainersPresenter - Copy.cs" />
+    <Compile Include="ViewModel\Containers\ContainerImagePresenter.cs" />
+    <Compile Include="ViewModel\Containers\ContainerPointsPresenter.cs" />
     <Compile Include="ViewModel\Containers\UcFlyContainerManagementPresenter.cs" />
     <Compile Include="ViewModel\Containers\UcContainerManagementPresenter.cs" />
     <Compile Include="ViewModel\Containers\ContainerManagementPresenter.cs" />

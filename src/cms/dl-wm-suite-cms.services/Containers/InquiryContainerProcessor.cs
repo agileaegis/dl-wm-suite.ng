@@ -26,7 +26,7 @@ namespace dl.wm.suite.cms.services.Containers
 
         public Task<ContainerUiModel> GetContainerAsync(Guid id)
         {
-            return Task.Run(() =>_autoMapper.Map<ContainerUiModel>(_containerRepository.FindBy(id)));
+            return Task.Run(() =>_autoMapper.Map<ContainerUiModel>(_containerRepository.FindOneBy(id)));
         }
     }
 }

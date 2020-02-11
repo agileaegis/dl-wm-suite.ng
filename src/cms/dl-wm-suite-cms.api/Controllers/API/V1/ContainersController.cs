@@ -177,8 +177,8 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
       {
         string imagePathFolder = string.Empty;
         
-        //imagePathFolder = $"{imageFolder}//{containerForCreationUiModel.ContainerImageName}"; 
-        imagePathFolder = $"{imageFolder}\\{containerForCreationUiModel.ContainerImageName}"; 
+        imagePathFolder = $"{imageFolder}//{containerForCreationUiModel.ContainerImageName}"; 
+        //imagePathFolder = $"{imageFolder}\\{containerForCreationUiModel.ContainerImageName}"; 
         
         using (FileStream fs = new FileStream(imagePathFolder, FileMode.Open, FileAccess.Read, FileShare.Read, 8,
           true))

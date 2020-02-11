@@ -65,6 +65,7 @@
     <Compile Include="Commons\LogMsgType.cs" />
     <Compile Include="Controls\Configurations\IUcCnfigurationManagementView.cs" />
     <Compile Include="Controls\Containers\AddEditFlyoutContainer\IUcFlyContainerManagementView.cs" />
+    <Compile Include="Controls\Containers\IContainerImageView.cs" />
     <Compile Include="Controls\Containers\IUcContainerManagementView.cs" />
     <Compile Include="Controls\Containers\IContainersView.cs" />
     <Compile Include="Controls\Containers\IContainerView.cs" />

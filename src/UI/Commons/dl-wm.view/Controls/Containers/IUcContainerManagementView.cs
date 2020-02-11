@@ -46,5 +46,6 @@ namespace dl.wm.view.Controls.Containers
         bool InitialLoadingWasCaught { set; }
         bool OpenFlyoutForAddContainer { set; }
         bool OnPopulateContainerDataAfterSelection { set; }
+        bool OpenFlyoutForEditContainer { set; }
     }
 }

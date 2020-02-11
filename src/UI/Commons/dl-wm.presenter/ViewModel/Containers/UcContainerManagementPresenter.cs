@@ -29,6 +29,14 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.OpenFlyoutForAddContainer = true;
         }
 
+        public void OpenFlyoutForEditContainerWasClicked()
+        {
+            View.OpenFlyoutForEditContainer = true;
+        }
+
+        public void RemoveContainerWasClicked()
+        {
+        }
         public async void ContainerFromGridWasSelected()
         {
             var urls = await StorageHelper.GetThumbNailUrls(new AzureStorageConfig(), View.SelectedContainerImageName);
