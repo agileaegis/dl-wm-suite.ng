@@ -16,22 +16,22 @@ namespace dl.wm.presenter.Mqtt
             _client = new MqttClient(RabbitMqConfiguration.Api);
 
             _client.Subscribe(new[]
-              {
-                  CommandingTopicsRepository.GetTopicRepository.ContainerPost
-        },
-              new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+                {
+                    CommandingTopicsRepository.GetTopicRepository.ContainerPost
+                },
+                new[] {MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE});
 
             _client.Subscribe(new[]
-              {
-                  CommandingTopicsRepository.GetTopicRepository.ContainerPut
-        },
-              new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+                {
+                    CommandingTopicsRepository.GetTopicRepository.ContainerPut
+                },
+                new[] {MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE});
 
             _client.Subscribe(new[]
-              {
-                  CommandingTopicsRepository.GetTopicRepository.ContainerDelete
-        },
-              new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+                {
+                    CommandingTopicsRepository.GetTopicRepository.ContainerDelete
+                },
+                new[] {MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE});
 
             _client.MqttMsgPublishReceived += ClientMqttMsgPublishReceived;
             _client.ConnectionClosed += ClientConnectionClosed;
@@ -41,7 +41,7 @@ namespace dl.wm.presenter.Mqtt
 
             _client.Connect($"UI-{Guid.NewGuid().ToString()}",
                 RabbitMqConfiguration.Username
-              , RabbitMqConfiguration.Password
+                , RabbitMqConfiguration.Password
             );
         }
 
