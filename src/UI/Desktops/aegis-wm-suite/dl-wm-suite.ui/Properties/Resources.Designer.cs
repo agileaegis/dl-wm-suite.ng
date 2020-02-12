@@ -101,6 +101,16 @@ namespace dl.wm.suite.ui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage black {
+            get {
+                object obj = ResourceManager.GetObject("black", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Calc {
@@ -156,6 +166,26 @@ namespace dl.wm.suite.ui.Properties {
         internal static DevExpress.Utils.Svg.SvgImage garbage_truck2 {
             get {
                 object obj = ResourceManager.GetObject("garbage_truck2", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage geofence_orange {
+            get {
+                object obj = ResourceManager.GetObject("geofence_orange", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage geofence_orange1 {
+            get {
+                object obj = ResourceManager.GetObject("geofence_orange1", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }

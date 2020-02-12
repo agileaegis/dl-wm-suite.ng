@@ -349,5 +349,55 @@ namespace dl.wm.suite.ui.Views.Modules
         {
 
         }
+
+        private void BarCheckItemContainerOrangeCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BarCheckItemContainerGrayCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BarCheckItemContainerRedCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BarCheckItemContainerYellowCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BarCheckItemContainerGreenCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BrChckItmGeofenceCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BrChckItmLockMapCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BrChckItmContainersWasteCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BrChckItmContainersRecycleCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BrChckItmContainersCompostCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }

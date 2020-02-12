@@ -486,6 +486,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\geofence_orange1.svg" />
+    <None Include="Resources\geofence_orange.svg" />
+    <None Include="Resources\black.svg" />
     <None Include="Resources\track_order3.svg" />
     <None Include="Resources\battery.svg" />
     <None Include="Resources\gray.svg" />

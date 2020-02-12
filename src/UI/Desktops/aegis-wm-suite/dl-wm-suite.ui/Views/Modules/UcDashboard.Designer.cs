@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel1 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel2 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel3 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
@@ -87,14 +86,14 @@
             this.brChckItmLockMap = new DevExpress.XtraBars.BarCheckItem();
             this.brEditItmContainerStatus = new DevExpress.XtraBars.BarEditItem();
             this.repoItemImgCmbContainerStatus = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection(this.components);
+            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection();
             this.brEditItmContainerFillLevel = new DevExpress.XtraBars.BarEditItem();
             this.repoItemImgCmbFillLevel = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.barCheckItem15 = new DevExpress.XtraBars.BarCheckItem();
-            this.barCheckItem16 = new DevExpress.XtraBars.BarCheckItem();
-            this.barCheckItem17 = new DevExpress.XtraBars.BarCheckItem();
-            this.barCheckItem18 = new DevExpress.XtraBars.BarCheckItem();
-            this.barCheckItem19 = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItemContainerGreen = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItemContainerYellow = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItemContainerGray = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItemContainerOrange = new DevExpress.XtraBars.BarCheckItem();
+            this.barCheckItemContainerRed = new DevExpress.XtraBars.BarCheckItem();
             this.barEditItemContainerLevel = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTrackBarContainerLevel = new DevExpress.XtraEditors.Repository.RepositoryItemTrackBar();
             this.brEditItmContainerLastServiced = new DevExpress.XtraBars.BarEditItem();
@@ -179,6 +178,7 @@
             this.barCheckItem13 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem14 = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.svgImageCollectionDashboard = new DevExpress.Utils.SvgImageCollection();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDashboardContainer)).BeginInit();
             this.layCntrlGrpDashboardContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCntrlDashboardMonitoringContainer)).BeginInit();
@@ -237,6 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollectionDashboard)).BeginInit();
             this.SuspendLayout();
             // 
             // layCntrlGrpDashboardContainer
@@ -260,7 +261,7 @@
             this.pnlCntrlDashboardMonitoringContainer.Controls.Add(this.xtraTabControl1);
             this.pnlCntrlDashboardMonitoringContainer.Location = new System.Drawing.Point(12, 12);
             this.pnlCntrlDashboardMonitoringContainer.Name = "pnlCntrlDashboardMonitoringContainer";
-            this.pnlCntrlDashboardMonitoringContainer.Size = new System.Drawing.Size(403, 360);
+            this.pnlCntrlDashboardMonitoringContainer.Size = new System.Drawing.Size(228, 360);
             this.pnlCntrlDashboardMonitoringContainer.TabIndex = 11;
             // 
             // xtraTabControl1
@@ -269,7 +270,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtrTbPgDashboardMonitorings;
-            this.xtraTabControl1.Size = new System.Drawing.Size(403, 360);
+            this.xtraTabControl1.Size = new System.Drawing.Size(228, 360);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtrTbPgDashboardMonitorings,
@@ -283,7 +284,7 @@
             this.xtrTbPgDashboardMonitorings.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_wall_mount_camera_32;
             this.xtrTbPgDashboardMonitorings.ImageOptions.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.xtrTbPgDashboardMonitorings.Name = "xtrTbPgDashboardMonitorings";
-            this.xtrTbPgDashboardMonitorings.Size = new System.Drawing.Size(397, 313);
+            this.xtrTbPgDashboardMonitorings.Size = new System.Drawing.Size(222, 313);
             this.xtrTbPgDashboardMonitorings.Text = "Παρακολούθηση";
             // 
             // laytCntrlTabContainerMonitoringSection
@@ -292,7 +293,7 @@
             this.laytCntrlTabContainerMonitoringSection.Location = new System.Drawing.Point(0, 0);
             this.laytCntrlTabContainerMonitoringSection.Name = "laytCntrlTabContainerMonitoringSection";
             this.laytCntrlTabContainerMonitoringSection.Root = this.laytCntrlGrpTabContainerMonitoringSection;
-            this.laytCntrlTabContainerMonitoringSection.Size = new System.Drawing.Size(397, 313);
+            this.laytCntrlTabContainerMonitoringSection.Size = new System.Drawing.Size(222, 313);
             this.laytCntrlTabContainerMonitoringSection.TabIndex = 0;
             this.laytCntrlTabContainerMonitoringSection.Text = "layoutControl1";
             // 
@@ -301,7 +302,7 @@
             this.laytCntrlGrpTabContainerMonitoringSection.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.laytCntrlGrpTabContainerMonitoringSection.GroupBordersVisible = false;
             this.laytCntrlGrpTabContainerMonitoringSection.Name = "laytCntrlGrpTabContainerMonitoringSection";
-            this.laytCntrlGrpTabContainerMonitoringSection.Size = new System.Drawing.Size(397, 313);
+            this.laytCntrlGrpTabContainerMonitoringSection.Size = new System.Drawing.Size(222, 313);
             this.laytCntrlGrpTabContainerMonitoringSection.TextVisible = false;
             // 
             // xtrTbPgDashboardCommands
@@ -314,7 +315,7 @@
             this.xtrTbPgDashboardCommands.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_cmd2_32;
             this.xtrTbPgDashboardCommands.ImageOptions.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
             this.xtrTbPgDashboardCommands.Name = "xtrTbPgDashboardCommands";
-            this.xtrTbPgDashboardCommands.Size = new System.Drawing.Size(397, 313);
+            this.xtrTbPgDashboardCommands.Size = new System.Drawing.Size(222, 313);
             this.xtrTbPgDashboardCommands.Text = "Commands";
             // 
             // laytCntrlTabContainerCommandsSection
@@ -333,7 +334,7 @@
             this.laytCntrlTabContainerCommandsSection.Location = new System.Drawing.Point(0, 0);
             this.laytCntrlTabContainerCommandsSection.Name = "laytCntrlTabContainerCommandsSection";
             this.laytCntrlTabContainerCommandsSection.Root = this.laytCntrlGrpTabContainerCommandsSection;
-            this.laytCntrlTabContainerCommandsSection.Size = new System.Drawing.Size(397, 313);
+            this.laytCntrlTabContainerCommandsSection.Size = new System.Drawing.Size(222, 313);
             this.laytCntrlTabContainerCommandsSection.TabIndex = 0;
             this.laytCntrlTabContainerCommandsSection.Text = "layoutControl1";
             // 
@@ -341,7 +342,7 @@
             // 
             this.simpleButton1.Location = new System.Drawing.Point(12, 96);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(342, 22);
+            this.simpleButton1.Size = new System.Drawing.Size(279, 22);
             this.simpleButton1.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.simpleButton1.TabIndex = 15;
             this.simpleButton1.Text = "simpleButton1";
@@ -354,7 +355,7 @@
             this.chckEdtCmdGeofencePopulationFromSelection.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.chckEdtCmdGeofencePopulationFromSelection.Properties.Appearance.Options.UseFont = true;
             this.chckEdtCmdGeofencePopulationFromSelection.Properties.Caption = "Populate Geofence OnDemand Selection";
-            this.chckEdtCmdGeofencePopulationFromSelection.Size = new System.Drawing.Size(342, 20);
+            this.chckEdtCmdGeofencePopulationFromSelection.Size = new System.Drawing.Size(279, 20);
             this.chckEdtCmdGeofencePopulationFromSelection.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.chckEdtCmdGeofencePopulationFromSelection.TabIndex = 14;
             // 
@@ -364,7 +365,7 @@
             this.btnClearPointsGeofence.Appearance.Options.UseFont = true;
             this.btnClearPointsGeofence.Location = new System.Drawing.Point(12, 149);
             this.btnClearPointsGeofence.Name = "btnClearPointsGeofence";
-            this.btnClearPointsGeofence.Size = new System.Drawing.Size(342, 23);
+            this.btnClearPointsGeofence.Size = new System.Drawing.Size(279, 23);
             this.btnClearPointsGeofence.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.btnClearPointsGeofence.TabIndex = 13;
             this.btnClearPointsGeofence.Text = "Clear Points for Geofence";
@@ -376,7 +377,7 @@
             this.btnStoreGeofence.Appearance.Options.UseFont = true;
             this.btnStoreGeofence.Location = new System.Drawing.Point(12, 230);
             this.btnStoreGeofence.Name = "btnStoreGeofence";
-            this.btnStoreGeofence.Size = new System.Drawing.Size(342, 23);
+            this.btnStoreGeofence.Size = new System.Drawing.Size(279, 23);
             this.btnStoreGeofence.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.btnStoreGeofence.TabIndex = 12;
             this.btnStoreGeofence.Text = "Store Geofence";
@@ -388,7 +389,7 @@
             this.btnClearGeofence.Appearance.Options.UseFont = true;
             this.btnClearGeofence.Location = new System.Drawing.Point(12, 203);
             this.btnClearGeofence.Name = "btnClearGeofence";
-            this.btnClearGeofence.Size = new System.Drawing.Size(342, 23);
+            this.btnClearGeofence.Size = new System.Drawing.Size(279, 23);
             this.btnClearGeofence.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.btnClearGeofence.TabIndex = 9;
             this.btnClearGeofence.Text = "Clear Geofence - Selected Points";
@@ -396,9 +397,9 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Location = new System.Drawing.Point(370, 12);
+            this.panelControl1.Location = new System.Drawing.Point(305, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(15, 289);
+            this.panelControl1.Size = new System.Drawing.Size(1, 289);
             this.panelControl1.TabIndex = 11;
             // 
             // tggCmdAddRemoveGeofencePoint
@@ -409,7 +410,7 @@
             this.tggCmdAddRemoveGeofencePoint.Properties.Appearance.Options.UseFont = true;
             this.tggCmdAddRemoveGeofencePoint.Properties.OffText = "No Action";
             this.tggCmdAddRemoveGeofencePoint.Properties.OnText = "Add Point";
-            this.tggCmdAddRemoveGeofencePoint.Size = new System.Drawing.Size(342, 26);
+            this.tggCmdAddRemoveGeofencePoint.Size = new System.Drawing.Size(279, 26);
             this.tggCmdAddRemoveGeofencePoint.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.tggCmdAddRemoveGeofencePoint.TabIndex = 10;
             this.tggCmdAddRemoveGeofencePoint.Toggled += new System.EventHandler(this.TggCmdAddRemoveGeofencePointToggled);
@@ -420,7 +421,7 @@
             this.btnPopulateGeofence.Appearance.Options.UseFont = true;
             this.btnPopulateGeofence.Location = new System.Drawing.Point(12, 176);
             this.btnPopulateGeofence.Name = "btnPopulateGeofence";
-            this.btnPopulateGeofence.Size = new System.Drawing.Size(342, 23);
+            this.btnPopulateGeofence.Size = new System.Drawing.Size(279, 23);
             this.btnPopulateGeofence.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.btnPopulateGeofence.TabIndex = 8;
             this.btnPopulateGeofence.Text = "Populate Geofence";
@@ -432,7 +433,7 @@
             this.btnPopulatePointsGeofence.Appearance.Options.UseFont = true;
             this.btnPopulatePointsGeofence.Location = new System.Drawing.Point(12, 122);
             this.btnPopulatePointsGeofence.Name = "btnPopulatePointsGeofence";
-            this.btnPopulatePointsGeofence.Size = new System.Drawing.Size(342, 23);
+            this.btnPopulatePointsGeofence.Size = new System.Drawing.Size(279, 23);
             this.btnPopulatePointsGeofence.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.btnPopulatePointsGeofence.TabIndex = 7;
             this.btnPopulatePointsGeofence.Text = "Populate Points for Geofence";
@@ -446,7 +447,7 @@
             this.tggCmdAddRemoveDumpster.Properties.Appearance.Options.UseFont = true;
             this.tggCmdAddRemoveDumpster.Properties.OffText = "Remove Dumpster";
             this.tggCmdAddRemoveDumpster.Properties.OnText = "Add Dumpster";
-            this.tggCmdAddRemoveDumpster.Size = new System.Drawing.Size(342, 26);
+            this.tggCmdAddRemoveDumpster.Size = new System.Drawing.Size(279, 26);
             this.tggCmdAddRemoveDumpster.StyleController = this.laytCntrlTabContainerCommandsSection;
             this.tggCmdAddRemoveDumpster.TabIndex = 6;
             this.tggCmdAddRemoveDumpster.Toggled += new System.EventHandler(this.TggCmdAddRemoveDumpsterToggled);
@@ -469,7 +470,7 @@
             this.emptySpaceItem13,
             this.layoutControlItem14});
             this.laytCntrlGrpTabContainerCommandsSection.Name = "laytCntrlGrpTabContainerCommandsSection";
-            this.laytCntrlGrpTabContainerCommandsSection.Size = new System.Drawing.Size(397, 313);
+            this.laytCntrlGrpTabContainerCommandsSection.Size = new System.Drawing.Size(318, 313);
             this.laytCntrlGrpTabContainerCommandsSection.TextVisible = false;
             // 
             // layoutControlItem6
@@ -477,7 +478,7 @@
             this.layoutControlItem6.Control = this.tggCmdAddRemoveDumpster;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(346, 30);
+            this.layoutControlItem6.Size = new System.Drawing.Size(283, 30);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -486,7 +487,7 @@
             this.layoutControlItem4.Control = this.btnPopulatePointsGeofence;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 110);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(346, 27);
+            this.layoutControlItem4.Size = new System.Drawing.Size(283, 27);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -495,7 +496,7 @@
             this.layoutControlItem7.Control = this.btnPopulateGeofence;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 164);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(346, 27);
+            this.layoutControlItem7.Size = new System.Drawing.Size(283, 27);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
@@ -504,16 +505,16 @@
             this.layoutControlItem9.Control = this.tggCmdAddRemoveGeofencePoint;
             this.layoutControlItem9.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(346, 30);
+            this.layoutControlItem9.Size = new System.Drawing.Size(283, 30);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.panelControl1;
-            this.layoutControlItem10.Location = new System.Drawing.Point(358, 0);
+            this.layoutControlItem10.Location = new System.Drawing.Point(293, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(19, 293);
+            this.layoutControlItem10.Size = new System.Drawing.Size(5, 293);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -522,7 +523,7 @@
             this.layoutControlItem8.Control = this.btnClearGeofence;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 191);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(346, 27);
+            this.layoutControlItem8.Size = new System.Drawing.Size(283, 27);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
@@ -531,7 +532,7 @@
             this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.Location = new System.Drawing.Point(0, 245);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(346, 48);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(283, 48);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem11
@@ -539,7 +540,7 @@
             this.layoutControlItem11.Control = this.btnStoreGeofence;
             this.layoutControlItem11.Location = new System.Drawing.Point(0, 218);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(346, 27);
+            this.layoutControlItem11.Size = new System.Drawing.Size(283, 27);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
@@ -548,7 +549,7 @@
             this.layoutControlItem12.Control = this.btnClearPointsGeofence;
             this.layoutControlItem12.Location = new System.Drawing.Point(0, 137);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(346, 27);
+            this.layoutControlItem12.Size = new System.Drawing.Size(283, 27);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
@@ -557,16 +558,16 @@
             this.layoutControlItem13.Control = this.chckEdtCmdGeofencePopulationFromSelection;
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 60);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(346, 24);
+            this.layoutControlItem13.Size = new System.Drawing.Size(283, 24);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
             // emptySpaceItem13
             // 
             this.emptySpaceItem13.AllowHotTrack = false;
-            this.emptySpaceItem13.Location = new System.Drawing.Point(346, 0);
+            this.emptySpaceItem13.Location = new System.Drawing.Point(283, 0);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(12, 293);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(10, 293);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem14
@@ -574,7 +575,7 @@
             this.layoutControlItem14.Control = this.simpleButton1;
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(346, 26);
+            this.layoutControlItem14.Size = new System.Drawing.Size(283, 26);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
@@ -591,9 +592,9 @@
             this.grpCntrlDashboardSelectionsContainer.Controls.Add(this.barDockControl8);
             this.grpCntrlDashboardSelectionsContainer.Controls.Add(this.barDockControl6);
             this.grpCntrlDashboardSelectionsContainer.Controls.Add(this.barDockControl5);
-            this.grpCntrlDashboardSelectionsContainer.Location = new System.Drawing.Point(424, 12);
+            this.grpCntrlDashboardSelectionsContainer.Location = new System.Drawing.Point(249, 12);
             this.grpCntrlDashboardSelectionsContainer.Name = "grpCntrlDashboardSelectionsContainer";
-            this.grpCntrlDashboardSelectionsContainer.Size = new System.Drawing.Size(1141, 1068);
+            this.grpCntrlDashboardSelectionsContainer.Size = new System.Drawing.Size(1316, 1068);
             this.grpCntrlDashboardSelectionsContainer.TabIndex = 9;
             this.grpCntrlDashboardSelectionsContainer.Text = "Επιλογές Χάρτη";
             // 
@@ -618,11 +619,11 @@
             this.brChckItmLockMap,
             this.brEditItmContainerStatus,
             this.brEditItmContainerFillLevel,
-            this.barCheckItem15,
-            this.barCheckItem16,
-            this.barCheckItem17,
-            this.barCheckItem18,
-            this.barCheckItem19,
+            this.barCheckItemContainerGreen,
+            this.barCheckItemContainerYellow,
+            this.barCheckItemContainerGray,
+            this.barCheckItemContainerOrange,
+            this.barCheckItemContainerRed,
             this.barEditItemContainerLevel,
             this.brEditItmContainerLastServiced});
             this.ribbonControl1.Location = new System.Drawing.Point(2, 39);
@@ -641,16 +642,17 @@
             this.repoItemImgCmbFillLevel,
             this.repositoryItemTrackBarContainerLevel,
             this.repositoryItemDateEditLastServiced});
-            this.ribbonControl1.Size = new System.Drawing.Size(1137, 144);
+            this.ribbonControl1.Size = new System.Drawing.Size(1312, 144);
             // 
             // brChckItmGeofence
             // 
             this.brChckItmGeofence.Caption = "Geofence";
             this.brChckItmGeofence.Id = 2;
-            this.brChckItmGeofence.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.map;
+            this.brChckItmGeofence.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.geofence_orange1;
             this.brChckItmGeofence.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brChckItmGeofence.ItemAppearance.Normal.Options.UseFont = true;
             this.brChckItmGeofence.Name = "brChckItmGeofence";
+            this.brChckItmGeofence.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BrChckItmGeofenceCheckedChanged);
             // 
             // brChckItmZoοmIn
             // 
@@ -696,6 +698,7 @@
             this.brChckItmContainersWaste.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brChckItmContainersWaste.ItemAppearance.Normal.Options.UseFont = true;
             this.brChckItmContainersWaste.Name = "brChckItmContainersWaste";
+            this.brChckItmContainersWaste.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BrChckItmContainersWasteCheckedChanged);
             // 
             // brChckItmContainersRecycle
             // 
@@ -705,6 +708,7 @@
             this.brChckItmContainersRecycle.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brChckItmContainersRecycle.ItemAppearance.Normal.Options.UseFont = true;
             this.brChckItmContainersRecycle.Name = "brChckItmContainersRecycle";
+            this.brChckItmContainersRecycle.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BrChckItmContainersRecycleCheckedChanged);
             // 
             // brChckItmContainersCompost
             // 
@@ -714,6 +718,7 @@
             this.brChckItmContainersCompost.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brChckItmContainersCompost.ItemAppearance.Normal.Options.UseFont = true;
             this.brChckItmContainersCompost.Name = "brChckItmContainersCompost";
+            this.brChckItmContainersCompost.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BrChckItmContainersCompostCheckedChanged);
             // 
             // brBtnItmZoοmIn
             // 
@@ -813,6 +818,7 @@
             this.brChckItmLockMap.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brChckItmLockMap.ItemAppearance.Normal.Options.UseFont = true;
             this.brChckItmLockMap.Name = "brChckItmLockMap";
+            this.brChckItmLockMap.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BrChckItmLockMapCheckedChanged);
             // 
             // brEditItmContainerStatus
             // 
@@ -880,44 +886,52 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repoItemImgCmbFillLevel.Name = "repoItemImgCmbFillLevel";
             // 
-            // barCheckItem15
+            // barCheckItemContainerGreen
             // 
-            this.barCheckItem15.Caption = "Άδειο (0-24%)";
-            this.barCheckItem15.Id = 18;
-            this.barCheckItem15.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.green;
-            this.barCheckItem15.Name = "barCheckItem15";
+            this.barCheckItemContainerGreen.Caption = "Άδειο (0-24%)";
+            this.barCheckItemContainerGreen.Id = 18;
+            this.barCheckItemContainerGreen.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.green;
+            this.barCheckItemContainerGreen.Name = "barCheckItemContainerGreen";
+            this.barCheckItemContainerGreen.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BarCheckItemContainerGreenCheckedChanged);
             // 
-            // barCheckItem16
+            // barCheckItemContainerYellow
             // 
-            this.barCheckItem16.Caption = "Μίσο Άδειο (25-49%)";
-            this.barCheckItem16.Id = 19;
-            this.barCheckItem16.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.yellow;
-            this.barCheckItem16.Name = "barCheckItem16";
+            this.barCheckItemContainerYellow.Caption = "Μίσο Άδειο (25-49%)";
+            this.barCheckItemContainerYellow.Id = 19;
+            this.barCheckItemContainerYellow.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.yellow;
+            this.barCheckItemContainerYellow.Name = "barCheckItemContainerYellow";
+            this.barCheckItemContainerYellow.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BarCheckItemContainerYellowCheckedChanged);
             // 
-            // barCheckItem17
+            // barCheckItemContainerGray
             // 
-            this.barCheckItem17.Caption = "Εκτός Σύνδεσης";
-            this.barCheckItem17.Id = 20;
-            this.barCheckItem17.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.gray;
-            this.barCheckItem17.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barCheckItem17.ItemAppearance.Normal.Options.UseFont = true;
-            this.barCheckItem17.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barCheckItem17.ItemInMenuAppearance.Normal.Options.UseFont = true;
-            this.barCheckItem17.Name = "barCheckItem17";
+            this.barCheckItemContainerGray.Caption = "Εκτός Σύνδεσης";
+            this.barCheckItemContainerGray.Id = 20;
+            this.barCheckItemContainerGray.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.gray;
+            this.barCheckItemContainerGray.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barCheckItemContainerGray.ItemAppearance.Normal.Options.UseFont = true;
+            this.barCheckItemContainerGray.ItemInMenuAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barCheckItemContainerGray.ItemInMenuAppearance.Normal.Options.UseFont = true;
+            this.barCheckItemContainerGray.Name = "barCheckItemContainerGray";
+            this.barCheckItemContainerGray.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BarCheckItemContainerGrayCheckedChanged);
             // 
-            // barCheckItem18
+            // barCheckItemContainerOrange
             // 
-            this.barCheckItem18.Caption = "Μίσο Γεμάτο (50-74%)";
-            this.barCheckItem18.Id = 21;
-            this.barCheckItem18.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.orange;
-            this.barCheckItem18.Name = "barCheckItem18";
+            this.barCheckItemContainerOrange.Caption = "Μίσο Γεμάτο (50-74%)";
+            this.barCheckItemContainerOrange.Id = 21;
+            this.barCheckItemContainerOrange.ImageOptions.DisabledSvgImage = global::dl.wm.suite.ui.Properties.Resources.black;
+            this.barCheckItemContainerOrange.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.orange;
+            this.barCheckItemContainerOrange.ItemAppearance.Normal.Options.UseImage = true;
+            this.barCheckItemContainerOrange.ItemAppearance.Pressed.Options.UseImage = true;
+            this.barCheckItemContainerOrange.Name = "barCheckItemContainerOrange";
+            this.barCheckItemContainerOrange.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BarCheckItemContainerOrangeCheckedChanged);
             // 
-            // barCheckItem19
+            // barCheckItemContainerRed
             // 
-            this.barCheckItem19.Caption = "Γεμάτο (75-100%)";
-            this.barCheckItem19.Id = 22;
-            this.barCheckItem19.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.red;
-            this.barCheckItem19.Name = "barCheckItem19";
+            this.barCheckItemContainerRed.Caption = "Γεμάτο (75-100%)";
+            this.barCheckItemContainerRed.Id = 22;
+            this.barCheckItemContainerRed.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.red;
+            this.barCheckItemContainerRed.Name = "barCheckItemContainerRed";
+            this.barCheckItemContainerRed.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.BarCheckItemContainerRedCheckedChanged);
             // 
             // barEditItemContainerLevel
             // 
@@ -1040,11 +1054,11 @@
             // 
             // rbbnPgGrpViewFillLevel
             // 
-            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItem15);
-            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItem16);
-            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItem18);
-            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItem19);
-            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItem17);
+            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItemContainerGreen);
+            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItemContainerYellow);
+            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItemContainerOrange);
+            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItemContainerRed);
+            this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItemContainerGray);
             this.rbbnPgGrpViewFillLevel.Name = "rbbnPgGrpViewFillLevel";
             this.rbbnPgGrpViewFillLevel.Text = "Επίπεδο Γεμίσματος";
             // 
@@ -1101,7 +1115,7 @@
             this.mpCntrlOpenDashboard.Location = new System.Drawing.Point(2, 39);
             this.mpCntrlOpenDashboard.MinZoomLevel = 12D;
             this.mpCntrlOpenDashboard.Name = "mpCntrlOpenDashboard";
-            this.mpCntrlOpenDashboard.Size = new System.Drawing.Size(1137, 1027);
+            this.mpCntrlOpenDashboard.Size = new System.Drawing.Size(1312, 1027);
             this.mpCntrlOpenDashboard.TabIndex = 0;
             this.mpCntrlOpenDashboard.ZoomLevel = 14D;
             this.mpCntrlOpenDashboard.MapItemClick += new DevExpress.XtraMap.MapItemClickEventHandler(this.MpCntrlOpenDashboardMapItemClick);
@@ -1123,7 +1137,7 @@
             // 
             this.barDockControl8.CausesValidation = false;
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(1139, 39);
+            this.barDockControl8.Location = new System.Drawing.Point(1314, 39);
             this.barDockControl8.Manager = null;
             this.barDockControl8.Size = new System.Drawing.Size(0, 1027);
             // 
@@ -1133,7 +1147,7 @@
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControl6.Location = new System.Drawing.Point(2, 1066);
             this.barDockControl6.Manager = null;
-            this.barDockControl6.Size = new System.Drawing.Size(1137, 0);
+            this.barDockControl6.Size = new System.Drawing.Size(1312, 0);
             // 
             // barDockControl5
             // 
@@ -1141,14 +1155,14 @@
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl5.Location = new System.Drawing.Point(2, 39);
             this.barDockControl5.Manager = null;
-            this.barDockControl5.Size = new System.Drawing.Size(1137, 0);
+            this.barDockControl5.Size = new System.Drawing.Size(1312, 0);
             // 
             // pnlCntrlDashboardMapContainer
             // 
             this.pnlCntrlDashboardMapContainer.Controls.Add(this.layCntrlPnlDashboardMapContainer);
             this.pnlCntrlDashboardMapContainer.Location = new System.Drawing.Point(12, 381);
             this.pnlCntrlDashboardMapContainer.Name = "pnlCntrlDashboardMapContainer";
-            this.pnlCntrlDashboardMapContainer.Size = new System.Drawing.Size(403, 699);
+            this.pnlCntrlDashboardMapContainer.Size = new System.Drawing.Size(228, 699);
             this.pnlCntrlDashboardMapContainer.TabIndex = 8;
             // 
             // layCntrlPnlDashboardMapContainer
@@ -1159,7 +1173,7 @@
             this.layCntrlPnlDashboardMapContainer.Location = new System.Drawing.Point(2, 2);
             this.layCntrlPnlDashboardMapContainer.Name = "layCntrlPnlDashboardMapContainer";
             this.layCntrlPnlDashboardMapContainer.Root = this.layCntrlGrpPnlDashboardMapContainer;
-            this.layCntrlPnlDashboardMapContainer.Size = new System.Drawing.Size(399, 695);
+            this.layCntrlPnlDashboardMapContainer.Size = new System.Drawing.Size(224, 695);
             this.layCntrlPnlDashboardMapContainer.TabIndex = 0;
             this.layCntrlPnlDashboardMapContainer.Text = "layoutControl1";
             // 
@@ -1167,7 +1181,7 @@
             // 
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(395, 691);
+            this.panelControl2.Size = new System.Drawing.Size(220, 691);
             this.panelControl2.TabIndex = 5;
             // 
             // barDockControl1
@@ -1185,7 +1199,7 @@
             this.layoutControlItem2});
             this.layCntrlGrpPnlDashboardMapContainer.Name = "layCntrlGrpPnlDashboardMapContainer";
             this.layCntrlGrpPnlDashboardMapContainer.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layCntrlGrpPnlDashboardMapContainer.Size = new System.Drawing.Size(399, 695);
+            this.layCntrlGrpPnlDashboardMapContainer.Size = new System.Drawing.Size(224, 695);
             this.layCntrlGrpPnlDashboardMapContainer.TextVisible = false;
             // 
             // layoutControlItem2
@@ -1193,7 +1207,7 @@
             this.layoutControlItem2.Control = this.panelControl2;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(399, 695);
+            this.layoutControlItem2.Size = new System.Drawing.Size(224, 695);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -1220,7 +1234,7 @@
             // splitterItem1
             // 
             this.splitterItem1.AllowHotTrack = true;
-            this.splitterItem1.Location = new System.Drawing.Point(407, 0);
+            this.splitterItem1.Location = new System.Drawing.Point(232, 0);
             this.splitterItem1.Name = "splitterItem1";
             this.splitterItem1.Size = new System.Drawing.Size(5, 1072);
             // 
@@ -1229,23 +1243,23 @@
             this.splitterItem2.AllowHotTrack = true;
             this.splitterItem2.Location = new System.Drawing.Point(0, 364);
             this.splitterItem2.Name = "splitterItem2";
-            this.splitterItem2.Size = new System.Drawing.Size(407, 5);
+            this.splitterItem2.Size = new System.Drawing.Size(232, 5);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.pnlCntrlDashboardMapContainer;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 369);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(407, 703);
+            this.layoutControlItem1.Size = new System.Drawing.Size(232, 703);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.grpCntrlDashboardSelectionsContainer;
-            this.layoutControlItem3.Location = new System.Drawing.Point(412, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(237, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1145, 1072);
+            this.layoutControlItem3.Size = new System.Drawing.Size(1320, 1072);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -1254,7 +1268,7 @@
             this.layoutControlItem5.Control = this.pnlCntrlDashboardMonitoringContainer;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(407, 364);
+            this.layoutControlItem5.Size = new System.Drawing.Size(232, 364);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -1660,6 +1674,21 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Step In Pixels";
             // 
+            // svgImageCollectionDashboard
+            // 
+            this.svgImageCollectionDashboard.Add("sphere_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.sphere_black"))));
+            this.svgImageCollectionDashboard.Add("lock_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.lock_black"))));
+            this.svgImageCollectionDashboard.Add("recycle_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.recycle_black"))));
+            this.svgImageCollectionDashboard.Add("waste_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.waste_black"))));
+            this.svgImageCollectionDashboard.Add("compost_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.compost_black"))));
+            this.svgImageCollectionDashboard.Add("lock_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.lock_orange"))));
+            this.svgImageCollectionDashboard.Add("sphere_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.sphere_orange"))));
+            this.svgImageCollectionDashboard.Add("recycle_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.recycle_orange"))));
+            this.svgImageCollectionDashboard.Add("waste_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.waste_orange"))));
+            this.svgImageCollectionDashboard.Add("compost_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.compost_orange"))));
+            this.svgImageCollectionDashboard.Add("geofence_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.geofence_black"))));
+            this.svgImageCollectionDashboard.Add("geofence_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.geofence_orange"))));
+            // 
             // UcDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1730,6 +1759,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollectionDashboard)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1867,11 +1897,11 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repoItemImgCmbContainerStatus;
         private DevExpress.XtraBars.BarEditItem brEditItmContainerFillLevel;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repoItemImgCmbFillLevel;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem15;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem16;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem17;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem18;
-        private DevExpress.XtraBars.BarCheckItem barCheckItem19;
+        private DevExpress.XtraBars.BarCheckItem barCheckItemContainerGreen;
+        private DevExpress.XtraBars.BarCheckItem barCheckItemContainerYellow;
+        private DevExpress.XtraBars.BarCheckItem barCheckItemContainerGray;
+        private DevExpress.XtraBars.BarCheckItem barCheckItemContainerOrange;
+        private DevExpress.XtraBars.BarCheckItem barCheckItemContainerRed;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbbnPgGrpViewFillLevel;
         private DevExpress.XtraBars.BarEditItem barEditItemContainerLevel;
         private DevExpress.XtraEditors.Repository.RepositoryItemTrackBar repositoryItemTrackBarContainerLevel;
@@ -1879,5 +1909,6 @@
         private DevExpress.XtraBars.BarEditItem brEditItmContainerLastServiced;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEditLastServiced;
         private DevExpress.Utils.ImageCollection imgCllctnContainerStatus;
+        private DevExpress.Utils.SvgImageCollection svgImageCollectionDashboard;
     }
 }
