@@ -486,6 +486,36 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\gray.svg" />
+    <None Include="Resources\red.svg" />
+    <None Include="Resources\orange.svg" />
+    <None Include="Resources\yellow.svg" />
+    <None Include="Resources\green.svg" />
+    <None Include="Resources\hashtag_large.svg" />
+    <None Include="Resources\search.svg" />
+    <None Include="Resources\lock.svg" />
+    <None Include="Resources\zoom_to_actual_size.svg" />
+    <None Include="Resources\zoom_out.svg" />
+    <None Include="Resources\zoom_in.svg" />
+    <None Include="Resources\world_map.svg" />
+    <None Include="Resources\waypoint_map.svg" />
+    <None Include="Resources\waste21.svg" />
+    <None Include="Resources\waste_sorting2.svg" />
+    <None Include="Resources\waste_sorting.svg" />
+    <None Include="Resources\waste_separation.svg" />
+    <None Include="Resources\waste_2sorting.svg" />
+    <None Include="Resources\waste.svg" />
+    <None Include="Resources\vox_player.svg" />
+    <None Include="Resources\track_order.svg" />
+    <None Include="Resources\route.svg" />
+    <None Include="Resources\recycle2.svg" />
+    <None Include="Resources\place_marker.svg" />
+    <None Include="Resources\map.svg" />
+    <None Include="Resources\location.svg" />
+    <None Include="Resources\gps_antenna.svg" />
+    <None Include="Resources\garbage_truck2.svg" />
+    <None Include="Resources\garbage_truck.svg" />
+    <None Include="Resources\waste2.svg" />
     <None Include="Resources\icons8_marker_161.png" />
     <None Include="Resources\icons8_wednesday_161.png" />
     <None Include="Resources\icons8_waste_m7_16.png" />

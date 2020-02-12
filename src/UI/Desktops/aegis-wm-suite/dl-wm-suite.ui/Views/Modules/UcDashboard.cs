@@ -78,7 +78,8 @@ namespace dl.wm.suite.ui.Views.Modules
             listSourceDataAdapterOpenDashboardDumpsterSource.AttributeMappings.Add(new MapItemAttributeMapping() { Member = "Id", Name = "Id" });
             listSourceDataAdapterOpenDashboardDumpsterSource.AttributeMappings.Add(new MapItemAttributeMapping() { Member = "Name", Name = "ContainerPointType" });
 
-            _clusterer = new DistanceBasedClusterer();
+            //_clusterer = new DistanceBasedClusterer();
+            _clusterer = new MarkerClusterer();
             if (_clusterer != null)
             {
                 _clusterer.Clustering += ClustererClustering;
@@ -343,5 +344,10 @@ namespace dl.wm.suite.ui.Views.Modules
         }
 
         #endregion
+
+        private void brEditItmAddressName_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
     }
 }
