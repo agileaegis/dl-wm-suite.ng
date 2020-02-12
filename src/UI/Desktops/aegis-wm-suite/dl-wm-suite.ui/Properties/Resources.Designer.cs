@@ -91,6 +91,16 @@ namespace dl.wm.suite.ui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage battery {
+            get {
+                object obj = ResourceManager.GetObject("battery", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Calc {
@@ -1956,6 +1966,16 @@ namespace dl.wm.suite.ui.Properties {
         internal static DevExpress.Utils.Svg.SvgImage track_order {
             get {
                 object obj = ResourceManager.GetObject("track_order", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage track_order3 {
+            get {
+                object obj = ResourceManager.GetObject("track_order3", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }

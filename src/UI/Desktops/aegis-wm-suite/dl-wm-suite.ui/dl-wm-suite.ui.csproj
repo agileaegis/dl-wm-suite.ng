@@ -486,6 +486,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\track_order3.svg" />
+    <None Include="Resources\battery.svg" />
     <None Include="Resources\gray.svg" />
     <None Include="Resources\red.svg" />
     <None Include="Resources\orange.svg" />

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel1 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel2 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel3 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
@@ -82,10 +83,11 @@
             this.brTrckItmZoοmOut = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTrackBarClusteringPixel = new DevExpress.XtraEditors.Repository.RepositoryItemTrackBar();
             this.brEditItmAddressName = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemSearchControl1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
+            this.repositoryItemSearchControlAddressName = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
             this.brChckItmLockMap = new DevExpress.XtraBars.BarCheckItem();
             this.brEditItmContainerStatus = new DevExpress.XtraBars.BarEditItem();
             this.repoItemImgCmbContainerStatus = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection(this.components);
             this.brEditItmContainerFillLevel = new DevExpress.XtraBars.BarEditItem();
             this.repoItemImgCmbFillLevel = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.barCheckItem15 = new DevExpress.XtraBars.BarCheckItem();
@@ -93,12 +95,17 @@
             this.barCheckItem17 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem18 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem19 = new DevExpress.XtraBars.BarCheckItem();
+            this.barEditItemContainerLevel = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTrackBarContainerLevel = new DevExpress.XtraEditors.Repository.RepositoryItemTrackBar();
+            this.brEditItmContainerLastServiced = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemDateEditLastServiced = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.rbbnPgDashboardMapHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbbnPgGrpViewOptions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbbnPgGrpContainerOptions = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbbnPgDashboardMapFilter = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbbnPgGrpViewSearch = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbbnPgGrpViewFillLevel = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbbnPgGrpViewFilters = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbbnPgDashboardMapRoutes = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbbnPgDashboardMapPrice = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -172,9 +179,6 @@
             this.barCheckItem13 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem14 = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.rbbnPgGrpViewFilters = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barEditItemContainerLevel = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemTrackBarContainerLevel = new DevExpress.XtraEditors.Repository.RepositoryItemTrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDashboardContainer)).BeginInit();
             this.layCntrlGrpDashboardContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCntrlDashboardMonitoringContainer)).BeginInit();
@@ -208,9 +212,13 @@
             this.grpCntrlDashboardSelectionsContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBarClusteringPixel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControlAddressName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItemImgCmbContainerStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItemImgCmbFillLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBarContainerLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditLastServiced)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditLastServiced.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mpCntrlOpenDashboard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCntrlDashboardMapContainer)).BeginInit();
@@ -229,7 +237,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBarContainerLevel)).BeginInit();
             this.SuspendLayout();
             // 
             // layCntrlGrpDashboardContainer
@@ -616,9 +623,10 @@
             this.barCheckItem17,
             this.barCheckItem18,
             this.barCheckItem19,
-            this.barEditItemContainerLevel});
+            this.barEditItemContainerLevel,
+            this.brEditItmContainerLastServiced});
             this.ribbonControl1.Location = new System.Drawing.Point(2, 39);
-            this.ribbonControl1.MaxItemId = 24;
+            this.ribbonControl1.MaxItemId = 25;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbbnPgDashboardMapHome,
@@ -628,11 +636,12 @@
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTrackBar1,
             this.repositoryItemTrackBarClusteringPixel,
-            this.repositoryItemSearchControl1,
+            this.repositoryItemSearchControlAddressName,
             this.repoItemImgCmbContainerStatus,
             this.repoItemImgCmbFillLevel,
-            this.repositoryItemTrackBarContainerLevel});
-            this.ribbonControl1.Size = new System.Drawing.Size(1137, 141);
+            this.repositoryItemTrackBarContainerLevel,
+            this.repositoryItemDateEditLastServiced});
+            this.ribbonControl1.Size = new System.Drawing.Size(1137, 144);
             // 
             // brChckItmGeofence
             // 
@@ -735,14 +744,18 @@
             // 
             // brTrckItmZoοmOut
             // 
-            this.brTrckItmZoοmOut.Caption = "Πυκνότητα";
+            this.brTrckItmZoοmOut.Caption = "Πυκνότητα: ";
             this.brTrckItmZoοmOut.Edit = this.repositoryItemTrackBarClusteringPixel;
             this.brTrckItmZoοmOut.EditHeight = 40;
             this.brTrckItmZoοmOut.EditValue = 3;
             this.brTrckItmZoοmOut.EditWidth = 150;
             this.brTrckItmZoοmOut.Id = 13;
+            this.brTrckItmZoοmOut.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brTrckItmZoοmOut.ItemAppearance.Hovered.Options.UseFont = true;
             this.brTrckItmZoοmOut.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brTrckItmZoοmOut.ItemAppearance.Normal.Options.UseFont = true;
+            this.brTrckItmZoοmOut.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brTrckItmZoοmOut.ItemAppearance.Pressed.Options.UseFont = true;
             this.brTrckItmZoοmOut.Name = "brTrckItmZoοmOut";
             // 
             // repositoryItemTrackBarClusteringPixel
@@ -761,27 +774,36 @@
             trackBarLabel3});
             this.repositoryItemTrackBarClusteringPixel.Minimum = 1;
             this.repositoryItemTrackBarClusteringPixel.Name = "repositoryItemTrackBarClusteringPixel";
+            this.repositoryItemTrackBarClusteringPixel.ShowLabels = true;
+            this.repositoryItemTrackBarClusteringPixel.ShowLabelsForHiddenTicks = true;
+            this.repositoryItemTrackBarClusteringPixel.ShowValueToolTip = true;
             // 
             // brEditItmAddressName
             // 
-            this.brEditItmAddressName.Caption = "Διέυθυνση ή Όνομα";
-            this.brEditItmAddressName.Edit = this.repositoryItemSearchControl1;
+            this.brEditItmAddressName.Caption = "Διεύθυνση ή Όνομα: ";
+            this.brEditItmAddressName.Edit = this.repositoryItemSearchControlAddressName;
             this.brEditItmAddressName.EditHeight = 22;
             this.brEditItmAddressName.EditWidth = 250;
             this.brEditItmAddressName.Id = 14;
             this.brEditItmAddressName.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.search;
+            this.brEditItmAddressName.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brEditItmAddressName.ItemAppearance.Hovered.Options.UseFont = true;
             this.brEditItmAddressName.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brEditItmAddressName.ItemAppearance.Normal.Options.UseFont = true;
+            this.brEditItmAddressName.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brEditItmAddressName.ItemAppearance.Pressed.Options.UseFont = true;
             this.brEditItmAddressName.Name = "brEditItmAddressName";
             this.brEditItmAddressName.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.brEditItmAddressName_ItemClick);
             // 
-            // repositoryItemSearchControl1
+            // repositoryItemSearchControlAddressName
             // 
-            this.repositoryItemSearchControl1.AutoHeight = false;
-            this.repositoryItemSearchControl1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemSearchControlAddressName.AutoHeight = false;
+            this.repositoryItemSearchControlAddressName.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.repositoryItemSearchControl1.Name = "repositoryItemSearchControl1";
+            this.repositoryItemSearchControlAddressName.Name = "repositoryItemSearchControlAddressName";
+            this.repositoryItemSearchControlAddressName.NullValuePrompt = "Προσθέσε κείμενο για αναζήτηση";
+            this.repositoryItemSearchControlAddressName.ShowNullValuePromptWhenFocused = true;
             // 
             // brChckItmLockMap
             // 
@@ -794,14 +816,18 @@
             // 
             // brEditItmContainerStatus
             // 
-            this.brEditItmContainerStatus.Caption = "Κατάσταση";
+            this.brEditItmContainerStatus.Caption = "Κατάσταση: ";
             this.brEditItmContainerStatus.Edit = this.repoItemImgCmbContainerStatus;
             this.brEditItmContainerStatus.EditHeight = 22;
             this.brEditItmContainerStatus.EditWidth = 150;
             this.brEditItmContainerStatus.Id = 16;
             this.brEditItmContainerStatus.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.hashtag_large;
+            this.brEditItmContainerStatus.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brEditItmContainerStatus.ItemAppearance.Hovered.Options.UseFont = true;
             this.brEditItmContainerStatus.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brEditItmContainerStatus.ItemAppearance.Normal.Options.UseFont = true;
+            this.brEditItmContainerStatus.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brEditItmContainerStatus.ItemAppearance.Pressed.Options.UseFont = true;
             this.brEditItmContainerStatus.Name = "brEditItmContainerStatus";
             // 
             // repoItemImgCmbContainerStatus
@@ -809,8 +835,32 @@
             this.repoItemImgCmbContainerStatus.AutoHeight = false;
             this.repoItemImgCmbContainerStatus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItemImgCmbContainerStatus.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Αλλαγμένη Θέση", "7", 3),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Απών", "8", 4),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Καμένος", "6", 2),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Κανονικός", "1", 0),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Σπασμένο Καπάκι", "2", 5),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Σπασμένος Κάδος", "3", 6),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Χαλασμένη Ρόδα", "5", 8),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Χαλασμένο Πεντάλ", "4", 7)});
+            this.repoItemImgCmbContainerStatus.LargeImages = this.imgCllctnContainerStatus;
             this.repoItemImgCmbContainerStatus.Name = "repoItemImgCmbContainerStatus";
+            this.repoItemImgCmbContainerStatus.SmallImages = this.imgCllctnContainerStatus;
             this.repoItemImgCmbContainerStatus.Sorted = true;
+            // 
+            // imgCllctnContainerStatus
+            // 
+            this.imgCllctnContainerStatus.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgCllctnContainerStatus.ImageStream")));
+            this.imgCllctnContainerStatus.Images.SetKeyName(0, "icons8_ok_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(1, "icons8_delete_bin_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(2, "icons8_gas_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(3, "icons8_hunt_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(4, "icons8_marker_off_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(5, "icons8_box_important_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(6, "icons8_error_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(7, "icons8_high_priority_32.png");
+            this.imgCllctnContainerStatus.Images.SetKeyName(8, "icons8_tire_32.png");
             // 
             // brEditItmContainerFillLevel
             // 
@@ -869,6 +919,78 @@
             this.barCheckItem19.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.red;
             this.barCheckItem19.Name = "barCheckItem19";
             // 
+            // barEditItemContainerLevel
+            // 
+            this.barEditItemContainerLevel.Caption = "Γέμισμα: ";
+            this.barEditItemContainerLevel.Edit = this.repositoryItemTrackBarContainerLevel;
+            this.barEditItemContainerLevel.EditHeight = 40;
+            this.barEditItemContainerLevel.EditValue = 20;
+            this.barEditItemContainerLevel.EditWidth = 150;
+            this.barEditItemContainerLevel.Id = 23;
+            this.barEditItemContainerLevel.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.battery;
+            this.barEditItemContainerLevel.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barEditItemContainerLevel.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barEditItemContainerLevel.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barEditItemContainerLevel.ItemAppearance.Normal.Options.UseFont = true;
+            this.barEditItemContainerLevel.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barEditItemContainerLevel.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barEditItemContainerLevel.Name = "barEditItemContainerLevel";
+            // 
+            // repositoryItemTrackBarContainerLevel
+            // 
+            this.repositoryItemTrackBarContainerLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.repositoryItemTrackBarContainerLevel.Appearance.Options.UseFont = true;
+            this.repositoryItemTrackBarContainerLevel.LabelAppearance.Options.UseTextOptions = true;
+            this.repositoryItemTrackBarContainerLevel.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            trackBarLabel4.Label = "1";
+            trackBarLabel4.Value = 1;
+            trackBarLabel5.Label = "50";
+            trackBarLabel5.Value = 50;
+            trackBarLabel6.Label = "100";
+            trackBarLabel6.Value = 100;
+            this.repositoryItemTrackBarContainerLevel.Labels.AddRange(new DevExpress.XtraEditors.Repository.TrackBarLabel[] {
+            trackBarLabel4,
+            trackBarLabel5,
+            trackBarLabel6});
+            this.repositoryItemTrackBarContainerLevel.LargeChange = 1;
+            this.repositoryItemTrackBarContainerLevel.Maximum = 100;
+            this.repositoryItemTrackBarContainerLevel.Minimum = 1;
+            this.repositoryItemTrackBarContainerLevel.Name = "repositoryItemTrackBarContainerLevel";
+            this.repositoryItemTrackBarContainerLevel.ShowLabels = true;
+            this.repositoryItemTrackBarContainerLevel.ShowLabelsForHiddenTicks = true;
+            this.repositoryItemTrackBarContainerLevel.ShowValueToolTip = true;
+            this.repositoryItemTrackBarContainerLevel.TickFrequency = 10;
+            // 
+            // brEditItmContainerLastServiced
+            // 
+            this.brEditItmContainerLastServiced.Caption = "Τελευταία Εξυπηρέτηση: ";
+            this.brEditItmContainerLastServiced.Edit = this.repositoryItemDateEditLastServiced;
+            this.brEditItmContainerLastServiced.EditHeight = 22;
+            this.brEditItmContainerLastServiced.EditWidth = 150;
+            this.brEditItmContainerLastServiced.Id = 24;
+            this.brEditItmContainerLastServiced.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.track_order3;
+            this.brEditItmContainerLastServiced.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brEditItmContainerLastServiced.ItemAppearance.Hovered.Options.UseFont = true;
+            this.brEditItmContainerLastServiced.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brEditItmContainerLastServiced.ItemAppearance.Normal.Options.UseFont = true;
+            this.brEditItmContainerLastServiced.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brEditItmContainerLastServiced.ItemAppearance.Pressed.Options.UseFont = true;
+            this.brEditItmContainerLastServiced.Name = "brEditItmContainerLastServiced";
+            // 
+            // repositoryItemDateEditLastServiced
+            // 
+            this.repositoryItemDateEditLastServiced.AutoHeight = false;
+            this.repositoryItemDateEditLastServiced.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditLastServiced.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEditLastServiced.DisplayFormat.FormatString = "g";
+            this.repositoryItemDateEditLastServiced.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditLastServiced.EditFormat.FormatString = "g";
+            this.repositoryItemDateEditLastServiced.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEditLastServiced.Mask.EditMask = "g";
+            this.repositoryItemDateEditLastServiced.Name = "repositoryItemDateEditLastServiced";
+            // 
             // rbbnPgDashboardMapHome
             // 
             this.rbbnPgDashboardMapHome.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -892,7 +1014,6 @@
             // 
             // rbbnPgGrpContainerOptions
             // 
-            this.rbbnPgGrpContainerOptions.ItemLinks.Add(this.brChckItmContainersAll);
             this.rbbnPgGrpContainerOptions.ItemLinks.Add(this.brChckItmContainersWaste);
             this.rbbnPgGrpContainerOptions.ItemLinks.Add(this.brChckItmContainersRecycle);
             this.rbbnPgGrpContainerOptions.ItemLinks.Add(this.brChckItmContainersCompost);
@@ -926,6 +1047,15 @@
             this.rbbnPgGrpViewFillLevel.ItemLinks.Add(this.barCheckItem17);
             this.rbbnPgGrpViewFillLevel.Name = "rbbnPgGrpViewFillLevel";
             this.rbbnPgGrpViewFillLevel.Text = "Επίπεδο Γεμίσματος";
+            // 
+            // rbbnPgGrpViewFilters
+            // 
+            this.rbbnPgGrpViewFilters.ItemLinks.Add(this.barEditItemContainerLevel);
+            this.rbbnPgGrpViewFilters.ItemLinks.Add(this.brEditItmContainerStatus);
+            this.rbbnPgGrpViewFilters.ItemLinks.Add(this.brEditItmContainerLastServiced);
+            this.rbbnPgGrpViewFilters.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
+            this.rbbnPgGrpViewFilters.Name = "rbbnPgGrpViewFilters";
+            this.rbbnPgGrpViewFilters.Text = "Φίλτρα";
             // 
             // rbbnPgDashboardMapRoutes
             // 
@@ -1530,48 +1660,6 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Step In Pixels";
             // 
-            // rbbnPgGrpViewFilters
-            // 
-            this.rbbnPgGrpViewFilters.ItemLinks.Add(this.barEditItemContainerLevel);
-            this.rbbnPgGrpViewFilters.ItemLinks.Add(this.brEditItmContainerStatus);
-            this.rbbnPgGrpViewFilters.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
-            this.rbbnPgGrpViewFilters.Name = "rbbnPgGrpViewFilters";
-            this.rbbnPgGrpViewFilters.Text = "Φίλτρα";
-            // 
-            // barEditItemContainerLevel
-            // 
-            this.barEditItemContainerLevel.Caption = "Γέμισμα";
-            this.barEditItemContainerLevel.Edit = this.repositoryItemTrackBarContainerLevel;
-            this.barEditItemContainerLevel.EditHeight = 40;
-            this.barEditItemContainerLevel.EditValue = 20;
-            this.barEditItemContainerLevel.EditWidth = 150;
-            this.barEditItemContainerLevel.Id = 23;
-            this.barEditItemContainerLevel.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barEditItemContainerLevel.ItemAppearance.Normal.Options.UseFont = true;
-            this.barEditItemContainerLevel.Name = "barEditItemContainerLevel";
-            // 
-            // repositoryItemTrackBarContainerLevel
-            // 
-            this.repositoryItemTrackBarContainerLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repositoryItemTrackBarContainerLevel.Appearance.Options.UseFont = true;
-            this.repositoryItemTrackBarContainerLevel.LabelAppearance.Options.UseTextOptions = true;
-            this.repositoryItemTrackBarContainerLevel.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            trackBarLabel4.Label = "1";
-            trackBarLabel4.Value = 1;
-            trackBarLabel5.Label = "50";
-            trackBarLabel5.Value = 50;
-            trackBarLabel6.Label = "100";
-            trackBarLabel6.Value = 100;
-            this.repositoryItemTrackBarContainerLevel.Labels.AddRange(new DevExpress.XtraEditors.Repository.TrackBarLabel[] {
-            trackBarLabel4,
-            trackBarLabel5,
-            trackBarLabel6});
-            this.repositoryItemTrackBarContainerLevel.LargeChange = 1;
-            this.repositoryItemTrackBarContainerLevel.Maximum = 100;
-            this.repositoryItemTrackBarContainerLevel.Minimum = 1;
-            this.repositoryItemTrackBarContainerLevel.Name = "repositoryItemTrackBarContainerLevel";
-            this.repositoryItemTrackBarContainerLevel.TickFrequency = 10;
-            // 
             // UcDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1616,9 +1704,13 @@
             this.grpCntrlDashboardSelectionsContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBarClusteringPixel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchControlAddressName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItemImgCmbContainerStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCllctnContainerStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repoItemImgCmbFillLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBarContainerLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditLastServiced.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEditLastServiced)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mpCntrlOpenDashboard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCntrlDashboardMapContainer)).EndInit();
@@ -1638,7 +1730,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTrackBarContainerLevel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1763,7 +1854,7 @@
         private DevExpress.XtraBars.BarButtonItem brBtnItmInitialView;
         private DevExpress.XtraBars.BarEditItem brTrckItmZoοmOut;
         private DevExpress.XtraEditors.Repository.RepositoryItemTrackBar repositoryItemTrackBarClusteringPixel;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControl1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControlAddressName;
         private DevExpress.XtraBars.BarCheckItem brChckItmLockMap;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbbnPgDashboardMapFilter;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbbnPgGrpViewSearch;
@@ -1785,5 +1876,8 @@
         private DevExpress.XtraBars.BarEditItem barEditItemContainerLevel;
         private DevExpress.XtraEditors.Repository.RepositoryItemTrackBar repositoryItemTrackBarContainerLevel;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbbnPgGrpViewFilters;
+        private DevExpress.XtraBars.BarEditItem brEditItmContainerLastServiced;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEditLastServiced;
+        private DevExpress.Utils.ImageCollection imgCllctnContainerStatus;
     }
 }
