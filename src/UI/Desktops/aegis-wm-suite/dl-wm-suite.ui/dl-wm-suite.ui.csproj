@@ -730,6 +730,8 @@
     <Content Include="Images\signal events.png" />
     <None Include="Images\signalevents1.png" />
     <Content Include="Images\Statistics.png" />
+    <Content Include="Images\svgs\geofence_black.svg" />
+    <Content Include="Images\svgs\geofence_orange.svg" />
     <Content Include="Images\System.png" />
     <Content Include="Images\technicians.png" />
     <Content Include="Images\Under_Construction.png" />
@@ -737,7 +739,6 @@
     <Content Include="Images\UserManagment.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\svgs\" />
     <Folder Include="Views\FlyOuts\AddEditUserDepartment\" />
   </ItemGroup>
   <ItemGroup>
