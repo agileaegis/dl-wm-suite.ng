@@ -11,6 +11,7 @@ using dl.wm.view.Controls.Dashboards;
 using dl.wm.view.Controls.Dashboards.Maps;
 using DevExpress.Map;
 using DevExpress.Utils.Menu;
+using DevExpress.Utils.Svg;
 using DevExpress.XtraMap;
 using dl.wm.models.DTOs.Containers;
 using dl.wm.presenter.ViewModel.Containers;
@@ -332,6 +333,68 @@ namespace dl.wm.suite.ui.Views.Modules
             }
         }
 
+        public bool RibbonLockMapEnabled
+        {
+            get => brChckItmLockMap.Enabled;
+            set => brChckItmLockMap.Enabled = value;
+        }
+
+        public bool RibbonLockMapValue
+        {
+            get => brChckItmLockMap.Checked;
+            set => brChckItmLockMap.Checked = value;
+        }
+
+        public bool RibbonLockMapSvgImageIsBlack
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmLockMap.ImageOptions.SvgImage = null;
+                }
+            }
+        }
+
+        public bool RibbonLockMapSvgImageIsOrange
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmLockMap.ImageOptions.SvgImage = null;
+                }
+            }
+        }
+
+        public bool RibbonGeofenceValue
+        {
+            get => brChckItmGeofence.Checked;
+            set => brChckItmGeofence.Checked = value;
+        }
+
+        public bool RibbonGeofenceSvgImageIsBlack
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmGeofence.ImageOptions.SvgImage = SvgImage.FromFile("../../images/svgs/geofence_black.svg");
+                }
+            }
+        }
+
+        public bool RibbonGeofenceSvgImageIsOrange
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmGeofence.ImageOptions.SvgImage = SvgImage.FromFile("../../images/svgs/geofence_orange.svg");
+                }
+            }
+        }
+
         #endregion
 
         #region IContainersPointsView
@@ -377,12 +440,12 @@ namespace dl.wm.suite.ui.Views.Modules
 
         private void BrChckItmGeofenceCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _dashboardManagementPresenter.RibbonCheckGeofenceWasClicked();
         }
 
         private void BrChckItmLockMapCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _dashboardManagementPresenter.RibbonCheckLocckMapWasClicked();
         }
 
         private void BrChckItmContainersWasteCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -486,41 +486,64 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\geofence_orange1.svg" />
-    <None Include="Resources\geofence_orange.svg" />
-    <None Include="Resources\black.svg" />
-    <None Include="Resources\track_order3.svg" />
-    <None Include="Resources\battery.svg" />
-    <None Include="Resources\gray.svg" />
-    <None Include="Resources\red.svg" />
-    <None Include="Resources\orange.svg" />
-    <None Include="Resources\yellow.svg" />
-    <None Include="Resources\green.svg" />
     <None Include="Resources\hashtag_large.svg" />
-    <None Include="Resources\search.svg" />
-    <None Include="Resources\lock.svg" />
+    <None Include="Resources\green.svg" />
+    <None Include="Resources\gray.svg" />
+    <None Include="Resources\gps_antenna.svg" />
+    <None Include="Resources\geofence_orange.svg" />
+    <None Include="Resources\geofence_black.svg" />
+    <None Include="Resources\add_trash.svg" />
+    <None Include="Resources\adventure.svg" />
+    <None Include="Resources\battery.svg" />
+    <None Include="Resources\black.svg" />
+    <None Include="Resources\blue.svg" />
+    <None Include="Resources\clear_filters.svg" />
+    <None Include="Resources\delete_trash.svg" />
+    <None Include="Resources\disposal.svg" />
+    <None Include="Resources\filter.svg" />
+    <None Include="Resources\filter_edit.svg" />
+    <None Include="Resources\garbage_truck.svg" />
+    <None Include="Resources\garbage_truck2.svg" />
     <None Include="Resources\zoom_to_actual_size.svg" />
     <None Include="Resources\zoom_out.svg" />
     <None Include="Resources\zoom_in.svg" />
+    <None Include="Resources\yellow.svg" />
     <None Include="Resources\world_map.svg" />
     <None Include="Resources\waypoint_map.svg" />
-    <None Include="Resources\waste21.svg" />
+    <None Include="Resources\waste5.svg" />
+    <None Include="Resources\waste3.svg" />
+    <None Include="Resources\waste2.svg" />
+    <None Include="Resources\waste1.svg" />
     <None Include="Resources\waste_sorting2.svg" />
+    <None Include="Resources\waste_sorting_black.svg" />
     <None Include="Resources\waste_sorting.svg" />
     <None Include="Resources\waste_separation.svg" />
+    <None Include="Resources\waste_black.svg" />
     <None Include="Resources\waste_2sorting.svg" />
     <None Include="Resources\waste.svg" />
     <None Include="Resources\vox_player.svg" />
+    <None Include="Resources\track_order3.svg" />
+    <None Include="Resources\track_order2.svg" />
     <None Include="Resources\track_order.svg" />
+    <None Include="Resources\search.svg" />
     <None Include="Resources\route.svg" />
+    <None Include="Resources\red.svg" />
+    <None Include="Resources\recycle3.svg" />
     <None Include="Resources\recycle2.svg" />
+    <None Include="Resources\recycle_black.svg" />
+    <None Include="Resources\private_lock_black.svg" />
+    <None Include="Resources\private_lock.svg" />
     <None Include="Resources\place_marker.svg" />
+    <None Include="Resources\orange.svg" />
+    <None Include="Resources\map_pin.svg" />
+    <None Include="Resources\map_black.svg" />
     <None Include="Resources\map.svg" />
+    <None Include="Resources\lock.svg" />
     <None Include="Resources\location.svg" />
-    <None Include="Resources\gps_antenna.svg" />
-    <None Include="Resources\garbage_truck2.svg" />
-    <None Include="Resources\garbage_truck.svg" />
-    <None Include="Resources\waste2.svg" />
+    <None Include="Resources\journey.svg" />
+    <None Include="Resources\lock1.svg" />
+    <None Include="Resources\geofence_orange1.svg" />
+    <None Include="Resources\waste21.svg" />
     <None Include="Resources\icons8_marker_161.png" />
     <None Include="Resources\icons8_wednesday_161.png" />
     <None Include="Resources\icons8_waste_m7_16.png" />
@@ -714,6 +737,7 @@
     <Content Include="Images\UserManagment.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\svgs\" />
     <Folder Include="Views\FlyOuts\AddEditUserDepartment\" />
   </ItemGroup>
   <ItemGroup>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel1 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel2 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel3 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
@@ -86,7 +87,7 @@
             this.brChckItmLockMap = new DevExpress.XtraBars.BarCheckItem();
             this.brEditItmContainerStatus = new DevExpress.XtraBars.BarEditItem();
             this.repoItemImgCmbContainerStatus = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection();
+            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection(this.components);
             this.brEditItmContainerFillLevel = new DevExpress.XtraBars.BarEditItem();
             this.repoItemImgCmbFillLevel = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.barCheckItemContainerGreen = new DevExpress.XtraBars.BarCheckItem();
@@ -178,7 +179,6 @@
             this.barCheckItem13 = new DevExpress.XtraBars.BarCheckItem();
             this.barCheckItem14 = new DevExpress.XtraBars.BarCheckItem();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.svgImageCollectionDashboard = new DevExpress.Utils.SvgImageCollection();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDashboardContainer)).BeginInit();
             this.layCntrlGrpDashboardContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCntrlDashboardMonitoringContainer)).BeginInit();
@@ -237,7 +237,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollectionDashboard)).BeginInit();
             this.SuspendLayout();
             // 
             // layCntrlGrpDashboardContainer
@@ -814,7 +813,7 @@
             // 
             this.brChckItmLockMap.Caption = "Κλείδωμα Θέασης";
             this.brChckItmLockMap.Id = 15;
-            this.brChckItmLockMap.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources._lock;
+            this.brChckItmLockMap.ImageOptions.SvgImage = global::dl.wm.suite.ui.Properties.Resources.lock1;
             this.brChckItmLockMap.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brChckItmLockMap.ItemAppearance.Normal.Options.UseFont = true;
             this.brChckItmLockMap.Name = "brChckItmLockMap";
@@ -1674,21 +1673,6 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Step In Pixels";
             // 
-            // svgImageCollectionDashboard
-            // 
-            this.svgImageCollectionDashboard.Add("sphere_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.sphere_black"))));
-            this.svgImageCollectionDashboard.Add("lock_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.lock_black"))));
-            this.svgImageCollectionDashboard.Add("recycle_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.recycle_black"))));
-            this.svgImageCollectionDashboard.Add("waste_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.waste_black"))));
-            this.svgImageCollectionDashboard.Add("compost_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.compost_black"))));
-            this.svgImageCollectionDashboard.Add("lock_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.lock_orange"))));
-            this.svgImageCollectionDashboard.Add("sphere_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.sphere_orange"))));
-            this.svgImageCollectionDashboard.Add("recycle_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.recycle_orange"))));
-            this.svgImageCollectionDashboard.Add("waste_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.waste_orange"))));
-            this.svgImageCollectionDashboard.Add("compost_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.compost_orange"))));
-            this.svgImageCollectionDashboard.Add("geofence_black", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.geofence_black"))));
-            this.svgImageCollectionDashboard.Add("geofence_orange", ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageCollectionDashboard.geofence_orange"))));
-            // 
             // UcDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1759,7 +1743,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollectionDashboard)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1909,6 +1892,5 @@
         private DevExpress.XtraBars.BarEditItem brEditItmContainerLastServiced;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEditLastServiced;
         private DevExpress.Utils.ImageCollection imgCllctnContainerStatus;
-        private DevExpress.Utils.SvgImageCollection svgImageCollectionDashboard;
     }
 }

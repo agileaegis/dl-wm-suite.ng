@@ -23,5 +23,21 @@ namespace dl.wm.presenter.ViewModel.Dashboards
         {
             View.OnDashboardLoaded = true;
         }
+
+        public void RibbonCheckLocckMapWasClicked()
+        {
+            if (View.RibbonLockMapValue)
+                View.RibbonLockMapSvgImageIsBlack = true;
+            else
+                View.RibbonLockMapSvgImageIsOrange = true;
+        }
+
+        public void RibbonCheckGeofenceWasClicked()
+        {
+            if (View.RibbonGeofenceValue)
+                View.RibbonGeofenceSvgImageIsBlack = true;
+            else
+                View.RibbonGeofenceSvgImageIsOrange = true;
+        }
     }
 }
