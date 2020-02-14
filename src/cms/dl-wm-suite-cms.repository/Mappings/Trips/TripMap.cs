@@ -102,8 +102,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Trips
         .Class<Tour>()
         .Access.Property()
         .Cascade.SaveUpdate()
-        //.Fetch.Join()
-        .LazyLoad()
+        .Fetch.Join()
         .Columns("tour_id");
 
       References(x => x.Trackable)

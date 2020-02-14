@@ -63,17 +63,6 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Length(128)
         ;
 
-      Map(x => x.Number)
-        .Column("number")
-        .CustomType("String")
-        .Access.Property()
-        .Generated.Never()
-        .CustomSqlType("nvarchar")
-        .Not.Nullable()
-        .Unique()
-        .Length(128)
-        ;
-      
       Map(x => x.PurchaseDate)
         .Column("purchase_date")
         .CustomType("DateTime")

@@ -18,11 +18,11 @@ namespace dl.wm.suite.cms.api.Configurations.AutoMappingProfiles.Containers
                 .ForMember(dest => dest.Id, opt => 
                   opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.ContainerLat, opt => 
-                  opt.MapFrom(src => src.Location.Coordinate.X))
+                  opt.MapFrom(src => src.Geo.Coordinate.X))
                 .ForMember(dest => dest.ContainerLon, opt =>
-                  opt.MapFrom(src => src.Location.Coordinate.Y))
+                  opt.MapFrom(src => src.Geo.Coordinate.Y))
                 .ForMember(dest => dest.ContainerPointType, opt => 
-                  opt.MapFrom(src => src.Location.GeometryType))
+                  opt.MapFrom(src => src.Geo.GeometryType))
                 .MaxDepth(1)
                 .PreserveReferences()
                 ;

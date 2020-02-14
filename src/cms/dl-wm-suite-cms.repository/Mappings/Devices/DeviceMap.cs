@@ -150,7 +150,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Class<Location>()
         .Access.Property()
         .Cascade.SaveUpdate()
-        .LazyLoad()
+        .Fetch.Join()
         .PropertyRef(p => p.Device)
         ;
 
@@ -158,7 +158,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Class<Simcard>()
         .Access.Property()
         .Cascade.SaveUpdate()
-        .LazyLoad()
+        .Fetch.Join()
         .PropertyRef(p => p.Device)
         ;
 

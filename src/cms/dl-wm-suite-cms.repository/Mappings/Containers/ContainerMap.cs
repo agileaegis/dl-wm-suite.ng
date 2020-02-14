@@ -55,10 +55,9 @@ namespace dl.wm.suite.cms.repository.Mappings.Containers
         .Not.Nullable()
         ;
 
-      Map(m => m.Location, "geo")
+      Map(m => m.Geo, "geo")
         .CustomType<PostGisGeometryType>()
         .LazyLoad();
-
 
       Map(x => x.Address)
         .Column("address")
@@ -183,7 +182,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Containers
         .Class<Device>()
         .Access.Property()
         .Cascade.SaveUpdate()
-        .LazyLoad()
+        .Fetch.Join()
         .PropertyRef(p => p.Container)
         ;
 

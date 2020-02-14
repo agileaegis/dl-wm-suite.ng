@@ -118,7 +118,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Tours
           .Class<Trip>()
           .Access.Property()
           .Cascade.SaveUpdate()
-          .LazyLoad()
+          .Fetch.Join()
           .PropertyRef(p => p.Tour)
           ;
 

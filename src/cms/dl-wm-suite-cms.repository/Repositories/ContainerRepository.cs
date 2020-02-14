@@ -37,47 +37,54 @@ namespace dl.wm.suite.cms.repository.Repositories
     {
       string queryStr =
           @"select c.Id, 
-                    NHSP.AsText(c.Location) 
+                    NHSP.AsText(c.Geo) 
                     from Container as c 
-                    where c.Location is not null"
+                    where c.Geo is not null"
         ;
 
       IList points = Session
         .CreateQuery(queryStr)
         .List();
 
-      var query = Session.QueryOver<Container>();
-
-      if (pageNum == -1 & pageSize == -1)
+      try
       {
-        var containers = query?.List();
+        var query = Session.QueryOver<Container>();
 
-        if (points.Count > 0)
+        if (pageNum == -1 & pageSize == -1)
         {
-          foreach (Object[] point in points)
+          var containers = query?.List();
+
+          if (points.Count > 0)
           {
-            containers.FirstOrDefault(x => x.Id == (Guid) point[0]).Location = _wkt.Read((string) point[1]);
+            foreach (Object[] point in points)
+            {
+              containers.FirstOrDefault(x => x.Id == (Guid)point[0]).Geo = _wkt.Read((string)point[1]);
+            }
           }
+
+          return new QueryResult<Container>(query?.List().AsQueryable());
         }
 
-        return new QueryResult<Container>(query?.List().AsQueryable());
+        return new QueryResult<Container>(query
+              .Skip(ResultsPagingUtility.CalculateStartIndex((int) pageNum, (int) pageSize))
+              .Take((int) pageSize).List().AsQueryable(),
+            query.ToRowCountQuery().RowCount(),
+            (int) pageSize)
+          ;
       }
-
-      return new QueryResult<Container>(query
-            .Skip(ResultsPagingUtility.CalculateStartIndex((int) pageNum, (int) pageSize))
-            .Take((int) pageSize).List().AsQueryable(),
-          query.ToRowCountQuery().RowCount(),
-          (int) pageSize)
-        ;
+      catch (Exception e)
+      {
+        throw new FindAllContainersPagedOfException(e.Message);
+      }
     }
 
     public List<Container> FindAllContainersPoints()
     {
       string queryStr =
           @"select c.Id, c.Name,
-                    NHSP.AsText(c.Location) 
+                    NHSP.AsText(c.Geo) 
                     from Container as c 
-                    where c.Location is not null"
+                    where c.Geo is not null"
         ;
 
       IList points = Session
@@ -90,7 +97,7 @@ namespace dl.wm.suite.cms.repository.Repositories
       {
         containers.AddRange(from object[] point in points select new Container()
         {
-          Id = (Guid) point[0], Name = (string) point[1], Location = _wkt.Read((string) point[2]),
+          Id = (Guid) point[0], Name = (string) point[1], Geo = _wkt.Read((string) point[2]),
         });
       }
 
@@ -168,9 +175,9 @@ namespace dl.wm.suite.cms.repository.Repositories
                     c.Address,
                     c.MandatoryPickupDate,
                     c.MandatoryPickupActive,
-                    NHSP.AsText(c.Location) 
+                    NHSP.AsText(c.Geo) 
                     from Container as c 
-                    where c.Location is not null and c.Id = :Id and c.IsActive = :IsActive"
+                    where c.Geo is not null and c.Id = :Id and c.IsActive = :IsActive"
         ;
 
        IList containersRepo = Session
@@ -206,7 +213,7 @@ namespace dl.wm.suite.cms.repository.Repositories
           Address = (string)point[13],
           MandatoryPickupDate = (DateTime)point[14],
           MandatoryPickupActive = (bool)point[15],
-          Location = _wkt.Read((string)point[16]),
+          Geo = _wkt.Read((string)point[16]),
         });
 
       return containers.FirstOrDefault();
