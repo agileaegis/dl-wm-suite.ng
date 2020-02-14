@@ -351,7 +351,7 @@ namespace dl.wm.suite.ui.Views.Modules
             {
                 if (value)
                 {
-                    brChckItmLockMap.ImageOptions.SvgImage = null;
+                    brChckItmLockMap.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\lock_black.svg");;
                 }
             }
         }
@@ -362,9 +362,15 @@ namespace dl.wm.suite.ui.Views.Modules
             {
                 if (value)
                 {
-                    brChckItmLockMap.ImageOptions.SvgImage = null;
+                    brChckItmLockMap.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\lock_orange.svg");;
                 }
             }
+        }
+
+        public bool RibbonGeofenceEnabled
+        {
+            get => brChckItmGeofence.Enabled;
+            set => brChckItmGeofence.Enabled = value;
         }
 
         public bool RibbonGeofenceValue
@@ -379,7 +385,7 @@ namespace dl.wm.suite.ui.Views.Modules
             {
                 if (value)
                 {
-                    brChckItmGeofence.ImageOptions.SvgImage = SvgImage.FromFile("../../images/svgs/geofence_black.svg");
+                    brChckItmGeofence.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\geofence_black.svg");
                 }
             }
         }
@@ -390,7 +396,143 @@ namespace dl.wm.suite.ui.Views.Modules
             {
                 if (value)
                 {
-                    brChckItmGeofence.ImageOptions.SvgImage = SvgImage.FromFile("../../images/svgs/geofence_orange.svg");
+                    brChckItmGeofence.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\geofence_orange.svg");
+                }
+            }
+        }
+
+        public bool RibbonSphereEnabled
+        {
+            get => barCheckItemContainerOrange.Enabled;
+            set => barCheckItemContainerOrange.Enabled = value;
+        }
+
+        public bool RibbonSphereValue
+        {
+            get => barCheckItemContainerOrange.Checked;
+            set => barCheckItemContainerOrange.Checked = value;
+        }
+
+        public bool RibbonSphereSvgImageIsBlack
+        {
+            set
+            {
+                if (value)
+                {
+                    barCheckItemContainerOrange.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\sphere_black.svg");
+                }
+            }
+        }
+
+        public bool RibbonSphereSvgImageIsOrange
+        {
+            set
+            {
+                if (value)
+                {
+                    barCheckItemContainerOrange.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\sphere_orange.svg");
+                }
+            }
+        }
+
+        public bool RibbonWasteEnabled
+        {
+            get => brChckItmContainersWaste.Enabled;
+            set => brChckItmContainersWaste.Enabled = value;
+        }
+
+        public bool RibbonWasteValue
+        {
+            get => brChckItmContainersWaste.Checked;
+            set => brChckItmContainersWaste.Checked = value;
+        }
+
+        public bool RibbonWasteSvgImageIsBlack
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmContainersWaste.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\waste_black.svg");
+                }
+            }
+        }
+
+        public bool RibbonWasteSvgImageIsOrange
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmContainersWaste.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\waste_orange.svg");
+                }
+            }
+        }
+
+        public bool RibbonCompostEnabled
+        {
+            get => brChckItmContainersCompost.Enabled;
+            set => brChckItmContainersCompost.Enabled = value;
+        }
+
+        public bool RibbonCompostValue
+        {
+            get => brChckItmContainersCompost.Checked;
+            set => brChckItmContainersCompost.Checked = value;
+        }
+
+        public bool RibbonCompostSvgImageIsBlack
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmContainersCompost.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\compost_black.svg");
+                }
+            }
+        }
+
+        public bool RibbonCompostSvgImageIsOrange
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmContainersCompost.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\compost_orange.svg");
+                }
+            }
+        }
+
+        public bool RibbonRecycleEnabled
+        {
+            get => brChckItmContainersRecycle.Enabled;
+            set => brChckItmContainersRecycle.Enabled = value;
+        }
+
+        public bool RibbonRecycleValue
+        {
+            get => brChckItmContainersRecycle.Checked;
+            set => brChckItmContainersRecycle.Checked = value;
+        }
+
+        public bool RibbonRecycleSvgImageIsBlack
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmContainersRecycle.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\recycle_black.svg");
+                }
+            }
+        }
+
+        public bool RibbonRecycleSvgImageIsOrange
+        {
+            set
+            {
+                if (value)
+                {
+                    brChckItmContainersRecycle.ImageOptions.SvgImage = SvgImage.FromFile("svgs\\recycle_orange.svg");
                 }
             }
         }
@@ -415,7 +557,7 @@ namespace dl.wm.suite.ui.Views.Modules
 
         private void BarCheckItemContainerOrangeCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _dashboardManagementPresenter.RibbonCheckOrangeSphereClicked();
         }
 
         private void BarCheckItemContainerGrayCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -445,22 +587,22 @@ namespace dl.wm.suite.ui.Views.Modules
 
         private void BrChckItmLockMapCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            _dashboardManagementPresenter.RibbonCheckLocckMapWasClicked();
+            _dashboardManagementPresenter.RibbonCheckLockMapWasClicked();
         }
 
         private void BrChckItmContainersWasteCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _dashboardManagementPresenter.RibbonCheckWasteWasClicked();
         }
 
         private void BrChckItmContainersRecycleCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _dashboardManagementPresenter.RibbonCheckRecycleWasClicked();
         }
 
         private void BrChckItmContainersCompostCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            _dashboardManagementPresenter.RibbonCheckCompostWasClicked();
         }
     }
 }

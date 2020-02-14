@@ -51,14 +51,14 @@ namespace dl.wm.suite.dms.services.Devices
                 ThrowExcIfThisDeviceAlreadyExist(deviceToBeCreated);
 
                 Log.Debug(
-                    $"Create Device: {newDeviceUiModel.DeviceNumPlate}" +
+                    $"Create Device: {newDeviceUiModel.DeviceImei}" +
                     "--CreateDevice--  @NotComplete@ [CreateDeviceProcessor]. " +
                     "Message: Just Before MakeItPersistence");
 
                 MakeDevicePersistent(deviceToBeCreated);
 
                 Log.Debug(
-                    $"Create Device: {newDeviceUiModel.DeviceNumPlate}" +
+                    $"Create Device: {newDeviceUiModel.DeviceImei}" +
                     "--CreateDevice--  @NotComplete@ [CreateDeviceProcessor]. " +
                     "Message: Just After MakeItPersistence");
                 response = ThrowExcIfDeviceWasNotBeMadePersistent(deviceToBeCreated);
@@ -68,7 +68,7 @@ namespace dl.wm.suite.dms.services.Devices
             {
                 response.Message = "ERROR_INVALID_VEHICLE_MODEL";
                 Log.Error(
-                    $"Create Device: {newDeviceUiModel.DeviceNumPlate}" +
+                    $"Create Device: {newDeviceUiModel.DeviceImei}" +
                     $"Error Message:{response.Message}" +
                     "--CreateDevice--  @NotComplete@ [CreateDeviceProcessor]. " +
                     $"Broken rules: {e.BrokenRules}");
@@ -77,7 +77,7 @@ namespace dl.wm.suite.dms.services.Devices
             {
                 response.Message = "ERROR_VEHICLE_ALREADY_EXISTS";
                 Log.Error(
-                    $"Create Device: {newDeviceUiModel.DeviceNumPlate}" +
+                    $"Create Device: {newDeviceUiModel.DeviceImei}" +
                     $"Error Message:{response.Message}" +
                     "--CreateDevice--  @fail@ [CreateDeviceProcessor]. " +
                     $"@innerfault:{ex?.Message} and {ex?.InnerException}");
@@ -86,7 +86,7 @@ namespace dl.wm.suite.dms.services.Devices
             {
                 response.Message = "ERROR_VEHICLE_NOT_MADE_PERSISTENT";
                 Log.Error(
-                    $"Create Device: {newDeviceUiModel.DeviceNumPlate}" +
+                    $"Create Device: {newDeviceUiModel.DeviceImei}" +
                     $"Error Message:{response.Message}" +
                     "--CreateDevice--  @fail@ [CreateDeviceProcessor]." +
                     $" @innerfault:{exx?.Message} and {exx?.InnerException}");
@@ -95,7 +95,7 @@ namespace dl.wm.suite.dms.services.Devices
             {
                 response.Message = "UNKNOWN_ERROR";
                 Log.Error(
-                    $"Create Device: {newDeviceUiModel.DeviceNumPlate}" +
+                    $"Create Device: {newDeviceUiModel.DeviceImei}" +
                     $"Error Message:{response.Message}" +
                     $"--CreateDevice--  @fail@ [CreateDeviceProcessor]. " +
                     $"@innerfault:{exxx.Message} and {exxx.InnerException}");

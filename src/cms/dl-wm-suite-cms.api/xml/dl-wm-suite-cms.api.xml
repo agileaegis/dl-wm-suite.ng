@@ -129,7 +129,7 @@
             <summary>
             POST : Create a New DeviceModel.
             </summary>
-            <param name="deviceForCreationUiModel">DeviceModelForCreationUiModel the Request Model for Creation</param>
+            <param name="deviceModelForCreationUiModel">DeviceModelForCreationUiModel the Request Model for Creation</param>
             <remarks> return a ResponseEntity with status 201 (Created) if the new DeviceModel is created, 400 (Bad Request), 500 (Server Error) </remarks>
             <response code="201">Created (if the DeviceModel is created)</response>
             <response code="400">Bad Request</response>

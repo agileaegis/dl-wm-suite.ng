@@ -11,6 +11,5 @@ namespace dl.wm.suite.cms.repository.ContractRepositories
     {
         QueryResult<Department> FindAllDepartmentsPagedOf(int? pageNum, int? pageSize);
         Department FindOneByName(string name);
-        IList<Employee> FindAllActiveDepartments(bool active);
     }
 }

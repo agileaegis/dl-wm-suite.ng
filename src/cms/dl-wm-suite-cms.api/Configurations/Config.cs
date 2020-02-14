@@ -43,139 +43,138 @@ using NHibernate.Spatial.Metadata;
 
 namespace dl.wm.suite.cms.api.Configurations
 {
-    public static class Config
+  public static class Config
+  {
+    public static void ConfigureRepositories(IServiceCollection services)
     {
-        public static void ConfigureRepositories(IServiceCollection services)
-        {
-            services.AddSingleton<IPropertyMappingService, PropertyMappingService>();
-            services.AddSingleton<ITypeHelperService, TypeHelperService>();
+      services.AddSingleton<IPropertyMappingService, PropertyMappingService>();
+      services.AddSingleton<ITypeHelperService, TypeHelperService>();
 
-            services.AddScoped<IMapsRedisRepository, MapsRedisRepository>();
+      services.AddScoped<IMapsRedisRepository, MapsRedisRepository>();
 
-            services.AddScoped<IInquiryUserProcessor, InquiryUserProcessor>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IUsersControllerDependencyBlock, UsersControllerDependencyBlock>();
+      services.AddScoped<IInquiryUserProcessor, InquiryUserProcessor>();
+      services.AddScoped<IUserRepository, UserRepository>();
+      services.AddScoped<IUsersControllerDependencyBlock, UsersControllerDependencyBlock>();
 
-            services.AddScoped<IInquiryDeviceModelProcessor, InquiryDeviceModelProcessor>();
-            services.AddScoped<IInquiryAllDeviceModelsProcessor, InquiryAllDeviceModelsProcessor>();
-            services.AddScoped<ICreateDeviceModelProcessor, CreateDeviceModelProcessor>();
-            services.AddScoped<IUpdateDeviceModelProcessor, UpdateDeviceModelProcessor>();
-            services.AddScoped<IDeleteDeviceModelProcessor, DeleteDeviceModelProcessor>();
-            services.AddScoped<IDeviceModelRepository, DeviceModelRepository>();
-            services.AddScoped<IDeviceModelsControllerDependencyBlock, DeviceModelsControllerDependencyBlock>();
+      services.AddScoped<IInquiryDeviceModelProcessor, InquiryDeviceModelProcessor>();
+      services.AddScoped<IInquiryAllDeviceModelsProcessor, InquiryAllDeviceModelsProcessor>();
+      services.AddScoped<ICreateDeviceModelProcessor, CreateDeviceModelProcessor>();
+      services.AddScoped<IUpdateDeviceModelProcessor, UpdateDeviceModelProcessor>();
+      services.AddScoped<IDeleteDeviceModelProcessor, DeleteDeviceModelProcessor>();
+      services.AddScoped<IDeviceModelRepository, DeviceModelRepository>();
+      services.AddScoped<IDeviceModelsControllerDependencyBlock, DeviceModelsControllerDependencyBlock>();
 
-            services.AddScoped<IInquiryDeviceProcessor, InquiryDeviceProcessor>();
-            services.AddScoped<IInquiryAllDevicesProcessor, InquiryAllDevicesProcessor>();
-            services.AddScoped<ICreateDeviceProcessor, CreateDeviceProcessor>();
-            services.AddScoped<IUpdateDeviceProcessor, UpdateDeviceProcessor>();
-            services.AddScoped<IDeleteDeviceProcessor, DeleteDeviceProcessor>();
-            services.AddScoped<IDeviceRepository, DeviceRepository>();
-            services.AddScoped<IDevicesControllerDependencyBlock, DevicesControllerDependencyBlock>();
+      services.AddScoped<IInquiryDeviceProcessor, InquiryDeviceProcessor>();
+      services.AddScoped<IInquiryAllDevicesProcessor, InquiryAllDevicesProcessor>();
+      services.AddScoped<ICreateDeviceProcessor, CreateDeviceProcessor>();
+      services.AddScoped<IUpdateDeviceProcessor, UpdateDeviceProcessor>();
+      services.AddScoped<IDeleteDeviceProcessor, DeleteDeviceProcessor>();
+      services.AddScoped<IDeviceRepository, DeviceRepository>();
+      services.AddScoped<IDevicesControllerDependencyBlock, DevicesControllerDependencyBlock>();
 
-            services.AddScoped<IInquiryContainerProcessor, InquiryContainerProcessor>();
-            services.AddScoped<IInquiryAllContainersProcessor, InquiryAllContainersProcessor>();
-            services.AddScoped<ICreateContainerProcessor, CreateContainerProcessor>();
-            services.AddScoped<IUpdateContainerProcessor, UpdateContainerProcessor>();
-            services.AddScoped<IDeleteContainerProcessor, DeleteContainerProcessor>();
-            services.AddScoped<IContainerRepository, ContainerRepository>();
-            services.AddScoped<IContainersControllerDependencyBlock, ContainersControllerDependencyBlock>();
+      services.AddScoped<IInquiryContainerProcessor, InquiryContainerProcessor>();
+      services.AddScoped<IInquiryAllContainersProcessor, InquiryAllContainersProcessor>();
+      services.AddScoped<ICreateContainerProcessor, CreateContainerProcessor>();
+      services.AddScoped<IUpdateContainerProcessor, UpdateContainerProcessor>();
+      services.AddScoped<IDeleteContainerProcessor, DeleteContainerProcessor>();
+      services.AddScoped<IContainerRepository, ContainerRepository>();
+      services.AddScoped<IContainersControllerDependencyBlock, ContainersControllerDependencyBlock>();
 
-            services.AddScoped<IInquiryTourProcessor, InquiryTourProcessor>();
-            services.AddScoped<IInquiryAllToursProcessor, InquiryAllToursProcessor>();
-            services.AddScoped<ICreateTourProcessor, CreateTourProcessor>();
-            services.AddScoped<IUpdateTourProcessor, UpdateTourProcessor>();
-            services.AddScoped<IDeleteTourProcessor, DeleteTourProcessor>();
-            services.AddScoped<ITourRepository, TourRepository>();
-            services.AddScoped<IToursControllerDependencyBlock, ToursControllerDependencyBlock>();
+      services.AddScoped<IInquiryTourProcessor, InquiryTourProcessor>();
+      services.AddScoped<IInquiryAllToursProcessor, InquiryAllToursProcessor>();
+      services.AddScoped<ICreateTourProcessor, CreateTourProcessor>();
+      services.AddScoped<IUpdateTourProcessor, UpdateTourProcessor>();
+      services.AddScoped<IDeleteTourProcessor, DeleteTourProcessor>();
+      services.AddScoped<ITourRepository, TourRepository>();
+      services.AddScoped<IToursControllerDependencyBlock, ToursControllerDependencyBlock>();
 
-            services.AddScoped<IInquiryDepartmentProcessor, InquiryDepartmentProcessor>();
-            services.AddScoped<IInquiryAllDepartmentsProcessor, InquiryAllDepartmentsProcessor>();
-            services.AddScoped<ICreateDepartmentProcessor, CreateDepartmentProcessor>();
-            services.AddScoped<IUpdateDepartmentProcessor, UpdateDepartmentProcessor>();
-            services.AddScoped<IDeleteDepartmentProcessor, DeleteDepartmentProcessor>();
-            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
-            services.AddScoped<IDepartmentsControllerDependencyBlock, DepartmentsControllerDependencyBlock>();
+      services.AddScoped<IInquiryDepartmentProcessor, InquiryDepartmentProcessor>();
+      services.AddScoped<IInquiryAllDepartmentsProcessor, InquiryAllDepartmentsProcessor>();
+      services.AddScoped<ICreateDepartmentProcessor, CreateDepartmentProcessor>();
+      services.AddScoped<IUpdateDepartmentProcessor, UpdateDepartmentProcessor>();
+      services.AddScoped<IDeleteDepartmentProcessor, DeleteDepartmentProcessor>();
+      services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+      services.AddScoped<IDepartmentsControllerDependencyBlock, DepartmentsControllerDependencyBlock>();
 
-            services.AddScoped<IInquiryEmployeeRoleProcessor, InquiryEmployeeRoleProcessor>();
-            services.AddScoped<IInquiryAllEmployeeRolesProcessor, InquiryAllEmployeeRolesProcessor>();
-            services.AddScoped<ICreateEmployeeRoleProcessor, CreateEmployeeRoleProcessor>();
-            services.AddScoped<IUpdateEmployeeRoleProcessor, UpdateEmployeeRoleProcessor>();
-            services.AddScoped<IDeleteEmployeeRoleProcessor, DeleteEmployeeRoleProcessor>();
-            services.AddScoped<IEmployeeRoleRepository, EmployeeRoleRepository>();
-            services.AddScoped<IEmployeeRolesControllerDependencyBlock, EmployeeRolesControllerDependencyBlock>();
+      services.AddScoped<IInquiryEmployeeRoleProcessor, InquiryEmployeeRoleProcessor>();
+      services.AddScoped<IInquiryAllEmployeeRolesProcessor, InquiryAllEmployeeRolesProcessor>();
+      services.AddScoped<ICreateEmployeeRoleProcessor, CreateEmployeeRoleProcessor>();
+      services.AddScoped<IUpdateEmployeeRoleProcessor, UpdateEmployeeRoleProcessor>();
+      services.AddScoped<IDeleteEmployeeRoleProcessor, DeleteEmployeeRoleProcessor>();
+      services.AddScoped<IEmployeeRoleRepository, EmployeeRoleRepository>();
+      services.AddScoped<IEmployeeRolesControllerDependencyBlock, EmployeeRolesControllerDependencyBlock>();
 
-            services.AddScoped<IInquiryEmployeeProcessor, InquiryEmployeeProcessor>();
-            services.AddScoped<IInquiryAllEmployeesProcessor, InquiryAllEmployeesProcessor>();
-            services.AddScoped<ICreateEmployeeProcessor, CreateEmployeeProcessor>();
-            services.AddScoped<IUpdateEmployeeProcessor, UpdateEmployeeProcessor>();
-            services.AddScoped<IDeleteEmployeeProcessor, DeleteEmployeeProcessor>();
-            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            services.AddScoped<IEmployeesControllerDependencyBlock, EmployeesControllerDependencyBlock>();
+      services.AddScoped<IInquiryEmployeeProcessor, InquiryEmployeeProcessor>();
+      services.AddScoped<IInquiryAllEmployeesProcessor, InquiryAllEmployeesProcessor>();
+      services.AddScoped<ICreateEmployeeProcessor, CreateEmployeeProcessor>();
+      services.AddScoped<IUpdateEmployeeProcessor, UpdateEmployeeProcessor>();
+      services.AddScoped<IDeleteEmployeeProcessor, DeleteEmployeeProcessor>();
+      services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+      services.AddScoped<IEmployeesControllerDependencyBlock, EmployeesControllerDependencyBlock>();
 
-            services.AddScoped<IInquiryVehicleProcessor, InquiryVehicleProcessor>();
-            services.AddScoped<IInquiryAllVehiclesProcessor, InquiryAllVehiclesProcessor>();
-            services.AddScoped<ICreateVehicleProcessor, CreateVehicleProcessor>();
-            services.AddScoped<IUpdateVehicleProcessor, UpdateVehicleProcessor>();
-            services.AddScoped<IDeleteVehicleProcessor, DeleteVehicleProcessor>();
-            services.AddScoped<IVehicleRepository, VehicleRepository>();
-            services.AddScoped<IVehiclesControllerDependencyBlock, VehiclesControllerDependencyBlock>();
+      services.AddScoped<IInquiryVehicleProcessor, InquiryVehicleProcessor>();
+      services.AddScoped<IInquiryAllVehiclesProcessor, InquiryAllVehiclesProcessor>();
+      services.AddScoped<ICreateVehicleProcessor, CreateVehicleProcessor>();
+      services.AddScoped<IUpdateVehicleProcessor, UpdateVehicleProcessor>();
+      services.AddScoped<IDeleteVehicleProcessor, DeleteVehicleProcessor>();
+      services.AddScoped<IVehicleRepository, VehicleRepository>();
+      services.AddScoped<IVehiclesControllerDependencyBlock, VehiclesControllerDependencyBlock>();
 
-        }
-
-        public static void ConfigureAutoMapper(IServiceCollection services)
-        {
-            services.AddSingleton<IAutoMapper, AutoMapperAdapter>();
-        }
-
-        public static void ConfigureNHibernate(IServiceCollection services, string connectionString)
-        {
-            //HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
-
-            try
-            {
-                var cfg = Fluently.Configure()
-                    .Database(PostgreSQLConfiguration.PostgreSQL82
-                        .ConnectionString(connectionString)
-                        .Driver<NpgsqlDriver>()
-                        .Dialect<PostGis20Dialect>()
-                        .ShowSql()
-                        .MaxFetchDepth(5)
-                        .FormatSql()
-                        .Raw("transaction.use_connection_on_system_prepare", "true")
-                        .AdoNetBatchSize(100)
-                    )
-                    .Mappings(x => x.FluentMappings.AddFromAssemblyOf<EmployeeMap>())
-                    .Cache(c => c.UseSecondLevelCache().UseQueryCache()
-                        .ProviderClass(typeof(NHibernate.Caches.RtMemoryCache.RtMemoryCacheProvider)
-                            .AssemblyQualifiedName)
-                    )
-                    .CurrentSessionContext("web")
-                    .BuildConfiguration();
-
-                cfg.AddAssembly(Assembly.GetExecutingAssembly());
-                cfg.AddAuxiliaryDatabaseObject(new SpatialAuxiliaryDatabaseObject(cfg));
-                Metadata.AddMapping(cfg, MetadataClass.GeometryColumn);
-                Metadata.AddMapping(cfg, MetadataClass.SpatialReferenceSystem);
-
-                var sessionFactory = cfg.BuildSessionFactory();
-
-                services.AddSingleton<ISessionFactory>(sessionFactory);
-
-                services.AddScoped<ISession>((ctx) =>
-                {
-                    var sf = ctx.GetRequiredService<ISessionFactory>();
-
-                    return sf.OpenSession();
-
-                });
-
-                services.AddScoped<IUnitOfWork, NhUnitOfWork>();
-            }
-            catch (Exception ex)
-            {
-                if (ex.InnerException != null)
-                    throw new NHibernateInitializationException(ex.Message, ex.InnerException.Message);
-            }
-        }
     }
+
+    public static void ConfigureAutoMapper(IServiceCollection services)
+    {
+      services.AddSingleton<IAutoMapper, AutoMapperAdapter>();
+    }
+
+    public static void ConfigureNHibernate(IServiceCollection services, string connectionString)
+    {
+      //HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
+
+      try
+      {
+        var cfg = Fluently.Configure()
+          .Database(PostgreSQLConfiguration.PostgreSQL82
+            .ConnectionString(connectionString)
+            .Driver<NpgsqlDriver>()
+            .Dialect<PostGis20Dialect>()
+            .ShowSql()
+            .MaxFetchDepth(5)
+            .FormatSql()
+            .Raw("transaction.use_connection_on_system_prepare", "true")
+            .AdoNetBatchSize(100)
+          )
+          .Mappings(x => x.FluentMappings.AddFromAssemblyOf<EmployeeMap>())
+          .Cache(c => c.UseSecondLevelCache().UseQueryCache()
+            .ProviderClass(typeof(NHibernate.Caches.RtMemoryCache.RtMemoryCacheProvider)
+              .AssemblyQualifiedName)
+          )
+          .CurrentSessionContext("web")
+          .BuildConfiguration();
+
+        cfg.AddAssembly(Assembly.GetExecutingAssembly());
+        cfg.AddAuxiliaryDatabaseObject(new SpatialAuxiliaryDatabaseObject(cfg));
+        Metadata.AddMapping(cfg, MetadataClass.GeometryColumn);
+        Metadata.AddMapping(cfg, MetadataClass.SpatialReferenceSystem);
+
+        var sessionFactory = cfg.BuildSessionFactory();
+
+        services.AddSingleton<ISessionFactory>(sessionFactory);
+
+        services.AddScoped<ISession>((ctx) =>
+        {
+          var sf = ctx.GetRequiredService<ISessionFactory>();
+
+          return sf.OpenSession();
+
+        });
+
+        services.AddScoped<IUnitOfWork, NhUnitOfWork>();
+      }
+      catch (Exception ex)
+      {
+        throw new NHibernateInitializationException(ex.Message, ex.InnerException?.Message);
+      }
+    }
+  }
 }

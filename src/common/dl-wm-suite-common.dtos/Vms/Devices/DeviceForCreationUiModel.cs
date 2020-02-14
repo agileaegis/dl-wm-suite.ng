@@ -2,24 +2,25 @@
 
 namespace dl.wm.suite.common.dtos.Vms.Devices
 {
-    public class DeviceForCreationUiModel
-    {
+  public class DeviceForCreationUiModel
+  {
+    [Required(AllowEmptyStrings = false)]
+    [Editable(true)]
+    public string DeviceImei { get; set; }
 
-        [Editable(false)]
-        public string DeviceValue => $"{DeviceBrand} -- {DeviceNumPlate}";
-
-        [Editable(true)]
-        public string DeviceBrand { get; set; }
-        [Editable(true)]
-        public string DeviceNumPlate { get; set; }
-        [Editable(true)]
-        public bool DeviceActive { get; set; }
-        [Editable(true)]
-        public int DeviceType { get; set; }
-        [Editable(true)]
-        public int DeviceStatus { get; set; }
-        [Editable(true)]
-        public int DeviceGas { get; set; }
-
-    }
+    [Required(AllowEmptyStrings = false)]
+    [Editable(true)] public string DeviceSerialNumber { get; set; }
+    [Required(AllowEmptyStrings = false)]
+    [Editable(true)] public string DeviceSimcardIccid { get; set; }
+    [Required(AllowEmptyStrings = false)]
+    [Editable(true)] public string DeviceSimcardImsi { get; set; }
+    [Required(AllowEmptyStrings = false)]
+    [Editable(true)] public string DeviceSimcardCountryIso { get; set; }
+    [Required(AllowEmptyStrings = false)]
+    [Editable(true)] public string DeviceSimcardNumber { get; set; }
+    [Required(AllowEmptyStrings = false)]
+    [Editable(true)] public string DeviceSimcardType { get; set; }
+    [Required(AllowEmptyStrings = false)]
+    [Editable(true)] public string DeviceSimcardNetworkType { get; set; }
+  }
 }

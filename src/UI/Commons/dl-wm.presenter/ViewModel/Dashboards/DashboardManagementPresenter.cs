@@ -1,7 +1,6 @@
 ﻿using dl.wm.presenter.ServiceAgents.Contracts;
 using dl.wm.presenter.ServiceAgents.Impls;
 using dl.wm.view.Controls.Dashboards;
-using dl.wm.view.Controls.Users;
 using dl.wm.presenter.Base;
 
 namespace dl.wm.presenter.ViewModel.Dashboards
@@ -24,7 +23,7 @@ namespace dl.wm.presenter.ViewModel.Dashboards
             View.OnDashboardLoaded = true;
         }
 
-        public void RibbonCheckLocckMapWasClicked()
+        public void RibbonCheckLockMapWasClicked()
         {
             if (View.RibbonLockMapValue)
                 View.RibbonLockMapSvgImageIsBlack = true;
@@ -38,6 +37,38 @@ namespace dl.wm.presenter.ViewModel.Dashboards
                 View.RibbonGeofenceSvgImageIsBlack = true;
             else
                 View.RibbonGeofenceSvgImageIsOrange = true;
+        }
+
+        public void RibbonCheckOrangeSphereClicked()
+        {
+            if (View.RibbonSphereValue)
+                View.RibbonSphereSvgImageIsBlack = true;
+            else
+                View.RibbonSphereSvgImageIsOrange = true;
+        }
+
+        public void RibbonCheckCompostWasClicked()
+        {
+            if (View.RibbonCompostValue)
+                View.RibbonCompostSvgImageIsBlack = true;
+            else
+                View.RibbonCompostSvgImageIsOrange = true;
+        }
+
+        public void RibbonCheckRecycleWasClicked()
+        {
+            if (View.RibbonRecycleValue)
+                View.RibbonRecycleSvgImageIsBlack = true;
+            else
+                View.RibbonRecycleSvgImageIsOrange = true;
+        }
+
+        public void RibbonCheckWasteWasClicked()
+        {
+            if (View.RibbonWasteValue)
+                View.RibbonWasteSvgImageIsBlack = true;
+            else
+                View.RibbonWasteSvgImageIsOrange = true;
         }
     }
 }

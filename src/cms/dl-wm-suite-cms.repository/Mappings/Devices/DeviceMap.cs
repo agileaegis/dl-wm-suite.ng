@@ -20,6 +20,66 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .GuidComb()
         ;
 
+      
+      Map(x => x.ActivationDate)
+        .Column("activation_date")
+        .CustomType("DateTime")
+        .Access.Property()
+        .Generated.Never()
+        .Not.Nullable()
+        ;
+
+      Map(x => x.ProvisioningDate)
+        .Column("provisioning_date")
+        .CustomType("DateTime")
+        .Access.Property()
+        .Generated.Never()
+        .Not.Nullable()
+        ;
+
+      Map(x => x.ResetDate)
+        .Column("reset_date")
+        .CustomType("DateTime")
+        .Access.Property()
+        .Generated.Never()
+        .Not.Nullable()
+        ;
+
+      Map(x => x.CreatedDate)
+        .Column("created_date")
+        .CustomType("DateTime")
+        .Access.Property()
+        .Generated.Never()
+        .Not.Nullable()
+        ;
+
+      Map(x => x.ModifiedDate)
+        .Column("modified_date")
+        .CustomType("DateTime")
+        .Access.Property()
+        .Generated.Never()
+        .Not.Nullable()
+        ;
+
+      Map(x => x.CreatedBy)
+        .Column("created_by")
+        .CustomType("Guid")
+        .Access.Property()
+        .Generated.Never()
+        .CustomSqlType("uuid")
+        .Not.Nullable()
+        ;
+
+      Map(x => x.ModifiedBy)
+        .Column("modified_by")
+        .CustomType("Guid")
+        .Access.Property()
+        .Generated.Never()
+        .CustomSqlType("uuid")
+        .Not.Nullable()
+        ;
+
+
       Map(x => x.Imei)
         .Column("imei")
         .CustomType("String")

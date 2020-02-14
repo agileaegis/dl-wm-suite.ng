@@ -4,19 +4,13 @@ namespace dl.wm.suite.common.infrastructure.Exceptions.Domain.Devices
 {
     public class DeviceDoesNotExistAfterMadePersistentException : Exception
     {
-        public string DeviceNumPlate { get; }
+        public string DeviceImei { get; }
 
-        public string DeviceBrand { get; }
-        public DeviceDoesNotExistAfterMadePersistentException(string vehicleBrand)
+        public DeviceDoesNotExistAfterMadePersistentException(string deviceImei)
         {
-            DeviceBrand = vehicleBrand;
+          DeviceImei = deviceImei;
         }
 
-        public DeviceDoesNotExistAfterMadePersistentException(string message, string vehicleNumPlate) : base(message)
-        {
-            this.DeviceNumPlate = vehicleNumPlate;
-        }
-
-        public override string Message => $" Device with Brand: {DeviceBrand} for Date:{DeviceNumPlate}, was not made Persistent!";
+        public override string Message => $" Device with Imei: {DeviceImei} was not made Persistent!";
     }
 }

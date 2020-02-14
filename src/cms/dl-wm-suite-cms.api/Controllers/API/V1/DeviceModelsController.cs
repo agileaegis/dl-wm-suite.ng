@@ -14,6 +14,8 @@ using dl.wm.suite.common.infrastructure.Helpers.ResourceParameters;
 using dl.wm.suite.common.infrastructure.PropertyMappings;
 using dl.wm.suite.common.infrastructure.PropertyMappings.TypeHelpers;
 using AutoMapper;
+using dl.wm.suite.cms.contracts.Users;
+using dl.wm.suite.cms.contracts.V1;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -39,12 +41,16 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
         private readonly ICreateDeviceModelProcessor _createDeviceModelProcessor;
         private readonly IUpdateDeviceModelProcessor _updateDeviceModelProcessor;
 
+        private readonly IInquiryUserProcessor _inquiryUserProcessor;
+
+
         public DeviceModelsController(IUrlHelper urlHelper,
             ITypeHelperService typeHelperService, IPropertyMappingService propertyMappingService,
             IInquiryAllDeviceModelsProcessor inquiryAllDeviceModelsProcessor,
             IInquiryDeviceModelProcessor inquiryDeviceModelProcessor,
             ICreateDeviceModelProcessor createDeviceModelProcessor,
-            IUpdateDeviceModelProcessor updateDeviceModelProcessor
+            IUpdateDeviceModelProcessor updateDeviceModelProcessor,
+            IUsersControllerDependencyBlock blockUser
             )
         {
             _urlHelper = urlHelper;
@@ -55,21 +61,63 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
             _inquiryDeviceModelProcessor = inquiryDeviceModelProcessor;
             _createDeviceModelProcessor = createDeviceModelProcessor;
             _updateDeviceModelProcessor = updateDeviceModelProcessor;
+
+            _inquiryUserProcessor = blockUser.InquiryUserProcessor;
         }
 
         /// <summary>
         /// POST : Create a New DeviceModel.
         /// </summary>
-        /// <param name="deviceForCreationUiModel">DeviceModelForCreationUiModel the Request Model for Creation</param>
+        /// <param name="deviceModelForCreationUiModel">DeviceModelForCreationUiModel the Request Model for Creation</param>
         /// <remarks> return a ResponseEntity with status 201 (Created) if the new DeviceModel is created, 400 (Bad Request), 500 (Server Error) </remarks>
         /// <response code="201">Created (if the DeviceModel is created)</response>
         /// <response code="400">Bad Request</response>
         /// <response code="500">Internal Server Error</response>
         [HttpPost(Name = "PostDeviceModelRoute")]
         [ValidateModel]
-        public async Task<IActionResult> PostDeviceModelRouteAsync([FromBody] DeviceModelForCreationUiModel deviceForCreationUiModel)
+        public async Task<IActionResult> PostDeviceModelRouteAsync([FromBody] DeviceModelForCreationUiModel deviceModelForCreationUiModel)
         {
-            return BadRequest(new {errorMessage = "UNKNOWN_ERROR_CREATION_NEW_DEVICE"});
+            var userAudit = await _inquiryUserProcessor.GetUserByLoginAsync(GetEmailFromClaims());
+
+            if (userAudit == null)
+                return BadRequest();
+
+            var newCreatedDeviceModel =
+                await _createDeviceModelProcessor.CreateDeviceModelAsync(userAudit.Id, deviceModelForCreationUiModel);
+
+            switch (newCreatedDeviceModel.Message)
+            {
+                case ("SUCCESS_CREATION"):
+                {
+                    Log.Information(
+                        $"--Method:PostDeviceModelRouteAsync -- Message:DEVICE_MODEL_CREATION_SUCCESSFULLY -- " +
+                        $"Datetime:{DateTime.Now} -- DeviceModelInfo:{deviceModelForCreationUiModel.DeviceModelName}");
+                    return Created(nameof(PostDeviceModelRouteAsync), newCreatedDeviceModel);
+                }
+                case ("ERROR_ALREADY_EXISTS"):
+                {
+                    Log.Error(
+                        $"--Method:PostDeviceModelRouteAsync -- Message:ERROR_DEVICE_MODEL_ALREADY_EXISTS -- " +
+                        $"Datetime:{DateTime.UtcNow} -- DeviceModelInfo:{deviceModelForCreationUiModel.DeviceModelName}");
+                    return BadRequest(new {errorMessage = "DEVICE_MODEL_ALREADY_EXISTS"});
+                }
+                case ("ERROR_DEVICE_MODEL_NOT_MADE_PERSISTENT"):
+                {
+                    Log.Error(
+                        $"--Method:PostDeviceModelRouteAsync -- Message:ERROR_DeviceModel_NOT_MADE_PERSISTENT -- " +
+                        $"Datetime:{DateTime.UtcNow} -- DeviceModelInfo:{deviceModelForCreationUiModel.DeviceModelName}");
+                    return BadRequest(new {errorMessage = "ERROR_CREATION_NEW_DEVICE_MODEL"});
+                }
+                case ("UNKNOWN_ERROR"):
+                {
+                    Log.Error(
+                        $"--Method:PostDeviceModelRouteAsync -- Message:ERROR_CREATION_NEW_DEVICE_MODEL-- " +
+                        $"Datetime:{DateTime.UtcNow} -- DeviceModelInfo:{deviceModelForCreationUiModel.DeviceModelName}");
+                    return BadRequest(new {errorMessage = "ERROR_CREATION_NEW_DEVICE_MODEL"});
+                }
+            }
+
+            return NotFound();
         }
 
 
@@ -154,7 +202,6 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
             //return Ok(DeviceModels.ShapeData(DeviceModelsResourceParameters.Fields));
             return Ok();
         }
-    
 
         #region Link Builder
 

@@ -8,6 +8,7 @@ using dl.wm.suite.cms.repository.Repositories.Base;
 using dl.wm.suite.common.infrastructure.Domain.Queries;
 using dl.wm.suite.common.infrastructure.Paging;
 using NHibernate;
+using NHibernate.Criterion;
 
 namespace dl.wm.suite.cms.repository.Repositories
 {
@@ -40,12 +41,11 @@ namespace dl.wm.suite.cms.repository.Repositories
 
         public Department FindOneByName(string name)
         {
-            throw new NotImplementedException();
-        }
-
-        public IList<Employee> FindAllActiveDepartments(bool active)
-        {
-            throw new NotImplementedException();
+          return (Department)
+            Session.CreateCriteria(typeof(Department))
+              .Add(Expression.Eq("Name", name))
+              .UniqueResult()
+            ;
         }
     }
 }

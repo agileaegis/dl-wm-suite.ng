@@ -25,9 +25,19 @@ namespace dl.wm.suite.cms.model.Devices
 
         public virtual ISet<Device> Devices { get; set; }
 
-
         protected override void Validate()
         {
+        }
+
+        public virtual void InjectWithInitialAttributes(string deviceModelName, string deviceModelCodeName)
+        {
+          this.Name = deviceModelName;
+          this.CodeName = deviceModelCodeName;
+        }
+
+        public virtual void InjectWithAudit(Guid accountIdToCreateThisDeviceModel)
+        {
+          //Todo: Should be added Audit
         }
     }
 }

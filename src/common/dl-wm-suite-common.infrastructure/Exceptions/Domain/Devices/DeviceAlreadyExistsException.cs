@@ -4,22 +4,16 @@ namespace dl.wm.suite.common.infrastructure.Exceptions.Domain.Devices
 {
     public class DeviceAlreadyExistsException : Exception
     {
-        public string NumPlate { get; }
+      public string BrokenRules { get; }
+      public string DeviceImei { get; }
 
-        public string DeviceName { get; }
 
-
-        public DeviceAlreadyExistsException(string vehicleName)
+        public DeviceAlreadyExistsException(string imei, string brokenRules)
         {
-            DeviceName = vehicleName;
+          BrokenRules = brokenRules;
+          BrokenRules = brokenRules;
         }
 
-        public DeviceAlreadyExistsException(string message, string numPlate) : base(message)
-        {
-            this.NumPlate = numPlate;
-        }
-
-        public override string Message => $" Device with Brand: {DeviceName} and Plate Number:{NumPlate}" +
-                                          " already Exists!";
+        public override string Message => $" Device with Imei: {DeviceImei} already Exists! Details : {BrokenRules}";
     }
 }

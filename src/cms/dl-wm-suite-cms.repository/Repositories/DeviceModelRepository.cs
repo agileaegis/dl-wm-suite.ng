@@ -34,51 +34,5 @@ namespace dl.wm.suite.cms.repository.Repositories
         {
             return null;
         }
-
-        public DeviceModel FindByNameSpecifiedDate(string nameDeviceModel, DateTime scheduledDateDeviceModel)
-        {
-            return (DeviceModel)
-                Session.CreateCriteria(typeof(DeviceModel))
-                   .Add(Restrictions.Eq("Name", nameDeviceModel))
-                    .Add(Restrictions.Eq(
-                       Projections.SqlFunction("date",
-                                               NHibernateUtil.Date,
-                                               Projections.Property("ScheduledDate")),
-                       scheduledDateDeviceModel.Date))
-                   .UniqueResult()
-                   ;
-        }
-
-        public IList<DeviceModel> FindAllByScheduledDate(DateTime scheduledDate)
-        {
-            return 
-                Session.CreateCriteria(typeof(DeviceModel))
-                .Add(Restrictions.Eq(
-                   Projections.SqlFunction("date",
-                                           NHibernateUtil.Date,
-                                           Projections.Property("ScheduledDate")),
-                   scheduledDate.Date))
-                .SetCacheable(true)
-                .SetCacheMode(CacheMode.Normal)
-                .SetFlushMode(FlushMode.Never)
-                .List<DeviceModel>()
-               ;
-        }
-
-        public IList<DeviceModel> FindAllBetweenScheduledDate(DateTime startedScheduledDate, DateTime endedScheduledDate)
-        {
-            return
-                Session.CreateCriteria(typeof(DeviceModel))
-                .Add(
-                    Expression.Conjunction()
-                        .Add(Restrictions.Ge("ScheduledDate", startedScheduledDate))
-                        .Add(Restrictions.Lt("ScheduledDate", endedScheduledDate))
-                    )
-                    .SetCacheable(true)
-                    .SetCacheMode(CacheMode.Normal)
-                    .SetFlushMode(FlushMode.Never)
-                    .List<DeviceModel>()
-                ;
-        }
     }
 }

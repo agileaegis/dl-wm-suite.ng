@@ -15,6 +15,20 @@ namespace dl.wm.suite.cms.model.Devices
 
     private void OnCreated()
     {
+      this.ActivationCode = Guid.NewGuid();
+      this.ProvisioningCode = Guid.NewGuid();
+      this.ResetCode = Guid.NewGuid();
+
+      this.ActivationDate = this.ProvisioningDate = this.ResetDate = DateTime.MinValue;
+      this.CreatedDate = DateTime.Now;
+      this.ModifiedDate = DateTime.MinValue;
+
+      this.ModifiedBy = this.ActivatedBy = this.ResetBy = this.ProvisioningBy = Guid.Empty;
+
+      this.IsEnabled = true;
+      this.IsActivated = false;
+      this.IsActive = true;
+
       this.Commands = new HashSet<Command>();
       this.Connections = new HashSet<ConnectionReport>();
       this.Calibrations = new HashSet<Calibration>();
@@ -27,6 +41,10 @@ namespace dl.wm.suite.cms.model.Devices
     public virtual Guid ActivationCode { get; set; }
     public virtual Guid ProvisioningCode { get; set; }
     public virtual Guid ResetCode { get; set; }
+    public virtual DateTime CreatedDate { get; set; }
+    public virtual Guid CreatedBy { get; set; }
+    public virtual DateTime ModifiedDate { get; set; }
+    public virtual Guid ModifiedBy { get; set; }
     public virtual DateTime ActivationDate { get; set; }
     public virtual DateTime ProvisioningDate { get; set; }
     public virtual DateTime ResetDate { get; set; }
@@ -53,6 +71,17 @@ namespace dl.wm.suite.cms.model.Devices
     protected override void Validate()
     {
 
+    }
+
+    public virtual void InjectWithInitialAttributes(string deviceImei, string deviceSerialNumber)
+    {
+      this.Imei = deviceImei;
+      this.SerialNumber = deviceSerialNumber;
+    }
+
+    public virtual void InjectWithAudit(Guid accountIdToCreateThisDevice)
+    {
+      this.CreatedBy = accountIdToCreateThisDevice;
     }
   }
 }
