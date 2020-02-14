@@ -31,6 +31,11 @@ namespace dl.wm.suite.cms.model.Vehicles
         public virtual string Brand { get; set; }
         public virtual DateTime RegisteredDate { get; set; }
         public virtual bool IsActive { get; set; }
+        public virtual double Height { get; set; }
+        public virtual double Width { get; set; }
+        public virtual double Axels { get; set; }
+        public virtual double Length { get; set; }
+        public virtual double MinTurnRadius { get; set; }
 
 
         public virtual GasType Gas { get; set; }

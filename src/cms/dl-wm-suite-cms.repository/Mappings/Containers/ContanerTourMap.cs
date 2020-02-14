@@ -1,5 +1,4 @@
 ﻿using dl.wm.suite.cms.model.Containers;
-using dl.wm.suite.cms.model.Employees;
 using dl.wm.suite.cms.model.Tours;
 using FluentNHibernate.Mapping;
 

@@ -16,7 +16,7 @@ namespace dl.wm.suite.cms.api.Configurations.AutoMappingProfiles.Tours
             CreateMap<Tour, TourForAssignTrackableModel>()
                 .ForMember(dest => dest.TourId, opt => opt.MapFrom(src => src.Id))
                 .ForMember(dest => dest.ScheduledDate, opt => opt.MapFrom(src => src.ScheduledDate))
-                .ForMember(dest => dest.AssetNumplate, opt => opt.MapFrom(src => src.Vehicle.NumPlate))
+                .ForMember(dest => dest.AssetNumplate, opt => opt.MapFrom(src => src.Asset.NumPlate))
                 .ForMember(dest => dest.EmployeeId, opt => opt.Ignore())
                 .MaxDepth(1)
                 .PreserveReferences()
