@@ -16,14 +16,17 @@ namespace dl.wm.suite.cms.model.Devices
 
         private void OnCreated()
         {
-            
+            this.CreatedDate = DateTime.Now;
+            this.ModifiedDate = DateTime.Now;
         }
 
         public virtual IGeometry Point { get; set; }
-        public virtual int Altitude { get; set; }
-        public virtual int Angle { get; set; }
+        public virtual double Altitude { get; set; }
+        public virtual double Angle { get; set; }
         public virtual int Satellites { get; set; }
-        public virtual int Speed { get; set; }
+        public virtual double Speed { get; set; }
+        public virtual DateTime CreatedDate { get; set; }
+        public virtual DateTime ModifiedDate { get; set; }
 
         public virtual Device Device { get; set; }
         
