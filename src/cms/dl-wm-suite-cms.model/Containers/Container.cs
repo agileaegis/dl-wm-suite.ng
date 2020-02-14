@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using dl.wm.suite.cms.model.Devices;
 using dl.wm.suite.common.infrastructure.Domain;
 using GeoAPI.Geometries;
 using NetTopologySuite.Geometries;
@@ -42,7 +43,10 @@ namespace dl.wm.suite.cms.model.Containers
         public virtual DateTime MandatoryPickupDate { get; set; }
         public virtual bool MandatoryPickupActive { get; set; }
 
+        public virtual Sensor Sensor { get; set; }
+        public virtual Device Device { get; set; }
         public virtual ISet<ContainerTour> ContainerTours { get; set; }
+        public virtual ISet<ContainerServiceLog> ServiceLogs { get; set; }
         
         protected override void Validate()
         {

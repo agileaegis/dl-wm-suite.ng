@@ -27,6 +27,8 @@ namespace dl.wm.suite.cms.model.Devices
         public virtual string JsonValue { get; set; }
         public virtual bool IsActive { get; set; }
 
+        public virtual Device Device { get; set; }
+
         protected override void Validate()
         {
         }

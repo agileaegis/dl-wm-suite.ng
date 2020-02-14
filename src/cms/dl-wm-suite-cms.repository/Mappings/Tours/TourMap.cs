@@ -28,9 +28,10 @@ namespace dl.wm.suite.cms.repository.Mappings.Tours
           .CustomType("String")
           .Access.Property()
           .Generated.Never()
+          .Unique()
           .CustomSqlType("nvarchar")
           .Not.Nullable()
-          .Length(50)
+          .Length(128)
           ;
 
         Map(x => x.Type)

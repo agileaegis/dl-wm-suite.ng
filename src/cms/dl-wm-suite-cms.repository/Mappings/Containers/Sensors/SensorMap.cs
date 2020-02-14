@@ -3,21 +3,30 @@ using FluentNHibernate.Mapping;
 
 namespace dl.wm.suite.cms.repository.Mappings.Containers.Sensors
 {
-    public class SensorMap : ClassMap<ContainerServiceLog>
+  public class SensorMap : ClassMap<Sensor>
+  {
+    public SensorMap()
     {
-        public SensorMap()
-        {
-            Table(@"sensors");
+      Table(@"sensors");
 
-            Id(x => x.Id)
-                .Column("id")
-                .CustomType("Guid")
-                .Access.Property()
-                .CustomSqlType("uuid")
-                .Not.Nullable()
-                .GeneratedBy
-                .GuidComb()
-                ;
-        }
+      Id(x => x.Id)
+        .Column("id")
+        .CustomType("Guid")
+        .Access.Property()
+        .CustomSqlType("uuid")
+        .Not.Nullable()
+        .GeneratedBy
+        .GuidComb()
+        ;
+
+      //HasOne
+      References(x => x.Container)
+        .Class<Container>()
+        .Access.Property()
+        .Cascade.SaveUpdate()
+        .Fetch.Join()
+        .Columns("container_id")
+        ;
     }
+  }
 }
