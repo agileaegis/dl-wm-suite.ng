@@ -1,6 +1,8 @@
 ﻿using dl.wm.suite.cms.model.Containers;
 using dl.wm.suite.cms.model.Devices;
+using dl.wm.suite.cms.repository.CustomTypes;
 using FluentNHibernate.Mapping;
+using nhibernate.postgresql.json;
 
 namespace dl.wm.suite.cms.repository.Mappings.Devices
 {
@@ -35,6 +37,11 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Generated.Never()
         .Not.Nullable()
         ;
+
+      Map(x => x.JsonbValue).CustomSqlType("jsonb")
+        .CustomType<JsonType<JsonbType>>()
+        .Column("measurement_value_json")
+        .Not.Nullable();
 
       Map(x => x.Temperature)
         .Column("temperature")

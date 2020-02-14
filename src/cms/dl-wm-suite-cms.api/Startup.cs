@@ -15,6 +15,7 @@ using dl.wm.suite.cms.api.Configurations.AutoMappingProfiles.Vehicles;
 using AspNetCoreRateLimit;
 using Autofac;
 using dl.wm.suite.cms.api.Mqtt;
+using dl.wm.suite.cms.repository.CustomTypes;
 using FluentValidation.AspNetCore;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -34,6 +35,7 @@ using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
+using Npgsql;
 using Serilog;
 using Serilog.Events;
 using StackExchange.Redis;
@@ -150,6 +152,8 @@ namespace dl.wm.suite.cms.api
           options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         })
         .AddFluentValidation();
+
+      NpgsqlConnection.GlobalTypeMapper.UseJsonNet(new[] { typeof(JsonbType) });
 
       services.AddResponseCaching();
 

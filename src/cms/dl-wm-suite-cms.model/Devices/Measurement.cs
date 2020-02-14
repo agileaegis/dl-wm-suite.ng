@@ -18,7 +18,7 @@ namespace dl.wm.suite.cms.model.Devices
 
         public virtual DateTime CreatedDate { get; set; }
         public virtual DateTime ModifiedDate { get; set; }
-        public virtual string JsonValue { get; set; }
+        public virtual string JsonbValue { get; set; }
         public virtual double Temperature { get; set; }
         public virtual double FillLevel { get; set; }
         public virtual double TiltX { get; set; }
