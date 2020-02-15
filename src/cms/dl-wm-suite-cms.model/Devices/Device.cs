@@ -107,6 +107,13 @@ namespace dl.wm.suite.cms.model.Devices
       this.ProvisioningBy = userAuditId;
       this.ProvisioningDate = DateTime.Now;
     }
+
+    public virtual void ActivateWith(Guid userAuditId)
+    {
+      this.ActivatedBy = userAuditId;
+      this.ActivationDate = DateTime.Now;
+      this.IsActivated = true;
+    }
   }
 }
 

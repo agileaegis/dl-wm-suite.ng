@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using dl.wm.suite.cms.contracts.Containers;
 using dl.wm.suite.cms.model.Containers;
@@ -10,7 +8,6 @@ using dl.wm.suite.cms.repository.ContractRepositories;
 using dl.wm.suite.common.dtos.Vms.Containers;
 using dl.wm.suite.common.infrastructure.Exceptions.Domain.Containers;
 using dl.wm.suite.common.infrastructure.Exceptions.Domain.Devices;
-using dl.wm.suite.common.infrastructure.Exceptions.Domain.Devices.DeviceModels;
 using dl.wm.suite.common.infrastructure.TypeMappings;
 using dl.wm.suite.common.infrastructure.UnitOfWorks;
 using Serilog;

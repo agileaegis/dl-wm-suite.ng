@@ -89,6 +89,54 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
       return BadRequest(new {errorMessage = "UNKNOWN_ERROR_CREATION_NEW_DEVICE"});
     }
 
+    /// <summary>
+    /// PUT : Activate an Existing Device.
+    /// </summary>
+    /// <param name="id">Device Id for Modification</param>
+    /// <param name="deviceForActivationModel">DeviceForActivationModel the Request Model for Activation</param>
+    /// <remarks> return a ResponseEntity with status 201 (Created) if the new Device is created, 400 (Bad Request), 500 (Server Error) </remarks>
+    /// <response code="200">Ok (if the Device is updated)</response>
+    /// <response code="400">Bad Request</response>
+    /// <response code="401">Unauthorized</response>
+    /// <response code="500">Internal Server Error</response>
+    [HttpPut("{id}/activate", Name = "PutDeviceActivateRoute")]
+    [ValidateModel]
+    public async Task<IActionResult> PutDeviceActivateAsync(Guid id, [FromBody] DeviceForActivationModel deviceForActivationModel)
+    {
+      var userAudit = await _inquiryUserProcessor.GetUserByLoginAsync(GetEmailFromClaims());
+
+      if (userAudit == null)
+        return BadRequest(new {errorMessage = "AUDIT_USER_NOT_EXIST"});
+
+      var activatingDevice =
+        await _updateDeviceProcessor.ActivatingDeviceAsync(userAudit.Id, id, deviceForActivationModel);
+
+      switch (activatingDevice.Message)
+      {
+        case ("SUCCESS_ACTIVATION"):
+        {
+          Log.Information(
+            $"--Method:PutDeviceActivateAsync -- Message:DEVICE_ACTIVATION_SUCCESSFULLY -- " +
+            $"Datetime:{DateTime.Now} -- DeviceInfo:{id} ");
+          return Ok(activatingDevice);
+        }
+        case ("ERROR_DEVICE_NOT_EXISTS"):
+        {
+          return BadRequest(new {errorMessage = "ERROR_DEVICE_NOT_EXISTS"});
+        }
+        case ("ERROR_ACTIVATION_FAILED"):
+        {
+          return BadRequest(new {errorMessage = "ERROR_ACTIVATION_FAILED"});
+        }
+        case ("UNKNOWN_ERROR"):
+        {
+          return BadRequest(new {errorMessage = "ERROR_ACTIVATION_DEVICE"});
+        }
+      }
+
+      return NotFound();
+    }
+
 
     /// <summary>
     /// PUT : Update an Existing Device.
