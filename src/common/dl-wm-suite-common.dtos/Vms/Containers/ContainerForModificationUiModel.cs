@@ -14,4 +14,10 @@ namespace dl.wm.suite.common.dtos.Vms.Containers
         [Editable(true)]
         public string ContainerName { get; set; }
     }
+    public class ContainerForModificationProvisioningModel
+    {
+        [Required]
+        [Editable(true)]
+        public Guid ContainerDeviceProvisioningCode { get; set; }
+    }
 }

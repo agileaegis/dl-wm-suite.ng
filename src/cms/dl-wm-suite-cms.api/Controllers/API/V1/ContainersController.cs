@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Mime;
 using System.Threading.Tasks;
 using dl.wm.suite.cms.api.Controllers.API.Base;
 using dl.wm.suite.cms.api.Validators;
@@ -23,10 +22,8 @@ using dl.wm.suite.cms.api.Helpers.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Serilog;
 
@@ -255,6 +252,62 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
 
       return NotFound();
     }
+
+    /// <summary>
+    /// PUT : Provisioning an Existing Container with an Existing Device.
+    /// </summary>
+    /// <param name="id">Container Id for Modification</param>
+    /// <param name="deviceId">Device Id for Provisioning</param>
+    /// <param name="containerForModificationProvisioningModel">ContainerForModificationProvisioningModel the Request Model for Modification</param>
+    /// <remarks> return a ResponseEntity with status 200 (Ok) if the new Container provisioning with Device Correctly, 400 (Bad Request), 500 (Server Error) </remarks>
+    /// <response code="200">Ok (if the Container is updated)</response>
+    /// <response code="401">Unauthorized</response>
+    /// <response code="400">Bad Request</response>
+    /// <response code="500">Internal Server Error</response>
+    [HttpPut("{id}/provisioning-device/{deviceId}", Name = "PutContainerProvisioningDeviceRoute")]
+    [ValidateModel]
+    public async Task<IActionResult> PutContainerProvisioningDeviceAsync(Guid id, Guid deviceId,
+      [FromBody] ContainerForModificationProvisioningModel containerForModificationProvisioningModel)
+    {
+      var userAudit = await _inquiryUserProcessor.GetUserByLoginAsync(GetEmailFromClaims());
+
+      if (userAudit == null)
+        return BadRequest(new {errorMessage = "AUDIT_USER_NOT_EXIST"});
+
+      var provisioningDeviceToContainer =
+        await _updateContainerProcessor.ProvisioningDeviceToContainerAsync(userAudit.Id, id, deviceId, containerForModificationProvisioningModel);
+
+      switch (provisioningDeviceToContainer.Message)
+      {
+        case ("SUCCESS_PROVISIONING"):
+        {
+          Log.Information(
+            $"--Method:PutContainerProvisioningDeviceAsync -- Message:DEVICE_CONTAINER_PROVISIONING_SUCCESSFULLY -- " +
+            $"Datetime:{DateTime.Now} -- ContainerInfo:{id} -- DeviceInfo:{deviceId}");
+          return Ok(provisioningDeviceToContainer);
+        }
+        case ("ERROR_DEVICE_NOT_EXISTS"):
+        {
+          return BadRequest(new {errorMessage = "ERROR_DEVICE_NOT_EXISTS"});
+        }
+        case ("ERROR_CONTAINER_NOT_EXISTS"):
+        {
+          return BadRequest(new {errorMessage = "ERROR_CONTAINER_NOT_EXISTS"});
+        }
+        case ("ERROR_PROVISIONING_FAILED"):
+        {
+          return BadRequest(new {errorMessage = "ERROR_PROVISIONING_FAILED"});
+        }
+        case ("UNKNOWN_ERROR"):
+        {
+          return BadRequest(new {errorMessage = "ERROR_PROVISIONING_DEVICE"});
+        }
+      }
+
+      return NotFound();
+    }
+
+
 
     /// <summary>
     /// PUT : Update an Existing Container.

@@ -71,6 +71,18 @@ namespace dl.wm.suite.cms.model.Containers
     {
       this.IsActive = false;
     }
+
+    public virtual void UpdateWithAudit(Guid userAuditId)
+    {
+      this.ModifiedBy = userAuditId;
+      this.ModifiedDate = DateTime.Now;
+    }
+
+    public virtual void InjectWithDevice(Device deviceToBeProvisioned)
+    {
+      this.Device = deviceToBeProvisioned;
+      deviceToBeProvisioned.Container = this;
+    }
   }
 }
 

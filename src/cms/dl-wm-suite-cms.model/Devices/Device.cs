@@ -95,6 +95,18 @@ namespace dl.wm.suite.cms.model.Devices
       this.DeviceModel = deviceModelToBeInjected;
       deviceModelToBeInjected.Devices.Add(this);
     }
+
+    public virtual void UpdateWithAudit(Guid userAuditId)
+    {
+      this.ModifiedBy = userAuditId;
+      this.ModifiedDate = DateTime.Now;
+    }
+
+    public virtual void ProvisioningWith(Guid userAuditId)
+    {
+      this.ProvisioningBy = userAuditId;
+      this.ProvisioningDate = DateTime.Now;
+    }
   }
 }
 
