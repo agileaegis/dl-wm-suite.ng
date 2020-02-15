@@ -137,6 +137,31 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
       return NotFound();
     }
 
+    /// <summary>
+    /// PUT : Update or Create a Measurement for an Existing Device.
+    /// </summary>
+    /// <param name="imei">Device Imei for Updating a Measurement </param>
+    /// <param name="deviceForMeasurementModel">DeviceForMeasurementModel the Request Model for Measurement</param>
+    /// <remarks> return a ResponseEntity with status 200 (Ok) if the update for Device is finished correctly, 400 (Bad Request), 500 (Server Error) </remarks>
+    /// <response code="200">Ok (if the Device is updated)</response>
+    /// <response code="400">Bad Request</response>
+    /// <response code="401">Unauthorized</response>
+    /// <response code="500">Internal Server Error</response>
+    [HttpPut("{id}/measurement", Name = "PutDeviceMeasurementRoute")]
+    [ValidateModel]
+    public async Task<IActionResult> PutDeviceMeasurementAsync(string imei, [FromBody] DeviceForMeasurementModel deviceForMeasurementModel)
+    {
+      try
+      {
+        await _updateDeviceProcessor.StoreMeasurement(imei, deviceForMeasurementModel);
+      }
+      catch (Exception e)
+      {
+        return BadRequest(new {errorMessage = "ERROR_DEVICE_MEASUREMENT_STORAGE"});
+      }
+      return Ok();
+    }
+
 
     /// <summary>
     /// PUT : Update an Existing Device.

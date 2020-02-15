@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using dl.wm.suite.common.infrastructure.Domain;
 using GeoAPI.Geometries;
+using NetTopologySuite.Geometries;
 
 namespace dl.wm.suite.cms.model.Devices
 {
@@ -17,7 +18,7 @@ namespace dl.wm.suite.cms.model.Devices
         private void OnCreated()
         {
             this.CreatedDate = DateTime.Now;
-            this.ModifiedDate = DateTime.Now;
+            this.ModifiedDate = DateTime.MinValue;
         }
 
         public virtual IGeometry Point { get; set; }
@@ -32,6 +33,24 @@ namespace dl.wm.suite.cms.model.Devices
         
         protected override void Validate()
         {
+        }
+
+        public virtual void InjectWithInitialAttributes(double geoLat, double geoLon, double altitude, double angle, int satellites, double speed)
+        {
+          this.Point = new Point(geoLat, geoLon)
+          {
+            SRID = 4326
+          };
+
+          this.Altitude = altitude;
+          this.Angle = angle;
+          this.Satellites = satellites;
+          this.Speed = speed;
+        }
+
+        public virtual void ModifiedWith()
+        {
+          this.ModifiedDate = DateTime.Now;
         }
     }
 }

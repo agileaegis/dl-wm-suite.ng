@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection.Metadata;
 using System.Threading.Tasks;
 using dl.wm.suite.cms.contracts.Devices;
 using dl.wm.suite.cms.model.Devices;
@@ -84,6 +86,86 @@ namespace dl.wm.suite.cms.services.Devices
       return Task.Run(() => response);
     }
 
+    public async Task StoreMeasurement(string imei, DeviceForMeasurementModel deviceForMeasurementModel)
+    {
+      if (string.IsNullOrEmpty(imei))
+        throw new InvalidImeiForDeviceMeasurementException();
+
+      if(deviceForMeasurementModel == null)
+        throw new InvalidMeasurementModelForDeviceMeasurementException();
+
+      try
+      {
+        var deviceToBeUpdatedWithMeasurement = ThrowExceptionIfDeviceDoesNotExist(imei);
+
+        var todayMeasurement =  deviceToBeUpdatedWithMeasurement.Measurements.FirstOrDefault(m => m.CreatedDate.Date == DateTime.Now.Date);
+
+        if (todayMeasurement == null)
+        {
+          todayMeasurement = new Measurement();
+        }
+
+        todayMeasurement.InjectWithInitialAttributes(
+          deviceForMeasurementModel.MeasurementValueJson,
+          deviceForMeasurementModel.Temperature,
+          deviceForMeasurementModel.FillLevel,
+          deviceForMeasurementModel.TiltX,
+          deviceForMeasurementModel.TiltY,
+          deviceForMeasurementModel.TiltZ,
+          deviceForMeasurementModel.Light,
+          deviceForMeasurementModel.Battery,
+          deviceForMeasurementModel.Gps,
+          deviceForMeasurementModel.NbIot,
+          deviceForMeasurementModel.BatterySafeMode,
+          deviceForMeasurementModel.TemperatureEnabled,
+          deviceForMeasurementModel.FillLevelEnabled,
+          deviceForMeasurementModel.MagnetometerEnabled,
+          deviceForMeasurementModel.TamperEnabled,
+          deviceForMeasurementModel.LightEnabled,
+          deviceForMeasurementModel.GpsEnabled
+          );
+
+        todayMeasurement.ModifiedWith();
+
+        var todayLocation =  deviceToBeUpdatedWithMeasurement.Locations.FirstOrDefault(m => m.CreatedDate.Date == DateTime.Now.Date);
+
+        if (todayLocation == null)
+        {
+          todayLocation = new Location();
+        }
+
+        todayLocation.InjectWithInitialAttributes(
+          deviceForMeasurementModel.GeoLat,
+          deviceForMeasurementModel.GeoLon,
+          deviceForMeasurementModel.Altitude,
+          deviceForMeasurementModel.Angle,
+          deviceForMeasurementModel.Satellites,
+          deviceForMeasurementModel.Speed
+        );
+
+        todayLocation.ModifiedWith();
+
+        if (todayMeasurement.Id == Guid.Empty)
+        {
+          deviceToBeUpdatedWithMeasurement.InjectWithMeasurement(todayMeasurement);
+        }
+        if (todayLocation.Id == Guid.Empty)
+        {
+          deviceToBeUpdatedWithMeasurement.InjectWithLocation(todayLocation);
+        }
+
+        MakeDevicePersistent(deviceToBeUpdatedWithMeasurement);
+      }
+      catch (DeviceDoesNotExistException e)
+      {
+        throw new InvalidMeasurementException("DEVICE_DOES_NOT_EXISTS");
+      }
+      catch (Exception e)
+      {
+        throw new InvalidMeasurementException("UNKNOWN_ERROR");
+      }
+    }
+
     private DeviceActivationUiModel ThrowExcIfActivationWasNotBeMadePersistent(Device deviceToBeActivated)
     {
       return new DeviceActivationUiModel()
@@ -108,10 +190,18 @@ namespace dl.wm.suite.cms.services.Devices
 
     private Device ThrowExceptionIfDeviceDoesNotExist(Guid idDevice)
     {
-      var deviceToBeProvisioned = _deviceRepository.FindBy(idDevice);
-      if (deviceToBeProvisioned == null)
+      var deviceToBeRetrieved = _deviceRepository.FindBy(idDevice);
+      if (deviceToBeRetrieved == null)
         throw new DeviceDoesNotExistException(idDevice);
-      return deviceToBeProvisioned;
+      return deviceToBeRetrieved;
+    }
+
+    private Device ThrowExceptionIfDeviceDoesNotExist(string imei)
+    {
+      var deviceToBeRetrieved = _deviceRepository.FindByImei(imei);
+      if (deviceToBeRetrieved == null)
+        throw new DeviceDoesNotExistException(imei);
+      return deviceToBeRetrieved;
     }
 
 

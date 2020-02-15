@@ -75,14 +75,22 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Not.Nullable()
         ;
 
-      //HasOne
       References(x => x.Device)
         .Class<Device>()
         .Access.Property()
-        .Cascade.SaveUpdate()
-        .Fetch.Join()
+        .Cascade.None()
+        .LazyLoad()
         .Columns("device_id")
         ;
+
+      ////HasOne
+      //References(x => x.Device)
+      //  .Class<Device>()
+      //  .Access.Property()
+      //  .Cascade.SaveUpdate()
+      //  .Fetch.Join()
+      //  .Columns("device_id")
+      //  ;
     }
   }
 }

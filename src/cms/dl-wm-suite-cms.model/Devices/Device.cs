@@ -34,6 +34,7 @@ namespace dl.wm.suite.cms.model.Devices
       this.Calibrations = new HashSet<Calibration>();
       this.Firmwares = new HashSet<DeviceFirmware>();
       this.Measurements = new HashSet<Measurement>();
+      this.Locations = new HashSet<Location>();
     }
 
     public virtual string Imei { get; set; }
@@ -60,13 +61,13 @@ namespace dl.wm.suite.cms.model.Devices
     public virtual DeviceModel DeviceModel { get; set; }
 
     public virtual Simcard Sim { get; set; }
-    public virtual Location Location { get; set; }
 
     public virtual ISet<Command> Commands { get; set; }
     public virtual ISet<ConnectionReport> Connections { get; set; }
     public virtual ISet<Calibration> Calibrations { get; set; }
     public virtual ISet<DeviceFirmware> Firmwares { get; set; }
     public virtual ISet<Measurement> Measurements { get; set; }
+    public virtual ISet<Location> Locations { get; set; }
 
     protected override void Validate()
     {
@@ -113,6 +114,17 @@ namespace dl.wm.suite.cms.model.Devices
       this.ActivatedBy = userAuditId;
       this.ActivationDate = DateTime.Now;
       this.IsActivated = true;
+    }
+
+    public virtual void InjectWithMeasurement(Measurement todayMeasurement)
+    {
+      this.Measurements.Add(todayMeasurement);
+      todayMeasurement.Device = this;
+    }
+    public virtual void InjectWithLocation(Location todayLocation)
+    {
+      this.Locations.Add(todayLocation);
+      todayLocation.Device = this;
     }
   }
 }

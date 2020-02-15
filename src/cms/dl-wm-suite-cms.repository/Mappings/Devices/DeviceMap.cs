@@ -206,13 +206,13 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Columns("container_id")
         ;
 
-      HasOne(x => x.Location)
-        .Class<Location>()
-        .Access.Property()
-        .Cascade.SaveUpdate()
-        .Fetch.Join()
-        .PropertyRef(p => p.Device)
-        ;
+      //HasOne(x => x.Location)
+      //  .Class<Location>()
+      //  .Access.Property()
+      //  .Cascade.SaveUpdate()
+      //  .Fetch.Join()
+      //  .PropertyRef(p => p.Device)
+      //  ;
 
       HasOne(x => x.Sim)
         .Class<Simcard>()
@@ -220,6 +220,18 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Cascade.SaveUpdate()
         .Fetch.Join()
         .PropertyRef(p => p.Device)
+        ;
+
+      HasMany<Location>(x => x.Locations)
+        .Access.Property()
+        .AsSet()
+        .Cascade.None()
+        .LazyLoad()
+        .Inverse()
+        .Generic()
+        .KeyColumns.Add("device_id", mapping => mapping.Name("device_id")
+          .SqlType("uuid")
+          .Not.Nullable())
         ;
 
       HasMany<Measurement>(x => x.Measurements)

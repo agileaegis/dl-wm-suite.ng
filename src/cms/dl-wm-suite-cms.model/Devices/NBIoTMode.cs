@@ -2,5 +2,6 @@
 {
     public enum NBIoTMode
     {
+      Normal = 1
     }
 }

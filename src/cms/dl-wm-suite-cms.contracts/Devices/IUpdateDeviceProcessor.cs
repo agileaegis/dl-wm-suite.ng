@@ -8,5 +8,6 @@ namespace dl.wm.suite.cms.contracts.Devices
     {
         Task<DeviceUiModel> UpdateDeviceAsync(DeviceForModificationUiModel updatedDevice);
         Task<DeviceActivationUiModel> ActivatingDeviceAsync(Guid userAuditId, Guid id, DeviceForActivationModel deviceForActivationModel);
+        Task StoreMeasurement(string imei, DeviceForMeasurementModel deviceForMeasurementModel);
     }
 }

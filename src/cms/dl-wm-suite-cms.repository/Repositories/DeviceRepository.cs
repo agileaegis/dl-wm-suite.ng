@@ -32,6 +32,7 @@ namespace dl.wm.suite.cms.repository.Repositories
           return (Device)
             Session.CreateCriteria(typeof(Device))
               .Add(Restrictions.Eq("Imei", imei))
+              .Add(Restrictions.Eq("IsActive", true))
               .UniqueResult()
             ;
         }

@@ -13,6 +13,7 @@ namespace dl.wm.suite.cms.model.Devices
         private void OnCreated()
         {
          this.CreatedDate = DateTime.Now;   
+         this.ModifiedDate = DateTime.MinValue;   
         }
 
 
@@ -43,6 +44,37 @@ namespace dl.wm.suite.cms.model.Devices
 
         protected override void Validate()
         {
+        }
+
+        public virtual void InjectWithInitialAttributes(string measurementValueJson, double temperature, double fillLevel, 
+          double tiltX, double tiltY, double tiltZ, int light, double battery, string gps, string nbIot, 
+          int batterySafeMode, bool temperatureEnabled, bool fillLevelEnabled, 
+          bool magnetometerEnabled, bool tamperEnabled, bool lightEnabled, bool gpsEnabled)
+        {
+          this.JsonbValue = measurementValueJson;
+          this.Temperature = temperature;
+          this.FillLevel = fillLevel;
+          this.TiltX = tiltX;
+          this.TiltY = tiltY;
+          this.TiltZ = tiltZ;
+          this.Light = light;
+          this.Battery = battery;
+          this.Gps = gps;
+          this.NbIoT = nbIot;
+          this.NBIoTMode = NBIoTMode.Normal;
+          this.BatterySaveMode = (BatteryMode) batterySafeMode;
+          this.TempEnabled = temperatureEnabled;
+          this.FillLevelEnabled = fillLevelEnabled;
+          this.MagnetometerEnabled = magnetometerEnabled;
+          this.TiltEnabled = magnetometerEnabled;
+          this.TamperEnabled = tamperEnabled;
+          this.LightEnabled = lightEnabled;
+          this.GpsEnabled = gpsEnabled;
+        }
+
+        public virtual void ModifiedWith()
+        {
+          this.ModifiedDate = DateTime.Now;
         }
     }
 }
