@@ -9,7 +9,11 @@ namespace dl.wm.suite.cms.model.Devices
   {
     public Simcard()
     {
+      this.CardType = SimCardType.SimOnChip;
+      this.NetworkType = SimNetworkType.NBIoT;
+      this.IsActive = true;
 
+      this.PurchaseDate = DateTime.Now;
     }
 
     public virtual string Iccid { get; set; }
@@ -25,6 +29,14 @@ namespace dl.wm.suite.cms.model.Devices
 
     protected override void Validate()
     {
+    }
+
+    public virtual void InjectWithInitialAttributes(string deviceSimcardIccid, string deviceSimcardImsi, string deviceSimcardCountryIso, string deviceSimcardNumber)
+    {
+      this.Iccid = deviceSimcardIccid;
+      this.Imsi = deviceSimcardImsi;
+      this.CountryIso = deviceSimcardCountryIso;
+      this.Number = deviceSimcardNumber;
     }
   }
 }

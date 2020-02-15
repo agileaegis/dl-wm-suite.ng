@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace dl.wm.suite.common.dtos.Vms.Devices
 {
@@ -22,5 +23,7 @@ namespace dl.wm.suite.common.dtos.Vms.Devices
     [Editable(true)] public string DeviceSimcardType { get; set; }
     [Required(AllowEmptyStrings = false)]
     [Editable(true)] public string DeviceSimcardNetworkType { get; set; }
+    [Required]
+    [Editable(true)] public Guid DeviceDeviceModelId { get; set; }
   }
 }

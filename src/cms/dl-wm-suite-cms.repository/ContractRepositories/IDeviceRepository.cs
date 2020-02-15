@@ -14,9 +14,6 @@ namespace dl.wm.suite.cms.repository.ContractRepositories
         Device FindBySimcardIccid(string iccid);
         Device FindByImeiAndSimcardIccid(string imei, string iccid);
         QueryResult<Device> FindAllDevicesPagedOf(int? pageNum, int? pageSize);
-        QueryResult<Device> FindAllDevicesPagedOfByScheduledDate(DateTime scheduledDateDevice, int? pageNum, int? pageSize);
-        Device FindByNameSpecifiedDate(string nameDevice, DateTime scheduledDateDevice);
-        IList<Device> FindAllByScheduledDate(DateTime scheduledDate);
-        IList<Device> FindAllBetweenScheduledDate(DateTime startedScheduledDate, DateTime endedScheduledDate);
+        Device FindBySimcardIccidOrImsi(string iccid, string imsi);
     }
 }

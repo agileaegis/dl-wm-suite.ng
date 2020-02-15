@@ -83,6 +83,18 @@ namespace dl.wm.suite.cms.model.Devices
     {
       this.CreatedBy = accountIdToCreateThisDevice;
     }
+
+    public virtual void InjectWithSimacard(Simcard simcardToBeInjected)
+    {
+      this.Sim = simcardToBeInjected;
+      simcardToBeInjected.Device = this;
+    }
+
+    public virtual void InjectWithDeviceModel(DeviceModel deviceModelToBeInjected)
+    {
+      this.DeviceModel = deviceModelToBeInjected;
+      deviceModelToBeInjected.Devices.Add(this);
+    }
   }
 }
 

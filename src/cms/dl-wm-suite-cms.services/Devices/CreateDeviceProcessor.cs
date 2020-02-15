@@ -5,8 +5,8 @@ using dl.wm.suite.cms.contracts.Devices;
 using dl.wm.suite.cms.model.Devices;
 using dl.wm.suite.cms.repository.ContractRepositories;
 using dl.wm.suite.common.dtos.Vms.Devices;
-using dl.wm.suite.common.infrastructure.Exceptions.Domain.Departments;
 using dl.wm.suite.common.infrastructure.Exceptions.Domain.Devices;
+using dl.wm.suite.common.infrastructure.Exceptions.Domain.Devices.DeviceModels;
 using dl.wm.suite.common.infrastructure.TypeMappings;
 using dl.wm.suite.common.infrastructure.UnitOfWorks;
 using Serilog;
@@ -17,13 +17,15 @@ namespace dl.wm.suite.cms.services.Devices
   {
     private readonly IUnitOfWork _uOf;
     private readonly IDeviceRepository _deviceRepository;
+    private readonly IDeviceModelRepository _deviceModelRepository;
     private readonly IAutoMapper _autoMapper;
 
     public CreateDeviceProcessor(IUnitOfWork uOf, IAutoMapper autoMapper,
-      IDeviceRepository deviceRepository)
+      IDeviceRepository deviceRepository, IDeviceModelRepository deviceModelRepository)
     {
       _uOf = uOf;
       _deviceRepository = deviceRepository;
+      _deviceModelRepository = deviceModelRepository;
       _autoMapper = autoMapper;
     }
 
@@ -53,6 +55,20 @@ namespace dl.wm.suite.cms.services.Devices
         ThrowExcIfThisDeviceAlreadyExist(deviceToBeCreated);
 
         var simcardToBeInjected = new Simcard();
+        simcardToBeInjected.InjectWithInitialAttributes(newDeviceUiModel.DeviceSimcardIccid,
+          newDeviceUiModel.DeviceSimcardImsi, newDeviceUiModel.DeviceSimcardCountryIso,
+          newDeviceUiModel.DeviceSimcardNumber);
+
+        ThrowExcIfThisSimCardForDeviceAlreadyExist(simcardToBeInjected);
+
+        deviceToBeCreated.InjectWithSimacard(simcardToBeInjected);
+
+        var deviceModelToBeInjected = _deviceModelRepository.FindBy(newDeviceUiModel.DeviceDeviceModelId);
+
+        if(deviceModelToBeInjected == null)
+          throw new DeviceModelDoesNotExistException(newDeviceUiModel.DeviceDeviceModelId);
+
+        deviceToBeCreated.InjectWithDeviceModel(deviceModelToBeInjected);
 
         Log.Debug(
           $"Create Device: {newDeviceUiModel.DeviceImei}" +
@@ -77,11 +93,27 @@ namespace dl.wm.suite.cms.services.Devices
           "--CreateDevice--  @NotComplete@ [CreateDeviceProcessor]. " +
           $"Broken rules: {e.BrokenRules}");
       }
+      catch (DeviceModelDoesNotExistException ex)
+      {
+        response.Message = "ERROR_DEVICE_MODEL_DOES_NOT_EXIST";
+        Log.Error(
+          $"Create Device: {newDeviceUiModel.DeviceImei} plus : DeviceModel: {newDeviceUiModel.DeviceDeviceModelId}" +
+          "--CreateDevice--  @fail@ [CreateDeviceProcessor]. " +
+          $"@innerfault:{ex?.Message} and {ex?.InnerException}");
+      }
       catch (DeviceAlreadyExistsException ex)
       {
         response.Message = "ERROR_DEVICE_ALREADY_EXISTS";
         Log.Error(
           $"Create Device: {newDeviceUiModel.DeviceImei}" +
+          "--CreateDevice--  @fail@ [CreateDeviceProcessor]. " +
+          $"@innerfault:{ex?.Message} and {ex?.InnerException}");
+      }
+      catch (SimcardAlreadyExistsException ex)
+      {
+        response.Message = "ERROR_DEVICE_SIMCARD_ALREADY_EXISTS";
+        Log.Error(
+          $"Create Device: {newDeviceUiModel.DeviceImei} plus : Simcard: {newDeviceUiModel.DeviceSimcardIccid}" +
           "--CreateDevice--  @fail@ [CreateDeviceProcessor]. " +
           $"@innerfault:{ex?.Message} and {ex?.InnerException}");
       }
@@ -105,11 +137,20 @@ namespace dl.wm.suite.cms.services.Devices
       return Task.Run(() => response);
     }
 
+    private void ThrowExcIfThisSimCardForDeviceAlreadyExist(Simcard simcardToBeInjected)
+    {
+      var deviceRetrieved = _deviceRepository.FindBySimcardIccidOrImsi(simcardToBeInjected.Iccid, simcardToBeInjected.Imsi);
+      if (deviceRetrieved != null)
+      {
+        throw new SimcardAlreadyExistsException(simcardToBeInjected.Iccid, simcardToBeInjected.Imsi);
+      }
+    }
+
 
     private void ThrowExcIfThisDeviceAlreadyExist(Device deviceToBeCreated)
     {
-      var customerRetrieved = _deviceRepository.FindByImei(deviceToBeCreated.Imei);
-      if (customerRetrieved != null)
+      var deviceRetrieved = _deviceRepository.FindByImei(deviceToBeCreated.Imei);
+      if (deviceRetrieved != null)
       {
         throw new DeviceAlreadyExistsException(deviceToBeCreated.Imei, deviceToBeCreated.GetBrokenRulesAsString());
       }
@@ -135,6 +176,5 @@ namespace dl.wm.suite.cms.services.Devices
       _deviceRepository.Save(deviceToBeMadePersistence);
       _uOf.Commit();
     }
-
   }
 }

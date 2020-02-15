@@ -129,7 +129,7 @@ namespace dl.wm.suite.cms.api.Configurations
 
     public static void ConfigureNHibernate(IServiceCollection services, string connectionString)
     {
-      //HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
+      HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
 
       try
       {

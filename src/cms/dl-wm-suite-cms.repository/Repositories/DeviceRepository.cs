@@ -84,55 +84,21 @@ namespace dl.wm.suite.cms.repository.Repositories
             return null;
         }
 
-        public QueryResult<Device> FindAllDevicesPagedOfByScheduledDate(DateTime scheduledDateDevice, int? pageNum, int? pageSize)
+        public Device FindBySimcardIccidOrImsi(string iccid, string imsi)
         {
-            return null;
-        }
-
-        public Device FindByNameSpecifiedDate(string nameDevice, DateTime scheduledDateDevice)
-        {
-            return (Device)
-                Session.CreateCriteria(typeof(Device))
-                   .Add(Restrictions.Eq("Name", nameDevice))
-                    .Add(Restrictions.Eq(
-                       Projections.SqlFunction("date",
-                                               NHibernateUtil.Date,
-                                               Projections.Property("ScheduledDate")),
-                       scheduledDateDevice.Date))
-                   .UniqueResult()
-                   ;
-        }
-
-        public IList<Device> FindAllByScheduledDate(DateTime scheduledDate)
-        {
-            return 
-                Session.CreateCriteria(typeof(Device))
-                .Add(Restrictions.Eq(
-                   Projections.SqlFunction("date",
-                                           NHibernateUtil.Date,
-                                           Projections.Property("ScheduledDate")),
-                   scheduledDate.Date))
-                .SetCacheable(true)
-                .SetCacheMode(CacheMode.Normal)
-                .SetFlushMode(FlushMode.Never)
-                .List<Device>()
-               ;
-        }
-
-        public IList<Device> FindAllBetweenScheduledDate(DateTime startedScheduledDate, DateTime endedScheduledDate)
-        {
-            return
-                Session.CreateCriteria(typeof(Device))
-                .Add(
-                    Expression.Conjunction()
-                        .Add(Restrictions.Ge("ScheduledDate", startedScheduledDate))
-                        .Add(Restrictions.Lt("ScheduledDate", endedScheduledDate))
-                    )
-                    .SetCacheable(true)
-                    .SetCacheMode(CacheMode.Normal)
-                    .SetFlushMode(FlushMode.Never)
-                    .List<Device>()
-                ;
+          return
+            (Device)
+            Session.CreateCriteria(typeof(Device))
+              .CreateAlias("Sim", "s", JoinType.InnerJoin)
+              .Add(Restrictions.Or(
+                Restrictions.Eq("s.Iccid", iccid),
+                Restrictions.Eq("s.Imsi", imsi)))
+              .Add(Expression.Eq("IsActive", true))
+              .SetCacheable(true)
+              .SetCacheMode(CacheMode.Normal)
+              .SetFlushMode(FlushMode.Never)
+              .UniqueResult()
+            ;
         }
     }
 }
