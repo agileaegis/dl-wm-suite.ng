@@ -91,7 +91,7 @@ namespace dl.wm.suite.cms.api.Mqtt
 
     private void ClientMqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
-
+      //Todo: Receiver for Storing Measurement
     }
   }
 }
