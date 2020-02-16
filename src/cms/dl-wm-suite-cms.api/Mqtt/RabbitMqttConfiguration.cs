@@ -55,6 +55,11 @@ namespace dl.wm.suite.cms.api.Mqtt
           "container/delete"
         },
         new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+      _client.Subscribe(new[]
+        {
+          "interprocess/push"
+        },
+        new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
 
       _client.MqttMsgPublishReceived += ClientMqttMsgPublishReceived;
       _client.ConnectionClosed += ClientConnectionClosed;

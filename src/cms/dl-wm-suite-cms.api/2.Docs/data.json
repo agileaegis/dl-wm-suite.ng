@@ -6,3 +6,33 @@
   "vehicleStatus": "Normal",
   "vehicleGas": "Petrol"
 }
+
+
+{
+  "measurementValueJson": "{ \"FirstName\":\"Jignesh\",\"LastName\":\"Trivedi\" }",
+  "temperature": 25.5,
+  "fillLevel": 55.53,
+  "tiltX": 90.00,
+  "tiltY": 90.00,
+  "tiltZ": 90.00,
+  "light": 15,
+  "battery": 3.99,
+  "gps": "string",
+  "nbIot": "string",
+  "batterySafeMode": 1,
+  "TamperState": false,
+  "temperatureEnabled": true,
+  "fillLevelEnabled": true,
+  "tiltYEnabled": true,
+  "magnetometerEnabled": true,
+  "tamperEnabled": true,
+  "lightEnabled": true,
+  "batteryEnabled": true,
+  "gpsEnabled": true,
+  "geoLat": 40.656420,
+  "geoLon": 22.906148,
+  "altitude": 1.00,
+  "angle": 1.00,
+  "speed": 0,
+  "satellites": 5
+}

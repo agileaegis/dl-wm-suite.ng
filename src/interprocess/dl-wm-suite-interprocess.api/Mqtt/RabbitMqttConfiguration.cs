@@ -37,6 +37,12 @@ namespace dl.wm.suite.interprocess.api.Mqtt
           "wm/nack"
         },
         new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });  
+
+      _client.Subscribe(new[]
+        {
+          "interprocess/push"
+        },
+        new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
       
       _client.MqttMsgPublishReceived += ClientMqttMsgPublishReceived;
       _client.ConnectionClosed += ClientConnectionClosed;

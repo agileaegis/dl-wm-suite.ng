@@ -112,7 +112,6 @@ namespace dl.wm.suite.interprocess.api
           services.AddSingleton<IRabbitMqttConfiguration, RabbitMqttConfiguration>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime)
         {
           if (env.IsDevelopment())
@@ -121,7 +120,6 @@ namespace dl.wm.suite.interprocess.api
           }
           else
           {
-            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
           }
 
@@ -131,13 +129,10 @@ namespace dl.wm.suite.interprocess.api
           var serviceWs = (IWsConfiguration) serviceProvider.GetService(typeof(IWsConfiguration));
           var serviceMqtt = (IRabbitMqttConfiguration) serviceProvider.GetService(typeof(IRabbitMqttConfiguration));
 
-          //IUdpConfiguration updServer = new UdpConfiguration();
           serviceUdp.EstablishConnection();
 
-          //IWsConfiguration wsServer = new WsConfiguration();
           serviceWs.EstablishConnection();
 
-          //IRabbitMqttConfiguration wsServer = new RabbitMqttConfiguration();
           serviceMqtt.EstablishConnection();
 
           app.UseSwagger().UseSwaggerUI(c =>
