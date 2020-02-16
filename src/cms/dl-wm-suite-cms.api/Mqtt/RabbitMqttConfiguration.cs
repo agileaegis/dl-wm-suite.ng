@@ -57,7 +57,7 @@ namespace dl.wm.suite.cms.api.Mqtt
         new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
       _client.Subscribe(new[]
         {
-          "interprocess/push"
+          "telemetry/message"
         },
         new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
 

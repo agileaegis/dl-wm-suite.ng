@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dl-wm.presenter", "src\UI\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dl-wm-suite.ui", "src\UI\Desktops\aegis-wm-suite\dl-wm-suite.ui\dl-wm-suite.ui.csproj", "{6FF75B22-00E9-439F-84BB-76988F877CD2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Simulator", "Simulator", "{D6F73CA3-ED6B-4FCD-9FEB-616EEF26E80C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wm-simulator", "src\UI\Desktops\ws-simulator\wm-simulator.csproj", "{F7FD49FD-48C9-4B9D-9A74-1C328A15C57C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{6FF75B22-00E9-439F-84BB-76988F877CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FF75B22-00E9-439F-84BB-76988F877CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FF75B22-00E9-439F-84BB-76988F877CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7FD49FD-48C9-4B9D-9A74-1C328A15C57C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7FD49FD-48C9-4B9D-9A74-1C328A15C57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7FD49FD-48C9-4B9D-9A74-1C328A15C57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7FD49FD-48C9-4B9D-9A74-1C328A15C57C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F7FD49FD-48C9-4B9D-9A74-1C328A15C57C} = {D6F73CA3-ED6B-4FCD-9FEB-616EEF26E80C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5B996706-75EA-4B74-B490-C08FF498F923}

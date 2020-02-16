@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Text;
+using dl.wm.suite.interprocess.api.Commanding.Events.EventArgs.Inbound;
+using dl.wm.suite.interprocess.api.Commanding.Listeners.Inbounds;
+using dl.wm.suite.interprocess.api.Commanding.Servers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using uPLibrary.Networking.M2Mqtt;
@@ -6,7 +10,7 @@ using uPLibrary.Networking.M2Mqtt.Messages;
 
 namespace dl.wm.suite.interprocess.api.Mqtt
 {
-  public class RabbitMqttConfiguration : IRabbitMqttConfiguration
+  public class RabbitMqttConfiguration : IRabbitMqttConfiguration, ITelemetryRowDetectionActionListener
   {
     public IConfiguration Configuration { get; }
     private readonly IServiceScopeFactory _scopeFactory;
@@ -20,6 +24,8 @@ namespace dl.wm.suite.interprocess.api.Mqtt
       Configuration = configuration;
       _scopeFactory = scopeFactory;
       _service = service;
+
+      WmInboundServer.GetWmInboundServer.Attach((ITelemetryRowDetectionActionListener) this);
     }
 
     public void EstablishConnection()
@@ -40,7 +46,7 @@ namespace dl.wm.suite.interprocess.api.Mqtt
 
       _client.Subscribe(new[]
         {
-          "interprocess/push"
+          "telemetry/message"
         },
         new[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
       
@@ -75,6 +81,15 @@ namespace dl.wm.suite.interprocess.api.Mqtt
     private void ClientMqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
 
+    }
+
+    public void Update(object sender, TelemetryRowDetectionEventArgs e)
+    {
+      if (_client.IsConnected)
+      {
+        //Todo: Log for Mqtt
+        var result = _client.Publish(Configuration.GetSection("MqttTopics:Telemetry").Value, Encoding.UTF8.GetBytes(e.Payload));
+      }
     }
   }
 }

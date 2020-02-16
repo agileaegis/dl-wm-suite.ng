@@ -109,3 +109,10 @@
 /src/dms/dl-wm-suite-dms.model/obj/*.targets
 /src/dms/dl-wm-suite-dms.contracts
 /src/dms/dl-wm-suite-dms.model
+/src/UI/Desktops/ws-simulator/bin/Debug/*.xml
+/src/UI/Desktops/ws-simulator/bin/Debug/*.config
+/src/UI/Desktops/ws-simulator/obj/Debug/*.cs
+/src/UI/Desktops/ws-simulator/obj/Debug/*.CopyComplete
+/src/UI/Desktops/ws-simulator/obj/Debug/*.txt
+/src/UI/Desktops/ws-simulator/obj/Debug/*.licenses
+/src/UI/Desktops/ws-simulator/obj/Debug/*.resources
