@@ -1,4 +1,5 @@
 ﻿using System;
+using dl.wm.suite.cms.model.CustomTypes;
 using dl.wm.suite.common.infrastructure.Domain;
 
 namespace dl.wm.suite.cms.model.Devices
@@ -14,12 +15,13 @@ namespace dl.wm.suite.cms.model.Devices
         {
          this.CreatedDate = DateTime.Now;   
          this.ModifiedDate = DateTime.MinValue;   
+         this.JsonbValue = new JsonbType();
         }
 
 
         public virtual DateTime CreatedDate { get; set; }
         public virtual DateTime ModifiedDate { get; set; }
-        public virtual string JsonbValue { get; set; }
+        public virtual JsonbType JsonbValue { get; set; }
         public virtual double Temperature { get; set; }
         public virtual double FillLevel { get; set; }
         public virtual double TiltX { get; set; }
@@ -51,7 +53,10 @@ namespace dl.wm.suite.cms.model.Devices
           int batterySafeMode, bool temperatureEnabled, bool fillLevelEnabled, 
           bool magnetometerEnabled, bool tamperEnabled, bool lightEnabled, bool gpsEnabled)
         {
-          this.JsonbValue = measurementValueJson;
+          this.JsonbValue = new JsonbType()
+          {
+            JsonbProperty = measurementValueJson
+          };
           this.Temperature = temperature;
           this.FillLevel = fillLevel;
           this.TiltX = tiltX;

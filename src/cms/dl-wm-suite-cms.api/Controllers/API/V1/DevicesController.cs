@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using dl.wm.suite.cms.api.Controllers.API.Base;
 using dl.wm.suite.cms.api.Validators;
@@ -18,7 +18,6 @@ using dl.wm.suite.cms.contracts.Users;
 using dl.wm.suite.cms.contracts.V1;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using Serilog;
 
 namespace dl.wm.suite.cms.api.Controllers.API.V1
@@ -147,7 +146,7 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
     /// <response code="400">Bad Request</response>
     /// <response code="401">Unauthorized</response>
     /// <response code="500">Internal Server Error</response>
-    [HttpPut("{id}/measurement", Name = "PutDeviceMeasurementRoute")]
+    [HttpPut("{imei}/measurement", Name = "PutDeviceMeasurementRoute")]
     [ValidateModel]
     public async Task<IActionResult> PutDeviceMeasurementAsync(string imei, [FromBody] DeviceForMeasurementModel deviceForMeasurementModel)
     {

@@ -1,4 +1,4 @@
-﻿namespace dl.wm.suite.cms.repository.CustomTypes
+﻿namespace dl.wm.suite.cms.model.CustomTypes
 {
   public class JsonbType
   {

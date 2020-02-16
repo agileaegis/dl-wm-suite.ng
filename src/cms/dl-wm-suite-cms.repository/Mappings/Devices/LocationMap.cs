@@ -78,7 +78,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
       References(x => x.Device)
         .Class<Device>()
         .Access.Property()
-        .Cascade.None()
+        .Cascade.SaveUpdate()
         .LazyLoad()
         .Columns("device_id")
         ;

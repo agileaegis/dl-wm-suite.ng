@@ -15,7 +15,7 @@ using dl.wm.suite.cms.api.Configurations.AutoMappingProfiles.Vehicles;
 using AspNetCoreRateLimit;
 using Autofac;
 using dl.wm.suite.cms.api.Mqtt;
-using dl.wm.suite.cms.repository.CustomTypes;
+using dl.wm.suite.cms.model.CustomTypes;
 using FluentValidation.AspNetCore;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

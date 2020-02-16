@@ -1,6 +1,7 @@
-﻿using dl.wm.suite.cms.model.Containers;
+﻿using System.Collections.Generic;
+using dl.wm.suite.cms.model.Containers;
+using dl.wm.suite.cms.model.CustomTypes;
 using dl.wm.suite.cms.model.Devices;
-using dl.wm.suite.cms.repository.CustomTypes;
 using FluentNHibernate.Mapping;
 using nhibernate.postgresql.json;
 
@@ -115,7 +116,6 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
 
       Map(x => x.Light)
         .Column("light")
-        .CustomType("double")
         .Access.Property()
         .Generated.Never()
         .Nullable()
@@ -190,7 +190,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
       References(x => x.Device)
         .Class<Device>()
         .Access.Property()
-        .Cascade.None()
+        .Cascade.SaveUpdate()
         .LazyLoad()
         .Columns("device_id")
         ;
