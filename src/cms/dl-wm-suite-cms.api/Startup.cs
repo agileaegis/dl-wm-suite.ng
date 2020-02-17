@@ -85,7 +85,7 @@ namespace dl.wm.suite.cms.api
         .WriteTo.Debug(
           outputTemplate:
           "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj} {NewLine}{HttpContext} {NewLine}{Exception}")
-        .WriteTo.RollingFile(HostEnv.WebRootPath + @"log-{Date}.txt", Serilog.Events.LogEventLevel.Information,
+        .WriteTo.RollingFile(HostEnv.WebRootPath + "//" + @"log-{Date}.txt", Serilog.Events.LogEventLevel.Information,
           retainedFileCountLimit: 7)
         .CreateLogger();
 

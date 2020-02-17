@@ -187,6 +187,23 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Not.Nullable()
         ;
 
+      Map(x => x.Distance)
+        .Column("distance")
+        .CustomType("double")
+        .Access.Property()
+        .Generated.Never()
+        .Nullable()
+        ;
+
+      Map(x => x.Tamper)
+        .Column("tamper")
+        .CustomType("decimal")
+        .Access.Property()
+        .Generated.Never()
+        .Nullable()
+        ;
+
+
       References(x => x.Device)
         .Class<Device>()
         .Access.Property()

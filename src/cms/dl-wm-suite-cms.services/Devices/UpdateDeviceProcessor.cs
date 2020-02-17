@@ -116,6 +116,8 @@ namespace dl.wm.suite.cms.services.Devices
           deviceForMeasurementModel.Battery,
           deviceForMeasurementModel.Gps,
           deviceForMeasurementModel.NbIot,
+          deviceForMeasurementModel.Distance,
+          deviceForMeasurementModel.Tamper,
           deviceForMeasurementModel.BatterySafeMode,
           deviceForMeasurementModel.TemperatureEnabled,
           deviceForMeasurementModel.FillLevelEnabled,

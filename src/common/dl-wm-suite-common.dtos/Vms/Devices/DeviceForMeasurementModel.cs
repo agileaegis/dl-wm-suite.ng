@@ -26,7 +26,8 @@ namespace dl.wm.suite.common.dtos.Vms.Devices
     [Editable(true)] public string  NbIot { get; set; }
     [Required]
     [Editable(true)] public int  BatterySafeMode { get; set; }
-    [Editable(true)] public bool TamperState { get; set; }
+    [Editable(true)] public double Distance { get; set; }
+    [Editable(true)] public decimal Tamper { get; set; }
     [Editable(true)] public bool TemperatureEnabled { get; set; }
     [Required]
     [Editable(true)] public bool  FillLevelEnabled { get; set; }

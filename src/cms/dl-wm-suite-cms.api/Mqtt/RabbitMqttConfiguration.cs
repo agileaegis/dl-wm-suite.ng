@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using dl.wm.suite.common.dtos.Vms.Devices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
@@ -91,7 +94,8 @@ namespace dl.wm.suite.cms.api.Mqtt
 
     private void ClientMqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
-      //Todo: Receiver for Storing Measurement
+      var jsonToBeSerialized = System.Text.Encoding.Default.GetString(e.Message);
+      MqqtMessageModel deviceForMeasurementModel = JsonConvert.DeserializeObject<MqqtMessageModel>(jsonToBeSerialized);
     }
   }
 }
