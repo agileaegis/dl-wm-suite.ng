@@ -2,7 +2,7 @@
 
 namespace dl.wm.suite.common.dtos.Vms.Devices
 {
-  public class MqqtMessageModel
+  public class TelemetryMessageModel
   {
     public string CommandType { get; set; }
     public double Temperature { get; set; }

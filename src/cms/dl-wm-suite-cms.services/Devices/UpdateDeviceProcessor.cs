@@ -86,7 +86,7 @@ namespace dl.wm.suite.cms.services.Devices
       return Task.Run(() => response);
     }
 
-    public async Task StoreMeasurement(string imei, DeviceForMeasurementModel deviceForMeasurementModel)
+    public async Task StoreMeasurement(string imei, string jsonValue, DeviceForMeasurementModel deviceForMeasurementModel)
     {
       if (string.IsNullOrEmpty(imei))
         throw new InvalidImeiForDeviceMeasurementException();
@@ -118,7 +118,7 @@ namespace dl.wm.suite.cms.services.Devices
           deviceForMeasurementModel.NbIot,
           deviceForMeasurementModel.Distance,
           deviceForMeasurementModel.Tamper,
-          deviceForMeasurementModel.BatterySafeMode,
+          Convert.ToInt32(deviceForMeasurementModel.BatterySafeMode),
           deviceForMeasurementModel.TemperatureEnabled,
           deviceForMeasurementModel.FillLevelEnabled,
           deviceForMeasurementModel.MagnetometerEnabled,
@@ -142,7 +142,12 @@ namespace dl.wm.suite.cms.services.Devices
           deviceForMeasurementModel.Altitude,
           deviceForMeasurementModel.Angle,
           deviceForMeasurementModel.Satellites,
-          deviceForMeasurementModel.Speed
+          deviceForMeasurementModel.Speed,
+          deviceForMeasurementModel.Bearing,
+          Convert.ToInt32(deviceForMeasurementModel.TimeToFix),
+          Convert.ToInt32(deviceForMeasurementModel.StatusFlags),
+          Convert.ToInt32(deviceForMeasurementModel.SignalLength),
+          deviceForMeasurementModel.Timestamp
         );
 
         todayLocation.ModifiedWith();

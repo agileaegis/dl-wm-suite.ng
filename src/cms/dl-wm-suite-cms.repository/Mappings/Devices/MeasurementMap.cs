@@ -116,6 +116,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
 
       Map(x => x.Light)
         .Column("light")
+        .CustomType("double")
         .Access.Property()
         .Generated.Never()
         .Nullable()
@@ -197,7 +198,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
 
       Map(x => x.Tamper)
         .Column("tamper")
-        .CustomType("decimal")
+        .CustomType("double")
         .Access.Property()
         .Generated.Never()
         .Nullable()

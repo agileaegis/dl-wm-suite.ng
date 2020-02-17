@@ -27,7 +27,7 @@ namespace dl.wm.suite.cms.model.Devices
         public virtual double TiltX { get; set; }
         public virtual double TiltY { get; set; }
         public virtual double TiltZ { get; set; }
-        public virtual int Light { get; set; }
+        public virtual double Light { get; set; }
         public virtual double Battery { get; set; }
         public virtual string Gps { get; set; }
         public virtual string NbIoT { get; set; }
@@ -41,7 +41,7 @@ namespace dl.wm.suite.cms.model.Devices
         public virtual BatteryMode BatterySaveMode { get; set; }
         public virtual NBIoTMode NBIoTMode { get; set; }
         public virtual double Distance { get; set; }
-        public virtual decimal Tamper { get; set; }
+        public virtual double Tamper { get; set; }
 
         public virtual Device Device { get; set; }
 
@@ -50,7 +50,7 @@ namespace dl.wm.suite.cms.model.Devices
         }
 
         public virtual void InjectWithInitialAttributes(string measurementValueJson, double temperature, double fillLevel, 
-          double tiltX, double tiltY, double tiltZ, int light, double battery, string gps, string nbIot, double distance, decimal tamper, 
+          double tiltX, double tiltY, double tiltZ, double light, double battery, string gps, string nbIot, double distance, double tamper, 
           int batterySafeMode, bool temperatureEnabled, bool fillLevelEnabled, 
           bool magnetometerEnabled, bool tamperEnabled, bool lightEnabled, bool gpsEnabled)
         {

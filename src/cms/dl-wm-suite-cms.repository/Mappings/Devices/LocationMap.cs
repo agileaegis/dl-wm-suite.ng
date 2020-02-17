@@ -75,6 +75,39 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .Not.Nullable()
         ;
 
+      Map(x => x.Bearing)
+        .Column("bearing")
+        .CustomType("double")
+        .Access.Property()
+        .Generated.Never().CustomSqlType("double")
+        ;
+
+      Map(x => x.SignalLength)
+        .Column("signal_length")
+        .Access.Property()
+        .Generated.Never()
+        ;
+
+      Map(x => x.StatusFlag)
+        .Column("status_flag")
+        .Access.Property()
+        .Generated.Never()
+        ;
+
+      Map(x => x.TimeToFix)
+        .Column("timetofix")
+        .Access.Property()
+        .Generated.Never()
+        ;
+
+      Map(x => x.Timestamp)
+        .Column("Timestamp")
+        .CustomType("DateTime")
+        .Access.Property()
+        .Generated.Never()
+        .Not.Nullable()
+        ;
+
       References(x => x.Device)
         .Class<Device>()
         .Access.Property()
@@ -82,15 +115,6 @@ namespace dl.wm.suite.cms.repository.Mappings.Devices
         .LazyLoad()
         .Columns("device_id")
         ;
-
-      ////HasOne
-      //References(x => x.Device)
-      //  .Class<Device>()
-      //  .Access.Property()
-      //  .Cascade.SaveUpdate()
-      //  .Fetch.Join()
-      //  .Columns("device_id")
-      //  ;
     }
   }
 }

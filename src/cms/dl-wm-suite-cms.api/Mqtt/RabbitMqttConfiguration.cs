@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using dl.wm.suite.cms.contracts.Devices;
 using dl.wm.suite.common.dtos.Vms.Devices;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
+using Serilog.Formatting.Json;
 using uPLibrary.Networking.M2Mqtt;
 using uPLibrary.Networking.M2Mqtt.Messages;
 
@@ -92,10 +95,62 @@ namespace dl.wm.suite.cms.api.Mqtt
     {
     }
 
-    private void ClientMqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
+    private async void ClientMqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
     {
       var jsonToBeSerialized = System.Text.Encoding.Default.GetString(e.Message);
-      MqqtMessageModel deviceForMeasurementModel = JsonConvert.DeserializeObject<MqqtMessageModel>(jsonToBeSerialized);
+      TelemetryMessageModel telemetryModelModel = JsonConvert.DeserializeObject<TelemetryMessageModel>(jsonToBeSerialized);
+      try
+      {
+        await DoScopedMeasurementStore(jsonToBeSerialized, telemetryModelModel);
+      }
+      catch (Exception exception)
+      {
+        //Todo: Handle Exception
+      }
+    }
+
+    private async Task DoScopedMeasurementStore(string jsonValue, TelemetryMessageModel telemetryModelModel)
+    {
+      using (var scope = _scopeFactory.CreateScope())
+      {
+        var iUpdateDeviceProcessor = scope.ServiceProvider.GetRequiredService<IUpdateDeviceProcessor>();
+        await iUpdateDeviceProcessor.StoreMeasurement(telemetryModelModel.Imei, jsonValue, new DeviceForMeasurementModel()
+        {
+          MeasurementValueJson = jsonValue,
+          Altitude = telemetryModelModel.Altitude,
+          Speed = telemetryModelModel.Speed,
+          Bearing = telemetryModelModel.Bearing,
+          Angle = telemetryModelModel.Angle,
+          Satellites = telemetryModelModel.NumOfSatellites,
+          GeoLat = telemetryModelModel.Latitude,
+          GeoLon = telemetryModelModel.Longitude,
+          TimeToFix = telemetryModelModel.TimeToFix,
+          SignalLength = telemetryModelModel.SignalLength,
+          StatusFlags = telemetryModelModel.StatusFlags,
+          Timestamp = telemetryModelModel.Timestamp,
+          Temperature = telemetryModelModel.Temperature,
+          FillLevel = telemetryModelModel.FillLevel,
+          TiltX = telemetryModelModel.TiltX,
+          TiltY = telemetryModelModel.TiltY,
+          TiltZ = telemetryModelModel.TiltZ,
+          Light = telemetryModelModel.Light,
+          Battery = telemetryModelModel.Battery,
+          Gps = telemetryModelModel.Gps,
+          NbIot = telemetryModelModel.NbIoT,
+          Distance = telemetryModelModel.Distance,
+          Tamper = telemetryModelModel.Tamper,
+          NbIoTSignalLength = telemetryModelModel.NbIoTSignalLength,
+          LatestResetCause = telemetryModelModel.LatestResetCause,
+          FirmwareVersion = telemetryModelModel.FirmwareVersion,
+          TemperatureEnable = telemetryModelModel.TemperatureEnable,
+          DistanceEnable = telemetryModelModel.DistanceEnable,
+          TiltEnable = telemetryModelModel.TiltEnable,
+          MagnetometerEnable = telemetryModelModel.MagnetometerEnable,
+          TamperEnable = telemetryModelModel.TamperEnable,
+          BatterySafeMode = telemetryModelModel.BatterySafeMode,
+          NbIoTMode = telemetryModelModel.NbIoTMode,
+        });
+      }
     }
   }
 }

@@ -152,7 +152,7 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
     {
       try
       {
-        await _updateDeviceProcessor.StoreMeasurement(imei, deviceForMeasurementModel);
+        await _updateDeviceProcessor.StoreMeasurement(imei, "", deviceForMeasurementModel);
       }
       catch (Exception e)
       {
