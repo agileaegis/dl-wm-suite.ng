@@ -23,8 +23,8 @@ namespace dl.wm.suite.ui
       UserLookAndFeel.Default.SetSkinStyle("Metropolis Dark");
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      //ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue = "localhost";
-      ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue = "137.116.232.108";
+      ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue = "localhost";
+      //ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue = "137.116.232.108";
       Application.Run(new Main());
     }
   }
