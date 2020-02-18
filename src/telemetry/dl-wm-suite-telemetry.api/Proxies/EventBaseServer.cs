@@ -16,9 +16,9 @@ namespace dl.wm.suite.telemetry.api.Proxies
             TelemetryRowDetector?.Invoke(this, e);
         }
 
-        public void RaiseTelemetryRowDetection(Guid? correlationId, string imei, string payload)
+        public void RaiseTelemetryRowDetection(string imei, string payload)
         {
-            OnTelemetryRowDetection(new TelemetryRowEventArgs(correlationId, imei, payload));
+            OnTelemetryRowDetection(new TelemetryRowEventArgs(imei, payload));
         }
 
         public void Attach(ITelemetryRowDetectionActionListener listener)

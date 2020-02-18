@@ -9,7 +9,7 @@ namespace dl.wm.suite.telemetry.api.Messaging.Consumers
     {
         public async Task Consume(ConsumeContext<TelemetryDeliveredEvent> context)
         {
-            await Task.Run(() => EventServer.GetServer.RaiseTelemetryRowDetection(context.CorrelationId, context.Message.Imei, context.Message.Payload));
+            await Task.Run(() => EventServer.GetServer.RaiseTelemetryRowDetection(context.Message.Imei, context.Message.Payload));
         }
     }
 }

@@ -69,12 +69,6 @@
     <ProjectReference Include="..\dl-wm-suite-cms.services\dl-wm-suite-cms.services.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="HibernatingRhinos.Profiler.Appender">
-      <HintPath>C:\Users\Venus\Desktop\NHibernate.Profiler-v5.0-Build-5043\Appender\netcoreapp2.0\HibernatingRhinos.Profiler.Appender.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
   <PropertyGroup> 
     <ServerGarbageCollection>false</ServerGarbageCollection>
   </PropertyGroup>

@@ -57,6 +57,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\common\dl-wm-suite-common.dtos\dl-wm-suite-common.dtos.csproj" />
     <ProjectReference Include="..\..\common\dl-wm-suite-common.messaging\dl-wm-suite-common.messaging.csproj" />
   </ItemGroup>
 

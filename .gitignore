@@ -116,3 +116,14 @@
 /src/UI/Desktops/ws-simulator/obj/Debug/*.txt
 /src/UI/Desktops/ws-simulator/obj/Debug/*.licenses
 /src/UI/Desktops/ws-simulator/obj/Debug/*.resources
+/src/UI/Desktops/ws-simulator/bin/Debug/*.dll
+/src/UI/Desktops/ws-simulator/bin/Debug/de/*.dll
+/src/UI/Desktops/ws-simulator/bin/Debug/es/*.dll
+/src/UI/Desktops/ws-simulator/bin/Debug/ja/*.dll
+/src/UI/Desktops/ws-simulator/bin/Debug/ru/*.dll
+/src/UI/Desktops/ws-simulator/bin/Debug/*.exe
+/src/UI/Desktops/ws-simulator/bin/Debug/*.pdb
+/src/UI/Desktops/ws-simulator/obj/Debug/*.cache
+/src/UI/Desktops/ws-simulator/obj/Debug/*.exe
+/src/UI/Desktops/ws-simulator/obj/Debug/*.pdb
+/src/interprocess/dl-wm-suite-interprocess.api/*.txt
