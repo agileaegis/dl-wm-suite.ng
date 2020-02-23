@@ -1,4 +1,4 @@
-﻿namespace dl.wm.suite.cms.api.Helpers.Models
+﻿namespace dl.wm.suite.common.infrastructure.Helpers.Azure
 {
   public class AzureStorageConfig
   {

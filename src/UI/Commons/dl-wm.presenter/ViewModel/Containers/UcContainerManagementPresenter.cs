@@ -45,11 +45,13 @@ namespace dl.wm.presenter.ViewModel.Containers
         }
         public async void ContainerFromGridWasSelected()
         {
-            var urls = await StorageHelper.GetThumbNailUrls(new AzureStorageConfig(), View.SelectedContainerImageName);
-            if (urls.Count > 0)
-            {
-                View.PctContainerImageValue = urls.First();
-            }
+            //var urls = await StorageHelper.GetThumbNailUrls(new AzureStorageConfig(), View.SelectedContainerImageName);
+            //if (urls.Count > 0)
+            //{
+            //    View.PctContainerImageValue = urls.First();
+            //}
+
+            View.PctContainerImageValue = View.SelectedContainerImageName;
 
             View.OnPopulateContainerDataAfterSelection = true;
         }

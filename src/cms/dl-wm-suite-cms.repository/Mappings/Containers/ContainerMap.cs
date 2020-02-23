@@ -178,6 +178,65 @@ namespace dl.wm.suite.cms.repository.Mappings.Containers
         .Not.Nullable()
         ;
 
+      Map(x => x.Capacity)
+        .Column("capacity")
+        .CustomType("int")
+        .Access.Property()
+        .Generated.Never()
+        .Default(@"1100")
+        .CustomSqlType("integer")
+        .Not.Nullable()
+        ;
+
+      Map(x => x.UsefulLoad)
+        .Column("load")
+        .CustomType("int")
+        .Access.Property()
+        .Generated.Never()
+        .Default(@"520")
+        .CustomSqlType("integer")
+        .Not.Nullable()
+        ;
+
+      Map(x => x.IsFixed)
+        .Column("fixed")
+        .CustomType("Boolean")
+        .Access.Property()
+        .Generated.Never()
+        .Default("true")
+        .CustomSqlType("boolean")
+        .Not.Nullable()
+        ;
+
+      Map(x => x.Description)
+        .Column("description")
+        .CustomType("string")
+        .Access.Property()
+        .Generated.Never()
+        .CustomSqlType("nvarchar")
+        .Nullable()
+        ;
+
+      Map(x => x.WasteType)
+        .Column("waste_type")
+        .CustomType<WasteType>()
+        .Access.Property()
+        .Generated.Never()
+        .Default(@"1")
+        .CustomSqlType("integer")
+        .Not.Nullable()
+        ;
+
+      Map(x => x.Material)
+        .Column("material")
+        .CustomType<Material>()
+        .Access.Property()
+        .Generated.Never()
+        .Default(@"1")
+        .CustomSqlType("integer")
+        .Not.Nullable()
+        ;
+      
       HasOne(x => x.Device)
         .Class<Device>()
         .Access.Property()

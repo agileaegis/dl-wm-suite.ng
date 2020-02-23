@@ -10,7 +10,9 @@ namespace dl.wm.suite.cms.repository.ContractRepositories
     {
         Container FindOneByName(string name);
         QueryResult<Container> FindAllContainersPagedOf(int? pageNum, int? pageSize);
+        QueryResult<Container> FindAllContainersPagedOf2(int? pageNum, int? pageSize);
         List<Container> FindAllContainersPoints();
+        List<Container> FindAllContainers();
         QueryResult<Container> FindAllContainersPagedOfByScheduledDate(DateTime scheduledDateContainer, int? pageNum, int? pageSize);
         Container FindByNameSpecifiedDate(string nameContainer, DateTime scheduledDateContainer);
         IList<Container> FindAllByScheduledDate(DateTime scheduledDate);

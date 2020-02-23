@@ -39,5 +39,13 @@ namespace dl.wm.suite.common.dtos.Vms.Containers
 
     [Required] [Editable(true)] public virtual DateTime ContainerMandatoryPickupDate { get; set; }
     [Required] [Editable(true)] public virtual bool ContainerMandatoryPickupActive { get; set; }
+    [Required] [Editable(true)] public virtual int ContainerCapacity { get; set; }
+    [Required] [Editable(true)] public virtual int ContainerLoad { get; set; }
+    [Required] [Editable(true)] public virtual string ContainerWasteType { get; set; }
+    [Required] [Editable(true)] public virtual string ContainerWasteTypeValue { get; set; }
+    [Required] [Editable(true)] public virtual string ContainerMaterial { get; set; }
+    [Required] [Editable(true)] public virtual string ContainerMaterialValue { get; set; }
+    [Required] [Editable(true)] public virtual bool ContainerFixed { get; set; }
+    [Required] [Editable(true)] public virtual string ContainerDescription { get; set; }
   }
 }

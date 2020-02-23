@@ -3,29 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using dl.wm.suite.cms.api.Helpers.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
 
-namespace dl.wm.suite.cms.api.Helpers
+namespace dl.wm.suite.common.infrastructure.Helpers.Azure
 {
   public static class StorageHelper
   {
-
-    public static bool IsImage(IFormFile file)
-    {
-      if (file.ContentType.Contains("image"))
-      {
-        return true;
-      }
-
-      string[] formats = new string[] { ".jpg", ".png", ".gif", ".jpeg" };
-
-      return formats.Any(item => file.FileName.EndsWith(item, StringComparison.OrdinalIgnoreCase));
-    }
-
     public static async Task<bool> UploadFileToStorage(Stream fileStream, string fileName, AzureStorageConfig storageConfig)
     {
       // Create storagecredentials object by reading the values from the configuration (appsettings.json)
@@ -50,12 +35,13 @@ namespace dl.wm.suite.cms.api.Helpers
       return await Task.FromResult(true);
     }
 
-    public static async Task<List<string>> GetThumbNailUrls(AzureStorageConfig storageConfig)
+    public static async Task<List<string>> GetThumbNailUrls(AzureStorageConfig storageConfig, string imageName)
     {
       List<string> thumbnailUrls = new List<string>();
 
       // Create storagecredentials object by reading the values from the configuration (appsettings.json)
-      StorageCredentials storageCredentials = new StorageCredentials(storageConfig.AccountName, storageConfig.AccountKey);
+      StorageCredentials storageCredentials =
+        new StorageCredentials(storageConfig.AccountName, storageConfig.AccountKey);
 
       // Create cloudstorage account by passing the storagecredentials
       CloudStorageAccount storageAccount = new CloudStorageAccount(storageCredentials, true);
@@ -64,7 +50,7 @@ namespace dl.wm.suite.cms.api.Helpers
       CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
 
       // Get reference to the container
-      CloudBlobContainer container = blobClient.GetContainerReference(storageConfig.ThumbnailContainer);
+      CloudBlobContainer container = blobClient.GetContainerReference(storageConfig.ImageContainer);
 
       BlobContinuationToken continuationToken = null;
 
@@ -76,18 +62,22 @@ namespace dl.wm.suite.cms.api.Helpers
       {
         //This overload allows control of the page size. You can return all remaining results by passing null for the maxResults parameter,
         //or by calling a different overload.
-        resultSegment = await container.ListBlobsSegmentedAsync("", true, BlobListingDetails.All, 10, continuationToken, null, null);
+        resultSegment = await container
+            .ListBlobsSegmentedAsync("", true, BlobListingDetails.All, 10, continuationToken, null, null)
+          ;
 
-        foreach (var blobItem in resultSegment.Results)
+        //var segments = ((IEnumerable<CloudBlockBlob>) resultSegment.Results).Where(x => x.Name == imageName);
+
+        foreach (var listBlobItem in resultSegment.Results)
         {
-          thumbnailUrls.Add(blobItem.StorageUri.PrimaryUri.ToString());
+          var blobItem = (CloudBlockBlob) listBlobItem;
+          if (blobItem.Name == imageName)
+            thumbnailUrls.Add(blobItem.StorageUri.PrimaryUri.ToString());
         }
 
         //Get the continuation token.
         continuationToken = resultSegment.ContinuationToken;
-      }
-
-      while (continuationToken != null);
+      } while (continuationToken != null);
 
       return await Task.FromResult(thumbnailUrls);
     }

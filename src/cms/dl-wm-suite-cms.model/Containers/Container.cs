@@ -27,6 +27,7 @@ namespace dl.wm.suite.cms.model.Containers
       this.Material = Material.HDPE;
       this.IsFixed = true;
       this.Capacity = 1100;
+      this.UsefulLoad = 520;
 
       this.ContainerTours = new HashSet<ContainerTour>();
     }
@@ -49,9 +50,11 @@ namespace dl.wm.suite.cms.model.Containers
     public virtual DateTime MandatoryPickupDate { get; set; }
     public virtual bool MandatoryPickupActive { get; set; }
     public virtual int Capacity { get; set; }
+    public virtual int UsefulLoad { get; set; }
     public virtual WasteType WasteType { get; set; }
     public virtual Material Material { get; set; }
     public virtual bool IsFixed { get; set; }
+    public virtual string Description { get; set; }
 
 
     public virtual Sensor Sensor { get; set; }

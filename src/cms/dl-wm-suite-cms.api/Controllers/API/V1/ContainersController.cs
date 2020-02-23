@@ -18,7 +18,7 @@ using dl.wm.suite.common.infrastructure.PropertyMappings;
 using dl.wm.suite.common.infrastructure.PropertyMappings.TypeHelpers;
 using AutoMapper;
 using dl.wm.suite.cms.api.Helpers;
-using dl.wm.suite.cms.api.Helpers.Models;
+using dl.wm.suite.common.infrastructure.Helpers.Azure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -78,6 +78,14 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
       _deleteContainerProcessor = deleteContainerProcessor;
 
       _inquiryUserProcessor = userBlock.InquiryUserProcessor;
+
+      _storageConfig = new AzureStorageConfig
+      {
+        AccountName = Configuration.GetSection("AzureStorageConfig:AccountName").Value,
+        AccountKey = Configuration.GetSection("AzureStorageConfig:AccountKey").Value,
+        ImageContainer = Configuration.GetSection("AzureStorageConfig:ImageContainer").Value,
+        ThumbnailContainer = Configuration.GetSection("AzureStorageConfig:ThumbnailContainer").Value
+      };
     }
 
     /// <summary>
@@ -160,22 +168,12 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
 
       string imageFolder = Path.Combine(_environment.WebRootPath, containerForCreationUiModel.ContainerImagePath);
 
-      _storageConfig = new AzureStorageConfig
-      {
-        AccountName = Configuration.GetSection("AzureStorageConfig:AccountName").Value,
-        AccountKey = Configuration.GetSection("AzureStorageConfig:AccountKey").Value,
-        ImageContainer = Configuration.GetSection("AzureStorageConfig:ImageContainer").Value,
-        ThumbnailContainer = Configuration.GetSection("AzureStorageConfig:ThumbnailContainer").Value
-      };
-
       string imageBlobName = Guid.NewGuid().ToString();
 
       try
       {
-        string imagePathFolder = string.Empty;
-        
-        imagePathFolder = $"{imageFolder}//{containerForCreationUiModel.ContainerImageName}"; 
-        
+        var imagePathFolder = $"{imageFolder}//{containerForCreationUiModel.ContainerImageName}";
+
         using (FileStream fs = new FileStream(imagePathFolder, FileMode.Open, FileAccess.Read, FileShare.Read, 8,
           true))
         {
@@ -323,6 +321,30 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
       [FromBody] ContainerForModificationUiModel containerForModificationUiModel)
     {
       return BadRequest(new {errorMessage = "UNKNOWN_ERROR_UPDATE_CONTAINER"});
+    }
+
+    /// <summary>
+    /// PUT : Update an Existing Containers Batch.
+    /// </summary>
+    /// <param name="containerForModificationUiModel">ContainerForCreationUiModel the Request Model for Modification</param>
+    /// <remarks> return a ResponseEntity with status 201 (Created) if the new Container is created, 400 (Bad Request), 500 (Server Error) </remarks>
+    /// <response code="200">Ok (if the Container is updated)</response>
+    /// <response code="400">Bad Request</response>
+    /// <response code="500">Internal Server Error</response>
+    [HttpPut("batch", Name = "PutContainerBatchRoute")]
+    [ValidateModel]
+    public async Task<IActionResult> PutContainerBatchAsync()
+    {
+      try
+      {
+        await _updateContainerProcessor.BatchUpdateContainerAsync(_storageConfig);
+      }
+      catch (Exception e)
+      {
+        return BadRequest(new {errorMessage = "ERROR_UPDATE_CONTAINERS"});
+      }
+
+      return Ok();
     }
 
 

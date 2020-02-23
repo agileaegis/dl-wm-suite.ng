@@ -36,6 +36,95 @@ namespace dl.wm.suite.cms.repository.Repositories
     public QueryResult<Container> FindAllContainersPagedOf(int? pageNum, int? pageSize)
     {
       string queryStr =
+          $@"select c.Id, 
+                    c.Name,
+                    c.FillLevel,
+                    c.IsActive,
+                    c.TimeFull,
+                    c.LastServicedDate,
+                    c.CreatedDate,
+                    c.ModifiedDate,
+                    c.CreatedBy,
+                    c.ModifiedBy,
+                    c.ImagePath,
+                    c.Type,
+                    c.Status,
+                    c.Address,
+                    c.MandatoryPickupDate,
+                    c.MandatoryPickupActive,
+                    NHSP.AsText(c.Geo),
+                    c.Level,
+                    c.Capacity,
+                    c.UsefulLoad,
+                    c.WasteType,
+                    c.Material,
+                    c.IsFixed,
+                    c.Description
+                    from Container as c 
+                    where c.Geo is not null and c.IsActive = :IsActive"
+        ;
+
+      try
+      {
+        var containersRepo = Session
+          .CreateQuery(queryStr)
+          .SetParameter("IsActive", true)
+          .List();
+        
+        List<Container> containers = new List<Container>();
+
+        containers.AddRange(from object[] point in containersRepo
+          select new Container()
+          {
+            Id = (Guid)point[0],
+            Name = (string)point[1],
+            FillLevel = (int)point[2],
+            IsActive = (bool)point[3],
+            TimeFull = (double)point[4],
+            LastServicedDate = (DateTime)point[5],
+            CreatedDate = (DateTime)point[6],
+            ModifiedDate = (DateTime)point[7],
+            CreatedBy = (Guid)point[8],
+            ModifiedBy = (Guid)point[9],
+            ImagePath = (string)point[10],
+            Type = (ContainerType)point[11],
+            Status = (ContainerStatus)point[12],
+            Address = (string)point[13],
+            MandatoryPickupDate = (DateTime)point[14],
+            MandatoryPickupActive = (bool)point[15],
+            Geo = _wkt.Read((string)point[16]),
+            Level = (int)point[17],
+            Capacity = (int)point[18],
+            UsefulLoad = (int)point[19],
+            WasteType = (WasteType)point[20],
+            Material = (Material)point[21],
+            IsFixed = (bool)point[22],
+            Description = (string)point[23],
+          });
+        
+        if (pageNum == -1 & pageSize == -1)
+        {
+          return new QueryResult<Container>(containers.AsQueryable());
+        }
+        else
+        {
+          return new QueryResult<Container>(containers
+                .Skip(ResultsPagingUtility.CalculateStartIndex((int) pageNum, (int) pageSize))
+                .Take((int) pageSize).AsQueryable(),
+              containers.Count,
+              (int) pageSize)
+            ;
+        }
+      }
+      catch (Exception e)
+      {
+        throw new FindAllContainersPagedOfException(e.Message);
+      }
+    }
+
+    public QueryResult<Container> FindAllContainersPagedOf2(int? pageNum, int? pageSize)
+    {
+      string queryStr =
           @"select c.Id, 
                     NHSP.AsText(c.Geo) 
                     from Container as c 
@@ -71,6 +160,42 @@ namespace dl.wm.suite.cms.repository.Repositories
             query.ToRowCountQuery().RowCount(),
             (int) pageSize)
           ;
+      }
+      catch (Exception e)
+      {
+        throw new FindAllContainersPagedOfException(e.Message);
+      }
+    }
+
+
+    public List<Container> FindAllContainers()
+    {
+      string queryStr =
+          @"select c.Id, 
+                    NHSP.AsText(c.Geo) 
+                    from Container as c 
+                    where c.Geo is not null"
+        ;
+
+      IList points = Session
+        .CreateQuery(queryStr)
+        .List();
+
+      try
+      {
+        var query = Session.QueryOver<Container>();
+
+        var containers = query?.List();
+
+          if (points.Count > 0)
+          {
+            foreach (Object[] point in points)
+            {
+              containers.FirstOrDefault(x => x.Id == (Guid)point[0]).Geo = _wkt.Read((string)point[1]);
+            }
+          }
+
+          return containers.ToList();
       }
       catch (Exception e)
       {

@@ -8,6 +8,7 @@ using dl.wm.suite.cms.repository.ContractRepositories;
 using dl.wm.suite.common.dtos.Vms.Containers;
 using dl.wm.suite.common.infrastructure.Exceptions.Domain.Containers;
 using dl.wm.suite.common.infrastructure.Exceptions.Domain.Devices;
+using dl.wm.suite.common.infrastructure.Helpers.Azure;
 using dl.wm.suite.common.infrastructure.TypeMappings;
 using dl.wm.suite.common.infrastructure.UnitOfWorks;
 using Serilog;
@@ -179,6 +180,48 @@ namespace dl.wm.suite.cms.services.Containers
 
       return Task.Run(() => response);
     }
+
+    public async Task BatchUpdateContainerAsync(AzureStorageConfig azureStorage)
+    {
+      var containers = _containerRepository.FindAllContainers();
+
+      if (containers != null)
+      {
+        foreach (var container in containers)
+        {
+          container.ModifiedDate = DateTime.Now;
+          if (container.Type == ContainerType.Waste)
+          {
+            container.WasteType = WasteType.Trash;
+          }
+          else if (container.Type == ContainerType.Recycle)
+          {
+            container.WasteType = WasteType.Recycle;
+          }
+
+          container.Capacity = 1100;
+          container.Material = Material.HDPE;
+          container.UsefulLoad = 520;
+
+          var urls = await StorageHelper.GetThumbNailUrls(azureStorage, container.ImagePath);
+          if (urls.Count > 0)
+          {
+            container.ImagePath = urls.First();
+          }
+
+          container.Description = $"Modified at {DateTime.Now} to support new Image Path plus additional attributes";
+          try
+          {
+            MakeContainerPersistent(container);
+          }
+          catch (Exception e)
+          {
+            
+          }
+        }
+      }
+    }
+
 
     private ContainerDeviceProvisioningUiModel ThrowExcIfProvisioningWasNotBeMadePersistent(Container containerToHaveBeenProvisioned)
     {
