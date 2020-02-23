@@ -36,5 +36,10 @@ namespace dl.wm.view.Controls.Dashboards
         bool RibbonRecycleValue { get; set; }
         bool RibbonRecycleSvgImageIsBlack {  set; }
         bool RibbonRecycleSvgImageIsOrange { set; }
+        bool OnClusterStepInPixelsChange { set; }
+
+
+        bool RibbonBarTrackStepInPixelsEnabled { get; set; }
+        int RibbonBarTrackStepInPixelsValue { get; set; }
     }
 }

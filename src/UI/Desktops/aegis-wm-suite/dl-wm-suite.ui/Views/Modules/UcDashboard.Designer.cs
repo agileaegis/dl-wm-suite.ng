@@ -80,7 +80,7 @@
             this.brBtnItmZoοmIn = new DevExpress.XtraBars.BarButtonItem();
             this.brBtnItmZoοmOut = new DevExpress.XtraBars.BarButtonItem();
             this.brBtnItmInitialView = new DevExpress.XtraBars.BarButtonItem();
-            this.brTrckItmZoοmOut = new DevExpress.XtraBars.BarEditItem();
+            this.brTrckItmStepInPixels = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTrackBarClusteringPixel = new DevExpress.XtraEditors.Repository.RepositoryItemTrackBar();
             this.brEditItmAddressName = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemSearchControlAddressName = new DevExpress.XtraEditors.Repository.RepositoryItemSearchControl();
@@ -398,7 +398,7 @@
             // 
             this.panelControl1.Location = new System.Drawing.Point(305, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1, 289);
+            this.panelControl1.Size = new System.Drawing.Size(1, 272);
             this.panelControl1.TabIndex = 11;
             // 
             // tggCmdAddRemoveGeofencePoint
@@ -469,7 +469,7 @@
             this.emptySpaceItem13,
             this.layoutControlItem14});
             this.laytCntrlGrpTabContainerCommandsSection.Name = "laytCntrlGrpTabContainerCommandsSection";
-            this.laytCntrlGrpTabContainerCommandsSection.Size = new System.Drawing.Size(318, 313);
+            this.laytCntrlGrpTabContainerCommandsSection.Size = new System.Drawing.Size(318, 296);
             this.laytCntrlGrpTabContainerCommandsSection.TextVisible = false;
             // 
             // layoutControlItem6
@@ -513,7 +513,7 @@
             this.layoutControlItem10.Control = this.panelControl1;
             this.layoutControlItem10.Location = new System.Drawing.Point(293, 0);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(5, 293);
+            this.layoutControlItem10.Size = new System.Drawing.Size(5, 276);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
@@ -531,7 +531,7 @@
             this.emptySpaceItem8.AllowHotTrack = false;
             this.emptySpaceItem8.Location = new System.Drawing.Point(0, 245);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(283, 48);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(283, 31);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem11
@@ -566,7 +566,7 @@
             this.emptySpaceItem13.AllowHotTrack = false;
             this.emptySpaceItem13.Location = new System.Drawing.Point(283, 0);
             this.emptySpaceItem13.Name = "emptySpaceItem13";
-            this.emptySpaceItem13.Size = new System.Drawing.Size(10, 293);
+            this.emptySpaceItem13.Size = new System.Drawing.Size(10, 276);
             this.emptySpaceItem13.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem14
@@ -613,7 +613,7 @@
             this.brBtnItmZoοmIn,
             this.brBtnItmZoοmOut,
             this.brBtnItmInitialView,
-            this.brTrckItmZoοmOut,
+            this.brTrckItmStepInPixels,
             this.brEditItmAddressName,
             this.brChckItmLockMap,
             this.brEditItmContainerStatus,
@@ -626,7 +626,7 @@
             this.barEditItemContainerLevel,
             this.brEditItmContainerLastServiced});
             this.ribbonControl1.Location = new System.Drawing.Point(2, 39);
-            this.ribbonControl1.MaxItemId = 25;
+            this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbbnPgDashboardMapHome,
@@ -746,41 +746,46 @@
             this.brBtnItmInitialView.ItemAppearance.Normal.Options.UseFont = true;
             this.brBtnItmInitialView.Name = "brBtnItmInitialView";
             // 
-            // brTrckItmZoοmOut
+            // brTrckItmStepInPixels
             // 
-            this.brTrckItmZoοmOut.Caption = "Πυκνότητα: ";
-            this.brTrckItmZoοmOut.Edit = this.repositoryItemTrackBarClusteringPixel;
-            this.brTrckItmZoοmOut.EditHeight = 40;
-            this.brTrckItmZoοmOut.EditValue = 3;
-            this.brTrckItmZoοmOut.EditWidth = 150;
-            this.brTrckItmZoοmOut.Id = 13;
-            this.brTrckItmZoοmOut.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brTrckItmZoοmOut.ItemAppearance.Hovered.Options.UseFont = true;
-            this.brTrckItmZoοmOut.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brTrckItmZoοmOut.ItemAppearance.Normal.Options.UseFont = true;
-            this.brTrckItmZoοmOut.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brTrckItmZoοmOut.ItemAppearance.Pressed.Options.UseFont = true;
-            this.brTrckItmZoοmOut.Name = "brTrckItmZoοmOut";
+            this.brTrckItmStepInPixels.Caption = "Πυκνότητα: ";
+            this.brTrckItmStepInPixels.Edit = this.repositoryItemTrackBarClusteringPixel;
+            this.brTrckItmStepInPixels.EditHeight = 40;
+            this.brTrckItmStepInPixels.EditValue = 50;
+            this.brTrckItmStepInPixels.EditWidth = 150;
+            this.brTrckItmStepInPixels.Id = 13;
+            this.brTrckItmStepInPixels.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.brTrckItmStepInPixels.ItemAppearance.Hovered.Options.UseFont = true;
+            this.brTrckItmStepInPixels.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brTrckItmStepInPixels.ItemAppearance.Normal.Options.UseFont = true;
+            this.brTrckItmStepInPixels.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brTrckItmStepInPixels.ItemAppearance.Pressed.Options.UseFont = true;
+            this.brTrckItmStepInPixels.Name = "brTrckItmStepInPixels";
+            this.brTrckItmStepInPixels.EditValueChanged += new System.EventHandler(this.BrTrckItmStepInPixelsEditValueChanged);
             // 
             // repositoryItemTrackBarClusteringPixel
             // 
             this.repositoryItemTrackBarClusteringPixel.LabelAppearance.Options.UseTextOptions = true;
             this.repositoryItemTrackBarClusteringPixel.LabelAppearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             trackBarLabel1.Label = "Min";
-            trackBarLabel1.Value = 1;
+            trackBarLabel1.Value = 20;
             trackBarLabel2.Label = "Mid";
-            trackBarLabel2.Value = 5;
+            trackBarLabel2.Value = 80;
             trackBarLabel3.Label = "Max";
-            trackBarLabel3.Value = 10;
+            trackBarLabel3.Value = 160;
             this.repositoryItemTrackBarClusteringPixel.Labels.AddRange(new DevExpress.XtraEditors.Repository.TrackBarLabel[] {
             trackBarLabel1,
             trackBarLabel2,
             trackBarLabel3});
-            this.repositoryItemTrackBarClusteringPixel.Minimum = 1;
+            this.repositoryItemTrackBarClusteringPixel.LargeChange = 20;
+            this.repositoryItemTrackBarClusteringPixel.Maximum = 150;
+            this.repositoryItemTrackBarClusteringPixel.Minimum = 20;
             this.repositoryItemTrackBarClusteringPixel.Name = "repositoryItemTrackBarClusteringPixel";
             this.repositoryItemTrackBarClusteringPixel.ShowLabels = true;
             this.repositoryItemTrackBarClusteringPixel.ShowLabelsForHiddenTicks = true;
             this.repositoryItemTrackBarClusteringPixel.ShowValueToolTip = true;
+            this.repositoryItemTrackBarClusteringPixel.SmallChange = 2;
+            this.repositoryItemTrackBarClusteringPixel.TickFrequency = 10;
             // 
             // brEditItmAddressName
             // 
@@ -1021,7 +1026,7 @@
             this.rbbnPgGrpViewOptions.ItemLinks.Add(this.brBtnItmInitialView);
             this.rbbnPgGrpViewOptions.ItemLinks.Add(this.brBtnItmZoοmIn);
             this.rbbnPgGrpViewOptions.ItemLinks.Add(this.brBtnItmZoοmOut);
-            this.rbbnPgGrpViewOptions.ItemLinks.Add(this.brTrckItmZoοmOut);
+            this.rbbnPgGrpViewOptions.ItemLinks.Add(this.brTrckItmStepInPixels);
             this.rbbnPgGrpViewOptions.Name = "rbbnPgGrpViewOptions";
             this.rbbnPgGrpViewOptions.Text = "Επιλογές Θέασης";
             // 
@@ -1112,11 +1117,11 @@
             this.mpCntrlOpenDashboard.Layers.Add(this.vectorItemsLayerOpenGeofencePoints);
             this.mpCntrlOpenDashboard.Layers.Add(this.vectorItemsLayerOpenShape);
             this.mpCntrlOpenDashboard.Location = new System.Drawing.Point(2, 39);
-            this.mpCntrlOpenDashboard.MinZoomLevel = 12D;
+            this.mpCntrlOpenDashboard.MinZoomLevel = 14D;
             this.mpCntrlOpenDashboard.Name = "mpCntrlOpenDashboard";
             this.mpCntrlOpenDashboard.Size = new System.Drawing.Size(1312, 1027);
             this.mpCntrlOpenDashboard.TabIndex = 0;
-            this.mpCntrlOpenDashboard.ZoomLevel = 14D;
+            this.mpCntrlOpenDashboard.ZoomLevel = 16D;
             this.mpCntrlOpenDashboard.MapItemClick += new DevExpress.XtraMap.MapItemClickEventHandler(this.MpCntrlOpenDashboardMapItemClick);
             this.mpCntrlOpenDashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MpCntrlOpenDashboardMouseDown);
             this.vectorItemsLayerOpenDashboardDumpsterSource.Data = this.listSourceDataAdapterOpenDashboardDumpsterSource;
@@ -1353,8 +1358,6 @@
             this.chkMarkerClustering.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.chkMarkerClustering.GroupIndex = 2;
             this.chkMarkerClustering.Id = 8;
-            this.chkMarkerClustering.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("chkMarkerClustering.ImageOptions.Image")));
-            this.chkMarkerClustering.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("chkMarkerClustering.ImageOptions.LargeImage")));
             this.chkMarkerClustering.Name = "chkMarkerClustering";
             this.chkMarkerClustering.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1364,8 +1367,6 @@
             this.chkDistanceBasedClustering.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.chkDistanceBasedClustering.GroupIndex = 2;
             this.chkDistanceBasedClustering.Id = 9;
-            this.chkDistanceBasedClustering.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("chkDistanceBasedClustering.ImageOptions.Image")));
-            this.chkDistanceBasedClustering.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("chkDistanceBasedClustering.ImageOptions.LargeImage")));
             this.chkDistanceBasedClustering.Name = "chkDistanceBasedClustering";
             this.chkDistanceBasedClustering.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1375,8 +1376,6 @@
             this.chkWithoutClustering.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.chkWithoutClustering.GroupIndex = 2;
             this.chkWithoutClustering.Id = 10;
-            this.chkWithoutClustering.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("chkWithoutClustering.ImageOptions.Image")));
-            this.chkWithoutClustering.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("chkWithoutClustering.ImageOptions.LargeImage")));
             this.chkWithoutClustering.Name = "chkWithoutClustering";
             this.chkWithoutClustering.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1396,8 +1395,6 @@
             this.chkCustomFactory.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.chkCustomFactory.GroupIndex = 3;
             this.chkCustomFactory.Id = 12;
-            this.chkCustomFactory.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("chkCustomFactory.ImageOptions.Image")));
-            this.chkCustomFactory.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("chkCustomFactory.ImageOptions.LargeImage")));
             this.chkCustomFactory.Name = "chkCustomFactory";
             this.chkCustomFactory.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1407,8 +1404,6 @@
             this.chkWitoutFactory.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.chkWitoutFactory.GroupIndex = 3;
             this.chkWitoutFactory.Id = 19;
-            this.chkWitoutFactory.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("chkWitoutFactory.ImageOptions.Image")));
-            this.chkWitoutFactory.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("chkWitoutFactory.ImageOptions.LargeImage")));
             this.chkWitoutFactory.Name = "chkWitoutFactory";
             this.chkWitoutFactory.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1426,8 +1421,6 @@
             this.chkClusteringByAttr.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.chkClusteringByAttr.GroupIndex = 4;
             this.chkClusteringByAttr.Id = 7;
-            this.chkClusteringByAttr.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("chkClusteringByAttr.ImageOptions.Image")));
-            this.chkClusteringByAttr.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("chkClusteringByAttr.ImageOptions.LargeImage")));
             this.chkClusteringByAttr.Name = "chkClusteringByAttr";
             this.chkClusteringByAttr.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1439,8 +1432,6 @@
             this.chkClusteringWitoutAttribute.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.chkClusteringWitoutAttribute.GroupIndex = 4;
             this.chkClusteringWitoutAttribute.Id = 20;
-            this.chkClusteringWitoutAttribute.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("chkClusteringWitoutAttribute.ImageOptions.Image")));
-            this.chkClusteringWitoutAttribute.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("chkClusteringWitoutAttribute.ImageOptions.LargeImage")));
             this.chkClusteringWitoutAttribute.Name = "chkClusteringWitoutAttribute";
             this.chkClusteringWitoutAttribute.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1465,8 +1456,6 @@
             this.barCheckItem1.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem1.GroupIndex = 2;
             this.barCheckItem1.Id = 8;
-            this.barCheckItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem1.ImageOptions.Image")));
-            this.barCheckItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem1.ImageOptions.LargeImage")));
             this.barCheckItem1.Name = "barCheckItem1";
             this.barCheckItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1476,8 +1465,6 @@
             this.barCheckItem2.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem2.GroupIndex = 2;
             this.barCheckItem2.Id = 9;
-            this.barCheckItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem2.ImageOptions.Image")));
-            this.barCheckItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem2.ImageOptions.LargeImage")));
             this.barCheckItem2.Name = "barCheckItem2";
             this.barCheckItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1487,8 +1474,6 @@
             this.barCheckItem3.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem3.GroupIndex = 2;
             this.barCheckItem3.Id = 10;
-            this.barCheckItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem3.ImageOptions.Image")));
-            this.barCheckItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem3.ImageOptions.LargeImage")));
             this.barCheckItem3.Name = "barCheckItem3";
             this.barCheckItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1508,8 +1493,6 @@
             this.barCheckItem4.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem4.GroupIndex = 3;
             this.barCheckItem4.Id = 12;
-            this.barCheckItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem4.ImageOptions.Image")));
-            this.barCheckItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem4.ImageOptions.LargeImage")));
             this.barCheckItem4.Name = "barCheckItem4";
             this.barCheckItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1519,8 +1502,6 @@
             this.barCheckItem5.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem5.GroupIndex = 3;
             this.barCheckItem5.Id = 19;
-            this.barCheckItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem5.ImageOptions.Image")));
-            this.barCheckItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem5.ImageOptions.LargeImage")));
             this.barCheckItem5.Name = "barCheckItem5";
             this.barCheckItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1538,8 +1519,6 @@
             this.barCheckItem6.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem6.GroupIndex = 4;
             this.barCheckItem6.Id = 7;
-            this.barCheckItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem6.ImageOptions.Image")));
-            this.barCheckItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem6.ImageOptions.LargeImage")));
             this.barCheckItem6.Name = "barCheckItem6";
             this.barCheckItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1551,8 +1530,6 @@
             this.barCheckItem7.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem7.GroupIndex = 4;
             this.barCheckItem7.Id = 20;
-            this.barCheckItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem7.ImageOptions.Image")));
-            this.barCheckItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem7.ImageOptions.LargeImage")));
             this.barCheckItem7.Name = "barCheckItem7";
             this.barCheckItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1577,8 +1554,6 @@
             this.barCheckItem8.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem8.GroupIndex = 2;
             this.barCheckItem8.Id = 8;
-            this.barCheckItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem8.ImageOptions.Image")));
-            this.barCheckItem8.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem8.ImageOptions.LargeImage")));
             this.barCheckItem8.Name = "barCheckItem8";
             this.barCheckItem8.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1588,8 +1563,6 @@
             this.barCheckItem9.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem9.GroupIndex = 2;
             this.barCheckItem9.Id = 9;
-            this.barCheckItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem9.ImageOptions.Image")));
-            this.barCheckItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem9.ImageOptions.LargeImage")));
             this.barCheckItem9.Name = "barCheckItem9";
             this.barCheckItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1599,8 +1572,6 @@
             this.barCheckItem10.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem10.GroupIndex = 2;
             this.barCheckItem10.Id = 10;
-            this.barCheckItem10.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem10.ImageOptions.Image")));
-            this.barCheckItem10.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem10.ImageOptions.LargeImage")));
             this.barCheckItem10.Name = "barCheckItem10";
             this.barCheckItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1620,8 +1591,6 @@
             this.barCheckItem11.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem11.GroupIndex = 3;
             this.barCheckItem11.Id = 12;
-            this.barCheckItem11.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem11.ImageOptions.Image")));
-            this.barCheckItem11.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem11.ImageOptions.LargeImage")));
             this.barCheckItem11.Name = "barCheckItem11";
             this.barCheckItem11.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1631,8 +1600,6 @@
             this.barCheckItem12.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem12.GroupIndex = 3;
             this.barCheckItem12.Id = 19;
-            this.barCheckItem12.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem12.ImageOptions.Image")));
-            this.barCheckItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem12.ImageOptions.LargeImage")));
             this.barCheckItem12.Name = "barCheckItem12";
             this.barCheckItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1650,8 +1617,6 @@
             this.barCheckItem13.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem13.GroupIndex = 4;
             this.barCheckItem13.Id = 7;
-            this.barCheckItem13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem13.ImageOptions.Image")));
-            this.barCheckItem13.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem13.ImageOptions.LargeImage")));
             this.barCheckItem13.Name = "barCheckItem13";
             this.barCheckItem13.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1663,8 +1628,6 @@
             this.barCheckItem14.CheckStyle = DevExpress.XtraBars.BarCheckStyles.Radio;
             this.barCheckItem14.GroupIndex = 4;
             this.barCheckItem14.Id = 20;
-            this.barCheckItem14.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barCheckItem14.ImageOptions.Image")));
-            this.barCheckItem14.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barCheckItem14.ImageOptions.LargeImage")));
             this.barCheckItem14.Name = "barCheckItem14";
             this.barCheckItem14.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -1865,7 +1828,7 @@
         private DevExpress.XtraBars.BarButtonItem brBtnItmZoοmIn;
         private DevExpress.XtraBars.BarButtonItem brBtnItmZoοmOut;
         private DevExpress.XtraBars.BarButtonItem brBtnItmInitialView;
-        private DevExpress.XtraBars.BarEditItem brTrckItmZoοmOut;
+        private DevExpress.XtraBars.BarEditItem brTrckItmStepInPixels;
         private DevExpress.XtraEditors.Repository.RepositoryItemTrackBar repositoryItemTrackBarClusteringPixel;
         private DevExpress.XtraEditors.Repository.RepositoryItemSearchControl repositoryItemSearchControlAddressName;
         private DevExpress.XtraBars.BarCheckItem brChckItmLockMap;

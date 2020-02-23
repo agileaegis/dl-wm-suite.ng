@@ -408,7 +408,6 @@
             this.grdClmnContainersContainerName.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerName.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerName.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerName.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerName.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerName.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerName.AppearanceHeader.Options.UseFont = true;
@@ -433,7 +432,6 @@
             this.grdClmnContainersContainerLevel.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerLevel.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerLevel.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerLevel.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerLevel.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerLevel.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerLevel.AppearanceHeader.Options.UseFont = true;
@@ -458,7 +456,6 @@
             this.grdClmnContainersContainerAddress.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerAddress.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerAddress.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerAddress.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerAddress.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerAddress.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerAddress.AppearanceHeader.Options.UseFont = true;
@@ -483,7 +480,6 @@
             this.grdClmnContainersContainerFillLevel.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerFillLevel.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerFillLevel.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerFillLevel.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerFillLevel.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerFillLevel.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerFillLevel.AppearanceHeader.Options.UseFont = true;
@@ -532,7 +528,6 @@
             this.grdClmnContainersContainerTimeFull.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerTimeFull.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerTimeFull.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerTimeFull.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerTimeFull.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerTimeFull.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdClmnContainersContainerTimeFull.AppearanceHeader.Options.UseFont = true;
@@ -557,7 +552,6 @@
             this.grdClmnContainersContainerLastServicedDate.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerLastServicedDate.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerLastServicedDate.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerLastServicedDate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerLastServicedDate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerLastServicedDate.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdClmnContainersContainerLastServicedDate.AppearanceHeader.Options.UseFont = true;
@@ -597,7 +591,6 @@
             this.grdClmnContainersContainerCreatedDateDate.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerCreatedDateDate.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerCreatedDateDate.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerCreatedDateDate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerCreatedDateDate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerCreatedDateDate.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdClmnContainersContainerCreatedDateDate.AppearanceHeader.Options.UseFont = true;
@@ -637,7 +630,6 @@
             this.grdClmnContainersContainerType.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerType.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerType.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerType.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerType.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerType.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdClmnContainersContainerType.AppearanceHeader.Options.UseFont = true;
@@ -684,7 +676,6 @@
             this.grdClmnContainersContainerStatus.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.grdClmnContainersContainerStatus.AppearanceCell.Options.UseFont = true;
             this.grdClmnContainersContainerStatus.AppearanceCell.Options.UseTextOptions = true;
-            this.grdClmnContainersContainerStatus.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grdClmnContainersContainerStatus.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grdClmnContainersContainerStatus.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdClmnContainersContainerStatus.AppearanceHeader.Options.UseFont = true;

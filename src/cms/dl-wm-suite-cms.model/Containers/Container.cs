@@ -23,6 +23,10 @@ namespace dl.wm.suite.cms.model.Containers
 
       this.Type = ContainerType.Waste;
       this.Status = ContainerStatus.Normal;
+      this.WasteType = WasteType.Trash;
+      this.Material = Material.HDPE;
+      this.IsFixed = true;
+      this.Capacity = 1100;
 
       this.ContainerTours = new HashSet<ContainerTour>();
     }
@@ -44,6 +48,11 @@ namespace dl.wm.suite.cms.model.Containers
     public virtual string Address { get; set; }
     public virtual DateTime MandatoryPickupDate { get; set; }
     public virtual bool MandatoryPickupActive { get; set; }
+    public virtual int Capacity { get; set; }
+    public virtual WasteType WasteType { get; set; }
+    public virtual Material Material { get; set; }
+    public virtual bool IsFixed { get; set; }
+
 
     public virtual Sensor Sensor { get; set; }
     public virtual Device Device { get; set; }

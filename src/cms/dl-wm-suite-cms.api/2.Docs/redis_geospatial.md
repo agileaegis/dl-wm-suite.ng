@@ -63,3 +63,5 @@ curl -X GET "http://localhost:6200/api/v1/Maps/geofence/52ddb6a7-396d-4193-8664-
 
 http://dev.virtualearth.net/REST/v1/Locations/38.0501859367969,23.7642672657967?o=xml&c=el&key=m0HlwlDQGKnphfEQXFU6~D8hpcOahW3Cl2dx9t2A4dg~Anv8eoE_8QtSX-1SJeQ3RflkKYph91GtHX2MZvyfSSPfv7aQ8gyYm16DMzD1CL2E
 http://dev.virtualearth.net/REST/v1/Locations/38.0501859367969,23.7642672657967?o=json&c=el&key=m0HlwlDQGKnphfEQXFU6~D8hpcOahW3Cl2dx9t2A4dg~Anv8eoE_8QtSX-1SJeQ3RflkKYph91GtHX2MZvyfSSPfv7aQ8gyYm16DMzD1CL2E
+
+

@@ -70,5 +70,10 @@ namespace dl.wm.presenter.ViewModel.Dashboards
             else
                 View.RibbonWasteSvgImageIsOrange = true;
         }
+
+        public void StepInPixelsWasChanged()
+        {
+            View.OnClusterStepInPixelsChange = true;
+        }
     }
 }

@@ -108,6 +108,7 @@ namespace dl.wm.suite.ui.Views.Modules
 
         private void UcDashboardLoad(object sender, System.EventArgs e)
         {
+            
             _dashboardManagementPresenter.UcDashboardWasLoaded();
         }
 
@@ -537,6 +538,32 @@ namespace dl.wm.suite.ui.Views.Modules
             }
         }
 
+        public bool OnClusterStepInPixelsChange
+        {
+            set
+            {
+                if (value)
+                {
+                    if (_clusterer != null)
+                    {
+                        this._clusterer.StepInPixels = RibbonBarTrackStepInPixelsValue;
+                    }
+                }
+            }
+        }
+
+        public bool RibbonBarTrackStepInPixelsEnabled
+        {
+            get => (bool) brTrckItmStepInPixels.Enabled;
+            set => brTrckItmStepInPixels.Enabled = value;
+        }
+
+        public int RibbonBarTrackStepInPixelsValue
+        {
+            get => (int) brTrckItmStepInPixels.EditValue;
+            set => brTrckItmStepInPixels.EditValue = value;
+        }
+
         #endregion
 
         #region IContainersPointsView
@@ -603,6 +630,11 @@ namespace dl.wm.suite.ui.Views.Modules
         private void BrChckItmContainersCompostCheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             _dashboardManagementPresenter.RibbonCheckCompostWasClicked();
+        }
+
+        private void BrTrckItmStepInPixelsEditValueChanged(object sender, EventArgs e)
+        {
+            _dashboardManagementPresenter.StepInPixelsWasChanged();
         }
     }
 }
