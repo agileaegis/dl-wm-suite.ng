@@ -169,7 +169,7 @@ namespace dl.wm.suite.cms.repository.Mappings.Vehicles
       HasMany<Tour>(x => x.Tours)
         .Access.Property()
         .AsSet()
-        .Cascade.None()
+        .Cascade.SaveUpdate()
         .LazyLoad()
         .Inverse()
         .Generic()

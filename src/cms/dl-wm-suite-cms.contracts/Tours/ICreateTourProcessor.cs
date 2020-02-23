@@ -1,9 +1,11 @@
-﻿using dl.wm.suite.common.dtos.Vms.Tours;
+﻿using System;
+using System.Threading.Tasks;
+using dl.wm.suite.common.dtos.Vms.Tours;
 
 namespace dl.wm.suite.cms.contracts.Tours
 {
     public interface ICreateTourProcessor
     {
-        TourUiModel CreateTourAsync(TourForCreationUiModel newTourUiModel);
+      Task<TourUiModel> CreateTourAsync(Guid accountIdToCreateThisTour, TourForCreationUiModel newTourUiModel);
     }
 }

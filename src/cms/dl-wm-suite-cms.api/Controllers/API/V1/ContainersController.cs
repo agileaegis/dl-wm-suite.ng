@@ -17,7 +17,6 @@ using dl.wm.suite.common.infrastructure.Helpers.ResourceParameters;
 using dl.wm.suite.common.infrastructure.PropertyMappings;
 using dl.wm.suite.common.infrastructure.PropertyMappings.TypeHelpers;
 using AutoMapper;
-using dl.wm.suite.cms.api.Helpers;
 using dl.wm.suite.common.infrastructure.Helpers.Azure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
