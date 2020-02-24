@@ -17,9 +17,9 @@ namespace dl.wm.suite.cms.model.Tours
 
     private void OnCreated()
     {
-      this.ScheduledDate = DateTime.UtcNow;
-      this.CreatedDate = DateTime.UtcNow;
-      this.ModifiedDate = DateTime.UtcNow;
+      this.ScheduledDate = DateTime.Now;
+      this.CreatedDate = DateTime.Now;
+      this.ModifiedDate = DateTime.MinValue;
       this.Type = TourType.Auto;
       this.Status = TourStatus.Scheduled;
       this.EmployeesTours = new HashSet<EmployeeTour>();
@@ -50,6 +50,11 @@ namespace dl.wm.suite.cms.model.Tours
       {
         AddBrokenRule(TourBusinessRules.Name);
       }
+
+      if (ScheduledDate.Date < DateTime.Now.Date)
+      {
+        AddBrokenRule(TourBusinessRules.ScheduledDate);
+      }
     }
 
     public virtual void ModifyWith(Tour tourWithModifiedValues)
@@ -79,6 +84,30 @@ namespace dl.wm.suite.cms.model.Tours
     {
       Asset.Tours.Remove(this);
       Asset = null;
+    }
+
+    public virtual void InjectWithAudit(Guid accountIdToCreateThisTour)
+    {
+      this.CreatedBy = accountIdToCreateThisTour;
+      this.CreatedDate = DateTime.Now;
+    }
+
+    public virtual void InjectWithAsset(Vehicle assetToBeInjected)
+    {
+      this.Asset = assetToBeInjected;
+      assetToBeInjected.Tours.Add(this);
+    }
+
+    public virtual void InjectWithEmployeeTour(EmployeeTour employeeTourToBeInjected)
+    {
+      this.EmployeesTours.Add(employeeTourToBeInjected);
+      employeeTourToBeInjected.Tour = this;
+    }
+
+    public virtual void InjectWithContainerTour(ContainerTour containerTourToBeInjected)
+    {
+      this.ContainerTours.Add(containerTourToBeInjected);
+      containerTourToBeInjected.Tour = this;
     }
   }
 }

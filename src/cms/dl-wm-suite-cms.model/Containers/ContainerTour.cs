@@ -13,6 +13,8 @@ namespace dl.wm.suite.cms.model.Containers
 
         private void OnCreated()
         {
+          this.CreatedDate = DateTime.Now;
+          this.ModifiedDate = DateTime.MinValue;
         }
 
         public virtual Tour Tour { get; set; }
@@ -26,6 +28,12 @@ namespace dl.wm.suite.cms.model.Containers
         protected override void Validate()
         {
 
+        }
+
+        public virtual void InjectWithContainer(Container container)
+        {
+          this.Container = container;
+          container.ContainerTours.Add(this);
         }
     }
 }
