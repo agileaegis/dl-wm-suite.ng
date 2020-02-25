@@ -40,7 +40,6 @@ namespace dl.wm.suite.cms.services.Containers
                 response.Message = "ERROR_INVALID_CONTAINER_MODEL";
                 return Task.Run(() => response);
             }
-
             
             try
             {

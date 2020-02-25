@@ -108,6 +108,12 @@ namespace dl.wm.presenter.ServiceAgents.Impls
                 ContainerAddress = changedContainer.ContainerAddress,
                 ContainerImagePath = changedContainer.ContainerImagePath,
                 ContainerImageName = changedContainer.ContainerImageName,
+                ContainerCapacity = changedContainer.ContainerCapacity,
+                ContainerFixed = changedContainer.ContainerFixed,
+                ContainerLoad = changedContainer.ContainerLoad,
+                ContainerMaterial = changedContainer.ContainerMaterial,
+                ContainerWasteType = changedContainer.ContainerWasteType,
+                ContainerDescription = changedContainer.ContainerDescription,
             });
 
             request.AddHeader("Content-Type", "application/json");

@@ -83,7 +83,8 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
         AccountName = Configuration.GetSection("AzureStorageConfig:AccountName").Value,
         AccountKey = Configuration.GetSection("AzureStorageConfig:AccountKey").Value,
         ImageContainer = Configuration.GetSection("AzureStorageConfig:ImageContainer").Value,
-        ThumbnailContainer = Configuration.GetSection("AzureStorageConfig:ThumbnailContainer").Value
+        ThumbnailContainer = Configuration.GetSection("AzureStorageConfig:ThumbnailContainer").Value,
+        Url = Configuration.GetSection("AzureStorageConfig:Url").Value,
       };
     }
 
@@ -208,7 +209,13 @@ namespace dl.wm.suite.cms.api.Controllers.API.V1
         ContainerStatus = containerForCreationUiModel.ContainerStatus,
         ContainerPickupDate = containerForCreationUiModel.ContainerPickupDate,
         ContainerPickupActive = containerForCreationUiModel.ContainerPickupActive,
-        ContainerImageName = imageBlobName
+        ContainerImageName = $"{_storageConfig.Url}+{imageBlobName}",
+        ContainerFixed = containerForCreationUiModel.ContainerFixed,
+        ContainerCapacity = containerForCreationUiModel.ContainerCapacity,
+        ContainerLoad = containerForCreationUiModel.ContainerLoad,
+        ContainerWasteType = containerForCreationUiModel.ContainerWasteType,
+        ContainerMaterial = containerForCreationUiModel.ContainerMaterial,
+        ContainerDescription = containerForCreationUiModel.ContainerDescription,
       };
 
       var newCreatedContainer =

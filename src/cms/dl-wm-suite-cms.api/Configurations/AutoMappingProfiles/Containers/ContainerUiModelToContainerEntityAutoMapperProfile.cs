@@ -23,6 +23,12 @@ namespace dl.wm.suite.cms.api.Configurations.AutoMappingProfiles.Containers
                             .ForMember(dest => dest.MandatoryPickupDate, opt => opt.MapFrom(src => src.ContainerPickupDate))
                             .ForMember(dest => dest.MandatoryPickupActive, opt => opt.MapFrom(src => src.ContainerPickupActive))
                             .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.ContainerAddress))
+                            .ForMember(dest => dest.IsFixed, opt => opt.MapFrom(src => src.ContainerFixed))
+                            .ForMember(dest => dest.Capacity, opt => opt.MapFrom(src => src.ContainerCapacity))
+                            .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.ContainerDescription))
+                            .ForMember(dest => dest.UsefulLoad, opt => opt.MapFrom(src => src.ContainerLoad))
+                            .ForMember(dest => dest.Material, opt => opt.MapFrom(src => src.ContainerMaterial))
+                            .ForMember(dest => dest.WasteType, opt => opt.MapFrom(src => src.ContainerWasteType))
                             .MaxDepth(1)
                             .PreserveReferences()
                             ;

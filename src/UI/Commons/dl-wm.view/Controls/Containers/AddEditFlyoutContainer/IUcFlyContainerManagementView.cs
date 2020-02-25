@@ -14,10 +14,26 @@ namespace dl.wm.view.Controls.Containers.AddEditFlyoutContainer
     {
         bool IsAddMode { get; set; }
 
+        bool TxtContainerLoadEnabled { get; set; }
+        string TxtContainerLoadValue { get; set; }
+        string SelectedContainerLoad { get; set; }
+        string ChangedContainerLoad { get; set; }
+
+        bool TxtContainerCapacityEnabled { get; set; }
+        string TxtContainerCapacityValue { get; set; }
+        string SelectedContainerCapacity { get; set; }
+        string ChangedContainerCapacity { get; set; }
+
+        bool TxtContainerDescriptionEnabled { get; set; }
+        string TxtContainerDescriptionValue { get; set; }
+        string SelectedContainerDescription { get; set; }
+        string ChangedContainerDescription { get; set; }
+
         bool TxtContainerNameEnabled { get; set; }
         string TxtContainerNameValue { get; set; }
         string SelectedContainerName { get; set; }
         string ChangedContainerName { get; set; }
+
 
         bool TxtContainerAddressEnabled { get; set; }
         double PointLatValue { get; set; }
@@ -82,6 +98,15 @@ namespace dl.wm.view.Controls.Containers.AddEditFlyoutContainer
         string SelectedContainerFillLevelValue { get; set; }
         string ChangedContainerFillLevelValue { get; set; }
 
+
+        bool CmbContainerMaterialEnabled { get; set; }
+        int ContainerMaterial { get; set; }
+        bool SelectedIndexMaterialOfContainerIsDefault { set; }
+        bool SelectedIndexMaterialOfContainerIsFirstIndex { set; }
+        bool SelectedIndexMaterialOfContainerIsCustom { set; }
+        string CmbContainerMaterialValue { get; set; }
+        string SelectedContainerMaterialValue { get; set; }
+        string ChangedContainerMaterialValue { get; set; }
 
         bool CmbContainerTypeEnabled { get; set; }
         int ContainerType { get; set; }

@@ -170,6 +170,18 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
         #region IUcFlyContainerManagementView
 
         public bool IsAddMode { get; set; }
+        public bool TxtContainerLoadEnabled { get; set; }
+        public string TxtContainerLoadValue { get; set; }
+        public string SelectedContainerLoad { get; set; }
+        public string ChangedContainerLoad { get; set; }
+        public bool TxtContainerCapacityEnabled { get; set; }
+        public string TxtContainerCapacityValue { get; set; }
+        public string SelectedContainerCapacity { get; set; }
+        public string ChangedContainerCapacity { get; set; }
+        public bool TxtContainerDescriptionEnabled { get; set; }
+        public string TxtContainerDescriptionValue { get; set; }
+        public string SelectedContainerDescription { get; set; }
+        public string ChangedContainerDescription { get; set; }
 
         public bool TxtContainerNameEnabled
         {
@@ -496,6 +508,14 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
 
         public string SelectedContainerFillLevelValue { get; set; }
         public string ChangedContainerFillLevelValue { get; set; }
+        public bool CmbContainerMaterialEnabled { get; set; }
+        public int ContainerMaterial { get; set; }
+        public bool SelectedIndexMaterialOfContainerIsDefault { get; set; }
+        public bool SelectedIndexMaterialOfContainerIsFirstIndex { get; set; }
+        public bool SelectedIndexMaterialOfContainerIsCustom { get; set; }
+        public string CmbContainerMaterialValue { get; set; }
+        public string SelectedContainerMaterialValue { get; set; }
+        public string ChangedContainerMaterialValue { get; set; }
         public bool CmbContainerTypeEnabled { get; set; }
         public int ContainerType { get; set; }
 

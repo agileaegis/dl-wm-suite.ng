@@ -20,6 +20,12 @@ namespace dl.wm.models.DTOs.Containers
         [Editable(true)] public DateTime ContainerPickupDate { get; set; }
         [Editable(true)] public string ContainerPickupOption { get; set; }
         [Required] [Editable(true)] public bool ContainerPickupActive { get; set; }
+        [Required] [Editable(true)] public bool ContainerFixed { get; set; }
+        [Required] [Editable(true)] public int ContainerCapacity { get; set; }
+        [Required] [Editable(true)] public int ContainerLoad { get; set; }
+        [Required] [Editable(true)] public string ContainerWasteType { get; set; }
+        [Required] [Editable(true)] public string ContainerMaterial { get; set; }
+        [Editable(true)] public string ContainerDescription { get; set; }
     }
 
     public class ContainerForCreationModel : ContainerForCreationUiModel
