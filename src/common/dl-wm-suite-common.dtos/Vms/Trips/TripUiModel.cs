@@ -5,7 +5,7 @@ namespace dl.wm.suite.common.dtos.Vms.Trips
 {
   public class TripUiModel
   {
-    [Key] public int Id { get; set; }
+    [Key] public Guid Id { get; set; }
 
     public string Message { get; set; }
     [Required]

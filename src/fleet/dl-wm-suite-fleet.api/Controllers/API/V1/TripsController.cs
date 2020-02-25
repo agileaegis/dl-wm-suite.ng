@@ -309,7 +309,8 @@ namespace dl.wm.suite.fleet.api.Controllers.API.V1
 
             var trip = Mapper.Map<TripUiModel>(tripFromRepo);
 
-            var links = CreateLinksForTrip(tripFromRepo.Id, fields);
+            //var links = CreateLinksForTrip(tripFromRepo.Id, fields);
+            var links = CreateLinksForTrip(1, fields);
 
             var linkedResourceToReturn = trip.ShapeData(fields)
                 as IDictionary<string, object>;

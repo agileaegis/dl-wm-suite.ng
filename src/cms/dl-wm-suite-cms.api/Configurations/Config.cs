@@ -3,6 +3,7 @@ using System.Reflection;
 using dl.wm.suite.cms.api.Helpers;
 using dl.wm.suite.cms.api.Redis.Maps.Contracts;
 using dl.wm.suite.cms.api.Redis.Maps.Impls;
+using dl.wm.suite.cms.api.Redis.TrackingPoints;
 using dl.wm.suite.cms.contracts.Containers;
 using dl.wm.suite.cms.contracts.Devices;
 using dl.wm.suite.cms.contracts.Devices.DeviceModels;
@@ -11,6 +12,7 @@ using dl.wm.suite.cms.contracts.Employees.Departments;
 using dl.wm.suite.cms.contracts.Employees.EmployeeRoles;
 using dl.wm.suite.cms.contracts.Tours;
 using dl.wm.suite.cms.contracts.Trackables;
+using dl.wm.suite.cms.contracts.Trips;
 using dl.wm.suite.cms.contracts.Users;
 using dl.wm.suite.cms.contracts.V1;
 using dl.wm.suite.cms.contracts.Vehicles;
@@ -26,6 +28,7 @@ using dl.wm.suite.cms.services.Employees.Departments;
 using dl.wm.suite.cms.services.Employees.EmployeeRoles;
 using dl.wm.suite.cms.services.Tours;
 using dl.wm.suite.cms.services.Trackables;
+using dl.wm.suite.cms.services.Trips;
 using dl.wm.suite.cms.services.Users;
 using dl.wm.suite.cms.services.V1;
 using dl.wm.suite.cms.services.Vehicles;
@@ -53,6 +56,7 @@ namespace dl.wm.suite.cms.api.Configurations
       services.AddSingleton<ITypeHelperService, TypeHelperService>();
 
       services.AddScoped<IMapsRedisRepository, MapsRedisRepository>();
+      services.AddTransient<ITrackingRedisRepository, TrackingRedisRepository>();
 
       services.AddScoped<IInquiryUserProcessor, InquiryUserProcessor>();
       services.AddScoped<IUserRepository, UserRepository>();
@@ -81,6 +85,14 @@ namespace dl.wm.suite.cms.api.Configurations
       services.AddScoped<IDeleteTrackableProcessor, DeleteTrackableProcessor>();
       services.AddScoped<ITrackableRepository, TrackableRepository>();
       services.AddScoped<ITrackablesControllerDependencyBlock, TrackablesControllerDependencyBlock>();
+
+      services.AddScoped<IInquiryTripProcessor, InquiryTripProcessor>();
+      services.AddScoped<IInquiryAllTripsProcessor, InquiryAllTripsProcessor>();
+      services.AddScoped<ICreateTripProcessor, CreateTripProcessor>();
+      services.AddScoped<IUpdateTripProcessor, UpdateTripProcessor>();
+      services.AddScoped<IDeleteTripProcessor, DeleteTripProcessor>();
+      services.AddScoped<ITripRepository, TripRepository>();
+      services.AddScoped<ITripsControllerDependencyBlock, TripsControllerDependencyBlock>();
 
       services.AddScoped<IInquiryContainerProcessor, InquiryContainerProcessor>();
       services.AddScoped<IInquiryAllContainersProcessor, InquiryAllContainersProcessor>();
