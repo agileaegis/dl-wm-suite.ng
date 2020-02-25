@@ -15,14 +15,14 @@ namespace dl.wm.view.Controls.Containers.AddEditFlyoutContainer
         bool IsAddMode { get; set; }
 
         bool TxtContainerLoadEnabled { get; set; }
-        string TxtContainerLoadValue { get; set; }
-        string SelectedContainerLoad { get; set; }
-        string ChangedContainerLoad { get; set; }
+        int TxtContainerLoadValue { get; set; }
+        int SelectedContainerLoad { get; set; }
+        int ChangedContainerLoad { get; set; }
 
         bool TxtContainerCapacityEnabled { get; set; }
-        string TxtContainerCapacityValue { get; set; }
-        string SelectedContainerCapacity { get; set; }
-        string ChangedContainerCapacity { get; set; }
+        int TxtContainerCapacityValue { get; set; }
+        int SelectedContainerCapacity { get; set; }
+        int ChangedContainerCapacity { get; set; }
 
         bool TxtContainerDescriptionEnabled { get; set; }
         string TxtContainerDescriptionValue { get; set; }

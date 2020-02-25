@@ -486,6 +486,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_text_box_16.png" />
+    <None Include="Resources\icons8_text_box_32.png" />
+    <None Include="Resources\icons8_leather_16.png" />
     <None Include="Resources\hashtag_large.svg" />
     <None Include="Resources\green.svg" />
     <None Include="Resources\gray.svg" />

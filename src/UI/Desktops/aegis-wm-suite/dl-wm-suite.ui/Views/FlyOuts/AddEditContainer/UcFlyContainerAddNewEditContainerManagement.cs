@@ -165,21 +165,71 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
             layerOpen.DataProvider = providerOpen;
         }
 
+        private void SpnContainerCapacityEditValueChanged(object sender, EventArgs e)
+        {
+            _ucFlyContainerManagementPresenter.CapacityValueChanged();
+        }
+
+        private void MmEditContainerDescriptionEditValueChanged(object sender, EventArgs e)
+        {
+            _ucFlyContainerManagementPresenter.DescriptionValueChanged();
+        }
+
+        private void SpnContainerLoadEditValueChanged(object sender, EventArgs e)
+        {
+            _ucFlyContainerManagementPresenter.LoadValueChanged();
+        }
+
+        private void ImgCmbBxEdtContainerMaterialEditValueChanged(object sender, EventArgs e)
+        {
+            _ucFlyContainerManagementPresenter.MaterialValueChanged();
+        }
+
         #endregion
 
         #region IUcFlyContainerManagementView
 
         public bool IsAddMode { get; set; }
-        public bool TxtContainerLoadEnabled { get; set; }
-        public string TxtContainerLoadValue { get; set; }
-        public string SelectedContainerLoad { get; set; }
-        public string ChangedContainerLoad { get; set; }
-        public bool TxtContainerCapacityEnabled { get; set; }
-        public string TxtContainerCapacityValue { get; set; }
-        public string SelectedContainerCapacity { get; set; }
-        public string ChangedContainerCapacity { get; set; }
-        public bool TxtContainerDescriptionEnabled { get; set; }
-        public string TxtContainerDescriptionValue { get; set; }
+
+        public bool TxtContainerLoadEnabled
+        {
+            get => spnContainerLoad.Enabled;
+            set => spnContainerLoad.Enabled = value;
+        }
+
+        public int TxtContainerLoadValue
+        {
+            get => (int)spnContainerLoad.EditValue;
+            set => spnContainerLoad.EditValue = value;
+        }
+        public int SelectedContainerLoad { get; set; }
+        public int ChangedContainerLoad { get; set; }
+
+        public bool TxtContainerCapacityEnabled
+        {
+            get => spnContainerCapacity.Enabled;
+            set => spnContainerCapacity.Enabled = value;
+        }
+
+        public int TxtContainerCapacityValue
+        {
+            get => (int)spnContainerCapacity.EditValue;
+            set => spnContainerCapacity.EditValue = value;
+        }
+        public int SelectedContainerCapacity { get; set; }
+        public int ChangedContainerCapacity { get; set; }
+
+        public bool TxtContainerDescriptionEnabled
+        {
+            get => mmEditContainerDescription.Enabled;
+            set => mmEditContainerDescription.Enabled = value;
+        }
+
+        public string TxtContainerDescriptionValue
+        {
+            get => (string)mmEditContainerDescription.EditValue;
+            set => mmEditContainerDescription.EditValue = value;
+        }
         public string SelectedContainerDescription { get; set; }
         public string ChangedContainerDescription { get; set; }
 
@@ -508,15 +558,62 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
 
         public string SelectedContainerFillLevelValue { get; set; }
         public string ChangedContainerFillLevelValue { get; set; }
-        public bool CmbContainerMaterialEnabled { get; set; }
+
+        public bool CmbContainerMaterialEnabled
+        {
+            get => imgCmbBxEdtContainerMaterial.Enabled;
+            set => imgCmbBxEdtContainerMaterial.Enabled = value;
+        }
         public int ContainerMaterial { get; set; }
-        public bool SelectedIndexMaterialOfContainerIsDefault { get; set; }
+
+        public bool SelectedIndexMaterialOfContainerIsDefault
+        {
+            set
+            {
+                if (value)
+                    imgCmbBxEdtContainerMaterial.SelectedIndex = 0;
+            }
+        }
         public bool SelectedIndexMaterialOfContainerIsFirstIndex { get; set; }
         public bool SelectedIndexMaterialOfContainerIsCustom { get; set; }
-        public string CmbContainerMaterialValue { get; set; }
+
+        public string CmbContainerMaterialValue
+        {
+            get => (string)((ImageComboBoxItem)imgCmbBxEdtContainerMaterial.SelectedItem).Value;
+            set
+            {
+                if (value != string.Empty)
+                    imgCmbBxEdtContainerMaterial.SelectedIndex =
+                        PopulateCmbContainerMaterialWithSelectedContainerMaterial(value);
+            }
+        }
+
+        private int PopulateCmbContainerMaterialWithSelectedContainerMaterial(string selectedContainerMaterial)
+        {
+            if (imgCmbBxEdtContainerMaterial.Properties.Items == null)
+            {
+                return -1;
+            }
+            var containerMaterials = imgCmbBxEdtContainerMaterial.Properties.Items;
+            for (var i = 0; i < containerMaterials.Count; i++)
+            {
+                if ((string)containerMaterials[i].Value == selectedContainerMaterial)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         public string SelectedContainerMaterialValue { get; set; }
         public string ChangedContainerMaterialValue { get; set; }
-        public bool CmbContainerTypeEnabled { get; set; }
+
+
+        public bool CmbContainerTypeEnabled
+        {
+            get => imgCmbBxEdtContainerType.Enabled;
+            set => imgCmbBxEdtContainerType.Enabled = value;
+        }
         public int ContainerType { get; set; }
 
         public bool SelectedIndexTypeOfContainerIsDefault
@@ -732,5 +829,7 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
 
 
         #endregion
+
+
     }
 }

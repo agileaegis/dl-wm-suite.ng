@@ -12,6 +12,10 @@ namespace dl.wm.presenter.ViewModel.Containers
     public class UcFlyContainerManagementPresenter : BasePresenter<IUcFlyContainerManagementView, IContainersService>
     {
 
+        private bool _bContainerMaterialValidated = false;
+        private bool _bContainerLoadValidated = false;
+        private bool _bContainerCapacityValidated = false;
+        private bool _bContainerDescriptionValidated = false;
         private bool _bContainerNameValidated = false;
         private bool _bContainerLevelValidated = false;
         private bool _bUserContainerStatusValidated = false;
@@ -64,6 +68,9 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.SelectedContainerId = Guid.Empty;
 
             View.SelectedContainerName = string.Empty;
+            View.SelectedContainerDescription = string.Empty;
+            View.SelectedContainerCapacity = 1100;
+            View.SelectedContainerLoad = 520;
             View.SelectedContainerLevel = 80;
             View.SelectedIndexFillLevelOfContainerIsDefault = true;
 
@@ -71,6 +78,7 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.SelectedContainerAddress = string.Empty;
             View.MapClearFromPoints = true;
             View.SelectedIndexStatusOfContainerIsDefault = true;
+            View.SelectedIndexMaterialOfContainerIsDefault = true;
 
             View.SelectedContainerMandatory = false;
             View.SelectedContainerMandatoryDateTime = DateTime.Now;
@@ -97,6 +105,9 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.BtnContainerCancelEnabled = true;
 
             View.TxtContainerNameEnabled = true;
+            View.TxtContainerDescriptionEnabled = true;
+            View.TxtContainerLoadEnabled = true;
+            View.TxtContainerCapacityEnabled = true;
             View.BarContainerLevelEnabled = true;
             View.CmbContainerFillLevelEnabled = true;
 
@@ -105,6 +116,7 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.TgglContainerPointEnabled = true;
             View.MapContainerEnabled = true;
             View.CmbContainerStatusEnabled = true;
+            View.CmbContainerMaterialEnabled = true;
             View.ChckContainerMandatoryEnabled = true;
             View.DtContainerMandatoryDateTimeEnabled = false;
             View.CmbContainerMandatoryOptionEnabled = false;
@@ -221,6 +233,19 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.ChangedContainer.ContainerName = _bContainerNameValidated
                 ? View.ChangedContainerName
                 : View.TxtContainerNameValue;
+
+            View.ChangedContainer.ContainerDescription = _bContainerDescriptionValidated
+                ? View.ChangedContainerDescription
+                : View.TxtContainerDescriptionValue;
+
+            View.ChangedContainer.ContainerCapacity = _bContainerCapacityValidated
+                ? View.ChangedContainerCapacity
+                : View.TxtContainerCapacityValue;
+
+            View.ChangedContainer.ContainerLoad = _bContainerLoadValidated
+                ? View.ChangedContainerLoad
+                : View.TxtContainerLoadValue;
+
             View.ChangedContainer.ContainerAddress = View.TxtContainerAddressValue;
             View.ChangedContainer.ContainerLocationLat = View.PointLatValue;
             View.ChangedContainer.ContainerLocationLong = View.PointLonValue;
@@ -238,6 +263,11 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.ChangedContainer.ContainerStatus = _bUserContainerStatusValidated
                 ? View.ChangedContainerStatusValue
                 : View.CmbContainerStatusValue;
+
+            View.ChangedContainer.ContainerMaterial = _bContainerMaterialValidated
+                ? View.ChangedContainerMaterialValue
+                : View.CmbContainerMaterialValue;
+
             View.ChangedContainer.ContainerMandatoryPickupActive = _bUserContainerMandatoryValidated
                 ? View.ChangedContainerMandatory
                 : View.ChckContainerMandatoryValue;
@@ -247,6 +277,9 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.ChangedContainer.ContainerMandatoryPickupDate = _bUserContainerMandatoryDateValidated
                 ? View.ChangedContainerMandatoryDateTime
                 : View.DtContainerMandatoryDateTimeValue;
+
+            View.ChangedContainer.ContainerFixed = true;
+            View.ChangedContainer.ContainerWasteType = View.ChangedContainer.ContainerType;
         }
 
         public void MapPointToggleWasChanged()
@@ -261,6 +294,66 @@ namespace dl.wm.presenter.ViewModel.Containers
             if (imageUploadResponse.IsStoredSuccessfully)
             {
                 View.PctContainerImageServerPath = imageUploadResponse.Path;
+            }
+        }
+
+        public void MaterialValueChanged()
+        {
+            if (View.SelectedContainerMaterialValue != View.CmbContainerMaterialValue)
+            {
+                View.ChangedContainerMaterialValue = View.CmbContainerMaterialValue;
+                View.BtnContainerSaveEnabled = true;
+                _bContainerMaterialValidated = true;
+            }
+            else
+            {
+                View.BtnContainerSaveEnabled = false;
+                _bContainerMaterialValidated = false;
+            }
+        }
+
+        public void LoadValueChanged()
+        {
+            if (View.SelectedContainerLoad != View.TxtContainerLoadValue)
+            {
+                View.ChangedContainerLoad = View.TxtContainerLoadValue;
+                View.BtnContainerSaveEnabled = true;
+                _bContainerLoadValidated = true;
+            }
+            else
+            {
+                View.BtnContainerSaveEnabled = false;
+                _bContainerLoadValidated = false;
+            }
+        }
+
+        public void DescriptionValueChanged()
+        {
+            if (View.SelectedContainerDescription != View.TxtContainerDescriptionValue)
+            {
+                View.ChangedContainerDescription = View.TxtContainerDescriptionValue;
+                View.BtnContainerSaveEnabled = true;
+                _bContainerDescriptionValidated = true;
+            }
+            else
+            {
+                View.BtnContainerSaveEnabled = false;
+                _bContainerDescriptionValidated = false;
+            }
+        }
+
+        public void CapacityValueChanged()
+        {
+            if (View.SelectedContainerCapacity != View.TxtContainerCapacityValue)
+            {
+                View.ChangedContainerCapacity = View.TxtContainerCapacityValue;
+                View.BtnContainerSaveEnabled = true;
+                _bContainerCapacityValidated = true;
+            }
+            else
+            {
+                View.BtnContainerSaveEnabled = false;
+                _bContainerCapacityValidated = false;
             }
         }
 
@@ -428,5 +521,7 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.PctContainerImagePath = View.SelectedContainer?.ContainerImageName;
             View.OnLoadAsyncImage = true;
         }
+
+
     }
 }
