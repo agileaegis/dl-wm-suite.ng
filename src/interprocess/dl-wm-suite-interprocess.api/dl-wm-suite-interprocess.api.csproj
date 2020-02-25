@@ -17,6 +17,13 @@
    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
      <DocumentationFile>..\dl-wm-suite-interprocess.api\xml\dl-wm-suite-interprocess.api.xml</DocumentationFile>
    </PropertyGroup>
+
+   <ItemGroup>
+     <Compile Remove="Messaging\**" />
+     <Content Remove="Messaging\**" />
+     <EmbeddedResource Remove="Messaging\**" />
+     <None Remove="Messaging\**" />
+   </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
@@ -39,7 +46,6 @@
   <ItemGroup>
     <Folder Include="Commanding\Commands\Outbound\" />
     <Folder Include="Helpers\Exceptions\Controllers\" />
-    <Folder Include="Messaging\Consumers\" />
   </ItemGroup>
 
 </Project>
