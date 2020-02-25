@@ -198,7 +198,8 @@ namespace dl.wm.suite.fleet.api.Controllers.API.V1
 
             var trackable = Mapper.Map<TrackableUiModel>(trackableFromRepo);
 
-            var links = CreateLinksForTrackable(trackable.Id, fields);
+            //var links = CreateLinksForTrackable(trackable.Id, fields);
+            var links = CreateLinksForTrackable(1, fields);
 
             var linkedResourceToReturn = trackable.ShapeData(fields)
                 as IDictionary<string, object>;

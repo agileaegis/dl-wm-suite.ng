@@ -10,6 +10,7 @@ using dl.wm.suite.cms.contracts.Employees;
 using dl.wm.suite.cms.contracts.Employees.Departments;
 using dl.wm.suite.cms.contracts.Employees.EmployeeRoles;
 using dl.wm.suite.cms.contracts.Tours;
+using dl.wm.suite.cms.contracts.Trackables;
 using dl.wm.suite.cms.contracts.Users;
 using dl.wm.suite.cms.contracts.V1;
 using dl.wm.suite.cms.contracts.Vehicles;
@@ -24,6 +25,7 @@ using dl.wm.suite.cms.services.Employees;
 using dl.wm.suite.cms.services.Employees.Departments;
 using dl.wm.suite.cms.services.Employees.EmployeeRoles;
 using dl.wm.suite.cms.services.Tours;
+using dl.wm.suite.cms.services.Trackables;
 using dl.wm.suite.cms.services.Users;
 using dl.wm.suite.cms.services.V1;
 using dl.wm.suite.cms.services.Vehicles;
@@ -71,6 +73,14 @@ namespace dl.wm.suite.cms.api.Configurations
       services.AddScoped<IDeleteDeviceProcessor, DeleteDeviceProcessor>();
       services.AddScoped<IDeviceRepository, DeviceRepository>();
       services.AddScoped<IDevicesControllerDependencyBlock, DevicesControllerDependencyBlock>();
+
+      services.AddScoped<IInquiryTrackableProcessor, InquiryTrackableProcessor>();
+      services.AddScoped<IInquiryAllTrackablesProcessor, InquiryAllTrackablesProcessor>();
+      services.AddScoped<ICreateTrackableProcessor, CreateTrackableProcessor>();
+      services.AddScoped<IUpdateTrackableProcessor, UpdateTrackableProcessor>();
+      services.AddScoped<IDeleteTrackableProcessor, DeleteTrackableProcessor>();
+      services.AddScoped<ITrackableRepository, TrackableRepository>();
+      services.AddScoped<ITrackablesControllerDependencyBlock, TrackablesControllerDependencyBlock>();
 
       services.AddScoped<IInquiryContainerProcessor, InquiryContainerProcessor>();
       services.AddScoped<IInquiryAllContainersProcessor, InquiryAllContainersProcessor>();

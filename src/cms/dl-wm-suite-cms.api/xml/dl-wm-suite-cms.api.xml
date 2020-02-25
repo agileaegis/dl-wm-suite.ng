@@ -349,6 +349,59 @@
             <response code="200">Resource retrieved correctly.</response>
             <response code="500">Internal Server Error.</response>
         </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.TrackablesController.PostTrackableRouteAsync(dl.wm.suite.common.dtos.Vms.Trackables.TrackableForCreationUiModel)">
+            <summary>
+            POST : Create a New Trackable.
+            </summary>
+            <param name="trackableForCreationUiModel">TrackableForCreationUiModel the Request Model for Creation</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Trackable is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="201">Created (if the Trackable is created)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.TrackablesController.PutTrackableRouteAsync(System.Guid,dl.wm.suite.common.dtos.Vms.Trackables.TrackableForModificationUiModel)">
+            <summary>
+            PUT : Update an Existing Trackable.
+            </summary>
+            <param name="id">Trackable Id for Modification</param>
+            <param name="TrackableForModificationUiModel">TrackableForCreationUiModel the Request Model for Modification</param>
+            <remarks> return a ResponseEntity with status 201 (Created) if the new Trackable is created, 400 (Bad Request), 500 (Server Error) </remarks>
+            <response code="200">Ok (if the Trackable is updated)</response>
+            <response code="400">Bad Request</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.TrackablesController.GetTrackableAsync(System.Guid,System.String)">
+            <summary>
+            Get - Retrieve Stored Trackable providing Trackable Id
+            </summary>
+            <param name="id">Trackable Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Trackable</param>
+            <remarks>Retrieve Trackables providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.TrackablesController.GetTrackableImeiAsync(System.String,System.String)">
+            <summary>
+            Get - Retrieve Stored Trackable providing Trackable Imei
+            </summary>
+            <param name="imei">Trackable Imei the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Trackable</param>
+            <remarks>Retrieve Trackables providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="401">Unauthorized</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.TrackablesController.GetTrackablesAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.TrackablesResourceParameters,System.String)">
+            <summary>
+            Get - Retrieve All/or Partial Paged Stored Trackables
+            </summary>
+            <remarks>Retrieve paged Trackables providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
         <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.VehiclesController.PostVehicleRouteAsync(dl.wm.suite.common.dtos.Vms.Vehicles.VehicleForCreationUiModel)">
             <summary>
             POST : Create a New Vehicle.

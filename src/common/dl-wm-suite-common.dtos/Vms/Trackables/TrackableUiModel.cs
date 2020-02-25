@@ -6,7 +6,7 @@ namespace dl.wm.suite.common.dtos.Vms.Trackables
     public class TrackableUiModel
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Message { get; set; }
 
