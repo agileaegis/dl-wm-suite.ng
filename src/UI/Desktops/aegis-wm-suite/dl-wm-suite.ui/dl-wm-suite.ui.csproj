@@ -486,6 +486,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_charged_battery_16.png" />
+    <None Include="Resources\icons8_weight_16.png" />
+    <None Include="Resources\icons8_hashtag_large_166.png" />
+    <None Include="Resources\icons8_battery_161.png" />
+    <None Include="Resources\icons8_adjust_161.png" />
+    <None Include="Resources\icons8_hashtag_large_165.png" />
     <None Include="Resources\icons8_text_box_16.png" />
     <None Include="Resources\icons8_text_box_32.png" />
     <None Include="Resources\icons8_leather_16.png" />

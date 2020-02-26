@@ -373,6 +373,16 @@ namespace dl.wm.suite.ui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_adjust_161 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_adjust_161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_administrator_male_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8_administrator_male_16", resourceCulture);
@@ -396,6 +406,16 @@ namespace dl.wm.suite.ui.Properties {
         internal static System.Drawing.Bitmap icons8_battery_16 {
             get {
                 object obj = ResourceManager.GetObject("icons8_battery_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_battery_161 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_battery_161", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +526,16 @@ namespace dl.wm.suite.ui.Properties {
         internal static System.Drawing.Bitmap icons8_cancel_324 {
             get {
                 object obj = ResourceManager.GetObject("icons8_cancel_324", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_charged_battery_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_charged_battery_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -866,6 +896,26 @@ namespace dl.wm.suite.ui.Properties {
         internal static System.Drawing.Bitmap icons8_hashtag_large_164 {
             get {
                 object obj = ResourceManager.GetObject("icons8_hashtag_large_164", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_hashtag_large_165 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_hashtag_large_165", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_hashtag_large_166 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_hashtag_large_166", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1666,6 +1716,16 @@ namespace dl.wm.suite.ui.Properties {
         internal static System.Drawing.Bitmap icons8_wednesday_161 {
             get {
                 object obj = ResourceManager.GetObject("icons8_wednesday_161", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_weight_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_weight_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
