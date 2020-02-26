@@ -452,9 +452,9 @@
             this.txtAddEditContainerAddress.Name = "txtAddEditContainerAddress";
             this.txtAddEditContainerAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerAddress.Properties.Appearance.Options.UseFont = true;
-            this.txtAddEditContainerAddress.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerAddress.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerAddress.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.txtAddEditContainerAddress.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerAddress.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerAddress.Properties.AppearanceFocused.Options.UseFont = true;
             this.txtAddEditContainerAddress.Size = new System.Drawing.Size(379, 22);
             this.txtAddEditContainerAddress.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -529,7 +529,7 @@
             this.cmbContainerCapacity.Name = "cmbContainerCapacity";
             this.cmbContainerCapacity.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cmbContainerCapacity.Properties.Appearance.Options.UseFont = true;
-            this.cmbContainerCapacity.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cmbContainerCapacity.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cmbContainerCapacity.Properties.AppearanceDropDown.Options.UseFont = true;
             this.cmbContainerCapacity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -557,7 +557,7 @@
             this.cmbContainerLoad.Name = "cmbContainerLoad";
             this.cmbContainerLoad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cmbContainerLoad.Properties.Appearance.Options.UseFont = true;
-            this.cmbContainerLoad.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cmbContainerLoad.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cmbContainerLoad.Properties.AppearanceDropDown.Options.UseFont = true;
             this.cmbContainerLoad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1059,9 +1059,9 @@
             this.txtAddEditContainerName.Name = "txtAddEditContainerName";
             this.txtAddEditContainerName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerName.Properties.Appearance.Options.UseFont = true;
-            this.txtAddEditContainerName.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerName.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerName.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.txtAddEditContainerName.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerName.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerName.Properties.AppearanceFocused.Options.UseFont = true;
             this.txtAddEditContainerName.Size = new System.Drawing.Size(379, 22);
             this.txtAddEditContainerName.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
