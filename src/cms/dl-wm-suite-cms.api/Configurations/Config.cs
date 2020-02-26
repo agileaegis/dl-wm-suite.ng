@@ -55,6 +55,9 @@ namespace dl.wm.suite.cms.api.Configurations
       services.AddSingleton<IPropertyMappingService, PropertyMappingService>();
       services.AddSingleton<ITypeHelperService, TypeHelperService>();
 
+      //Todo: Changed for Singleton Consumer
+      services.AddTransient<ITrackingRedisRepository, TrackingRedisRepository>();
+
       services.AddScoped<IMapsRedisRepository, MapsRedisRepository>();
       services.AddTransient<ITrackingRedisRepository, TrackingRedisRepository>();
 

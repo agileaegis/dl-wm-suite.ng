@@ -346,6 +346,7 @@ namespace dl.wm.suite.cms.api
 
       AutoMapper.Mapper.Initialize(cfg =>
       {
+        cfg.AddProfile<TourEntityToTourUiAutoMapperProfile>();
         cfg.AddProfile<TourUiModelToTourEntityAutoMapperProfile>();
         cfg.AddProfile<TourEntityToTourForCreationUiAutoMapperProfile>();
 

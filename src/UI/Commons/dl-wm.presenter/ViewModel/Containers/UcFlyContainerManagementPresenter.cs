@@ -69,9 +69,9 @@ namespace dl.wm.presenter.ViewModel.Containers
 
             View.SelectedContainerName = string.Empty;
             View.SelectedContainerDescription = string.Empty;
-            View.SelectedContainerCapacity = 1100;
-            View.SelectedContainerLoad = 520;
-            View.SelectedContainerLevel = 80;
+            View.SelectedIndexLoadOfContainerIsDefault = true;
+            View.SelectedIndexCapacityOfContainerIsDefault = true;
+            View.SelectedContainerLevel = 12;
             View.SelectedIndexFillLevelOfContainerIsDefault = true;
 
             View.SelectedIndexTypeOfContainerIsDefault = true;
@@ -86,7 +86,8 @@ namespace dl.wm.presenter.ViewModel.Containers
             View.SelectedContainerImage = string.Empty;
 
             View.TxtContainerNameValue = string.Empty;
-            View.BarContainerLevelValue = 80;
+            View.TxtContainerDescriptionValue = string.Empty;
+            View.BarContainerLevelValue = 12;
             View.TgglContainerPointValue = false;
             View.TxtContainerAddressValue = string.Empty;
             View.ChckContainerMandatoryValue = false;

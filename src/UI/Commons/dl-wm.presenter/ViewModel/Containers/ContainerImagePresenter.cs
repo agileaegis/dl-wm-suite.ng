@@ -19,14 +19,8 @@ namespace dl.wm.presenter.ViewModel.Containers
         {
         }
 
-        public async void ContainerImagePopulate()
+        public void ContainerImagePopulate()
         {
-            //var urls = await StorageHelper.GetThumbNailUrls(new AzureStorageConfig(), View.SelectedContainerImageNameImageView);
-            //if (urls.Count > 0)
-            //{
-            //    View.PctContainerImagePathValue = urls.First();
-            //}
-
             View.PctContainerImagePathValue = View.SelectedContainerImageNameImageView;
         }
     }

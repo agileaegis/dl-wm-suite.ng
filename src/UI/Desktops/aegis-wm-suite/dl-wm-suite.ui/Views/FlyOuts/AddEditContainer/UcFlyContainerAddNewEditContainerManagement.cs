@@ -193,30 +193,48 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
 
         public bool TxtContainerLoadEnabled
         {
-            get => spnContainerLoad.Enabled;
-            set => spnContainerLoad.Enabled = value;
+            get => cmbContainerLoad.Enabled;
+            set => cmbContainerLoad.Enabled = value;
         }
 
         public int TxtContainerLoadValue
         {
-            get => (int)spnContainerLoad.EditValue;
-            set => spnContainerLoad.EditValue = value;
+            get => Int32.Parse((string)cmbContainerLoad.EditValue);
+            set => cmbContainerLoad.EditValue = value;
         }
         public int SelectedContainerLoad { get; set; }
+
+        public bool SelectedIndexLoadOfContainerIsDefault
+        {
+            set
+            {
+                if (value)
+                    cmbContainerLoad.SelectedIndex = 1;
+            }
+        }
         public int ChangedContainerLoad { get; set; }
 
         public bool TxtContainerCapacityEnabled
         {
-            get => spnContainerCapacity.Enabled;
-            set => spnContainerCapacity.Enabled = value;
+            get => cmbContainerCapacity.Enabled;
+            set => cmbContainerCapacity.Enabled = value;
         }
 
         public int TxtContainerCapacityValue
         {
-            get => (int)spnContainerCapacity.EditValue;
-            set => spnContainerCapacity.EditValue = value;
+            get => Int32.Parse((string)cmbContainerCapacity.EditValue);
+            set => cmbContainerCapacity.EditValue = value;
         }
         public int SelectedContainerCapacity { get; set; }
+
+        public bool SelectedIndexCapacityOfContainerIsDefault
+        {
+            set
+            {
+                if (value)
+                    cmbContainerCapacity.SelectedIndex = 1;
+            }
+        }
         public int ChangedContainerCapacity { get; set; }
 
         public bool TxtContainerDescriptionEnabled

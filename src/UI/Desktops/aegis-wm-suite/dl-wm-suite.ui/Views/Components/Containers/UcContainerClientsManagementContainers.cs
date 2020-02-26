@@ -211,8 +211,11 @@ namespace dl.wm.suite.ui.Views.Components.Containers
         {
             set
             {
-                Uri blobUrl = new Uri(value);
-                pctrEdtContainerPhoto.LoadAsync(value);
+                if (!string.IsNullOrEmpty(value))
+                {
+                    Uri blobUrl = new Uri(value);
+                    pctrEdtContainerPhoto.LoadAsync(value);
+                }
             }
         }
 
