@@ -846,8 +846,8 @@ namespace dl.wm.suite.ui.Views.FlyOuts.AddEditContainer
         public string SelectedContainerImageNameImageView { get; set; }
 
 
-        #endregion
 
+        #endregion
 
     }
 }

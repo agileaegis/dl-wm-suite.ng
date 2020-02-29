@@ -17,7 +17,7 @@
     <UpgradeBackupLocation />
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>C:\Users\maliganis\Desktop\dl\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,9 +27,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -53,6 +54,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>icons8_recycle_bin.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C248FED13E29773DF51BD16C210CAACD5C8E2428</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>dl-wm-suite.ui_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
@@ -245,10 +258,10 @@
     <Compile Include="Views\FlyOuts\UcFlyOnDemandCommand.Designer.cs">
       <DependentUpon>UcFlyOnDemandCommand.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FlyOuts\AddEditEmployee\UcFlyEvtAddNewEditEmployeeManagement.cs">
+    <Compile Include="Views\FlyOuts\UcFlyEvtAddNewEditEmployeeManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\FlyOuts\AddEditEmployee\UcFlyEvtAddNewEditEmployeeManagement.Designer.cs">
+    <Compile Include="Views\FlyOuts\UcFlyEvtAddNewEditEmployeeManagement.Designer.cs">
       <DependentUpon>UcFlyEvtAddNewEditEmployeeManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Helpers\DashboardCustomClusterFactory.cs" />
@@ -413,7 +426,7 @@
     <EmbeddedResource Include="Views\FlyOuts\UcFlyOnDemandCommand.resx">
       <DependentUpon>UcFlyOnDemandCommand.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FlyOuts\AddEditEmployee\UcFlyEvtAddNewEditEmployeeManagement.resx">
+    <EmbeddedResource Include="Views\FlyOuts\UcFlyEvtAddNewEditEmployeeManagement.resx">
       <DependentUpon>UcFlyEvtAddNewEditEmployeeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Modules\UcAccount.resx">
@@ -457,6 +470,7 @@
     </EmbeddedResource>
     <None Include="0.Docs\ReadMe.md" />
     <None Include="app.config" />
+    <None Include="dl-wm-suite.ui_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -486,18 +500,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_gender_161.png" />
+    <None Include="Resources\icons8_charged_battery_16.png" />
+    <None Include="Resources\icons8_weight_16.png" />
+    <None Include="Resources\icons8_hashtag_large_166.png" />
+    <None Include="Resources\icons8_battery_161.png" />
+    <None Include="Resources\icons8_adjust_161.png" />
     <None Include="Resources\icons8_hashtag_large_165.png" />
-    <None Include="Resources\icons8_administrator_male_161.png" />
-    <None Include="Resources\icons8_phone2_16.png" />
-    <None Include="Resources\icons8_telephone_16.png" />
-    <None Include="Resources\icons8_zip_code_161.png" />
-    <None Include="Resources\icons8_email_162.png" />
-    <None Include="Resources\icons8_identification_documents_165.png" />
-    <None Include="Resources\icons8_identification_documents2_165.png" />
-    <None Include="Resources\icons8_worker_321.png" />
-    <None Include="Resources\info_323.png" />
-    <None Include="Resources\info_322.png" />
     <None Include="Resources\icons8_text_box_16.png" />
     <None Include="Resources\icons8_text_box_32.png" />
     <None Include="Resources\icons8_leather_16.png" />

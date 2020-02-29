@@ -28,7 +28,6 @@
     /// </summary>
     private void InitializeComponent()
     {
-            this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel1 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel2 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
             DevExpress.XtraEditors.Repository.TrackBarLabel trackBarLabel3 = new DevExpress.XtraEditors.Repository.TrackBarLabel();
@@ -36,12 +35,16 @@
             this.layCntrlFlyoutAddNewEditContainersContainer = new DevExpress.XtraLayout.LayoutControl();
             this.grpCntrlFlyoutAddNewEditContainersContainer = new DevExpress.XtraEditors.GroupControl();
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer = new DevExpress.XtraLayout.LayoutControl();
+            this.lblCntrlImageContainerCapacity = new DevExpress.XtraEditors.LabelControl();
+            this.lblCntrlImageContainerLoad = new DevExpress.XtraEditors.LabelControl();
+            this.lblCntrlImageContainerStatus = new DevExpress.XtraEditors.LabelControl();
+            this.lblCntrlImageContainerLevel = new DevExpress.XtraEditors.LabelControl();
             this.trckBrCntrlLevelContainer = new DevExpress.XtraEditors.TrackBarControl();
             this.lblCntlAddEditContainerLevel = new DevExpress.XtraEditors.LabelControl();
             this.txtAddEditContainerAddress = new DevExpress.XtraEditors.TextEdit();
             this.lblCtrlAddEditContainerAddress = new DevExpress.XtraEditors.LabelControl();
             this.imgCmbBxEdtContainerStatus = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection(this.components);
+            this.imgCllctnContainerStatus = new DevExpress.Utils.ImageCollection();
             this.chckEdtContainerMandatoryPickup = new DevExpress.XtraEditors.CheckEdit();
             this.cmbContainerCapacity = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblCntlAddEditContainerStatus = new DevExpress.XtraEditors.LabelControl();
@@ -53,14 +56,14 @@
             this.mmEditContainerDescription = new DevExpress.XtraEditors.MemoEdit();
             this.lblCtrlAddEditContainerDescription = new DevExpress.XtraEditors.LabelControl();
             this.imgCmbBxEdtContainerMaterial = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.imgCllctnContainerMaterial = new DevExpress.Utils.ImageCollection(this.components);
+            this.imgCllctnContainerMaterial = new DevExpress.Utils.ImageCollection();
             this.lblCtrlAddEditContainerMaterial = new DevExpress.XtraEditors.LabelControl();
             this.imgCmbBxEdtContainerMandatoryTypeCollection = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.imgCllctnContainerMandatory = new DevExpress.Utils.ImageCollection(this.components);
+            this.imgCllctnContainerMandatory = new DevExpress.Utils.ImageCollection();
             this.imgCmbBxEdtContainerFillLevel = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.imgCllctnContainerFillLevel = new DevExpress.Utils.ImageCollection(this.components);
+            this.imgCllctnContainerFillLevel = new DevExpress.Utils.ImageCollection();
             this.imgCmbBxEdtContainerType = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.imgCllctnContainerType = new DevExpress.Utils.ImageCollection(this.components);
+            this.imgCllctnContainerType = new DevExpress.Utils.ImageCollection();
             this.pctrEdtContainerPhoto = new DevExpress.XtraEditors.PictureEdit();
             this.lblCntrlImageContainerMandatoryType = new DevExpress.XtraEditors.LabelControl();
             this.lblCntrlImageContainerPhoto = new DevExpress.XtraEditors.LabelControl();
@@ -104,7 +107,6 @@
             this.emptySpaceItem26 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem55 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem56 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -148,15 +150,20 @@
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem35 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem44 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layCntrlGrpFlyoutAddNewEditEmployeeContainer = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem13 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem14 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.openFileDialogPhotoContainer = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
+            this.openFileDialogPhotoContainer = new DevExpress.XtraEditors.XtraOpenFileDialog();
             this.emptySpaceItem20 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem22 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlFlyoutAddNewEditContainersContainer)).BeginInit();
             this.layCntrlFlyoutAddNewEditContainersContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpCntrlFlyoutAddNewEditContainersContainer)).BeginInit();
@@ -209,7 +216,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
@@ -253,6 +259,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpFlyoutAddNewEditEmployeeContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
@@ -260,7 +272,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layCntrlFlyoutAddNewEditContainersContainer
@@ -270,7 +281,7 @@
             this.layCntrlFlyoutAddNewEditContainersContainer.Location = new System.Drawing.Point(0, 0);
             this.layCntrlFlyoutAddNewEditContainersContainer.Name = "layCntrlFlyoutAddNewEditContainersContainer";
             this.layCntrlFlyoutAddNewEditContainersContainer.Root = this.layCntrlGrpFlyoutAddNewEditEmployeeContainer;
-            this.layCntrlFlyoutAddNewEditContainersContainer.Size = new System.Drawing.Size(1662, 1075);
+            this.layCntrlFlyoutAddNewEditContainersContainer.Size = new System.Drawing.Size(1223, 721);
             this.layCntrlFlyoutAddNewEditContainersContainer.TabIndex = 0;
             this.layCntrlFlyoutAddNewEditContainersContainer.Text = "layoutControl1";
             // 
@@ -285,12 +296,16 @@
             this.grpCntrlFlyoutAddNewEditContainersContainer.Controls.Add(this.layCntrlFlyoutAddNewEditEmployeeGrpContainer);
             this.grpCntrlFlyoutAddNewEditContainersContainer.Location = new System.Drawing.Point(3, 3);
             this.grpCntrlFlyoutAddNewEditContainersContainer.Name = "grpCntrlFlyoutAddNewEditContainersContainer";
-            this.grpCntrlFlyoutAddNewEditContainersContainer.Size = new System.Drawing.Size(1656, 1069);
+            this.grpCntrlFlyoutAddNewEditContainersContainer.Size = new System.Drawing.Size(1217, 715);
             this.grpCntrlFlyoutAddNewEditContainersContainer.TabIndex = 4;
             this.grpCntrlFlyoutAddNewEditContainersContainer.Text = "Προσθήκη - Αλλαγή Κάδου";
             // 
             // layCntrlFlyoutAddNewEditEmployeeGrpContainer
             // 
+            this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Controls.Add(this.lblCntrlImageContainerCapacity);
+            this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Controls.Add(this.lblCntrlImageContainerLoad);
+            this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Controls.Add(this.lblCntrlImageContainerStatus);
+            this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Controls.Add(this.lblCntrlImageContainerLevel);
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Controls.Add(this.trckBrCntrlLevelContainer);
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Controls.Add(this.lblCntlAddEditContainerLevel);
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Controls.Add(this.txtAddEditContainerAddress);
@@ -335,14 +350,62 @@
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Name = "layCntrlFlyoutAddNewEditEmployeeGrpContainer";
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(748, 470, 650, 400);
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Root = this.layCntrlGrpFlyoutAddNewEditEmployeeGrpContainer;
-            this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Size = new System.Drawing.Size(1652, 1028);
+            this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Size = new System.Drawing.Size(1213, 674);
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.TabIndex = 0;
             this.layCntrlFlyoutAddNewEditEmployeeGrpContainer.Text = "layoutControl1";
+            // 
+            // lblCntrlImageContainerCapacity
+            // 
+            this.lblCntrlImageContainerCapacity.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCntrlImageContainerCapacity.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_charged_battery_16;
+            this.lblCntrlImageContainerCapacity.Appearance.Options.UseFont = true;
+            this.lblCntrlImageContainerCapacity.Appearance.Options.UseImage = true;
+            this.lblCntrlImageContainerCapacity.Location = new System.Drawing.Point(400, 12);
+            this.lblCntrlImageContainerCapacity.Name = "lblCntrlImageContainerCapacity";
+            this.lblCntrlImageContainerCapacity.Size = new System.Drawing.Size(16, 18);
+            this.lblCntrlImageContainerCapacity.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
+            this.lblCntrlImageContainerCapacity.TabIndex = 41;
+            // 
+            // lblCntrlImageContainerLoad
+            // 
+            this.lblCntrlImageContainerLoad.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCntrlImageContainerLoad.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_weight_16;
+            this.lblCntrlImageContainerLoad.Appearance.Options.UseFont = true;
+            this.lblCntrlImageContainerLoad.Appearance.Options.UseImage = true;
+            this.lblCntrlImageContainerLoad.Location = new System.Drawing.Point(400, 60);
+            this.lblCntrlImageContainerLoad.Name = "lblCntrlImageContainerLoad";
+            this.lblCntrlImageContainerLoad.Size = new System.Drawing.Size(16, 18);
+            this.lblCntrlImageContainerLoad.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
+            this.lblCntrlImageContainerLoad.TabIndex = 40;
+            // 
+            // lblCntrlImageContainerStatus
+            // 
+            this.lblCntrlImageContainerStatus.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCntrlImageContainerStatus.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_hashtag_large_166;
+            this.lblCntrlImageContainerStatus.Appearance.Options.UseFont = true;
+            this.lblCntrlImageContainerStatus.Appearance.Options.UseImage = true;
+            this.lblCntrlImageContainerStatus.Location = new System.Drawing.Point(12, 60);
+            this.lblCntrlImageContainerStatus.Name = "lblCntrlImageContainerStatus";
+            this.lblCntrlImageContainerStatus.Size = new System.Drawing.Size(16, 18);
+            this.lblCntrlImageContainerStatus.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
+            this.lblCntrlImageContainerStatus.TabIndex = 42;
+            // 
+            // lblCntrlImageContainerLevel
+            // 
+            this.lblCntrlImageContainerLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCntrlImageContainerLevel.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_battery_161;
+            this.lblCntrlImageContainerLevel.Appearance.Options.UseFont = true;
+            this.lblCntrlImageContainerLevel.Appearance.Options.UseImage = true;
+            this.lblCntrlImageContainerLevel.Location = new System.Drawing.Point(12, 252);
+            this.lblCntrlImageContainerLevel.Name = "lblCntrlImageContainerLevel";
+            this.lblCntrlImageContainerLevel.Size = new System.Drawing.Size(16, 18);
+            this.lblCntrlImageContainerLevel.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
+            this.lblCntrlImageContainerLevel.TabIndex = 39;
             // 
             // trckBrCntrlLevelContainer
             // 
             this.trckBrCntrlLevelContainer.EditValue = 80;
-            this.trckBrCntrlLevelContainer.Location = new System.Drawing.Point(12, 284);
+            this.trckBrCntrlLevelContainer.Location = new System.Drawing.Point(12, 274);
             this.trckBrCntrlLevelContainer.Name = "trckBrCntrlLevelContainer";
             this.trckBrCntrlLevelContainer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trckBrCntrlLevelContainer.Properties.Appearance.Options.UseFont = true;
@@ -365,7 +428,7 @@
             this.trckBrCntrlLevelContainer.Properties.ShowValueToolTip = true;
             this.trckBrCntrlLevelContainer.Properties.SmallChange = 10;
             this.trckBrCntrlLevelContainer.Properties.TickFrequency = 10;
-            this.trckBrCntrlLevelContainer.Size = new System.Drawing.Size(459, 45);
+            this.trckBrCntrlLevelContainer.Size = new System.Drawing.Size(379, 45);
             this.trckBrCntrlLevelContainer.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.trckBrCntrlLevelContainer.TabIndex = 39;
             this.trckBrCntrlLevelContainer.Value = 80;
@@ -373,11 +436,11 @@
             // 
             // lblCntlAddEditContainerLevel
             // 
-            this.lblCntlAddEditContainerLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCntlAddEditContainerLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCntlAddEditContainerLevel.Appearance.Options.UseFont = true;
-            this.lblCntlAddEditContainerLevel.Location = new System.Drawing.Point(12, 262);
+            this.lblCntlAddEditContainerLevel.Location = new System.Drawing.Point(32, 252);
             this.lblCntlAddEditContainerLevel.Name = "lblCntlAddEditContainerLevel";
-            this.lblCntlAddEditContainerLevel.Size = new System.Drawing.Size(63, 18);
+            this.lblCntlAddEditContainerLevel.Size = new System.Drawing.Size(54, 16);
             this.lblCntlAddEditContainerLevel.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCntlAddEditContainerLevel.TabIndex = 13;
             this.lblCntlAddEditContainerLevel.Text = "Επίπεδο:";
@@ -385,34 +448,34 @@
             // txtAddEditContainerAddress
             // 
             this.txtAddEditContainerAddress.Enabled = false;
-            this.txtAddEditContainerAddress.Location = new System.Drawing.Point(12, 234);
+            this.txtAddEditContainerAddress.Location = new System.Drawing.Point(12, 226);
             this.txtAddEditContainerAddress.Name = "txtAddEditContainerAddress";
-            this.txtAddEditContainerAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerAddress.Properties.Appearance.Options.UseFont = true;
-            this.txtAddEditContainerAddress.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerAddress.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerAddress.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.txtAddEditContainerAddress.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerAddress.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerAddress.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtAddEditContainerAddress.Size = new System.Drawing.Size(459, 24);
+            this.txtAddEditContainerAddress.Size = new System.Drawing.Size(379, 22);
             this.txtAddEditContainerAddress.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.txtAddEditContainerAddress.TabIndex = 6;
             // 
             // lblCtrlAddEditContainerAddress
             // 
-            this.lblCtrlAddEditContainerAddress.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCtrlAddEditContainerAddress.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCtrlAddEditContainerAddress.Appearance.Options.UseFont = true;
-            this.lblCtrlAddEditContainerAddress.Location = new System.Drawing.Point(32, 212);
+            this.lblCtrlAddEditContainerAddress.Location = new System.Drawing.Point(32, 204);
             this.lblCtrlAddEditContainerAddress.Name = "lblCtrlAddEditContainerAddress";
-            this.lblCtrlAddEditContainerAddress.Size = new System.Drawing.Size(235, 18);
+            this.lblCtrlAddEditContainerAddress.Size = new System.Drawing.Size(206, 16);
             this.lblCtrlAddEditContainerAddress.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCtrlAddEditContainerAddress.TabIndex = 32;
             this.lblCtrlAddEditContainerAddress.Text = "Διευθυνση Τοποθέτησης Κάδου:";
             // 
             // imgCmbBxEdtContainerStatus
             // 
-            this.imgCmbBxEdtContainerStatus.Location = new System.Drawing.Point(12, 84);
+            this.imgCmbBxEdtContainerStatus.Location = new System.Drawing.Point(12, 82);
             this.imgCmbBxEdtContainerStatus.Name = "imgCmbBxEdtContainerStatus";
-            this.imgCmbBxEdtContainerStatus.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.imgCmbBxEdtContainerStatus.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerStatus.Properties.Appearance.Options.UseFont = true;
             this.imgCmbBxEdtContainerStatus.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerStatus.Properties.AppearanceDropDown.Options.UseFont = true;
@@ -428,7 +491,7 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Αλλαγμένη Θέση", "7", 3),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Απών", "8", 4)});
             this.imgCmbBxEdtContainerStatus.Properties.SmallImages = this.imgCllctnContainerStatus;
-            this.imgCmbBxEdtContainerStatus.Size = new System.Drawing.Size(459, 24);
+            this.imgCmbBxEdtContainerStatus.Size = new System.Drawing.Size(379, 22);
             this.imgCmbBxEdtContainerStatus.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.imgCmbBxEdtContainerStatus.TabIndex = 0;
             this.imgCmbBxEdtContainerStatus.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerStatusEditValueChanged);
@@ -448,12 +511,12 @@
             // 
             // chckEdtContainerMandatoryPickup
             // 
-            this.chckEdtContainerMandatoryPickup.Location = new System.Drawing.Point(480, 162);
+            this.chckEdtContainerMandatoryPickup.Location = new System.Drawing.Point(400, 156);
             this.chckEdtContainerMandatoryPickup.Name = "chckEdtContainerMandatoryPickup";
-            this.chckEdtContainerMandatoryPickup.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckEdtContainerMandatoryPickup.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chckEdtContainerMandatoryPickup.Properties.Appearance.Options.UseFont = true;
             this.chckEdtContainerMandatoryPickup.Properties.Caption = "Υποχρεωτική Αποκομιδή";
-            this.chckEdtContainerMandatoryPickup.Size = new System.Drawing.Size(280, 22);
+            this.chckEdtContainerMandatoryPickup.Size = new System.Drawing.Size(203, 20);
             this.chckEdtContainerMandatoryPickup.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.chckEdtContainerMandatoryPickup.TabIndex = 37;
             this.chckEdtContainerMandatoryPickup.CheckedChanged += new System.EventHandler(this.ChckEdtContainerMandatoryPickupCheckedChanged);
@@ -462,67 +525,67 @@
             // cmbContainerCapacity
             // 
             this.cmbContainerCapacity.EditValue = " ";
-            this.cmbContainerCapacity.Location = new System.Drawing.Point(480, 34);
+            this.cmbContainerCapacity.Location = new System.Drawing.Point(400, 34);
             this.cmbContainerCapacity.Name = "cmbContainerCapacity";
-            this.cmbContainerCapacity.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cmbContainerCapacity.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cmbContainerCapacity.Properties.Appearance.Options.UseFont = true;
-            this.cmbContainerCapacity.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cmbContainerCapacity.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cmbContainerCapacity.Properties.AppearanceDropDown.Options.UseFont = true;
             this.cmbContainerCapacity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbContainerCapacity.Properties.Items.AddRange(new object[] {
             "360",
             "1100"});
-            this.cmbContainerCapacity.Size = new System.Drawing.Size(565, 24);
+            this.cmbContainerCapacity.Size = new System.Drawing.Size(366, 22);
             this.cmbContainerCapacity.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.cmbContainerCapacity.TabIndex = 43;
             // 
             // lblCntlAddEditContainerStatus
             // 
-            this.lblCntlAddEditContainerStatus.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCntlAddEditContainerStatus.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCntlAddEditContainerStatus.Appearance.Options.UseFont = true;
-            this.lblCntlAddEditContainerStatus.Location = new System.Drawing.Point(12, 62);
+            this.lblCntlAddEditContainerStatus.Location = new System.Drawing.Point(32, 60);
             this.lblCntlAddEditContainerStatus.Name = "lblCntlAddEditContainerStatus";
-            this.lblCntlAddEditContainerStatus.Size = new System.Drawing.Size(143, 18);
+            this.lblCntlAddEditContainerStatus.Size = new System.Drawing.Size(125, 16);
             this.lblCntlAddEditContainerStatus.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCntlAddEditContainerStatus.TabIndex = 10;
             this.lblCntlAddEditContainerStatus.Text = " Κατάσταση Κάδου:";
             // 
             // cmbContainerLoad
             // 
-            this.cmbContainerLoad.Location = new System.Drawing.Point(480, 84);
+            this.cmbContainerLoad.Location = new System.Drawing.Point(400, 82);
             this.cmbContainerLoad.Name = "cmbContainerLoad";
-            this.cmbContainerLoad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cmbContainerLoad.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cmbContainerLoad.Properties.Appearance.Options.UseFont = true;
-            this.cmbContainerLoad.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.cmbContainerLoad.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.cmbContainerLoad.Properties.AppearanceDropDown.Options.UseFont = true;
             this.cmbContainerLoad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbContainerLoad.Properties.Items.AddRange(new object[] {
             "144",
             "520"});
-            this.cmbContainerLoad.Size = new System.Drawing.Size(565, 24);
+            this.cmbContainerLoad.Size = new System.Drawing.Size(366, 22);
             this.cmbContainerLoad.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.cmbContainerLoad.TabIndex = 43;
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(480, 62);
+            this.labelControl2.Location = new System.Drawing.Point(420, 60);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(165, 18);
+            this.labelControl2.Size = new System.Drawing.Size(141, 16);
             this.labelControl2.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.labelControl2.TabIndex = 43;
             this.labelControl2.Text = "Ωφέλιμο φορτίο (Kg):";
             // 
             // lblCntlAddEditContainerCapacity
             // 
-            this.lblCntlAddEditContainerCapacity.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCntlAddEditContainerCapacity.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCntlAddEditContainerCapacity.Appearance.Options.UseFont = true;
-            this.lblCntlAddEditContainerCapacity.Location = new System.Drawing.Point(480, 12);
+            this.lblCntlAddEditContainerCapacity.Location = new System.Drawing.Point(420, 12);
             this.lblCntlAddEditContainerCapacity.Name = "lblCntlAddEditContainerCapacity";
-            this.lblCntlAddEditContainerCapacity.Size = new System.Drawing.Size(154, 18);
+            this.lblCntlAddEditContainerCapacity.Size = new System.Drawing.Size(132, 16);
             this.lblCntlAddEditContainerCapacity.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCntlAddEditContainerCapacity.TabIndex = 43;
             this.lblCntlAddEditContainerCapacity.Text = "Χωρητικότητα (Ltr):";
@@ -533,7 +596,7 @@
             this.lblCntrlImageContainerDescription.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_text_box_16;
             this.lblCntrlImageContainerDescription.Appearance.Options.UseFont = true;
             this.lblCntrlImageContainerDescription.Appearance.Options.UseImage = true;
-            this.lblCntrlImageContainerDescription.Location = new System.Drawing.Point(12, 333);
+            this.lblCntrlImageContainerDescription.Location = new System.Drawing.Point(12, 323);
             this.lblCntrlImageContainerDescription.Name = "lblCntrlImageContainerDescription";
             this.lblCntrlImageContainerDescription.Size = new System.Drawing.Size(16, 18);
             this.lblCntrlImageContainerDescription.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -545,7 +608,7 @@
             this.lblCntlImageContainerMaterial.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_leather_16;
             this.lblCntlImageContainerMaterial.Appearance.Options.UseFont = true;
             this.lblCntlImageContainerMaterial.Appearance.Options.UseImage = true;
-            this.lblCntlImageContainerMaterial.Location = new System.Drawing.Point(480, 112);
+            this.lblCntlImageContainerMaterial.Location = new System.Drawing.Point(400, 108);
             this.lblCntlImageContainerMaterial.Name = "lblCntlImageContainerMaterial";
             this.lblCntlImageContainerMaterial.Size = new System.Drawing.Size(16, 18);
             this.lblCntlImageContainerMaterial.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -554,31 +617,31 @@
             // 
             // mmEditContainerDescription
             // 
-            this.mmEditContainerDescription.Location = new System.Drawing.Point(12, 355);
+            this.mmEditContainerDescription.Location = new System.Drawing.Point(12, 345);
             this.mmEditContainerDescription.Name = "mmEditContainerDescription";
-            this.mmEditContainerDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mmEditContainerDescription.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mmEditContainerDescription.Properties.Appearance.Options.UseFont = true;
-            this.mmEditContainerDescription.Size = new System.Drawing.Size(1033, 115);
+            this.mmEditContainerDescription.Size = new System.Drawing.Size(754, 30);
             this.mmEditContainerDescription.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.mmEditContainerDescription.TabIndex = 0;
             this.mmEditContainerDescription.EditValueChanged += new System.EventHandler(this.MmEditContainerDescriptionEditValueChanged);
             // 
             // lblCtrlAddEditContainerDescription
             // 
-            this.lblCtrlAddEditContainerDescription.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCtrlAddEditContainerDescription.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCtrlAddEditContainerDescription.Appearance.Options.UseFont = true;
-            this.lblCtrlAddEditContainerDescription.Location = new System.Drawing.Point(32, 333);
+            this.lblCtrlAddEditContainerDescription.Location = new System.Drawing.Point(32, 323);
             this.lblCtrlAddEditContainerDescription.Name = "lblCtrlAddEditContainerDescription";
-            this.lblCtrlAddEditContainerDescription.Size = new System.Drawing.Size(87, 18);
+            this.lblCtrlAddEditContainerDescription.Size = new System.Drawing.Size(77, 16);
             this.lblCtrlAddEditContainerDescription.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCtrlAddEditContainerDescription.TabIndex = 39;
             this.lblCtrlAddEditContainerDescription.Text = "Περιγραφή:";
             // 
             // imgCmbBxEdtContainerMaterial
             // 
-            this.imgCmbBxEdtContainerMaterial.Location = new System.Drawing.Point(480, 134);
+            this.imgCmbBxEdtContainerMaterial.Location = new System.Drawing.Point(400, 130);
             this.imgCmbBxEdtContainerMaterial.Name = "imgCmbBxEdtContainerMaterial";
-            this.imgCmbBxEdtContainerMaterial.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.imgCmbBxEdtContainerMaterial.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerMaterial.Properties.Appearance.Options.UseFont = true;
             this.imgCmbBxEdtContainerMaterial.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerMaterial.Properties.AppearanceDropDown.Options.UseFont = true;
@@ -588,7 +651,7 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Πλαστικός", "1", 1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Μεταλλικός", "2", 0)});
             this.imgCmbBxEdtContainerMaterial.Properties.SmallImages = this.imgCllctnContainerMaterial;
-            this.imgCmbBxEdtContainerMaterial.Size = new System.Drawing.Size(565, 24);
+            this.imgCmbBxEdtContainerMaterial.Size = new System.Drawing.Size(366, 22);
             this.imgCmbBxEdtContainerMaterial.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.imgCmbBxEdtContainerMaterial.TabIndex = 41;
             this.imgCmbBxEdtContainerMaterial.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerMaterialEditValueChanged);
@@ -601,20 +664,20 @@
             // 
             // lblCtrlAddEditContainerMaterial
             // 
-            this.lblCtrlAddEditContainerMaterial.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCtrlAddEditContainerMaterial.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCtrlAddEditContainerMaterial.Appearance.Options.UseFont = true;
-            this.lblCtrlAddEditContainerMaterial.Location = new System.Drawing.Point(500, 112);
+            this.lblCtrlAddEditContainerMaterial.Location = new System.Drawing.Point(420, 108);
             this.lblCtrlAddEditContainerMaterial.Name = "lblCtrlAddEditContainerMaterial";
-            this.lblCtrlAddEditContainerMaterial.Size = new System.Drawing.Size(142, 18);
+            this.lblCtrlAddEditContainerMaterial.Size = new System.Drawing.Size(123, 16);
             this.lblCtrlAddEditContainerMaterial.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCtrlAddEditContainerMaterial.TabIndex = 41;
             this.lblCtrlAddEditContainerMaterial.Text = "Υλικό Κατασκευής:";
             // 
             // imgCmbBxEdtContainerMandatoryTypeCollection
             // 
-            this.imgCmbBxEdtContainerMandatoryTypeCollection.Location = new System.Drawing.Point(480, 284);
+            this.imgCmbBxEdtContainerMandatoryTypeCollection.Location = new System.Drawing.Point(400, 274);
             this.imgCmbBxEdtContainerMandatoryTypeCollection.Name = "imgCmbBxEdtContainerMandatoryTypeCollection";
-            this.imgCmbBxEdtContainerMandatoryTypeCollection.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.imgCmbBxEdtContainerMandatoryTypeCollection.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerMandatoryTypeCollection.Properties.Appearance.Options.UseFont = true;
             this.imgCmbBxEdtContainerMandatoryTypeCollection.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerMandatoryTypeCollection.Properties.AppearanceDropDown.Options.UseFont = true;
@@ -628,7 +691,7 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("ϊδια Ημέρα Ετήσια", "5", 4),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("2 Φοορές την Ημέρα", "6", 5)});
             this.imgCmbBxEdtContainerMandatoryTypeCollection.Properties.SmallImages = this.imgCllctnContainerMandatory;
-            this.imgCmbBxEdtContainerMandatoryTypeCollection.Size = new System.Drawing.Size(565, 24);
+            this.imgCmbBxEdtContainerMandatoryTypeCollection.Size = new System.Drawing.Size(366, 22);
             this.imgCmbBxEdtContainerMandatoryTypeCollection.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.imgCmbBxEdtContainerMandatoryTypeCollection.TabIndex = 1;
             this.imgCmbBxEdtContainerMandatoryTypeCollection.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerMandatoryTypeCollectionEditValueChanged);
@@ -645,9 +708,9 @@
             // 
             // imgCmbBxEdtContainerFillLevel
             // 
-            this.imgCmbBxEdtContainerFillLevel.Location = new System.Drawing.Point(12, 134);
+            this.imgCmbBxEdtContainerFillLevel.Location = new System.Drawing.Point(12, 130);
             this.imgCmbBxEdtContainerFillLevel.Name = "imgCmbBxEdtContainerFillLevel";
-            this.imgCmbBxEdtContainerFillLevel.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.imgCmbBxEdtContainerFillLevel.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerFillLevel.Properties.Appearance.Options.UseFont = true;
             this.imgCmbBxEdtContainerFillLevel.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerFillLevel.Properties.AppearanceDropDown.Options.UseFont = true;
@@ -660,7 +723,7 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Γεμάτος (75-100%)", "4", 3),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Εκτός Σύνδεσης", "5", 4)});
             this.imgCmbBxEdtContainerFillLevel.Properties.SmallImages = this.imgCllctnContainerFillLevel;
-            this.imgCmbBxEdtContainerFillLevel.Size = new System.Drawing.Size(459, 24);
+            this.imgCmbBxEdtContainerFillLevel.Size = new System.Drawing.Size(379, 22);
             this.imgCmbBxEdtContainerFillLevel.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.imgCmbBxEdtContainerFillLevel.TabIndex = 1;
             this.imgCmbBxEdtContainerFillLevel.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerFillLevelEditValueChanged);
@@ -676,9 +739,9 @@
             // 
             // imgCmbBxEdtContainerType
             // 
-            this.imgCmbBxEdtContainerType.Location = new System.Drawing.Point(12, 184);
+            this.imgCmbBxEdtContainerType.Location = new System.Drawing.Point(12, 178);
             this.imgCmbBxEdtContainerType.Name = "imgCmbBxEdtContainerType";
-            this.imgCmbBxEdtContainerType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.imgCmbBxEdtContainerType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerType.Properties.Appearance.Options.UseFont = true;
             this.imgCmbBxEdtContainerType.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.imgCmbBxEdtContainerType.Properties.AppearanceDropDown.Options.UseFont = true;
@@ -690,7 +753,7 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Κομποστοποιήση", "3", 3),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Άλλος", "4", 0)});
             this.imgCmbBxEdtContainerType.Properties.SmallImages = this.imgCllctnContainerType;
-            this.imgCmbBxEdtContainerType.Size = new System.Drawing.Size(459, 24);
+            this.imgCmbBxEdtContainerType.Size = new System.Drawing.Size(379, 22);
             this.imgCmbBxEdtContainerType.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.imgCmbBxEdtContainerType.TabIndex = 1;
             this.imgCmbBxEdtContainerType.EditValueChanged += new System.EventHandler(this.ImgCmbBxEdtContainerTypeEditValueChanged);
@@ -706,11 +769,11 @@
             // pctrEdtContainerPhoto
             // 
             this.pctrEdtContainerPhoto.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pctrEdtContainerPhoto.Location = new System.Drawing.Point(1054, 34);
+            this.pctrEdtContainerPhoto.Location = new System.Drawing.Point(775, 34);
             this.pctrEdtContainerPhoto.Name = "pctrEdtContainerPhoto";
             this.pctrEdtContainerPhoto.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pctrEdtContainerPhoto.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pctrEdtContainerPhoto.Size = new System.Drawing.Size(586, 436);
+            this.pctrEdtContainerPhoto.Size = new System.Drawing.Size(426, 341);
             this.pctrEdtContainerPhoto.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.pctrEdtContainerPhoto.TabIndex = 35;
             this.pctrEdtContainerPhoto.DoubleClick += new System.EventHandler(this.PctrEdtContainerPhotoDoubleClick);
@@ -721,7 +784,7 @@
             this.lblCntrlImageContainerMandatoryType.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("lblCntrlImageContainerMandatoryType.Appearance.Image")));
             this.lblCntrlImageContainerMandatoryType.Appearance.Options.UseFont = true;
             this.lblCntrlImageContainerMandatoryType.Appearance.Options.UseImage = true;
-            this.lblCntrlImageContainerMandatoryType.Location = new System.Drawing.Point(480, 262);
+            this.lblCntrlImageContainerMandatoryType.Location = new System.Drawing.Point(400, 252);
             this.lblCntrlImageContainerMandatoryType.Name = "lblCntrlImageContainerMandatoryType";
             this.lblCntrlImageContainerMandatoryType.Size = new System.Drawing.Size(16, 18);
             this.lblCntrlImageContainerMandatoryType.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -733,7 +796,7 @@
             this.lblCntrlImageContainerPhoto.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_camera_enhance_16;
             this.lblCntrlImageContainerPhoto.Appearance.Options.UseFont = true;
             this.lblCntrlImageContainerPhoto.Appearance.Options.UseImage = true;
-            this.lblCntrlImageContainerPhoto.Location = new System.Drawing.Point(1054, 12);
+            this.lblCntrlImageContainerPhoto.Location = new System.Drawing.Point(775, 12);
             this.lblCntrlImageContainerPhoto.Name = "lblCntrlImageContainerPhoto";
             this.lblCntrlImageContainerPhoto.Size = new System.Drawing.Size(16, 18);
             this.lblCntrlImageContainerPhoto.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -741,22 +804,22 @@
             // 
             // lblCtrlAddEditContainerPhoto
             // 
-            this.lblCtrlAddEditContainerPhoto.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCtrlAddEditContainerPhoto.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCtrlAddEditContainerPhoto.Appearance.Options.UseFont = true;
-            this.lblCtrlAddEditContainerPhoto.Location = new System.Drawing.Point(1074, 12);
+            this.lblCtrlAddEditContainerPhoto.Location = new System.Drawing.Point(795, 12);
             this.lblCtrlAddEditContainerPhoto.Name = "lblCtrlAddEditContainerPhoto";
-            this.lblCtrlAddEditContainerPhoto.Size = new System.Drawing.Size(103, 18);
+            this.lblCtrlAddEditContainerPhoto.Size = new System.Drawing.Size(89, 16);
             this.lblCtrlAddEditContainerPhoto.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCtrlAddEditContainerPhoto.TabIndex = 32;
             this.lblCtrlAddEditContainerPhoto.Text = "Φωτογραφία:";
             // 
             // lblCtrlAddEditContainerMandatoryType
             // 
-            this.lblCtrlAddEditContainerMandatoryType.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCtrlAddEditContainerMandatoryType.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCtrlAddEditContainerMandatoryType.Appearance.Options.UseFont = true;
-            this.lblCtrlAddEditContainerMandatoryType.Location = new System.Drawing.Point(500, 262);
+            this.lblCtrlAddEditContainerMandatoryType.Location = new System.Drawing.Point(420, 252);
             this.lblCtrlAddEditContainerMandatoryType.Name = "lblCtrlAddEditContainerMandatoryType";
-            this.lblCtrlAddEditContainerMandatoryType.Size = new System.Drawing.Size(259, 18);
+            this.lblCtrlAddEditContainerMandatoryType.Size = new System.Drawing.Size(225, 16);
             this.lblCtrlAddEditContainerMandatoryType.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCtrlAddEditContainerMandatoryType.TabIndex = 37;
             this.lblCtrlAddEditContainerMandatoryType.Text = "Τρόπος Υποχρεωτικής Αποκομιδής:";
@@ -767,7 +830,7 @@
             this.lblCntrlImageContainerAddress.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_address_162;
             this.lblCntrlImageContainerAddress.Appearance.Options.UseFont = true;
             this.lblCntrlImageContainerAddress.Appearance.Options.UseImage = true;
-            this.lblCntrlImageContainerAddress.Location = new System.Drawing.Point(12, 212);
+            this.lblCntrlImageContainerAddress.Location = new System.Drawing.Point(12, 204);
             this.lblCntrlImageContainerAddress.Name = "lblCntrlImageContainerAddress";
             this.lblCntrlImageContainerAddress.Size = new System.Drawing.Size(16, 18);
             this.lblCntrlImageContainerAddress.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -776,37 +839,37 @@
             // dtEdtContainerMandatoryPickupDate
             // 
             this.dtEdtContainerMandatoryPickupDate.EditValue = null;
-            this.dtEdtContainerMandatoryPickupDate.Location = new System.Drawing.Point(480, 234);
+            this.dtEdtContainerMandatoryPickupDate.Location = new System.Drawing.Point(400, 226);
             this.dtEdtContainerMandatoryPickupDate.Name = "dtEdtContainerMandatoryPickupDate";
-            this.dtEdtContainerMandatoryPickupDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEdtContainerMandatoryPickupDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtEdtContainerMandatoryPickupDate.Properties.Appearance.Options.UseFont = true;
             this.dtEdtContainerMandatoryPickupDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtEdtContainerMandatoryPickupDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtEdtContainerMandatoryPickupDate.Size = new System.Drawing.Size(565, 24);
+            this.dtEdtContainerMandatoryPickupDate.Size = new System.Drawing.Size(366, 22);
             this.dtEdtContainerMandatoryPickupDate.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.dtEdtContainerMandatoryPickupDate.TabIndex = 38;
             this.dtEdtContainerMandatoryPickupDate.EditValueChanged += new System.EventHandler(this.DtEdtContainerMandatoryPickupDateEditValueChanged);
             // 
             // lblCtrlAddEditContainerMandatoryPickupDate
             // 
-            this.lblCtrlAddEditContainerMandatoryPickupDate.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCtrlAddEditContainerMandatoryPickupDate.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCtrlAddEditContainerMandatoryPickupDate.Appearance.Options.UseFont = true;
-            this.lblCtrlAddEditContainerMandatoryPickupDate.Location = new System.Drawing.Point(500, 212);
+            this.lblCtrlAddEditContainerMandatoryPickupDate.Location = new System.Drawing.Point(420, 204);
             this.lblCtrlAddEditContainerMandatoryPickupDate.Name = "lblCtrlAddEditContainerMandatoryPickupDate";
-            this.lblCtrlAddEditContainerMandatoryPickupDate.Size = new System.Drawing.Size(293, 18);
+            this.lblCtrlAddEditContainerMandatoryPickupDate.Size = new System.Drawing.Size(254, 16);
             this.lblCtrlAddEditContainerMandatoryPickupDate.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCtrlAddEditContainerMandatoryPickupDate.TabIndex = 24;
             this.lblCtrlAddEditContainerMandatoryPickupDate.Text = "Ημερομηνία Υποχρεωτικής Αποκομιδής:";
             // 
             // lblCntlAddEditContainerFillLevel
             // 
-            this.lblCntlAddEditContainerFillLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCntlAddEditContainerFillLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCntlAddEditContainerFillLevel.Appearance.Options.UseFont = true;
-            this.lblCntlAddEditContainerFillLevel.Location = new System.Drawing.Point(32, 112);
+            this.lblCntlAddEditContainerFillLevel.Location = new System.Drawing.Point(32, 108);
             this.lblCntlAddEditContainerFillLevel.Name = "lblCntlAddEditContainerFillLevel";
-            this.lblCntlAddEditContainerFillLevel.Size = new System.Drawing.Size(151, 18);
+            this.lblCntlAddEditContainerFillLevel.Size = new System.Drawing.Size(130, 16);
             this.lblCntlAddEditContainerFillLevel.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCntlAddEditContainerFillLevel.TabIndex = 20;
             this.lblCntlAddEditContainerFillLevel.Text = "Επίπεδο Γεμίσματος:";
@@ -817,7 +880,7 @@
             this.lblCntlImageContainerFillLevel.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("lblCntlImageContainerFillLevel.Appearance.Image")));
             this.lblCntlImageContainerFillLevel.Appearance.Options.UseFont = true;
             this.lblCntlImageContainerFillLevel.Appearance.Options.UseImage = true;
-            this.lblCntlImageContainerFillLevel.Location = new System.Drawing.Point(12, 112);
+            this.lblCntlImageContainerFillLevel.Location = new System.Drawing.Point(12, 108);
             this.lblCntlImageContainerFillLevel.Name = "lblCntlImageContainerFillLevel";
             this.lblCntlImageContainerFillLevel.Size = new System.Drawing.Size(16, 18);
             this.lblCntlImageContainerFillLevel.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -825,11 +888,11 @@
             // 
             // lblCtrlAddEditContainerType
             // 
-            this.lblCtrlAddEditContainerType.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCtrlAddEditContainerType.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCtrlAddEditContainerType.Appearance.Options.UseFont = true;
-            this.lblCtrlAddEditContainerType.Location = new System.Drawing.Point(32, 162);
+            this.lblCtrlAddEditContainerType.Location = new System.Drawing.Point(32, 156);
             this.lblCtrlAddEditContainerType.Name = "lblCtrlAddEditContainerType";
-            this.lblCtrlAddEditContainerType.Size = new System.Drawing.Size(99, 18);
+            this.lblCtrlAddEditContainerType.Size = new System.Drawing.Size(87, 16);
             this.lblCtrlAddEditContainerType.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCtrlAddEditContainerType.TabIndex = 30;
             this.lblCtrlAddEditContainerType.Text = "Τύπος Κάδου:";
@@ -840,7 +903,7 @@
             this.lblCntrlImageContainerType.Appearance.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_waste_sorting_16;
             this.lblCntrlImageContainerType.Appearance.Options.UseFont = true;
             this.lblCntrlImageContainerType.Appearance.Options.UseImage = true;
-            this.lblCntrlImageContainerType.Location = new System.Drawing.Point(12, 162);
+            this.lblCntrlImageContainerType.Location = new System.Drawing.Point(12, 156);
             this.lblCntrlImageContainerType.Name = "lblCntrlImageContainerType";
             this.lblCntrlImageContainerType.Size = new System.Drawing.Size(16, 18);
             this.lblCntrlImageContainerType.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -854,9 +917,9 @@
             this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.AppearanceCaption.Options.UseFont = true;
             this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.CaptionImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_map_pinpoint_32;
             this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.Controls.Add(this.layCntrlEvtAddEditEmployeeAddressContainer);
-            this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.Location = new System.Drawing.Point(12, 479);
+            this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.Location = new System.Drawing.Point(12, 384);
             this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.Name = "grpCntrlFlyoutAddNewEditContainerMapPointContainer";
-            this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.Size = new System.Drawing.Size(1628, 495);
+            this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.Size = new System.Drawing.Size(1189, 236);
             this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.TabIndex = 18;
             this.grpCntrlFlyoutAddNewEditContainerMapPointContainer.Text = "Σημέιο - Τοποθεσία";
             // 
@@ -869,7 +932,7 @@
             this.layCntrlEvtAddEditEmployeeAddressContainer.Name = "layCntrlEvtAddEditEmployeeAddressContainer";
             this.layCntrlEvtAddEditEmployeeAddressContainer.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(721, 110, 650, 400);
             this.layCntrlEvtAddEditEmployeeAddressContainer.Root = this.layCntrlGrpEvtAddEditEmployeeAddressContainer;
-            this.layCntrlEvtAddEditEmployeeAddressContainer.Size = new System.Drawing.Size(1624, 454);
+            this.layCntrlEvtAddEditEmployeeAddressContainer.Size = new System.Drawing.Size(1185, 195);
             this.layCntrlEvtAddEditEmployeeAddressContainer.TabIndex = 0;
             this.layCntrlEvtAddEditEmployeeAddressContainer.Text = "layoutControl1";
             // 
@@ -877,11 +940,11 @@
             // 
             this.tgglSwtchEditMapPointContainer.Location = new System.Drawing.Point(2, 2);
             this.tgglSwtchEditMapPointContainer.Name = "tgglSwtchEditMapPointContainer";
-            this.tgglSwtchEditMapPointContainer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tgglSwtchEditMapPointContainer.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tgglSwtchEditMapPointContainer.Properties.Appearance.Options.UseFont = true;
             this.tgglSwtchEditMapPointContainer.Properties.OffText = "Παρατήρηση";
             this.tgglSwtchEditMapPointContainer.Properties.OnText = "Επεξεργασία";
-            this.tgglSwtchEditMapPointContainer.Size = new System.Drawing.Size(272, 29);
+            this.tgglSwtchEditMapPointContainer.Size = new System.Drawing.Size(197, 26);
             this.tgglSwtchEditMapPointContainer.StyleController = this.layCntrlEvtAddEditEmployeeAddressContainer;
             this.tgglSwtchEditMapPointContainer.TabIndex = 5;
             this.tgglSwtchEditMapPointContainer.Click += new System.EventHandler(this.TgglSwtchEditMapPointContainerClick);
@@ -889,13 +952,13 @@
             // mpCntrlAddEditContainer
             // 
             this.mpCntrlAddEditContainer.Layers.Add(this.vectorItemsLayerContainerPoint);
-            this.mpCntrlAddEditContainer.Location = new System.Drawing.Point(2, 35);
+            this.mpCntrlAddEditContainer.Location = new System.Drawing.Point(2, 32);
             this.mpCntrlAddEditContainer.MinZoomLevel = 12D;
             this.mpCntrlAddEditContainer.Name = "mpCntrlAddEditContainer";
             this.mpCntrlAddEditContainer.NavigationPanelOptions.ShowMilesScale = false;
             this.mpCntrlAddEditContainer.NavigationPanelOptions.ShowZoomTrackbar = false;
             this.mpCntrlAddEditContainer.NavigationPanelOptions.Visible = false;
-            this.mpCntrlAddEditContainer.Size = new System.Drawing.Size(1620, 417);
+            this.mpCntrlAddEditContainer.Size = new System.Drawing.Size(1181, 161);
             this.mpCntrlAddEditContainer.TabIndex = 4;
             this.mpCntrlAddEditContainer.ZoomLevel = 15D;
             this.mpCntrlAddEditContainer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MpCntrlAddEditContainerMouseDown);
@@ -911,15 +974,15 @@
             this.emptySpaceItem6});
             this.layCntrlGrpEvtAddEditEmployeeAddressContainer.Name = "Root";
             this.layCntrlGrpEvtAddEditEmployeeAddressContainer.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layCntrlGrpEvtAddEditEmployeeAddressContainer.Size = new System.Drawing.Size(1624, 454);
+            this.layCntrlGrpEvtAddEditEmployeeAddressContainer.Size = new System.Drawing.Size(1185, 195);
             this.layCntrlGrpEvtAddEditEmployeeAddressContainer.TextVisible = false;
             // 
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.mpCntrlAddEditContainer;
-            this.layoutControlItem17.Location = new System.Drawing.Point(0, 33);
+            this.layoutControlItem17.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(1624, 421);
+            this.layoutControlItem17.Size = new System.Drawing.Size(1185, 165);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
             // 
@@ -928,16 +991,16 @@
             this.layoutControlItem18.Control = this.tgglSwtchEditMapPointContainer;
             this.layoutControlItem18.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(276, 33);
+            this.layoutControlItem18.Size = new System.Drawing.Size(201, 30);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(276, 0);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(201, 0);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(1348, 33);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(984, 30);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lblCntlImageContainerMandatoryDate
@@ -946,7 +1009,7 @@
             this.lblCntlImageContainerMandatoryDate.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("lblCntlImageContainerMandatoryDate.Appearance.Image")));
             this.lblCntlImageContainerMandatoryDate.Appearance.Options.UseFont = true;
             this.lblCntlImageContainerMandatoryDate.Appearance.Options.UseImage = true;
-            this.lblCntlImageContainerMandatoryDate.Location = new System.Drawing.Point(480, 212);
+            this.lblCntlImageContainerMandatoryDate.Location = new System.Drawing.Point(400, 204);
             this.lblCntlImageContainerMandatoryDate.Name = "lblCntlImageContainerMandatoryDate";
             this.lblCntlImageContainerMandatoryDate.Size = new System.Drawing.Size(16, 18);
             this.lblCntlImageContainerMandatoryDate.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
@@ -955,12 +1018,12 @@
             // 
             // btnAddEditContainerSave
             // 
-            this.btnAddEditContainerSave.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnAddEditContainerSave.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.btnAddEditContainerSave.Appearance.Options.UseFont = true;
             this.btnAddEditContainerSave.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_save_32;
-            this.btnAddEditContainerSave.Location = new System.Drawing.Point(1312, 978);
+            this.btnAddEditContainerSave.Location = new System.Drawing.Point(906, 624);
             this.btnAddEditContainerSave.Name = "btnAddEditContainerSave";
-            this.btnAddEditContainerSave.Size = new System.Drawing.Size(158, 38);
+            this.btnAddEditContainerSave.Size = new System.Drawing.Size(148, 38);
             this.btnAddEditContainerSave.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.btnAddEditContainerSave.TabIndex = 8;
             this.btnAddEditContainerSave.Text = " Αποθήκευση";
@@ -968,12 +1031,12 @@
             // 
             // btnAddEditContainerCancel
             // 
-            this.btnAddEditContainerCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.btnAddEditContainerCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.btnAddEditContainerCancel.Appearance.Options.UseFont = true;
             this.btnAddEditContainerCancel.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_cancel_322;
-            this.btnAddEditContainerCancel.Location = new System.Drawing.Point(1474, 978);
+            this.btnAddEditContainerCancel.Location = new System.Drawing.Point(1058, 624);
             this.btnAddEditContainerCancel.Name = "btnAddEditContainerCancel";
-            this.btnAddEditContainerCancel.Size = new System.Drawing.Size(166, 38);
+            this.btnAddEditContainerCancel.Size = new System.Drawing.Size(143, 38);
             this.btnAddEditContainerCancel.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.btnAddEditContainerCancel.TabIndex = 7;
             this.btnAddEditContainerCancel.Text = "Ακύρωση";
@@ -981,11 +1044,11 @@
             // 
             // lblCntlAddEditContainerName
             // 
-            this.lblCntlAddEditContainerName.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCntlAddEditContainerName.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.lblCntlAddEditContainerName.Appearance.Options.UseFont = true;
             this.lblCntlAddEditContainerName.Location = new System.Drawing.Point(32, 12);
             this.lblCntlAddEditContainerName.Name = "lblCntlAddEditContainerName";
-            this.lblCntlAddEditContainerName.Size = new System.Drawing.Size(59, 18);
+            this.lblCntlAddEditContainerName.Size = new System.Drawing.Size(53, 16);
             this.lblCntlAddEditContainerName.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.lblCntlAddEditContainerName.TabIndex = 6;
             this.lblCntlAddEditContainerName.Text = " Όνομα:";
@@ -994,13 +1057,13 @@
             // 
             this.txtAddEditContainerName.Location = new System.Drawing.Point(12, 34);
             this.txtAddEditContainerName.Name = "txtAddEditContainerName";
-            this.txtAddEditContainerName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerName.Properties.Appearance.Options.UseFont = true;
-            this.txtAddEditContainerName.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerName.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerName.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.txtAddEditContainerName.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.txtAddEditContainerName.Properties.AppearanceFocused.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.txtAddEditContainerName.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtAddEditContainerName.Size = new System.Drawing.Size(459, 24);
+            this.txtAddEditContainerName.Size = new System.Drawing.Size(379, 22);
             this.txtAddEditContainerName.StyleController = this.layCntrlFlyoutAddNewEditEmployeeGrpContainer;
             this.txtAddEditContainerName.TabIndex = 5;
             this.txtAddEditContainerName.EditValueChanged += new System.EventHandler(this.TxtAddEditContainerNameEditValueChanged);
@@ -1037,7 +1100,6 @@
             this.emptySpaceItem26,
             this.layoutControlItem55,
             this.layoutControlItem56,
-            this.emptySpaceItem7,
             this.layoutControlItem19,
             this.layoutControlItem20,
             this.layoutControlItem13,
@@ -1081,17 +1143,22 @@
             this.layoutControlItem30,
             this.layoutControlItem11,
             this.layoutControlItem24,
-            this.emptySpaceItem4});
+            this.emptySpaceItem4,
+            this.layoutControlItem21,
+            this.emptySpaceItem7,
+            this.layoutControlItem35,
+            this.layoutControlItem44,
+            this.layoutControlItem45});
             this.layCntrlGrpFlyoutAddNewEditEmployeeGrpContainer.Name = "Root";
-            this.layCntrlGrpFlyoutAddNewEditEmployeeGrpContainer.Size = new System.Drawing.Size(1652, 1028);
+            this.layCntrlGrpFlyoutAddNewEditEmployeeGrpContainer.Size = new System.Drawing.Size(1213, 674);
             this.layCntrlGrpFlyoutAddNewEditEmployeeGrpContainer.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(83, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(77, 0);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(380, 22);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(306, 22);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
@@ -1108,7 +1175,7 @@
             this.layoutControlItem3.Control = this.txtAddEditContainerName;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 22);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(463, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(383, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -1117,48 +1184,48 @@
             this.layoutControlItem4.Control = this.lblCntlAddEditContainerName;
             this.layoutControlItem4.Location = new System.Drawing.Point(20, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(63, 22);
+            this.layoutControlItem4.Size = new System.Drawing.Size(57, 22);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 966);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 612);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(1300, 42);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(894, 42);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnAddEditContainerCancel;
-            this.layoutControlItem5.Location = new System.Drawing.Point(1462, 966);
+            this.layoutControlItem5.Location = new System.Drawing.Point(1046, 612);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(170, 42);
+            this.layoutControlItem5.Size = new System.Drawing.Size(147, 42);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnAddEditContainerSave;
-            this.layoutControlItem6.Location = new System.Drawing.Point(1300, 966);
+            this.layoutControlItem6.Location = new System.Drawing.Point(894, 612);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(162, 42);
+            this.layoutControlItem6.Size = new System.Drawing.Size(152, 42);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(751, 250);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(637, 240);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(286, 22);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(121, 22);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.lblCntlImageContainerMandatoryDate;
-            this.layoutControlItem14.Location = new System.Drawing.Point(468, 200);
+            this.layoutControlItem14.Location = new System.Drawing.Point(388, 192);
             this.layoutControlItem14.Name = "layoutControlItem14";
             this.layoutControlItem14.Size = new System.Drawing.Size(20, 22);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
@@ -1167,32 +1234,32 @@
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.grpCntrlFlyoutAddNewEditContainerMapPointContainer;
-            this.layoutControlItem16.Location = new System.Drawing.Point(0, 467);
+            this.layoutControlItem16.Location = new System.Drawing.Point(0, 372);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(1632, 499);
+            this.layoutControlItem16.Size = new System.Drawing.Size(1193, 240);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
             // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(259, 200);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(230, 192);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(204, 22);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(153, 22);
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem26
             // 
             this.emptySpaceItem26.AllowHotTrack = false;
-            this.emptySpaceItem26.Location = new System.Drawing.Point(123, 150);
+            this.emptySpaceItem26.Location = new System.Drawing.Point(111, 144);
             this.emptySpaceItem26.Name = "emptySpaceItem26";
-            this.emptySpaceItem26.Size = new System.Drawing.Size(340, 22);
+            this.emptySpaceItem26.Size = new System.Drawing.Size(272, 22);
             this.emptySpaceItem26.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem55
             // 
             this.layoutControlItem55.Control = this.lblCntrlImageContainerType;
-            this.layoutControlItem55.Location = new System.Drawing.Point(0, 150);
+            this.layoutControlItem55.Location = new System.Drawing.Point(0, 144);
             this.layoutControlItem55.Name = "layoutControlItem55";
             this.layoutControlItem55.Size = new System.Drawing.Size(20, 22);
             this.layoutControlItem55.TextSize = new System.Drawing.Size(0, 0);
@@ -1201,24 +1268,16 @@
             // layoutControlItem56
             // 
             this.layoutControlItem56.Control = this.lblCtrlAddEditContainerType;
-            this.layoutControlItem56.Location = new System.Drawing.Point(20, 150);
+            this.layoutControlItem56.Location = new System.Drawing.Point(20, 144);
             this.layoutControlItem56.Name = "layoutControlItem56";
-            this.layoutControlItem56.Size = new System.Drawing.Size(103, 22);
+            this.layoutControlItem56.Size = new System.Drawing.Size(91, 22);
             this.layoutControlItem56.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem56.TextVisible = false;
-            // 
-            // emptySpaceItem7
-            // 
-            this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(175, 100);
-            this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(288, 22);
-            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.lblCntlImageContainerFillLevel;
-            this.layoutControlItem19.Location = new System.Drawing.Point(0, 100);
+            this.layoutControlItem19.Location = new System.Drawing.Point(0, 96);
             this.layoutControlItem19.Name = "layoutControlItem19";
             this.layoutControlItem19.Size = new System.Drawing.Size(20, 22);
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
@@ -1227,41 +1286,41 @@
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.lblCntlAddEditContainerFillLevel;
-            this.layoutControlItem20.Location = new System.Drawing.Point(20, 100);
+            this.layoutControlItem20.Location = new System.Drawing.Point(20, 96);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(155, 22);
+            this.layoutControlItem20.Size = new System.Drawing.Size(134, 22);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextVisible = false;
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.lblCtrlAddEditContainerMandatoryPickupDate;
-            this.layoutControlItem13.Location = new System.Drawing.Point(488, 200);
+            this.layoutControlItem13.Location = new System.Drawing.Point(408, 192);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(297, 22);
+            this.layoutControlItem13.Size = new System.Drawing.Size(258, 22);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.dtEdtContainerMandatoryPickupDate;
-            this.layoutControlItem15.Location = new System.Drawing.Point(468, 222);
+            this.layoutControlItem15.Location = new System.Drawing.Point(388, 214);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(569, 28);
+            this.layoutControlItem15.Size = new System.Drawing.Size(370, 26);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
             // splitterItem2
             // 
             this.splitterItem2.AllowHotTrack = true;
-            this.splitterItem2.Location = new System.Drawing.Point(0, 462);
+            this.splitterItem2.Location = new System.Drawing.Point(0, 367);
             this.splitterItem2.Name = "splitterItem2";
-            this.splitterItem2.Size = new System.Drawing.Size(1632, 5);
+            this.splitterItem2.Size = new System.Drawing.Size(1193, 5);
             // 
             // layoutControlItem29
             // 
             this.layoutControlItem29.Control = this.lblCntrlImageContainerAddress;
-            this.layoutControlItem29.Location = new System.Drawing.Point(0, 200);
+            this.layoutControlItem29.Location = new System.Drawing.Point(0, 192);
             this.layoutControlItem29.Name = "layoutControlItem29";
             this.layoutControlItem29.Size = new System.Drawing.Size(20, 22);
             this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
@@ -1270,31 +1329,31 @@
             // emptySpaceItem19
             // 
             this.emptySpaceItem19.AllowHotTrack = false;
-            this.emptySpaceItem19.Location = new System.Drawing.Point(1169, 0);
+            this.emptySpaceItem19.Location = new System.Drawing.Point(876, 0);
             this.emptySpaceItem19.Name = "emptySpaceItem19";
-            this.emptySpaceItem19.Size = new System.Drawing.Size(463, 22);
+            this.emptySpaceItem19.Size = new System.Drawing.Size(317, 22);
             this.emptySpaceItem19.TextSize = new System.Drawing.Size(0, 0);
             // 
             // splitterItem3
             // 
             this.splitterItem3.AllowHotTrack = true;
-            this.splitterItem3.Location = new System.Drawing.Point(1037, 0);
+            this.splitterItem3.Location = new System.Drawing.Point(758, 0);
             this.splitterItem3.Name = "splitterItem3";
-            this.splitterItem3.Size = new System.Drawing.Size(5, 462);
+            this.splitterItem3.Size = new System.Drawing.Size(5, 367);
             // 
             // layoutControlItem22
             // 
             this.layoutControlItem22.Control = this.lblCtrlAddEditContainerMandatoryType;
-            this.layoutControlItem22.Location = new System.Drawing.Point(488, 250);
+            this.layoutControlItem22.Location = new System.Drawing.Point(408, 240);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(263, 22);
+            this.layoutControlItem22.Size = new System.Drawing.Size(229, 22);
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem22.TextVisible = false;
             // 
             // layoutControlItem23
             // 
             this.layoutControlItem23.Control = this.lblCntrlImageContainerMandatoryType;
-            this.layoutControlItem23.Location = new System.Drawing.Point(468, 250);
+            this.layoutControlItem23.Location = new System.Drawing.Point(388, 240);
             this.layoutControlItem23.Name = "layoutControlItem23";
             this.layoutControlItem23.Size = new System.Drawing.Size(20, 22);
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
@@ -1303,16 +1362,16 @@
             // layoutControlItem26
             // 
             this.layoutControlItem26.Control = this.lblCtrlAddEditContainerPhoto;
-            this.layoutControlItem26.Location = new System.Drawing.Point(1062, 0);
+            this.layoutControlItem26.Location = new System.Drawing.Point(783, 0);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(107, 22);
+            this.layoutControlItem26.Size = new System.Drawing.Size(93, 22);
             this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem26.TextVisible = false;
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.lblCntrlImageContainerPhoto;
-            this.layoutControlItem31.Location = new System.Drawing.Point(1042, 0);
+            this.layoutControlItem31.Location = new System.Drawing.Point(763, 0);
             this.layoutControlItem31.Name = "layoutControlItem31";
             this.layoutControlItem31.Size = new System.Drawing.Size(20, 22);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
@@ -1321,103 +1380,103 @@
             // layoutControlItem32
             // 
             this.layoutControlItem32.Control = this.pctrEdtContainerPhoto;
-            this.layoutControlItem32.Location = new System.Drawing.Point(1042, 22);
+            this.layoutControlItem32.Location = new System.Drawing.Point(763, 22);
             this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(590, 440);
+            this.layoutControlItem32.Size = new System.Drawing.Size(430, 345);
             this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem32.TextVisible = false;
             // 
             // emptySpaceItem12
             // 
             this.emptySpaceItem12.AllowHotTrack = false;
-            this.emptySpaceItem12.Location = new System.Drawing.Point(785, 200);
+            this.emptySpaceItem12.Location = new System.Drawing.Point(666, 192);
             this.emptySpaceItem12.Name = "emptySpaceItem12";
-            this.emptySpaceItem12.Size = new System.Drawing.Size(252, 22);
+            this.emptySpaceItem12.Size = new System.Drawing.Size(92, 22);
             this.emptySpaceItem12.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem27
             // 
             this.layoutControlItem27.Control = this.imgCmbBxEdtContainerType;
-            this.layoutControlItem27.Location = new System.Drawing.Point(0, 172);
+            this.layoutControlItem27.Location = new System.Drawing.Point(0, 166);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(463, 28);
+            this.layoutControlItem27.Size = new System.Drawing.Size(383, 26);
             this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem27.TextVisible = false;
             // 
             // layoutControlItem36
             // 
             this.layoutControlItem36.Control = this.imgCmbBxEdtContainerFillLevel;
-            this.layoutControlItem36.Location = new System.Drawing.Point(0, 122);
+            this.layoutControlItem36.Location = new System.Drawing.Point(0, 118);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(463, 28);
+            this.layoutControlItem36.Size = new System.Drawing.Size(383, 26);
             this.layoutControlItem36.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem36.TextVisible = false;
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.imgCmbBxEdtContainerMandatoryTypeCollection;
-            this.layoutControlItem12.Location = new System.Drawing.Point(468, 272);
+            this.layoutControlItem12.Location = new System.Drawing.Point(388, 262);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(569, 28);
+            this.layoutControlItem12.Size = new System.Drawing.Size(370, 26);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
             // emptySpaceItem18
             // 
             this.emptySpaceItem18.AllowHotTrack = false;
-            this.emptySpaceItem18.Location = new System.Drawing.Point(634, 100);
+            this.emptySpaceItem18.Location = new System.Drawing.Point(535, 96);
             this.emptySpaceItem18.Name = "emptySpaceItem18";
-            this.emptySpaceItem18.Size = new System.Drawing.Size(403, 22);
+            this.emptySpaceItem18.Size = new System.Drawing.Size(223, 22);
             this.emptySpaceItem18.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem40
             // 
             this.layoutControlItem40.Control = this.lblCtrlAddEditContainerMaterial;
-            this.layoutControlItem40.Location = new System.Drawing.Point(488, 100);
+            this.layoutControlItem40.Location = new System.Drawing.Point(408, 96);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(146, 22);
+            this.layoutControlItem40.Size = new System.Drawing.Size(127, 22);
             this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem40.TextVisible = false;
             // 
             // layoutControlItem41
             // 
             this.layoutControlItem41.Control = this.imgCmbBxEdtContainerMaterial;
-            this.layoutControlItem41.Location = new System.Drawing.Point(468, 122);
+            this.layoutControlItem41.Location = new System.Drawing.Point(388, 118);
             this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(569, 28);
+            this.layoutControlItem41.Size = new System.Drawing.Size(370, 26);
             this.layoutControlItem41.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem41.TextVisible = false;
             // 
             // emptySpaceItem21
             // 
             this.emptySpaceItem21.AllowHotTrack = false;
-            this.emptySpaceItem21.Location = new System.Drawing.Point(111, 321);
+            this.emptySpaceItem21.Location = new System.Drawing.Point(101, 311);
             this.emptySpaceItem21.Name = "emptySpaceItem21";
-            this.emptySpaceItem21.Size = new System.Drawing.Size(926, 22);
+            this.emptySpaceItem21.Size = new System.Drawing.Size(657, 22);
             this.emptySpaceItem21.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem25
             // 
             this.layoutControlItem25.Control = this.lblCtrlAddEditContainerDescription;
-            this.layoutControlItem25.Location = new System.Drawing.Point(20, 321);
+            this.layoutControlItem25.Location = new System.Drawing.Point(20, 311);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(91, 22);
+            this.layoutControlItem25.Size = new System.Drawing.Size(81, 22);
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextVisible = false;
             // 
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.mmEditContainerDescription;
-            this.layoutControlItem33.Location = new System.Drawing.Point(0, 343);
+            this.layoutControlItem33.Location = new System.Drawing.Point(0, 333);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(1037, 119);
+            this.layoutControlItem33.Size = new System.Drawing.Size(758, 34);
             this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem33.TextVisible = false;
             // 
             // layoutControlItem38
             // 
             this.layoutControlItem38.Control = this.lblCntlImageContainerMaterial;
-            this.layoutControlItem38.Location = new System.Drawing.Point(468, 100);
+            this.layoutControlItem38.Location = new System.Drawing.Point(388, 96);
             this.layoutControlItem38.Name = "layoutControlItem38";
             this.layoutControlItem38.Size = new System.Drawing.Size(20, 22);
             this.layoutControlItem38.TextSize = new System.Drawing.Size(0, 0);
@@ -1426,7 +1485,7 @@
             // layoutControlItem39
             // 
             this.layoutControlItem39.Control = this.lblCntrlImageContainerDescription;
-            this.layoutControlItem39.Location = new System.Drawing.Point(0, 321);
+            this.layoutControlItem39.Location = new System.Drawing.Point(0, 311);
             this.layoutControlItem39.Name = "layoutControlItem39";
             this.layoutControlItem39.Size = new System.Drawing.Size(20, 22);
             this.layoutControlItem39.TextSize = new System.Drawing.Size(0, 0);
@@ -1435,156 +1494,208 @@
             // layoutControlItem42
             // 
             this.layoutControlItem42.Control = this.lblCntlAddEditContainerCapacity;
-            this.layoutControlItem42.Location = new System.Drawing.Point(468, 0);
+            this.layoutControlItem42.Location = new System.Drawing.Point(408, 0);
             this.layoutControlItem42.Name = "layoutControlItem42";
-            this.layoutControlItem42.Size = new System.Drawing.Size(158, 22);
+            this.layoutControlItem42.Size = new System.Drawing.Size(136, 22);
             this.layoutControlItem42.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem42.TextVisible = false;
             // 
             // emptySpaceItem10
             // 
             this.emptySpaceItem10.AllowHotTrack = false;
-            this.emptySpaceItem10.Location = new System.Drawing.Point(626, 0);
+            this.emptySpaceItem10.Location = new System.Drawing.Point(544, 0);
             this.emptySpaceItem10.Name = "emptySpaceItem10";
-            this.emptySpaceItem10.Size = new System.Drawing.Size(411, 22);
+            this.emptySpaceItem10.Size = new System.Drawing.Size(214, 22);
             this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem37
             // 
             this.layoutControlItem37.Control = this.labelControl2;
-            this.layoutControlItem37.Location = new System.Drawing.Point(468, 50);
+            this.layoutControlItem37.Location = new System.Drawing.Point(408, 48);
             this.layoutControlItem37.Name = "layoutControlItem37";
-            this.layoutControlItem37.Size = new System.Drawing.Size(169, 22);
+            this.layoutControlItem37.Size = new System.Drawing.Size(145, 22);
             this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem37.TextVisible = false;
             // 
             // layoutControlItem43
             // 
             this.layoutControlItem43.Control = this.cmbContainerLoad;
-            this.layoutControlItem43.Location = new System.Drawing.Point(468, 72);
+            this.layoutControlItem43.Location = new System.Drawing.Point(388, 70);
             this.layoutControlItem43.Name = "layoutControlItem43";
-            this.layoutControlItem43.Size = new System.Drawing.Size(569, 28);
+            this.layoutControlItem43.Size = new System.Drawing.Size(370, 26);
             this.layoutControlItem43.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem43.TextVisible = false;
             // 
             // emptySpaceItem16
             // 
             this.emptySpaceItem16.AllowHotTrack = false;
-            this.emptySpaceItem16.Location = new System.Drawing.Point(637, 50);
+            this.emptySpaceItem16.Location = new System.Drawing.Point(553, 48);
             this.emptySpaceItem16.Name = "emptySpaceItem16";
-            this.emptySpaceItem16.Size = new System.Drawing.Size(400, 22);
+            this.emptySpaceItem16.Size = new System.Drawing.Size(205, 22);
             this.emptySpaceItem16.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem34
             // 
             this.layoutControlItem34.Control = this.cmbContainerCapacity;
-            this.layoutControlItem34.Location = new System.Drawing.Point(468, 22);
+            this.layoutControlItem34.Location = new System.Drawing.Point(388, 22);
             this.layoutControlItem34.Name = "layoutControlItem34";
-            this.layoutControlItem34.Size = new System.Drawing.Size(569, 28);
+            this.layoutControlItem34.Size = new System.Drawing.Size(370, 26);
             this.layoutControlItem34.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem34.TextVisible = false;
             // 
             // splitterItem4
             // 
             this.splitterItem4.AllowHotTrack = true;
-            this.splitterItem4.Location = new System.Drawing.Point(463, 0);
+            this.splitterItem4.Location = new System.Drawing.Point(383, 0);
             this.splitterItem4.Name = "splitterItem4";
-            this.splitterItem4.Size = new System.Drawing.Size(5, 321);
+            this.splitterItem4.Size = new System.Drawing.Size(5, 311);
             // 
             // emptySpaceItem17
             // 
             this.emptySpaceItem17.AllowHotTrack = false;
-            this.emptySpaceItem17.Location = new System.Drawing.Point(67, 250);
+            this.emptySpaceItem17.Location = new System.Drawing.Point(78, 240);
             this.emptySpaceItem17.Name = "emptySpaceItem17";
-            this.emptySpaceItem17.Size = new System.Drawing.Size(396, 22);
+            this.emptySpaceItem17.Size = new System.Drawing.Size(305, 22);
             this.emptySpaceItem17.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem11
             // 
             this.emptySpaceItem11.AllowHotTrack = false;
-            this.emptySpaceItem11.Location = new System.Drawing.Point(468, 300);
+            this.emptySpaceItem11.Location = new System.Drawing.Point(388, 288);
             this.emptySpaceItem11.Name = "emptySpaceItem11";
-            this.emptySpaceItem11.Size = new System.Drawing.Size(569, 21);
+            this.emptySpaceItem11.Size = new System.Drawing.Size(370, 23);
             this.emptySpaceItem11.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem23
             // 
             this.emptySpaceItem23.AllowHotTrack = false;
-            this.emptySpaceItem23.Location = new System.Drawing.Point(752, 150);
+            this.emptySpaceItem23.Location = new System.Drawing.Point(595, 144);
             this.emptySpaceItem23.Name = "emptySpaceItem23";
-            this.emptySpaceItem23.Size = new System.Drawing.Size(285, 26);
+            this.emptySpaceItem23.Size = new System.Drawing.Size(163, 24);
             this.emptySpaceItem23.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.chckEdtContainerMandatoryPickup;
-            this.layoutControlItem7.Location = new System.Drawing.Point(468, 150);
+            this.layoutControlItem7.Location = new System.Drawing.Point(388, 144);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(284, 26);
+            this.layoutControlItem7.Size = new System.Drawing.Size(207, 24);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(147, 50);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(149, 48);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(316, 22);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(234, 22);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.lblCntlAddEditContainerStatus;
-            this.layoutControlItem8.Location = new System.Drawing.Point(0, 50);
+            this.layoutControlItem8.Location = new System.Drawing.Point(20, 48);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(147, 22);
+            this.layoutControlItem8.Size = new System.Drawing.Size(129, 22);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.imgCmbBxEdtContainerStatus;
-            this.layoutControlItem9.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 70);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(463, 28);
+            this.layoutControlItem9.Size = new System.Drawing.Size(383, 26);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem28
             // 
             this.layoutControlItem28.Control = this.lblCtrlAddEditContainerAddress;
-            this.layoutControlItem28.Location = new System.Drawing.Point(20, 200);
+            this.layoutControlItem28.Location = new System.Drawing.Point(20, 192);
             this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(239, 22);
+            this.layoutControlItem28.Size = new System.Drawing.Size(210, 22);
             this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem28.TextVisible = false;
             // 
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.txtAddEditContainerAddress;
-            this.layoutControlItem30.Location = new System.Drawing.Point(0, 222);
+            this.layoutControlItem30.Location = new System.Drawing.Point(0, 214);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(463, 28);
+            this.layoutControlItem30.Size = new System.Drawing.Size(383, 26);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.lblCntlAddEditContainerLevel;
-            this.layoutControlItem11.Location = new System.Drawing.Point(0, 250);
+            this.layoutControlItem11.Location = new System.Drawing.Point(20, 240);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(67, 22);
+            this.layoutControlItem11.Size = new System.Drawing.Size(58, 22);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem24
             // 
             this.layoutControlItem24.Control = this.trckBrCntrlLevelContainer;
-            this.layoutControlItem24.Location = new System.Drawing.Point(0, 272);
+            this.layoutControlItem24.Location = new System.Drawing.Point(0, 262);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(463, 49);
+            this.layoutControlItem24.Size = new System.Drawing.Size(383, 49);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextVisible = false;
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(388, 168);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(370, 24);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.lblCntrlImageContainerLevel;
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 240);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(20, 22);
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem21.TextVisible = false;
+            // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.Location = new System.Drawing.Point(154, 96);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(229, 22);
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem35
+            // 
+            this.layoutControlItem35.Control = this.lblCntrlImageContainerStatus;
+            this.layoutControlItem35.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem35.Name = "layoutControlItem35";
+            this.layoutControlItem35.Size = new System.Drawing.Size(20, 22);
+            this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem35.TextVisible = false;
+            // 
+            // layoutControlItem44
+            // 
+            this.layoutControlItem44.Control = this.lblCntrlImageContainerLoad;
+            this.layoutControlItem44.Location = new System.Drawing.Point(388, 48);
+            this.layoutControlItem44.Name = "layoutControlItem44";
+            this.layoutControlItem44.Size = new System.Drawing.Size(20, 22);
+            this.layoutControlItem44.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem44.TextVisible = false;
+            // 
+            // layoutControlItem45
+            // 
+            this.layoutControlItem45.Control = this.lblCntrlImageContainerCapacity;
+            this.layoutControlItem45.Location = new System.Drawing.Point(388, 0);
+            this.layoutControlItem45.Name = "layoutControlItem45";
+            this.layoutControlItem45.Size = new System.Drawing.Size(20, 22);
+            this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem45.TextVisible = false;
             // 
             // layCntrlGrpFlyoutAddNewEditEmployeeContainer
             // 
@@ -1594,7 +1705,7 @@
             this.layoutControlItem1});
             this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Name = "layCntrlGrpFlyoutAddNewEditEmployeeContainer";
             this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
-            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Size = new System.Drawing.Size(1662, 1075);
+            this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.Size = new System.Drawing.Size(1223, 721);
             this.layCntrlGrpFlyoutAddNewEditEmployeeContainer.TextVisible = false;
             // 
             // layoutControlItem1
@@ -1602,7 +1713,7 @@
             this.layoutControlItem1.Control = this.grpCntrlFlyoutAddNewEditContainersContainer;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1660, 1073);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1221, 719);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -1651,21 +1762,13 @@
             this.emptySpaceItem22.Size = new System.Drawing.Size(10, 56);
             this.emptySpaceItem22.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem4
-            // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(468, 176);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(569, 24);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // UcFlyContainerAddNewEditContainerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layCntrlFlyoutAddNewEditContainersContainer);
             this.Name = "UcFlyContainerAddNewEditContainerManagement";
-            this.Size = new System.Drawing.Size(1662, 1075);
+            this.Size = new System.Drawing.Size(1223, 721);
             this.Load += new System.EventHandler(this.UcFlyContainerAddNewEditContainerManagementLoad);
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlFlyoutAddNewEditContainersContainer)).EndInit();
             this.layCntrlFlyoutAddNewEditContainersContainer.ResumeLayout(false);
@@ -1719,7 +1822,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem56)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
@@ -1763,6 +1865,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpFlyoutAddNewEditEmployeeContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
@@ -1770,7 +1878,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             this.ResumeLayout(false);
 
     }
@@ -1816,7 +1923,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem56;
         private DevExpress.XtraEditors.LabelControl lblCntlAddEditContainerFillLevel;
         private DevExpress.XtraEditors.LabelControl lblCntlImageContainerFillLevel;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
         private DevExpress.XtraEditors.ToggleSwitch tgglSwtchEditMapPointContainer;
@@ -1901,5 +2007,14 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraEditors.LabelControl lblCntrlImageContainerCapacity;
+        private DevExpress.XtraEditors.LabelControl lblCntrlImageContainerLoad;
+        private DevExpress.XtraEditors.LabelControl lblCntrlImageContainerLevel;
+        private DevExpress.XtraEditors.LabelControl lblCntrlImageContainerStatus;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem35;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem44;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem45;
     }
 }
