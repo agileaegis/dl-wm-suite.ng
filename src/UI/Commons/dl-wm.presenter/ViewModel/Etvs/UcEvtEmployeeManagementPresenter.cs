@@ -22,5 +22,10 @@ namespace dl.wm.presenter.ViewModel.Etvs
         {
             View.OpenFlyoutForAddEmployee = true;
         }
+
+        public void UcWasLoaded()
+        {
+            View.OnEmployeeManagementLoaded = true;
+        }
     }
 }

@@ -16,4 +16,15 @@ namespace dl.wm.presenter.Exceptions
 
         public override string Message => $"Service HTTP Request Exception. Status code: {HttpStatusCode}";
     }
+    public class ServiceHttpRequestException : Exception
+    {
+        public string E{ get; private set; }
+
+        public ServiceHttpRequestException(string e)
+        {
+            E = e;
+        }
+
+        public override string Message => $"Error {E}";
+    }
 }

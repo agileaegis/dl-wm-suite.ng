@@ -33,18 +33,26 @@
             this.layCntrlClientsEmployeesGroupContainer = new DevExpress.XtraLayout.LayoutControl();
             this.gcAdvBndEvtEmployees = new DevExpress.XtraGrid.GridControl();
             this.gvAdvBndEvtEmployees = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
+            this.gbClmManagementEmployeeInfos = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gdClmManagementEmployeeEmployId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeFirstName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeLastname = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeEmail = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeGender = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.repoItmImgeCombEmployeeGender = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.repoItmImgeCombEmployeeDepartment = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.gdClmEmployeeManagementEmployeeStatus = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.repoItmImgeCombEmployeeStatus = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.gdClmEmployeeManagementEmployeeEmployeeRole = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.repoItmImgeCombEmployeeRole = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.gbClmManagementEmployeeAddress = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gdClmEmployeeManagementEmployeeRoleId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeAddress1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeAddress2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeCity = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeePostcode = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gbClmManagementEmployeeInformation = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gdClmEmployeeManagementEmployeePhone = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeMobile = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.gdClmEmployeeManagementEmployeeDepartmentId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -59,14 +67,6 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.laytCntrlGrpDicomClientsContainer = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.repoItmImgeCombEmployeeRole = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.repoItmImgeCombEmployeeGender = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.repoItmImgeCombEmployeeStatus = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.repoItmImgeCombEmployeeDepartment = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gbClmManagementEmployeeInfos = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gbClmManagementEmployeeAddress = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gbClmManagementEmployeeInformation = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlClientsEmployeesContainer)).BeginInit();
             this.layCntrlClientsEmployeesContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpCntrlClientsEmployeesGroupContainer)).BeginInit();
@@ -75,6 +75,10 @@
             this.layCntrlClientsEmployeesGroupContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcAdvBndEvtEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAdvBndEvtEmployees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeGender)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeDepartment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeRole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDicomClientsGroupContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -83,10 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laytCntrlGrpDicomClientsContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeRole)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeGender)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeDepartment)).BeginInit();
             this.SuspendLayout();
             // 
             // layCntrlClientsEmployeesContainer
@@ -189,6 +189,24 @@
             this.gvAdvBndEvtEmployees.OptionsView.ShowAutoFilterRow = true;
             this.gvAdvBndEvtEmployees.OptionsView.ShowGroupPanel = false;
             // 
+            // gbClmManagementEmployeeInfos
+            // 
+            this.gbClmManagementEmployeeInfos.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbClmManagementEmployeeInfos.AppearanceHeader.Options.UseFont = true;
+            this.gbClmManagementEmployeeInfos.Caption = "Εργαζόμενος";
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmManagementEmployeeEmployId);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeFirstName);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeLastname);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmail);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeGender);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmployeeDepartment);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeStatus);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmployeeRole);
+            this.gbClmManagementEmployeeInfos.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_worker_321;
+            this.gbClmManagementEmployeeInfos.Name = "gbClmManagementEmployeeInfos";
+            this.gbClmManagementEmployeeInfos.VisibleIndex = 0;
+            this.gbClmManagementEmployeeInfos.Width = 524;
+            // 
             // gdClmManagementEmployeeEmployId
             // 
             this.gdClmManagementEmployeeEmployId.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,6 +296,35 @@
             this.gdClmEmployeeManagementEmployeeGender.Visible = true;
             this.gdClmEmployeeManagementEmployeeGender.Width = 96;
             // 
+            // repoItmImgeCombEmployeeGender
+            // 
+            this.repoItmImgeCombEmployeeGender.AutoHeight = false;
+            this.repoItmImgeCombEmployeeGender.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmImgeCombEmployeeGender.Name = "repoItmImgeCombEmployeeGender";
+            // 
+            // gdClmEmployeeManagementEmployeeEmployeeDepartment
+            // 
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Caption = "Τμήμα";
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.ColumnEdit = this.repoItmImgeCombEmployeeDepartment;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.FieldName = "EmployeeEmployeeDepartment.EmployeeDepartment";
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_department2_16;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Name = "gdClmEmployeeManagementEmployeeEmployeeDepartment";
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.RowIndex = 1;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Visible = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Width = 144;
+            // 
+            // repoItmImgeCombEmployeeDepartment
+            // 
+            this.repoItmImgeCombEmployeeDepartment.AutoHeight = false;
+            this.repoItmImgeCombEmployeeDepartment.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmImgeCombEmployeeDepartment.Name = "repoItmImgeCombEmployeeDepartment";
+            // 
             // gdClmEmployeeManagementEmployeeStatus
             // 
             this.gdClmEmployeeManagementEmployeeStatus.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -298,6 +345,13 @@
             this.gdClmEmployeeManagementEmployeeStatus.Visible = true;
             this.gdClmEmployeeManagementEmployeeStatus.Width = 185;
             // 
+            // repoItmImgeCombEmployeeStatus
+            // 
+            this.repoItmImgeCombEmployeeStatus.AutoHeight = false;
+            this.repoItmImgeCombEmployeeStatus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmImgeCombEmployeeStatus.Name = "repoItmImgeCombEmployeeStatus";
+            // 
             // gdClmEmployeeManagementEmployeeEmployeeRole
             // 
             this.gdClmEmployeeManagementEmployeeEmployeeRole.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
@@ -312,6 +366,28 @@
             this.gdClmEmployeeManagementEmployeeEmployeeRole.RowIndex = 1;
             this.gdClmEmployeeManagementEmployeeEmployeeRole.Visible = true;
             this.gdClmEmployeeManagementEmployeeEmployeeRole.Width = 195;
+            // 
+            // repoItmImgeCombEmployeeRole
+            // 
+            this.repoItmImgeCombEmployeeRole.AutoHeight = false;
+            this.repoItmImgeCombEmployeeRole.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmImgeCombEmployeeRole.Name = "repoItmImgeCombEmployeeRole";
+            // 
+            // gbClmManagementEmployeeAddress
+            // 
+            this.gbClmManagementEmployeeAddress.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbClmManagementEmployeeAddress.AppearanceHeader.Options.UseFont = true;
+            this.gbClmManagementEmployeeAddress.Caption = "Διεύθυνση";
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeRoleId);
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeAddress1);
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeAddress2);
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeCity);
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeePostcode);
+            this.gbClmManagementEmployeeAddress.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_address_book_2_32;
+            this.gbClmManagementEmployeeAddress.Name = "gbClmManagementEmployeeAddress";
+            this.gbClmManagementEmployeeAddress.VisibleIndex = 1;
+            this.gbClmManagementEmployeeAddress.Width = 421;
             // 
             // gdClmEmployeeManagementEmployeeRoleId
             // 
@@ -381,6 +457,20 @@
             this.gdClmEmployeeManagementEmployeePostcode.RowIndex = 1;
             this.gdClmEmployeeManagementEmployeePostcode.Visible = true;
             this.gdClmEmployeeManagementEmployeePostcode.Width = 193;
+            // 
+            // gbClmManagementEmployeeInformation
+            // 
+            this.gbClmManagementEmployeeInformation.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gbClmManagementEmployeeInformation.AppearanceHeader.Image = global::dl.wm.suite.ui.Properties.Resources.info_322;
+            this.gbClmManagementEmployeeInformation.AppearanceHeader.Options.UseFont = true;
+            this.gbClmManagementEmployeeInformation.AppearanceHeader.Options.UseImage = true;
+            this.gbClmManagementEmployeeInformation.Caption = "Πληροφορίες";
+            this.gbClmManagementEmployeeInformation.Columns.Add(this.gdClmEmployeeManagementEmployeePhone);
+            this.gbClmManagementEmployeeInformation.Columns.Add(this.gdClmEmployeeManagementEmployeeMobile);
+            this.gbClmManagementEmployeeInformation.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_more_info_32;
+            this.gbClmManagementEmployeeInformation.Name = "gbClmManagementEmployeeInformation";
+            this.gbClmManagementEmployeeInformation.VisibleIndex = 2;
+            this.gbClmManagementEmployeeInformation.Width = 318;
             // 
             // gdClmEmployeeManagementEmployeePhone
             // 
@@ -532,96 +622,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // repoItmImgeCombEmployeeRole
-            // 
-            this.repoItmImgeCombEmployeeRole.AutoHeight = false;
-            this.repoItmImgeCombEmployeeRole.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repoItmImgeCombEmployeeRole.Name = "repoItmImgeCombEmployeeRole";
-            // 
-            // repoItmImgeCombEmployeeGender
-            // 
-            this.repoItmImgeCombEmployeeGender.AutoHeight = false;
-            this.repoItmImgeCombEmployeeGender.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repoItmImgeCombEmployeeGender.Name = "repoItmImgeCombEmployeeGender";
-            // 
-            // repoItmImgeCombEmployeeStatus
-            // 
-            this.repoItmImgeCombEmployeeStatus.AutoHeight = false;
-            this.repoItmImgeCombEmployeeStatus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repoItmImgeCombEmployeeStatus.Name = "repoItmImgeCombEmployeeStatus";
-            // 
-            // repoItmImgeCombEmployeeDepartment
-            // 
-            this.repoItmImgeCombEmployeeDepartment.AutoHeight = false;
-            this.repoItmImgeCombEmployeeDepartment.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repoItmImgeCombEmployeeDepartment.Name = "repoItmImgeCombEmployeeDepartment";
-            // 
-            // gdClmEmployeeManagementEmployeeEmployeeDepartment
-            // 
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceCell.Options.UseFont = true;
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceHeader.Options.UseFont = true;
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Caption = "Τμήμα";
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.ColumnEdit = this.repoItmImgeCombEmployeeDepartment;
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.FieldName = "EmployeeEmployeeDepartment.EmployeeDepartment";
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_department2_16;
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Name = "gdClmEmployeeManagementEmployeeEmployeeDepartment";
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.RowIndex = 1;
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Visible = true;
-            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Width = 144;
-            // 
-            // gbClmManagementEmployeeInfos
-            // 
-            this.gbClmManagementEmployeeInfos.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbClmManagementEmployeeInfos.AppearanceHeader.Options.UseFont = true;
-            this.gbClmManagementEmployeeInfos.Caption = "Εργαζόμενος";
-            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmManagementEmployeeEmployId);
-            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeFirstName);
-            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeLastname);
-            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmail);
-            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeGender);
-            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmployeeDepartment);
-            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeStatus);
-            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmployeeRole);
-            this.gbClmManagementEmployeeInfos.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_worker_321;
-            this.gbClmManagementEmployeeInfos.Name = "gbClmManagementEmployeeInfos";
-            this.gbClmManagementEmployeeInfos.VisibleIndex = 0;
-            this.gbClmManagementEmployeeInfos.Width = 524;
-            // 
-            // gbClmManagementEmployeeAddress
-            // 
-            this.gbClmManagementEmployeeAddress.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbClmManagementEmployeeAddress.AppearanceHeader.Options.UseFont = true;
-            this.gbClmManagementEmployeeAddress.Caption = "Διεύθυνση";
-            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeRoleId);
-            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeAddress1);
-            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeAddress2);
-            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeCity);
-            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeePostcode);
-            this.gbClmManagementEmployeeAddress.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_address_book_2_32;
-            this.gbClmManagementEmployeeAddress.Name = "gbClmManagementEmployeeAddress";
-            this.gbClmManagementEmployeeAddress.VisibleIndex = 1;
-            this.gbClmManagementEmployeeAddress.Width = 421;
-            // 
-            // gbClmManagementEmployeeInformation
-            // 
-            this.gbClmManagementEmployeeInformation.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gbClmManagementEmployeeInformation.AppearanceHeader.Image = global::dl.wm.suite.ui.Properties.Resources.info_322;
-            this.gbClmManagementEmployeeInformation.AppearanceHeader.Options.UseFont = true;
-            this.gbClmManagementEmployeeInformation.AppearanceHeader.Options.UseImage = true;
-            this.gbClmManagementEmployeeInformation.Caption = "Πληροφορίες";
-            this.gbClmManagementEmployeeInformation.Columns.Add(this.gdClmEmployeeManagementEmployeePhone);
-            this.gbClmManagementEmployeeInformation.Columns.Add(this.gdClmEmployeeManagementEmployeeMobile);
-            this.gbClmManagementEmployeeInformation.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_more_info_32;
-            this.gbClmManagementEmployeeInformation.Name = "gbClmManagementEmployeeInformation";
-            this.gbClmManagementEmployeeInformation.VisibleIndex = 2;
-            this.gbClmManagementEmployeeInformation.Width = 318;
-            // 
             // UcClientsEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -629,6 +629,7 @@
             this.Controls.Add(this.layCntrlClientsEmployeesContainer);
             this.Name = "UcClientsEmployees";
             this.Size = new System.Drawing.Size(1365, 768);
+            this.Load += new System.EventHandler(this.UcClientsEmployeesLoad);
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlClientsEmployeesContainer)).EndInit();
             this.layCntrlClientsEmployeesContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpCntrlClientsEmployeesGroupContainer)).EndInit();
@@ -637,6 +638,10 @@
             this.layCntrlClientsEmployeesGroupContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcAdvBndEvtEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvAdvBndEvtEmployees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeGender)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeDepartment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDicomClientsGroupContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -645,10 +650,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laytCntrlGrpDicomClientsContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeRole)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeGender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeDepartment)).EndInit();
             this.ResumeLayout(false);
 
         }

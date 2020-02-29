@@ -16,7 +16,7 @@ namespace dl.wm.models.DTOs.Users
     {
         public UserUiModel()
         {
-            Employee = new EmployeeUiModel();
+            Employee = new EmployeeForCreationUiModel();
         }
 
         [Key]
@@ -26,7 +26,7 @@ namespace dl.wm.models.DTOs.Users
         public string Message { get; set; }
         [Required]
         [Editable(false)]
-        public EmployeeUiModel Employee { get; set; }
+        public EmployeeForCreationUiModel Employee { get; set; }
         [Required]
         [Editable(false)]
         public string Login { get; set; }

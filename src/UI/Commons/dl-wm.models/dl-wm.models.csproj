@@ -51,6 +51,7 @@
     <Compile Include="DTOs\Dashboards\DashboardUiModel.cs" />
     <Compile Include="DTOs\Dashboards\MapUiModel.cs" />
     <Compile Include="DTOs\Employees\Departments\DepartmentUiModel.cs" />
+    <Compile Include="DTOs\Employees\EmployeeForCreationUiModel.cs" />
     <Compile Include="DTOs\Employees\EmployeeRoles\EmployeeRoleUiModel.cs" />
     <Compile Include="DTOs\Employees\EmployeeUiModel.cs" />
     <Compile Include="DTOs\Maps\GeofenceForModification.cs" />

@@ -1,35 +1,37 @@
 ﻿using System;
 using dl.wm.presenter.ServiceAgents.Contracts;
 using dl.wm.presenter.ServiceAgents.Impls;
-using dl.wm.presenter.Utilities;
-using dl.wm.view.Controls.Containers;
+using dl.wm.view.Controls.Employees;
 using dl.wm.presenter.Base;
 using dl.wm.presenter.Exceptions;
+using dl.wm.presenter.Utilities;
 
-namespace dl.wm.presenter.ViewModel.Containers
+namespace dl.wm.presenter.ViewModel.Employees
 {
-    public class ContainerPointsPresenter : BasePresenter<IContainersPointsView, IContainersService>
+    public class EmployeesPresenter : BasePresenter<IEmployeesView, IEmployeesService>
     {
-        public ContainerPointsPresenter(IContainersPointsView view)
-            : this(view, new ContainersService())
+        public EmployeesPresenter(IEmployeesView view)
+            : this(view, new EmployeesService())
         {
         }
 
-        public ContainerPointsPresenter(IContainersPointsView view, IContainersService service)
+        public EmployeesPresenter(IEmployeesView view, IEmployeesService service)
             : base(view, service)
         {
         }
 
-        public async void LoadAllContainersPoints()
+        public async void LoadAllActiveEmployees()
         {
             try
             {
-                var containersPoints = await Service.GetAllActiveContainersPointsAsync(ClientSettingsSingleton.InstanceSettings().TokenConfigValue);
-                if (containersPoints?.Count == 0)
-                    View.NoneContainerPointWasRetrieved = true;
+                var employees =
+                    await Service.GetAllActiveEmployeesAsync(
+                        ClientSettingsSingleton.InstanceSettings().TokenConfigValue);
+                if (employees?.Count == 0)
+                    View.NoneEmployeeWasRetrieved = true;
                 else
                 {
-                    View.ContainersPoints = containersPoints;
+                    View.Employees = employees;
                 }
             }
             catch (Exception e)
@@ -47,17 +49,17 @@ namespace dl.wm.presenter.ViewModel.Containers
                 switch (ex.Content)
                 {
                     case "UNKNOWN_ERROR":
-                        View.OnContainerPointsMsgError = "Σφάλμα απροσδιόριστο.";
+                        View.OnEmployeesMsgError = "Σφάλμα απροσδιόριστο.";
                         break;
                     default:
-                        View.OnContainerPointsMsgError =
+                        View.OnEmployeesMsgError =
                             $"Σφάλμα διακομιστή: {ex.HttpStatusCode}\n, Επιπλέον στοιχεία: {ex.Content}";
                         break;
                 }
             }
             else
             {
-                View.OnContainerPointsMsgError = "΄Αγνωστο Σφάλμα: " + e.Message;
+                View.OnEmployeesMsgError = "΄Αγνωστο Σφάλμα: " + e.Message;
             }
         }
     }

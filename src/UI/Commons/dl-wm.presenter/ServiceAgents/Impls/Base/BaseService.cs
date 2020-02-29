@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using dl.wm.models.DTOs.Base;
+using dl.wm.presenter.Exceptions;
 using dl.wm.presenter.ServiceAgents.BaseProvider;
 using dl.wm.presenter.ServiceAgents.Contracts.Base;
 using dl.wm.presenter.UriBuilders;
@@ -27,7 +28,7 @@ namespace dl.wm.presenter.ServiceAgents.Impls.Base
     public virtual async Task<TEntity> GetEntityByIdAsync(Guid entityId, string authorizationToken = null)
     {
       UriBuilder builder = CreateUriBuilder();
-      builder.Path += entityId.ToString();
+      builder.Path += $"/{entityId.ToString()}";
       return await RequestProvider.GetAsync<TEntity>(builder.ToString(), authorizationToken);
     }
 
@@ -40,10 +41,8 @@ namespace dl.wm.presenter.ServiceAgents.Impls.Base
       }
       catch (Exception e)
       {
-          //Todo: Handle Exception
+          throw new ServiceHttpRequestException(e.Message);
       }
-
-      return null;
     }
 
     public virtual async Task<TEntity> CreateEntityAsync(TEntity newEntity, string authorizationToken = null)

@@ -17,7 +17,7 @@ namespace dl.wm.suite.cms.services.Employees
             _autoMapper = autoMapper;
         }
 
-        public Task<EmployeeUiModel> GetEmployeeAsync(Guid id)
+        public Task<EmployeeUiModel> GetEmployeeByIdAsync(Guid id)
         {
             return Task.Run(() => _autoMapper.Map<EmployeeUiModel>(_employeeRepository.FindBy(id)));
         }

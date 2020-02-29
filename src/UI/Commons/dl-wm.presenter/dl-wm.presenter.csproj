@@ -174,10 +174,11 @@
     <Compile Include="ServiceAgents\Impls\EmployeeRolesService.cs" />
     <Compile Include="ServiceAgents\Impls\ContainersService.cs" />
     <Compile Include="ServiceAgents\Impls\VehiclesService.cs" />
+    <Compile Include="UriBuilders\ApiFactories\EmployeeUriAddr.cs" />
     <Compile Include="UriBuilders\ApiFactories\MapUriAddr.cs" />
     <Compile Include="UriBuilders\ApiFactories\DashboardUriAddr.cs" />
     <Compile Include="UriBuilders\ApiFactories\AccountUriAddr.cs" />
-    <Compile Include="UriBuilders\ApiFactories\BaseClientUri.cs" />
+    <Compile Include="UriBuilders\ApiFactories\Base\BaseClientUri.cs" />
     <Compile Include="UriBuilders\ApiFactories\UserUriAddr.cs" />
     <Compile Include="UriBuilders\ApiFactories\UserRoleUriAddr.cs" />
     <Compile Include="UriBuilders\ApiFactories\UserJwtUriAddr.cs" />
@@ -186,6 +187,7 @@
     <Compile Include="UriBuilders\ApiFactories\ContainerUriAddr.cs" />
     <Compile Include="UriBuilders\ApiFactories\VehicleUriAddr.cs" />
     <Compile Include="UriBuilders\ClientUriAddressesRepository.cs" />
+    <Compile Include="UriBuilders\Factories\ClientEmployeeUriFactory.cs" />
     <Compile Include="UriBuilders\Factories\ClientMapUriFactory.cs" />
     <Compile Include="UriBuilders\Factories\ClientDashboardUriFactory.cs" />
     <Compile Include="UriBuilders\Factories\ClientAccountUriFactory.cs" />
@@ -211,7 +213,7 @@
     <Compile Include="ViewModel\Dashboards\DashboardManagementPresenter.cs" />
     <Compile Include="ViewModel\Employees\Departments\DepartmentsPresenter.cs" />
     <Compile Include="ViewModel\Employees\EmployeeRoles\EmployeeRolesPresenter.cs" />
-    <Compile Include="ViewModel\Employees\VehiclesPresenter.cs" />
+    <Compile Include="ViewModel\Employees\EmployeesPresenter.cs" />
     <Compile Include="ViewModel\Etvs\UcEvtEmployeeManagementPresenter.cs" />
     <Compile Include="ViewModel\Etvs\UcEvtManagementPresenter.cs" />
     <Compile Include="ViewModel\LoginForget\LoginForgetManagementPresenter.cs" />

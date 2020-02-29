@@ -5,7 +5,6 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using dl.wm.models.DTOs.Containers;
-using dl.wm.models.DTOs.Dashboards;
 using dl.wm.models.DTOs.Users;
 using dl.wm.presenter.Exceptions;
 using dl.wm.presenter.ServiceAgents.Contracts;

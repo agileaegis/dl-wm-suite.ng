@@ -19,6 +19,7 @@ namespace dl.wm.presenter.UriBuilders
                     { "ContainersService", new ClientContainerUriFactory(ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue)},
                     { "DepartmentsService", new ClientDepartmentUriFactory(ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue)},
                     { "EmployeeRolesService", new ClientEmployeeRoleUriFactory(ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue)},
+                    { "EmployeesService", new ClientEmployeeUriFactory(ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue)},
                     { "UserjwtService", new ClientUserJwtUriFactory(ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue)},
                     { "UserRolesService", new ClientUserRoleUriFactory(ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue)},
                 };
@@ -85,6 +86,11 @@ namespace dl.wm.presenter.UriBuilders
       {
         _clientUriFactory.Add(clientUriAddressName,
             new ClientEmployeeRoleUriFactory(ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue));
+      }
+      if (clientUriAddressName == "EmployeesService")
+      {
+        _clientUriFactory.Add(clientUriAddressName,
+            new ClientEmployeeUriFactory(ClientSettingsSingleton.InstanceSettings().IpAddressConfigValue));
       }
       if (clientUriAddressName == "UserjwtService")
       {

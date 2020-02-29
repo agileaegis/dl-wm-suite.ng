@@ -44,6 +44,8 @@ namespace dl.wm.suite.cms.api.Helpers
                 {"id", new PropertyMappingValue(new List<string>() {"id"})},
                 {"Firstname", new PropertyMappingValue(new List<string>() {"Firstname"})},
                 {"Lastname", new PropertyMappingValue(new List<string>() {"Lastname"})},
+                {"Email", new PropertyMappingValue(new List<string>() {"Email"})},
+                {"IsActive", new PropertyMappingValue(new List<string>() {"IsActive"})},
             };
 
         private readonly Dictionary<string, PropertyMappingValue> _vehiclePropertyMapping =

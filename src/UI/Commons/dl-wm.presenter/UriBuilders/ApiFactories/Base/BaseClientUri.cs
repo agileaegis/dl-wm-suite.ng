@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace dl.wm.presenter.UriBuilders.ApiFactories
+namespace dl.wm.presenter.UriBuilders.ApiFactories.Base
 {
     public abstract class BaseClientUri
     {
@@ -35,7 +35,7 @@ namespace dl.wm.presenter.UriBuilders.ApiFactories
             }
             uriSb.Append("/");
             uriSb.Append(Segment);
-            uriSb.Append("/");
+            //uriSb.Append("/");
 
             return uriSb.ToString();
         }

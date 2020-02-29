@@ -575,6 +575,15 @@ namespace dl.wm.suite.ui.Views.Modules
             set => listSourceDataAdapterOpenDashboardDumpsterSource.DataSource = value;
         }
 
+        public string OnContainerPointsMsgError
+        {
+            set
+            {
+                //Todo: 
+                throw new Exception();
+            }
+        }
+
         #endregion
 
         private void brEditItmAddressName_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

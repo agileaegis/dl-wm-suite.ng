@@ -296,6 +296,25 @@
             <response code="200">Resource retrieved correctly.</response>
             <response code="500">Internal Server Error.</response>
         </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.EmployeesController.GetEmployeeAsync(System.Guid,System.String)">
+            <summary>
+            Get : Retrieve Stored providing Employee Role Id
+            </summary>
+            <param name="id">Employee Id the Request Index for Retrieval</param>
+            <param name="fields">Fiends to be filtered with for the returned Employee</param>
+            <remarks>Retrieve Employee Role providing Id and [Optional] fields</remarks>
+            <response code="200">Resource retrieved correctly</response>
+            <response code="404">Resource Not Found</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
+        <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.EmployeesController.GetEmployeesAsync(dl.wm.suite.common.infrastructure.Helpers.ResourceParameters.EmployeesResourceParameters,System.String)">
+            <summary>
+            Get : Retrieve All/or Partial Paged Stored Employees 
+            </summary>
+            <remarks>Retrieve paged Employees providing Paging Query</remarks>
+            <response code="200">Resource retrieved correctly.</response>
+            <response code="500">Internal Server Error.</response>
+        </member>
         <member name="M:dl.wm.suite.cms.api.Controllers.API.V1.ToursController.PostTourRouteAsync(dl.wm.suite.common.dtos.Vms.Tours.TourForCreationUiModel)">
             <summary>
             POST : Create a New Tour.

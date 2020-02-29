@@ -1,4 +1,6 @@
-﻿namespace dl.wm.presenter.UriBuilders.ApiFactories
+﻿using dl.wm.presenter.UriBuilders.ApiFactories.Base;
+
+namespace dl.wm.presenter.UriBuilders.ApiFactories
 {
     public class DashboardUriAddr : BaseClientUri
     {
