@@ -1,7 +1,7 @@
 ﻿using System;
 using dl.wm.suite.ui.Controls;
 
-namespace dl.wm.suite.ui.Views.FlyOuts
+namespace dl.wm.suite.ui.Views.FlyOuts.AddEditEmployee
 {
     public partial class UcFlyEvtAddNewEditEmployeeManagement : BaseModule
     {

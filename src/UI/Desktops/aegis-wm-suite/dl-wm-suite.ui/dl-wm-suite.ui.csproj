@@ -245,10 +245,10 @@
     <Compile Include="Views\FlyOuts\UcFlyOnDemandCommand.Designer.cs">
       <DependentUpon>UcFlyOnDemandCommand.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FlyOuts\UcFlyEvtAddNewEditEmployeeManagement.cs">
+    <Compile Include="Views\FlyOuts\AddEditEmployee\UcFlyEvtAddNewEditEmployeeManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\FlyOuts\UcFlyEvtAddNewEditEmployeeManagement.Designer.cs">
+    <Compile Include="Views\FlyOuts\AddEditEmployee\UcFlyEvtAddNewEditEmployeeManagement.Designer.cs">
       <DependentUpon>UcFlyEvtAddNewEditEmployeeManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Helpers\DashboardCustomClusterFactory.cs" />
@@ -413,7 +413,7 @@
     <EmbeddedResource Include="Views\FlyOuts\UcFlyOnDemandCommand.resx">
       <DependentUpon>UcFlyOnDemandCommand.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FlyOuts\UcFlyEvtAddNewEditEmployeeManagement.resx">
+    <EmbeddedResource Include="Views\FlyOuts\AddEditEmployee\UcFlyEvtAddNewEditEmployeeManagement.resx">
       <DependentUpon>UcFlyEvtAddNewEditEmployeeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Modules\UcAccount.resx">
@@ -486,6 +486,18 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8_gender_161.png" />
+    <None Include="Resources\icons8_hashtag_large_165.png" />
+    <None Include="Resources\icons8_administrator_male_161.png" />
+    <None Include="Resources\icons8_phone2_16.png" />
+    <None Include="Resources\icons8_telephone_16.png" />
+    <None Include="Resources\icons8_zip_code_161.png" />
+    <None Include="Resources\icons8_email_162.png" />
+    <None Include="Resources\icons8_identification_documents_165.png" />
+    <None Include="Resources\icons8_identification_documents2_165.png" />
+    <None Include="Resources\icons8_worker_321.png" />
+    <None Include="Resources\info_323.png" />
+    <None Include="Resources\info_322.png" />
     <None Include="Resources\icons8_text_box_16.png" />
     <None Include="Resources\icons8_text_box_32.png" />
     <None Include="Resources\icons8_leather_16.png" />

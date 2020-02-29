@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using dl.wm.models.DTOs.Users;
 using dl.wm.suite.ui.Controls;
-using dl.wm.suite.ui.Views.FlyOuts;
 using dl.wm.suite.ui.Views.FlyOuts.AddEditContainer;
 using dl.wm.suite.ui.Views.FlyOuts.AddEditRole;
 using dl.wm.suite.ui.Views.FlyOuts.AddEditUser;
@@ -11,6 +10,7 @@ using DevExpress.XtraBars.Docking2010.Views;
 using DevExpress.XtraBars.Docking2010.Views.WindowsUI;
 using DevExpress.XtraEditors;
 using dl.wm.presenter.Mqtt;
+using dl.wm.suite.ui.Views.FlyOuts.AddEditEmployee;
 
 namespace dl.wm.suite.ui
 {

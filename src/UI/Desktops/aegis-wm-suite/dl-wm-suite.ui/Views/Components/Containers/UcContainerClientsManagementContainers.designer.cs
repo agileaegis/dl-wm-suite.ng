@@ -334,6 +334,8 @@
             // 
             // gcContainers
             // 
+            this.gcContainers.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gcContainers.EmbeddedNavigator.Appearance.Options.UseFont = true;
             this.gcContainers.EmbeddedNavigator.Buttons.Append.Enabled = false;
             this.gcContainers.EmbeddedNavigator.Buttons.Append.Visible = false;
             this.gcContainers.EmbeddedNavigator.Buttons.CancelEdit.Enabled = false;

@@ -276,7 +276,7 @@
             this.btnManagementSaveRegisteredEmployee.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.btnManagementSaveRegisteredEmployee.Appearance.Options.UseFont = true;
             this.btnManagementSaveRegisteredEmployee.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_save_322;
-            this.btnManagementSaveRegisteredEmployee.Location = new System.Drawing.Point(1121, 117);
+            this.btnManagementSaveRegisteredEmployee.Location = new System.Drawing.Point(1121, 112);
             this.btnManagementSaveRegisteredEmployee.Name = "btnManagementSaveRegisteredEmployee";
             this.btnManagementSaveRegisteredEmployee.Size = new System.Drawing.Size(276, 38);
             this.btnManagementSaveRegisteredEmployee.StyleController = this.layCntrlDicomClientsGroupContainer;
@@ -287,7 +287,7 @@
             // 
             this.btnEvtManagementUnregisterEmployee.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_back_to_32;
             this.btnEvtManagementUnregisterEmployee.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnEvtManagementUnregisterEmployee.Location = new System.Drawing.Point(760, 313);
+            this.btnEvtManagementUnregisterEmployee.Location = new System.Drawing.Point(760, 305);
             this.btnEvtManagementUnregisterEmployee.MaximumSize = new System.Drawing.Size(40, 40);
             this.btnEvtManagementUnregisterEmployee.MinimumSize = new System.Drawing.Size(40, 40);
             this.btnEvtManagementUnregisterEmployee.Name = "btnEvtManagementUnregisterEmployee";
@@ -299,7 +299,7 @@
             // 
             this.btnEvtManagementRegisterEmployee.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_next_page_32;
             this.btnEvtManagementRegisterEmployee.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnEvtManagementRegisterEmployee.Location = new System.Drawing.Point(760, 269);
+            this.btnEvtManagementRegisterEmployee.Location = new System.Drawing.Point(760, 261);
             this.btnEvtManagementRegisterEmployee.MaximumSize = new System.Drawing.Size(40, 40);
             this.btnEvtManagementRegisterEmployee.MinimumSize = new System.Drawing.Size(40, 40);
             this.btnEvtManagementRegisterEmployee.Name = "btnEvtManagementRegisterEmployee";
@@ -520,16 +520,19 @@
             // 
             // gcAdvBndManagementEmployeeTours
             // 
+            this.gcAdvBndManagementEmployeeTours.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gcAdvBndManagementEmployeeTours.EmbeddedNavigator.Appearance.Options.UseFont = true;
             this.gcAdvBndManagementEmployeeTours.EmbeddedNavigator.Buttons.Append.Visible = false;
             this.gcAdvBndManagementEmployeeTours.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
             this.gcAdvBndManagementEmployeeTours.EmbeddedNavigator.Buttons.Edit.Visible = false;
             this.gcAdvBndManagementEmployeeTours.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
             this.gcAdvBndManagementEmployeeTours.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.gcAdvBndManagementEmployeeTours.EmbeddedNavigator.TextStringFormat = "Διαδρομή {0} από {1}";
-            this.gcAdvBndManagementEmployeeTours.Location = new System.Drawing.Point(2, 257);
+            this.gcAdvBndManagementEmployeeTours.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gcAdvBndManagementEmployeeTours.Location = new System.Drawing.Point(2, 254);
             this.gcAdvBndManagementEmployeeTours.MainView = this.gvAdvBndManagementEmployeeTours;
             this.gcAdvBndManagementEmployeeTours.Name = "gcAdvBndManagementEmployeeTours";
-            this.gcAdvBndManagementEmployeeTours.Size = new System.Drawing.Size(426, 575);
+            this.gcAdvBndManagementEmployeeTours.Size = new System.Drawing.Size(426, 578);
             this.gcAdvBndManagementEmployeeTours.TabIndex = 13;
             this.gcAdvBndManagementEmployeeTours.UseEmbeddedNavigator = true;
             this.gcAdvBndManagementEmployeeTours.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -722,7 +725,7 @@
             this.dateNavigator1.FirstDayOfWeek = System.DayOfWeek.Sunday;
             this.dateNavigator1.Location = new System.Drawing.Point(2, 2);
             this.dateNavigator1.Name = "dateNavigator1";
-            this.dateNavigator1.Size = new System.Drawing.Size(426, 246);
+            this.dateNavigator1.Size = new System.Drawing.Size(426, 243);
             this.dateNavigator1.StyleController = this.layCntrlDicomClientsGroupContainer;
             this.dateNavigator1.TabIndex = 4;
             // 
@@ -763,7 +766,7 @@
             this.layoutControlItem2.Control = this.dateNavigator1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(430, 250);
+            this.layoutControlItem2.Size = new System.Drawing.Size(430, 247);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -777,9 +780,9 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.gcAdvBndManagementEmployeeTours;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 255);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 252);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(430, 579);
+            this.layoutControlItem4.Size = new System.Drawing.Size(430, 582);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -806,21 +809,21 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(758, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(44, 267);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(44, 259);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(758, 355);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(758, 347);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(44, 479);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(44, 487);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnEvtManagementRegisterEmployee;
-            this.layoutControlItem7.Location = new System.Drawing.Point(758, 267);
+            this.layoutControlItem7.Location = new System.Drawing.Point(758, 259);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(44, 44);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -829,7 +832,7 @@
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnEvtManagementUnregisterEmployee;
-            this.layoutControlItem8.Location = new System.Drawing.Point(758, 311);
+            this.layoutControlItem8.Location = new System.Drawing.Point(758, 303);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(44, 44);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
@@ -838,14 +841,14 @@
             // splitterItem2
             // 
             this.splitterItem2.AllowHotTrack = true;
-            this.splitterItem2.Location = new System.Drawing.Point(0, 250);
+            this.splitterItem2.Location = new System.Drawing.Point(0, 247);
             this.splitterItem2.Name = "splitterItem2";
             this.splitterItem2.Size = new System.Drawing.Size(430, 5);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnManagementSaveRegisteredEmployee;
-            this.layoutControlItem9.Location = new System.Drawing.Point(1119, 115);
+            this.layoutControlItem9.Location = new System.Drawing.Point(1119, 110);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(280, 42);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
@@ -899,7 +902,7 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(1119, 100);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(280, 15);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(280, 10);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem13
@@ -939,9 +942,9 @@
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(1119, 157);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(1119, 152);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(280, 677);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(280, 682);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // laytCntrlGrpDicomClientsContainer

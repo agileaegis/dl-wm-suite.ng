@@ -28,46 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcClientsEmployees));
             this.layCntrlClientsEmployeesContainer = new DevExpress.XtraLayout.LayoutControl();
             this.grpCntrlClientsEmployeesGroupContainer = new DevExpress.XtraEditors.GroupControl();
             this.layCntrlClientsEmployeesGroupContainer = new DevExpress.XtraLayout.LayoutControl();
+            this.gcAdvBndEvtEmployees = new DevExpress.XtraGrid.GridControl();
+            this.gvAdvBndEvtEmployees = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
+            this.gdClmManagementEmployeeEmployId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeFirstName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeLastname = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeEmail = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeGender = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeStatus = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeEmployeeRole = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeRoleId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeAddress1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeAddress2 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeCity = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeePostcode = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeePhone = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeMobile = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gdClmEmployeeManagementEmployeeDepartmentId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.btnEvtRemoveEmployee = new DevExpress.XtraEditors.SimpleButton();
             this.btnEvtEditEmployee = new DevExpress.XtraEditors.SimpleButton();
             this.btnEvtAddEmployee = new DevExpress.XtraEditors.SimpleButton();
-            this.gcEvtEmployees = new DevExpress.XtraGrid.GridControl();
-            this.gvEvtEmployees = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layCntrlGrpDicomClientsGroupContainer = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.laytCntrlGrpDicomClientsContainer = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.repoItmImgeCombEmployeeRole = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.repoItmImgeCombEmployeeGender = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.repoItmImgeCombEmployeeStatus = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.repoItmImgeCombEmployeeDepartment = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gbClmManagementEmployeeInfos = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gbClmManagementEmployeeAddress = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gbClmManagementEmployeeInformation = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlClientsEmployeesContainer)).BeginInit();
             this.layCntrlClientsEmployeesContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpCntrlClientsEmployeesGroupContainer)).BeginInit();
             this.grpCntrlClientsEmployeesGroupContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlClientsEmployeesGroupContainer)).BeginInit();
             this.layCntrlClientsEmployeesGroupContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcEvtEmployees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvEvtEmployees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcAdvBndEvtEmployees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAdvBndEvtEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDicomClientsGroupContainer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.laytCntrlGrpDicomClientsContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeGender)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeDepartment)).BeginInit();
             this.SuspendLayout();
             // 
             // layCntrlClientsEmployeesContainer
@@ -96,10 +115,10 @@
             // 
             // layCntrlClientsEmployeesGroupContainer
             // 
+            this.layCntrlClientsEmployeesGroupContainer.Controls.Add(this.gcAdvBndEvtEmployees);
             this.layCntrlClientsEmployeesGroupContainer.Controls.Add(this.btnEvtRemoveEmployee);
             this.layCntrlClientsEmployeesGroupContainer.Controls.Add(this.btnEvtEditEmployee);
             this.layCntrlClientsEmployeesGroupContainer.Controls.Add(this.btnEvtAddEmployee);
-            this.layCntrlClientsEmployeesGroupContainer.Controls.Add(this.gcEvtEmployees);
             this.layCntrlClientsEmployeesGroupContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layCntrlClientsEmployeesGroupContainer.Location = new System.Drawing.Point(2, 21);
             this.layCntrlClientsEmployeesGroupContainer.Name = "layCntrlClientsEmployeesGroupContainer";
@@ -107,6 +126,294 @@
             this.layCntrlClientsEmployeesGroupContainer.Size = new System.Drawing.Size(1357, 741);
             this.layCntrlClientsEmployeesGroupContainer.TabIndex = 0;
             this.layCntrlClientsEmployeesGroupContainer.Text = "layoutControl1";
+            // 
+            // gcAdvBndEvtEmployees
+            // 
+            this.gcAdvBndEvtEmployees.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gcAdvBndEvtEmployees.EmbeddedNavigator.Appearance.Options.UseFont = true;
+            this.gcAdvBndEvtEmployees.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gcAdvBndEvtEmployees.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gcAdvBndEvtEmployees.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gcAdvBndEvtEmployees.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gcAdvBndEvtEmployees.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.gcAdvBndEvtEmployees.EmbeddedNavigator.TextStringFormat = "Εργαζόμενος {0} από {1}";
+            this.gcAdvBndEvtEmployees.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gcAdvBndEvtEmployees.Location = new System.Drawing.Point(2, 44);
+            this.gcAdvBndEvtEmployees.MainView = this.gvAdvBndEvtEmployees;
+            this.gcAdvBndEvtEmployees.Name = "gcAdvBndEvtEmployees";
+            this.gcAdvBndEvtEmployees.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repoItmImgeCombEmployeeRole,
+            this.repoItmImgeCombEmployeeGender,
+            this.repoItmImgeCombEmployeeStatus,
+            this.repoItmImgeCombEmployeeDepartment});
+            this.gcAdvBndEvtEmployees.Size = new System.Drawing.Size(1353, 695);
+            this.gcAdvBndEvtEmployees.TabIndex = 14;
+            this.gcAdvBndEvtEmployees.UseEmbeddedNavigator = true;
+            this.gcAdvBndEvtEmployees.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvAdvBndEvtEmployees});
+            // 
+            // gvAdvBndEvtEmployees
+            // 
+            this.gvAdvBndEvtEmployees.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gbClmManagementEmployeeInfos,
+            this.gbClmManagementEmployeeAddress,
+            this.gbClmManagementEmployeeInformation});
+            this.gvAdvBndEvtEmployees.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
+            this.gdClmManagementEmployeeEmployId,
+            this.gdClmEmployeeManagementEmployeeLastname,
+            this.gdClmEmployeeManagementEmployeeFirstName,
+            this.gdClmEmployeeManagementEmployeeEmail,
+            this.gdClmEmployeeManagementEmployeeRoleId,
+            this.gdClmEmployeeManagementEmployeeDepartmentId,
+            this.gdClmEmployeeManagementEmployeeStatus,
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment,
+            this.gdClmEmployeeManagementEmployeeEmployeeRole,
+            this.gdClmEmployeeManagementEmployeeGender,
+            this.gdClmEmployeeManagementEmployeeAddress1,
+            this.gdClmEmployeeManagementEmployeeAddress2,
+            this.gdClmEmployeeManagementEmployeeCity,
+            this.gdClmEmployeeManagementEmployeePostcode,
+            this.gdClmEmployeeManagementEmployeePhone,
+            this.gdClmEmployeeManagementEmployeeMobile});
+            this.gvAdvBndEvtEmployees.GridControl = this.gcAdvBndEvtEmployees;
+            this.gvAdvBndEvtEmployees.Name = "gvAdvBndEvtEmployees";
+            this.gvAdvBndEvtEmployees.OptionsBehavior.AllowPixelScrolling = DevExpress.Utils.DefaultBoolean.True;
+            this.gvAdvBndEvtEmployees.OptionsBehavior.AutoExpandAllGroups = true;
+            this.gvAdvBndEvtEmployees.OptionsClipboard.ClipboardMode = DevExpress.Export.ClipboardMode.Formatted;
+            this.gvAdvBndEvtEmployees.OptionsDetail.EnableMasterViewMode = false;
+            this.gvAdvBndEvtEmployees.OptionsFilter.ColumnFilterPopupMode = DevExpress.XtraGrid.Columns.ColumnFilterPopupMode.Excel;
+            this.gvAdvBndEvtEmployees.OptionsNavigation.AutoFocusNewRow = true;
+            this.gvAdvBndEvtEmployees.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateFocusedItem;
+            this.gvAdvBndEvtEmployees.OptionsView.EnableAppearanceEvenRow = true;
+            this.gvAdvBndEvtEmployees.OptionsView.EnableAppearanceOddRow = true;
+            this.gvAdvBndEvtEmployees.OptionsView.ShowAutoFilterRow = true;
+            this.gvAdvBndEvtEmployees.OptionsView.ShowGroupPanel = false;
+            // 
+            // gdClmManagementEmployeeEmployId
+            // 
+            this.gdClmManagementEmployeeEmployId.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmManagementEmployeeEmployId.AppearanceCell.Options.UseFont = true;
+            this.gdClmManagementEmployeeEmployId.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmManagementEmployeeEmployId.AppearanceHeader.Options.UseFont = true;
+            this.gdClmManagementEmployeeEmployId.Caption = "TourId";
+            this.gdClmManagementEmployeeEmployId.FieldName = "EmployeeId";
+            this.gdClmManagementEmployeeEmployId.Name = "gdClmManagementEmployeeEmployId";
+            this.gdClmManagementEmployeeEmployId.OptionsColumn.AllowEdit = false;
+            this.gdClmManagementEmployeeEmployId.OptionsColumn.AllowMove = false;
+            this.gdClmManagementEmployeeEmployId.OptionsColumn.ReadOnly = true;
+            this.gdClmManagementEmployeeEmployId.OptionsFilter.PopupExcelFilterDefaultTab = DevExpress.XtraGrid.Columns.ExcelFilterDefaultTab.Filters;
+            this.gdClmManagementEmployeeEmployId.OptionsFilter.PopupExcelFilterEnumFilters = DevExpress.XtraGrid.Columns.ExcelFilterEnumFilters.AllFilters;
+            this.gdClmManagementEmployeeEmployId.Width = 84;
+            // 
+            // gdClmEmployeeManagementEmployeeFirstName
+            // 
+            this.gdClmEmployeeManagementEmployeeFirstName.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeFirstName.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeFirstName.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeFirstName.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeFirstName.Caption = "Όνομα";
+            this.gdClmEmployeeManagementEmployeeFirstName.FieldName = "EmployeeFirstName";
+            this.gdClmEmployeeManagementEmployeeFirstName.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_identification_documents2_165;
+            this.gdClmEmployeeManagementEmployeeFirstName.Name = "gdClmEmployeeManagementEmployeeFirstName";
+            this.gdClmEmployeeManagementEmployeeFirstName.OptionsColumn.AllowEdit = false;
+            this.gdClmEmployeeManagementEmployeeFirstName.OptionsColumn.AllowMove = false;
+            this.gdClmEmployeeManagementEmployeeFirstName.OptionsColumn.ReadOnly = true;
+            this.gdClmEmployeeManagementEmployeeFirstName.OptionsFilter.PopupExcelFilterDefaultTab = DevExpress.XtraGrid.Columns.ExcelFilterDefaultTab.Filters;
+            this.gdClmEmployeeManagementEmployeeFirstName.OptionsFilter.PopupExcelFilterEnumFilters = DevExpress.XtraGrid.Columns.ExcelFilterEnumFilters.AllFilters;
+            this.gdClmEmployeeManagementEmployeeFirstName.Visible = true;
+            this.gdClmEmployeeManagementEmployeeFirstName.Width = 106;
+            // 
+            // gdClmEmployeeManagementEmployeeLastname
+            // 
+            this.gdClmEmployeeManagementEmployeeLastname.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeLastname.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeLastname.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeLastname.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeLastname.Caption = "Επώνυμο";
+            this.gdClmEmployeeManagementEmployeeLastname.FieldName = "EmployeeLastName";
+            this.gdClmEmployeeManagementEmployeeLastname.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_identification_documents_165;
+            this.gdClmEmployeeManagementEmployeeLastname.Name = "gdClmEmployeeManagementEmployeeLastname";
+            this.gdClmEmployeeManagementEmployeeLastname.OptionsColumn.AllowEdit = false;
+            this.gdClmEmployeeManagementEmployeeLastname.OptionsColumn.AllowMove = false;
+            this.gdClmEmployeeManagementEmployeeLastname.OptionsColumn.ReadOnly = true;
+            this.gdClmEmployeeManagementEmployeeLastname.OptionsFilter.PopupExcelFilterDefaultTab = DevExpress.XtraGrid.Columns.ExcelFilterDefaultTab.Filters;
+            this.gdClmEmployeeManagementEmployeeLastname.OptionsFilter.PopupExcelFilterEnumFilters = DevExpress.XtraGrid.Columns.ExcelFilterEnumFilters.AllFilters;
+            this.gdClmEmployeeManagementEmployeeLastname.Visible = true;
+            this.gdClmEmployeeManagementEmployeeLastname.Width = 165;
+            // 
+            // gdClmEmployeeManagementEmployeeEmail
+            // 
+            this.gdClmEmployeeManagementEmployeeEmail.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeEmail.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeEmail.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeEmail.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeEmail.Caption = "Email";
+            this.gdClmEmployeeManagementEmployeeEmail.FieldName = "EmployeeEmail";
+            this.gdClmEmployeeManagementEmployeeEmail.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_email_162;
+            this.gdClmEmployeeManagementEmployeeEmail.Name = "gdClmEmployeeManagementEmployeeEmail";
+            this.gdClmEmployeeManagementEmployeeEmail.OptionsColumn.AllowEdit = false;
+            this.gdClmEmployeeManagementEmployeeEmail.OptionsColumn.AllowMove = false;
+            this.gdClmEmployeeManagementEmployeeEmail.OptionsColumn.ReadOnly = true;
+            this.gdClmEmployeeManagementEmployeeEmail.OptionsFilter.PopupExcelFilterDefaultTab = DevExpress.XtraGrid.Columns.ExcelFilterDefaultTab.Filters;
+            this.gdClmEmployeeManagementEmployeeEmail.OptionsFilter.PopupExcelFilterEnumFilters = DevExpress.XtraGrid.Columns.ExcelFilterEnumFilters.AllFilters;
+            this.gdClmEmployeeManagementEmployeeEmail.Visible = true;
+            this.gdClmEmployeeManagementEmployeeEmail.Width = 157;
+            // 
+            // gdClmEmployeeManagementEmployeeGender
+            // 
+            this.gdClmEmployeeManagementEmployeeGender.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeGender.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeGender.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeGender.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeGender.Caption = "Φύλο";
+            this.gdClmEmployeeManagementEmployeeGender.ColumnEdit = this.repoItmImgeCombEmployeeGender;
+            this.gdClmEmployeeManagementEmployeeGender.FieldName = "EmployeeGender";
+            this.gdClmEmployeeManagementEmployeeGender.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_gender_161;
+            this.gdClmEmployeeManagementEmployeeGender.Name = "gdClmEmployeeManagementEmployeeGender";
+            this.gdClmEmployeeManagementEmployeeGender.OptionsColumn.AllowEdit = false;
+            this.gdClmEmployeeManagementEmployeeGender.OptionsColumn.AllowMove = false;
+            this.gdClmEmployeeManagementEmployeeGender.OptionsColumn.ReadOnly = true;
+            this.gdClmEmployeeManagementEmployeeGender.OptionsFilter.PopupExcelFilterDefaultTab = DevExpress.XtraGrid.Columns.ExcelFilterDefaultTab.Filters;
+            this.gdClmEmployeeManagementEmployeeGender.OptionsFilter.PopupExcelFilterEnumFilters = DevExpress.XtraGrid.Columns.ExcelFilterEnumFilters.AllFilters;
+            this.gdClmEmployeeManagementEmployeeGender.Visible = true;
+            this.gdClmEmployeeManagementEmployeeGender.Width = 96;
+            // 
+            // gdClmEmployeeManagementEmployeeStatus
+            // 
+            this.gdClmEmployeeManagementEmployeeStatus.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeStatus.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeStatus.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeStatus.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeStatus.Caption = "Κατάσταση";
+            this.gdClmEmployeeManagementEmployeeStatus.ColumnEdit = this.repoItmImgeCombEmployeeStatus;
+            this.gdClmEmployeeManagementEmployeeStatus.FieldName = "EmployeeStatus";
+            this.gdClmEmployeeManagementEmployeeStatus.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_hashtag_large_165;
+            this.gdClmEmployeeManagementEmployeeStatus.Name = "gdClmEmployeeManagementEmployeeStatus";
+            this.gdClmEmployeeManagementEmployeeStatus.OptionsColumn.AllowEdit = false;
+            this.gdClmEmployeeManagementEmployeeStatus.OptionsColumn.AllowMove = false;
+            this.gdClmEmployeeManagementEmployeeStatus.OptionsColumn.ReadOnly = true;
+            this.gdClmEmployeeManagementEmployeeStatus.OptionsFilter.PopupExcelFilterDefaultTab = DevExpress.XtraGrid.Columns.ExcelFilterDefaultTab.Filters;
+            this.gdClmEmployeeManagementEmployeeStatus.OptionsFilter.PopupExcelFilterEnumFilters = DevExpress.XtraGrid.Columns.ExcelFilterEnumFilters.AllFilters;
+            this.gdClmEmployeeManagementEmployeeStatus.RowIndex = 1;
+            this.gdClmEmployeeManagementEmployeeStatus.Visible = true;
+            this.gdClmEmployeeManagementEmployeeStatus.Width = 185;
+            // 
+            // gdClmEmployeeManagementEmployeeEmployeeRole
+            // 
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.Caption = "Ρόλος";
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.ColumnEdit = this.repoItmImgeCombEmployeeRole;
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.FieldName = "EmployeeEmployeeRole.EmployeeRole";
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_administrator_male_161;
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.Name = "gdClmEmployeeManagementEmployeeEmployeeRole";
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.RowIndex = 1;
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.Visible = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeRole.Width = 195;
+            // 
+            // gdClmEmployeeManagementEmployeeRoleId
+            // 
+            this.gdClmEmployeeManagementEmployeeRoleId.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeRoleId.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeRoleId.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gdClmEmployeeManagementEmployeeRoleId.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeRoleId.Caption = "EmployeeRoleId";
+            this.gdClmEmployeeManagementEmployeeRoleId.FieldName = "EmployeeEmployeeRole.Id";
+            this.gdClmEmployeeManagementEmployeeRoleId.Name = "gdClmEmployeeManagementEmployeeRoleId";
+            this.gdClmEmployeeManagementEmployeeRoleId.OptionsColumn.AllowEdit = false;
+            this.gdClmEmployeeManagementEmployeeRoleId.OptionsColumn.AllowMove = false;
+            this.gdClmEmployeeManagementEmployeeRoleId.OptionsColumn.ReadOnly = true;
+            this.gdClmEmployeeManagementEmployeeRoleId.OptionsFilter.PopupExcelFilterDefaultTab = DevExpress.XtraGrid.Columns.ExcelFilterDefaultTab.Filters;
+            this.gdClmEmployeeManagementEmployeeRoleId.OptionsFilter.PopupExcelFilterEnumFilters = DevExpress.XtraGrid.Columns.ExcelFilterEnumFilters.AllFilters;
+            // 
+            // gdClmEmployeeManagementEmployeeAddress1
+            // 
+            this.gdClmEmployeeManagementEmployeeAddress1.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeAddress1.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeAddress1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeAddress1.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeAddress1.Caption = "Διεύθυνση 1";
+            this.gdClmEmployeeManagementEmployeeAddress1.FieldName = "EmployeeAddreesOne";
+            this.gdClmEmployeeManagementEmployeeAddress1.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_home_address_16;
+            this.gdClmEmployeeManagementEmployeeAddress1.Name = "gdClmEmployeeManagementEmployeeAddress1";
+            this.gdClmEmployeeManagementEmployeeAddress1.Visible = true;
+            this.gdClmEmployeeManagementEmployeeAddress1.Width = 207;
+            // 
+            // gdClmEmployeeManagementEmployeeAddress2
+            // 
+            this.gdClmEmployeeManagementEmployeeAddress2.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeAddress2.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeAddress2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeAddress2.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeAddress2.Caption = "Διεύθυνση 2";
+            this.gdClmEmployeeManagementEmployeeAddress2.FieldName = "EmployeeAddressTwo";
+            this.gdClmEmployeeManagementEmployeeAddress2.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_home_address2_16;
+            this.gdClmEmployeeManagementEmployeeAddress2.Name = "gdClmEmployeeManagementEmployeeAddress2";
+            this.gdClmEmployeeManagementEmployeeAddress2.Visible = true;
+            this.gdClmEmployeeManagementEmployeeAddress2.Width = 214;
+            // 
+            // gdClmEmployeeManagementEmployeeCity
+            // 
+            this.gdClmEmployeeManagementEmployeeCity.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeCity.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeCity.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeCity.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeCity.Caption = "Πόλη";
+            this.gdClmEmployeeManagementEmployeeCity.FieldName = "EmployeeCity";
+            this.gdClmEmployeeManagementEmployeeCity.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_company_161;
+            this.gdClmEmployeeManagementEmployeeCity.Name = "gdClmEmployeeManagementEmployeeCity";
+            this.gdClmEmployeeManagementEmployeeCity.RowIndex = 1;
+            this.gdClmEmployeeManagementEmployeeCity.Visible = true;
+            this.gdClmEmployeeManagementEmployeeCity.Width = 228;
+            // 
+            // gdClmEmployeeManagementEmployeePostcode
+            // 
+            this.gdClmEmployeeManagementEmployeePostcode.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeePostcode.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeePostcode.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeePostcode.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeePostcode.Caption = "Ταχ.Κώδικας";
+            this.gdClmEmployeeManagementEmployeePostcode.FieldName = "EmployeePostcode";
+            this.gdClmEmployeeManagementEmployeePostcode.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_zip_code_161;
+            this.gdClmEmployeeManagementEmployeePostcode.Name = "gdClmEmployeeManagementEmployeePostcode";
+            this.gdClmEmployeeManagementEmployeePostcode.RowIndex = 1;
+            this.gdClmEmployeeManagementEmployeePostcode.Visible = true;
+            this.gdClmEmployeeManagementEmployeePostcode.Width = 193;
+            // 
+            // gdClmEmployeeManagementEmployeePhone
+            // 
+            this.gdClmEmployeeManagementEmployeePhone.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeePhone.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeePhone.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeePhone.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeePhone.Caption = "Τηλέφωνο - Σταθερό";
+            this.gdClmEmployeeManagementEmployeePhone.FieldName = "EmployeePhone";
+            this.gdClmEmployeeManagementEmployeePhone.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_telephone_16;
+            this.gdClmEmployeeManagementEmployeePhone.Name = "gdClmEmployeeManagementEmployeePhone";
+            this.gdClmEmployeeManagementEmployeePhone.Visible = true;
+            this.gdClmEmployeeManagementEmployeePhone.Width = 318;
+            // 
+            // gdClmEmployeeManagementEmployeeMobile
+            // 
+            this.gdClmEmployeeManagementEmployeeMobile.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeMobile.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeMobile.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeMobile.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeMobile.Caption = "Τηλέφωνο - Κινητό";
+            this.gdClmEmployeeManagementEmployeeMobile.FieldName = "EmployeeMobile";
+            this.gdClmEmployeeManagementEmployeeMobile.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_phone2_16;
+            this.gdClmEmployeeManagementEmployeeMobile.Name = "gdClmEmployeeManagementEmployeeMobile";
+            this.gdClmEmployeeManagementEmployeeMobile.RowIndex = 1;
+            this.gdClmEmployeeManagementEmployeeMobile.Visible = true;
+            this.gdClmEmployeeManagementEmployeeMobile.Width = 318;
+            // 
+            // gdClmEmployeeManagementEmployeeDepartmentId
+            // 
+            this.gdClmEmployeeManagementEmployeeDepartmentId.Caption = "EmployeeDepartmentId";
+            this.gdClmEmployeeManagementEmployeeDepartmentId.FieldName = "EmployeeEmployeeDepartment.Id";
+            this.gdClmEmployeeManagementEmployeeDepartmentId.Name = "gdClmEmployeeManagementEmployeeDepartmentId";
             // 
             // btnEvtRemoveEmployee
             // 
@@ -146,111 +453,20 @@
             this.btnEvtAddEmployee.Text = " ";
             this.btnEvtAddEmployee.Click += new System.EventHandler(this.BtnEvtAddEmployeeClick);
             // 
-            // gcEvtEmployees
-            // 
-            this.gcEvtEmployees.Location = new System.Drawing.Point(2, 44);
-            this.gcEvtEmployees.MainView = this.gvEvtEmployees;
-            this.gcEvtEmployees.Name = "gcEvtEmployees";
-            this.gcEvtEmployees.Size = new System.Drawing.Size(1353, 695);
-            this.gcEvtEmployees.TabIndex = 4;
-            this.gcEvtEmployees.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvEvtEmployees});
-            // 
-            // gvEvtEmployees
-            // 
-            this.gvEvtEmployees.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7});
-            this.gvEvtEmployees.GridControl = this.gcEvtEmployees;
-            this.gvEvtEmployees.Name = "gvEvtEmployees";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Id";
-            this.gridColumn1.Name = "gridColumn1";
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gridColumn2.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn2.Caption = "Όνομα";
-            this.gridColumn2.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_identification_documents2_161;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 0;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.Caption = "Επώνυμο";
-            this.gridColumn3.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_identification_documents_162;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 1;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.gridColumn4.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn4.Caption = "Email";
-            this.gridColumn4.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_email_161;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 2;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Decription";
-            this.gridColumn5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn5.ImageOptions.Image")));
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Timeouts (s)";
-            this.gridColumn6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn6.ImageOptions.Image")));
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Viewer Path";
-            this.gridColumn7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn7.ImageOptions.Image")));
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 5;
-            // 
             // layCntrlGrpDicomClientsGroupContainer
             // 
             this.layCntrlGrpDicomClientsGroupContainer.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layCntrlGrpDicomClientsGroupContainer.GroupBordersVisible = false;
             this.layCntrlGrpDicomClientsGroupContainer.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem2,
             this.emptySpaceItem2,
             this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6});
+            this.layoutControlItem6,
+            this.layoutControlItem7});
             this.layCntrlGrpDicomClientsGroupContainer.Name = "layCntrlGrpDicomClientsGroupContainer";
             this.layCntrlGrpDicomClientsGroupContainer.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.layCntrlGrpDicomClientsGroupContainer.Size = new System.Drawing.Size(1357, 741);
             this.layCntrlGrpDicomClientsGroupContainer.TextVisible = false;
-            // 
-            // layoutControlItem2
-            // 
-            this.layoutControlItem2.Control = this.gcEvtEmployees;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 42);
-            this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1357, 699);
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem2.TextVisible = false;
             // 
             // emptySpaceItem2
             // 
@@ -287,6 +503,15 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.gcAdvBndEvtEmployees;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 42);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(1357, 699);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
             // laytCntrlGrpDicomClientsContainer
             // 
             this.laytCntrlGrpDicomClientsContainer.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -307,6 +532,96 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
+            // repoItmImgeCombEmployeeRole
+            // 
+            this.repoItmImgeCombEmployeeRole.AutoHeight = false;
+            this.repoItmImgeCombEmployeeRole.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmImgeCombEmployeeRole.Name = "repoItmImgeCombEmployeeRole";
+            // 
+            // repoItmImgeCombEmployeeGender
+            // 
+            this.repoItmImgeCombEmployeeGender.AutoHeight = false;
+            this.repoItmImgeCombEmployeeGender.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmImgeCombEmployeeGender.Name = "repoItmImgeCombEmployeeGender";
+            // 
+            // repoItmImgeCombEmployeeStatus
+            // 
+            this.repoItmImgeCombEmployeeStatus.AutoHeight = false;
+            this.repoItmImgeCombEmployeeStatus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmImgeCombEmployeeStatus.Name = "repoItmImgeCombEmployeeStatus";
+            // 
+            // repoItmImgeCombEmployeeDepartment
+            // 
+            this.repoItmImgeCombEmployeeDepartment.AutoHeight = false;
+            this.repoItmImgeCombEmployeeDepartment.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repoItmImgeCombEmployeeDepartment.Name = "repoItmImgeCombEmployeeDepartment";
+            // 
+            // gdClmEmployeeManagementEmployeeEmployeeDepartment
+            // 
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceCell.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.AppearanceHeader.Options.UseFont = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Caption = "Τμήμα";
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.ColumnEdit = this.repoItmImgeCombEmployeeDepartment;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.FieldName = "EmployeeEmployeeDepartment.EmployeeDepartment";
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_department2_16;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Name = "gdClmEmployeeManagementEmployeeEmployeeDepartment";
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.RowIndex = 1;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Visible = true;
+            this.gdClmEmployeeManagementEmployeeEmployeeDepartment.Width = 144;
+            // 
+            // gbClmManagementEmployeeInfos
+            // 
+            this.gbClmManagementEmployeeInfos.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbClmManagementEmployeeInfos.AppearanceHeader.Options.UseFont = true;
+            this.gbClmManagementEmployeeInfos.Caption = "Εργαζόμενος";
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmManagementEmployeeEmployId);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeFirstName);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeLastname);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmail);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeGender);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmployeeDepartment);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeStatus);
+            this.gbClmManagementEmployeeInfos.Columns.Add(this.gdClmEmployeeManagementEmployeeEmployeeRole);
+            this.gbClmManagementEmployeeInfos.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_worker_321;
+            this.gbClmManagementEmployeeInfos.Name = "gbClmManagementEmployeeInfos";
+            this.gbClmManagementEmployeeInfos.VisibleIndex = 0;
+            this.gbClmManagementEmployeeInfos.Width = 524;
+            // 
+            // gbClmManagementEmployeeAddress
+            // 
+            this.gbClmManagementEmployeeAddress.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbClmManagementEmployeeAddress.AppearanceHeader.Options.UseFont = true;
+            this.gbClmManagementEmployeeAddress.Caption = "Διεύθυνση";
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeRoleId);
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeAddress1);
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeAddress2);
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeeCity);
+            this.gbClmManagementEmployeeAddress.Columns.Add(this.gdClmEmployeeManagementEmployeePostcode);
+            this.gbClmManagementEmployeeAddress.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_address_book_2_32;
+            this.gbClmManagementEmployeeAddress.Name = "gbClmManagementEmployeeAddress";
+            this.gbClmManagementEmployeeAddress.VisibleIndex = 1;
+            this.gbClmManagementEmployeeAddress.Width = 421;
+            // 
+            // gbClmManagementEmployeeInformation
+            // 
+            this.gbClmManagementEmployeeInformation.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.gbClmManagementEmployeeInformation.AppearanceHeader.Image = global::dl.wm.suite.ui.Properties.Resources.info_322;
+            this.gbClmManagementEmployeeInformation.AppearanceHeader.Options.UseFont = true;
+            this.gbClmManagementEmployeeInformation.AppearanceHeader.Options.UseImage = true;
+            this.gbClmManagementEmployeeInformation.Caption = "Πληροφορίες";
+            this.gbClmManagementEmployeeInformation.Columns.Add(this.gdClmEmployeeManagementEmployeePhone);
+            this.gbClmManagementEmployeeInformation.Columns.Add(this.gdClmEmployeeManagementEmployeeMobile);
+            this.gbClmManagementEmployeeInformation.ImageOptions.Image = global::dl.wm.suite.ui.Properties.Resources.icons8_more_info_32;
+            this.gbClmManagementEmployeeInformation.Name = "gbClmManagementEmployeeInformation";
+            this.gbClmManagementEmployeeInformation.VisibleIndex = 2;
+            this.gbClmManagementEmployeeInformation.Width = 318;
+            // 
             // UcClientsEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,16 +635,20 @@
             this.grpCntrlClientsEmployeesGroupContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlClientsEmployeesGroupContainer)).EndInit();
             this.layCntrlClientsEmployeesGroupContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gcEvtEmployees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvEvtEmployees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcAdvBndEvtEmployees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAdvBndEvtEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layCntrlGrpDicomClientsGroupContainer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.laytCntrlGrpDicomClientsContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeGender)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repoItmImgeCombEmployeeDepartment)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,17 +660,7 @@
     private DevExpress.XtraEditors.GroupControl grpCntrlClientsEmployeesGroupContainer;
     private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     private DevExpress.XtraLayout.LayoutControl layCntrlClientsEmployeesGroupContainer;
-    private DevExpress.XtraGrid.GridControl gcEvtEmployees;
-    private DevExpress.XtraGrid.Views.Grid.GridView gvEvtEmployees;
-    private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-    private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-    private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-    private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-    private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-    private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-    private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     private DevExpress.XtraLayout.LayoutControlGroup layCntrlGrpDicomClientsGroupContainer;
-    private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraEditors.SimpleButton btnEvtRemoveEmployee;
         private DevExpress.XtraEditors.SimpleButton btnEvtEditEmployee;
@@ -359,5 +668,31 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraGrid.GridControl gcAdvBndEvtEmployees;
+        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView gvAdvBndEvtEmployees;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmManagementEmployeeEmployId;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeFirstName;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeEmail;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeLastname;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeRoleId;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeGender;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeStatus;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeDepartmentId;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeEmployeeRole;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeAddress1;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeAddress2;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeCity;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeePostcode;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeePhone;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeMobile;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gbClmManagementEmployeeInfos;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repoItmImgeCombEmployeeGender;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn gdClmEmployeeManagementEmployeeEmployeeDepartment;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repoItmImgeCombEmployeeDepartment;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repoItmImgeCombEmployeeStatus;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repoItmImgeCombEmployeeRole;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gbClmManagementEmployeeAddress;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gbClmManagementEmployeeInformation;
     }
 }

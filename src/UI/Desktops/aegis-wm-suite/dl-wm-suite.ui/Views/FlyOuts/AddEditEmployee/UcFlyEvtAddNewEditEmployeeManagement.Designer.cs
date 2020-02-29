@@ -1,4 +1,4 @@
-﻿namespace dl.wm.suite.ui.Views.FlyOuts
+﻿namespace dl.wm.suite.ui.Views.FlyOuts.AddEditEmployee
 {
   partial class UcFlyEvtAddNewEditEmployeeManagement
   {
@@ -1823,7 +1823,7 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // UcFlyUserAddNewEditUserManagement
+            // UcFlyEvtAddNewEditEmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
